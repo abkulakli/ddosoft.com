@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn practical methods to measure and reduce your software's carbon footprint. Tools, metrics, and strategies for sustainable development teams.">
+    <meta name="keywords" content="carbon footprint software, sustainable development metrics, green software measurement, environmental impact assessment, eco-friendly programming">
+    <meta name="author" content="DDOSoft">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Calculating the Carbon Footprint of Your Software: A Practical Guide">
+    <meta property="og:description" content="Comprehensive guide to measuring and reducing your software's environmental impact through practical tools and methodologies.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html">
+    <meta property="og:site_name" content="DDOSoft">
+    
+    <title>Calculating the Carbon Footprint of Your Software | DDOSoft</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Main navigation">
+            <div class="nav__container">
+                <a href="../index.html" class="nav__logo" aria-label="DDOSoft home">
+                    <span class="nav__logo-text">DDOSoft</span>
+                </a>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="../index.html#home" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../index.html#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../index.html#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../articles.html" class="nav__link">Articles</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../index.html#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Article Header -->
+        <section class="article-header">
+            <div class="article-header__container">
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="breadcrumb__separator">→</span>
+                    <a href="../articles.html">Articles</a>
+                    <span class="breadcrumb__separator">→</span>
+                    <span class="breadcrumb__current">Carbon Footprint Calculation</span>
+                </nav>
+                
+                <div class="article-header__meta">
+                    <span class="article-header__category">Green Technology</span>
+                    <time class="article-header__date" datetime="2025-08-30">August 30, 2025</time>
+                </div>
+                
+                <h1 class="article-header__title">
+                    Calculating the Carbon Footprint of Your Software
+                </h1>
+                
+                <p class="article-header__excerpt">
+                    Learn practical methods to measure and reduce the environmental impact of your applications. 
+                    This comprehensive guide provides tools, metrics, and strategies for development teams 
+                    committed to sustainable software practices.
+                </p>
+                
+                <div class="article-header__author">
+                    <div class="author__info">
+                        <div class="author__name">DDOSoft Sustainability Team</div>
+                        <div class="author__title">Green Technology Specialists</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <div class="article-content__container">
+                <div class="article-body">
+                    
+                    <p class="lead">
+                        Software has a carbon footprint—from the energy consumed by data centers to the power drawn 
+                        by end-user devices. As developers, we have both the responsibility and the opportunity to 
+                        minimize this impact. But you can't reduce what you can't measure. This guide provides 
+                        practical methods for calculating your software's environmental impact and actionable 
+                        strategies for reduction.
+                    </p>
+                    
+                    <h2>Understanding Software's Environmental Impact</h2>
+                    
+                    <p>
+                        The carbon footprint of software extends across its entire lifecycle, from development 
+                        to deployment to end-user consumption. Understanding these different components is the 
+                        first step toward effective measurement and reduction.
+                    </p>
+                    
+                    <div class="impact-breakdown">
+                        <h3>Primary Carbon Sources in Software</h3>
+                        <div class="carbon-sources">
+                            <div class="carbon-source">
+                                <div class="source-icon">🖥️</div>
+                                <div class="source-content">
+                                    <h4>Client-Side Consumption</h4>
+                                    <p>Energy used by user devices (laptops, phones, tablets) when running your application</p>
+                                    <div class="source-impact">Typically 40-60% of total footprint</div>
+                                </div>
+                            </div>
+                            
+                            <div class="carbon-source">
+                                <div class="source-icon">☁️</div>
+                                <div class="source-content">
+                                    <h4>Server Infrastructure</h4>
+                                    <p>Data centers, cloud services, CDNs, and backend processing</p>
+                                    <div class="source-impact">Typically 25-35% of total footprint</div>
+                                </div>
+                            </div>
+                            
+                            <div class="carbon-source">
+                                <div class="source-icon">🌐</div>
+                                <div class="source-content">
+                                    <h4>Network Transmission</h4>
+                                    <p>Data transfer between clients and servers, including API calls and content delivery</p>
+                                    <div class="source-impact">Typically 10-20% of total footprint</div>
+                                </div>
+                            </div>
+                            
+                            <div class="carbon-source">
+                                <div class="source-icon">🔧</div>
+                                <div class="source-content">
+                                    <h4>Development & Operations</h4>
+                                    <p>CI/CD pipelines, testing environments, development tools, and team devices</p>
+                                    <div class="source-impact">Typically 5-15% of total footprint</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>Measurement Methodology: A Step-by-Step Approach</h2>
+                    
+                    <h3>Step 1: Define Your Measurement Scope</h3>
+                    
+                    <p>
+                        Before you can calculate your software's carbon footprint, you need to define what you're measuring:
+                    </p>
+                    
+                    <ul>
+                        <li><strong>Functional Unit:</strong> What constitutes one "use" of your software? (per user session, per transaction, per month of usage)</li>
+                        <li><strong>System Boundaries:</strong> Which components are included in your measurement?</li>
+                        <li><strong>Time Period:</strong> Are you measuring per hour, day, month, or year?</li>
+                        <li><strong>Geographic Scope:</strong> Different regions have different carbon intensities for electricity</li>
+                    </ul>
+                    
+                    <h3>Step 2: Measure Energy Consumption</h3>
+                    
+                    <p>
+                        Energy consumption is the primary driver of software's carbon footprint. Here are practical methods 
+                        for measuring energy usage across different components:
+                    </p>
+                    
+                    <h4>Client-Side Measurement</h4>
+                    
+                    <div class="measurement-methods">
+                        <div class="method">
+                            <h5>Browser-Based Applications</h5>
+                            <ul>
+                                <li>Use browser performance APIs to measure CPU usage</li>
+                                <li>Monitor network requests and data transfer volumes</li>
+                                <li>Analyze rendering and JavaScript execution costs</li>
+                                <li>Tools: Chrome DevTools, WebPageTest, Lighthouse</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="method">
+                            <h5>Desktop Applications</h5>
+                            <ul>
+                                <li>Monitor CPU, memory, and disk usage directly</li>
+                                <li>Use system monitoring tools for power consumption</li>
+                                <li>Measure GPU usage for graphics-intensive applications</li>
+                                <li>Tools: Task Manager, Activity Monitor, htop, PowerTOP</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="method">
+                            <h5>Mobile Applications</h5>
+                            <ul>
+                                <li>Use platform-specific energy profilers</li>
+                                <li>Monitor battery drain during application usage</li>
+                                <li>Analyze network activity and background processes</li>
+                                <li>Tools: Xcode Instruments, Android Battery Historian</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4>Server-Side Measurement</h4>
+                    
+                    <div class="code-example">
+                        <h5>Example: Monitoring Server Energy Consumption</h5>
+                        <p>For cloud-based applications, you can estimate energy consumption using CPU utilization metrics:</p>
+                        <pre><code># Example calculation for AWS EC2 instance
+# t3.medium instance: ~20W TDP (Thermal Design Power)
+# 80% average CPU utilization
+# Running 24/7 for a month
+
+monthly_kwh = (20W * 0.80) * 24 * 30 / 1000
+# Result: ~11.52 kWh per month per instance</code></pre>
+                    </div>
+                    
+                    <h3>Step 3: Convert Energy to Carbon Emissions</h3>
+                    
+                    <p>
+                        Once you have energy consumption data, convert it to carbon emissions using carbon intensity factors:
+                    </p>
+                    
+                    <div class="carbon-calculation">
+                        <h4>Carbon Intensity by Region (2025 estimates)</h4>
+                        <div class="carbon-intensities">
+                            <div class="intensity-item">
+                                <div class="region">Global Average</div>
+                                <div class="intensity">475 g CO₂e/kWh</div>
+                            </div>
+                            <div class="intensity-item">
+                                <div class="region">United States</div>
+                                <div class="intensity">396 g CO₂e/kWh</div>
+                            </div>
+                            <div class="intensity-item">
+                                <div class="region">European Union</div>
+                                <div class="intensity">253 g CO₂e/kWh</div>
+                            </div>
+                            <div class="intensity-item">
+                                <div class="region">Nordic Countries</div>
+                                <div class="intensity">83 g CO₂e/kWh</div>
+                            </div>
+                            <div class="intensity-item">
+                                <div class="region">China</div>
+                                <div class="intensity">555 g CO₂e/kWh</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="formula-box">
+                        <h4>Basic Carbon Footprint Formula</h4>
+                        <p><strong>Carbon Emissions (kg CO₂e) = Energy Consumption (kWh) × Carbon Intensity (kg CO₂e/kWh)</strong></p>
+                        
+                        <p>Example: A web application consuming 10 kWh/month in the EU:</p>
+                        <p><strong>10 kWh × 0.253 kg CO₂e/kWh = 2.53 kg CO₂e per month</strong></p>
+                    </div>
+                    
+                    <h2>Practical Tools and Frameworks</h2>
+                    
+                    <h3>Open Source Tools</h3>
+                    
+                    <div class="tools-list">
+                        <div class="tool">
+                            <h4>Green Software Foundation Tools</h4>
+                            <ul>
+                                <li><strong>Carbon Aware SDK:</strong> Real-time carbon intensity data and forecasting</li>
+                                <li><strong>Software Carbon Intensity (SCI) Specification:</strong> Standardized measurement methodology</li>
+                                <li><strong>Green Software Patterns:</strong> Best practices and measurement guidelines</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tool">
+                            <h4>Website Carbon Calculators</h4>
+                            <ul>
+                                <li><strong>Website Carbon Calculator:</strong> Estimates emissions from web pages</li>
+                                <li><strong>Beacon:</strong> Continuous monitoring of web application carbon footprint</li>
+                                <li><strong>EcoPing:</strong> Real-time website sustainability metrics</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tool">
+                            <h4>Infrastructure Monitoring</h4>
+                            <ul>
+                                <li><strong>Scaphandre:</strong> Power consumption monitoring for servers and containers</li>
+                                <li><strong>PowerAPI:</strong> Software power meter for applications and systems</li>
+                                <li><strong>Cloud Carbon Footprint:</strong> Multi-cloud carbon emission estimation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Commercial Solutions</h3>
+                    
+                    <ul>
+                        <li><strong>Google Cloud Carbon Footprint:</strong> Built-in carbon reporting for GCP services</li>
+                        <li><strong>AWS Customer Carbon Footprint Tool:</strong> Carbon emissions tracking for AWS usage</li>
+                        <li><strong>Microsoft Sustainability Calculator:</strong> Emissions reporting for Azure services</li>
+                        <li><strong>Datadog Carbon Footprint Tracking:</strong> Application-level carbon monitoring</li>
+                    </ul>
+                    
+                    <h2>Case Study: Measuring a Web Application's Carbon Footprint</h2>
+                    
+                    <p>
+                        Let's walk through a practical example of calculating the carbon footprint of a typical web application:
+                    </p>
+                    
+                    <div class="case-study-example">
+                        <h3>Application Profile</h3>
+                        <ul>
+                            <li>React-based e-commerce platform</li>
+                            <li>10,000 monthly active users</li>
+                            <li>Average session: 15 minutes, 8 page views</li>
+                            <li>Hosted on AWS in US-East-1</li>
+                            <li>CDN for static assets</li>
+                        </ul>
+                        
+                        <h3>Measurement Results</h3>
+                        
+                        <div class="measurement-results">
+                            <div class="result-category">
+                                <h4>Client-Side (per user session)</h4>
+                                <ul>
+                                    <li>CPU usage: Average 25% for 15 minutes</li>
+                                    <li>Estimated device power: 45W (typical laptop)</li>
+                                    <li>Energy per session: 45W × 0.25 × 0.25h = 2.8Wh</li>
+                                    <li>Monthly total: 2.8Wh × 10,000 users = 28 kWh</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="result-category">
+                                <h4>Server Infrastructure (monthly)</h4>
+                                <ul>
+                                    <li>Application servers: 2× m5.large instances (48W each)</li>
+                                    <li>Database: 1× db.r5.large (65W estimated)</li>
+                                    <li>Load balancer and misc: 20W</li>
+                                    <li>Monthly total: (96 + 65 + 20)W × 720h = 130 kWh</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="result-category">
+                                <h4>Network & CDN (monthly)</h4>
+                                <ul>
+                                    <li>Data transfer: 500GB total</li>
+                                    <li>Network energy: ~0.006 kWh/GB</li>
+                                    <li>Monthly total: 500 × 0.006 = 3 kWh</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="carbon-calculation-result">
+                            <h4>Total Carbon Footprint Calculation</h4>
+                            <ul>
+                                <li><strong>Total Energy:</strong> 28 + 130 + 3 = 161 kWh/month</li>
+                                <li><strong>Carbon Intensity (US-East):</strong> 396 g CO₂e/kWh</li>
+                                <li><strong>Total Emissions:</strong> 161 × 0.396 = 63.8 kg CO₂e/month</li>
+                                <li><strong>Per User Per Session:</strong> 63.8 / 10,000 = 6.4 g CO₂e</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h2>Strategies for Carbon Footprint Reduction</h2>
+                    
+                    <h3>Quick Wins (Low effort, high impact)</h3>
+                    
+                    <ul>
+                        <li><strong>Optimize Images:</strong> Compress and use next-gen formats (WebP, AVIF)</li>
+                        <li><strong>Minimize JavaScript:</strong> Remove unused code and libraries</li>
+                        <li><strong>Enable Compression:</strong> Use gzip/brotli for text assets</li>
+                        <li><strong>CDN Usage:</strong> Serve static assets from edge locations</li>
+                        <li><strong>Caching Strategies:</strong> Reduce server requests through intelligent caching</li>
+                    </ul>
+                    
+                    <h3>Medium-term Improvements</h3>
+                    
+                    <ul>
+                        <li><strong>Green Hosting:</strong> Choose providers with renewable energy commitments</li>
+                        <li><strong>Performance Optimization:</strong> Faster applications consume less energy</li>
+                        <li><strong>Efficient Algorithms:</strong> Reduce computational complexity</li>
+                        <li><strong>Database Optimization:</strong> Optimize queries and data structures</li>
+                        <li><strong>Auto-scaling:</strong> Match resources to actual demand</li>
+                    </ul>
+                    
+                    <h3>Long-term Architectural Changes</h3>
+                    
+                    <ul>
+                        <li><strong>Serverless Architecture:</strong> Pay only for actual compute time</li>
+                        <li><strong>Edge Computing:</strong> Process data closer to users</li>
+                        <li><strong>Carbon-Aware Computing:</strong> Schedule intensive tasks during low-carbon periods</li>
+                        <li><strong>Progressive Web Apps:</strong> Reduce client-side resource requirements</li>
+                        <li><strong>Sustainable UX:</strong> Design interfaces that encourage efficient usage</li>
+                    </ul>
+                    
+                    <blockquote class="article-quote">
+                        "The most sustainable code is no code at all. Every feature we build should justify its environmental cost."
+                        <cite>— DDOSoft Development Philosophy</cite>
+                    </blockquote>
+                    
+                    <h2>Setting Targets and Tracking Progress</h2>
+                    
+                    <h3>Establishing Baseline Metrics</h3>
+                    
+                    <p>
+                        Before you can improve, you need to establish baseline measurements:
+                    </p>
+                    
+                    <ol>
+                        <li><strong>Current State Assessment:</strong> Measure existing applications comprehensively</li>
+                        <li><strong>Industry Benchmarking:</strong> Compare against similar applications and industry standards</li>
+                        <li><strong>Science-Based Targets:</strong> Align with climate goals (1.5°C pathway)</li>
+                        <li><strong>Continuous Monitoring:</strong> Implement automated tracking and reporting</li>
+                    </ol>
+                    
+                    <h3>Key Performance Indicators (KPIs)</h3>
+                    
+                    <div class="kpi-metrics">
+                        <div class="kpi">
+                            <div class="kpi-name">Carbon Intensity</div>
+                            <div class="kpi-description">g CO₂e per user session or transaction</div>
+                        </div>
+                        <div class="kpi">
+                            <div class="kpi-name">Energy Efficiency</div>
+                            <div class="kpi-description">kWh per unit of business value delivered</div>
+                        </div>
+                        <div class="kpi">
+                            <div class="kpi-name">Data Efficiency</div>
+                            <div class="kpi-description">MB transferred per user interaction</div>
+                        </div>
+                        <div class="kpi">
+                            <div class="kpi-name">Performance Score</div>
+                            <div class="kpi-description">Core Web Vitals and loading metrics</div>
+                        </div>
+                    </div>
+                    
+                    <h2>The DDOSoft Approach: Integrated Carbon Tracking</h2>
+                    
+                    <p>
+                        At DDOSoft, we integrate carbon footprint calculation into our development process:
+                    </p>
+                    
+                    <ul>
+                        <li><strong>Design Phase:</strong> Carbon impact assessment for new features</li>
+                        <li><strong>Development:</strong> Real-time energy consumption monitoring in dev environments</li>
+                        <li><strong>Testing:</strong> Performance tests include energy efficiency metrics</li>
+                        <li><strong>Deployment:</strong> Production monitoring with carbon tracking dashboards</li>
+                        <li><strong>Optimization:</strong> Regular reviews and improvement cycles</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <h3>DDOGreen: Leading by Example</h3>
+                        <p>
+                            Our DDOGreen power management tool demonstrates these principles in action. By intelligently 
+                            managing system resources, it reduces client-side energy consumption by an average of 28% 
+                            with zero performance impact. The tool itself has a minimal carbon footprint—consuming less 
+                            than 0.1% of the energy it saves.
+                        </p>
+                    </div>
+                    
+                    <h2>Future Trends in Carbon Measurement</h2>
+                    
+                    <h3>Emerging Standards and Frameworks</h3>
+                    
+                    <ul>
+                        <li><strong>ISO 14001 for Software:</strong> Environmental management standards adapted for digital products</li>
+                        <li><strong>EU Digital Product Passport:</strong> Mandatory environmental impact disclosure</li>
+                        <li><strong>Carbon Accounting Standards:</strong> PCAF and GHG Protocol updates for digital services</li>
+                        <li><strong>AI-Powered Optimization:</strong> Machine learning for real-time carbon optimization</li>
+                    </ul>
+                    
+                    <h3>Technology Advancements</h3>
+                    
+                    <ul>
+                        <li><strong>Hardware Integration:</strong> Better APIs for accessing device-level energy data</li>
+                        <li><strong>Network Optimization:</strong> More efficient protocols and compression algorithms</li>
+                        <li><strong>Edge Computing:</strong> Reduced data transfer through local processing</li>
+                        <li><strong>Quantum Computing:</strong> Potential for dramatically more efficient algorithms</li>
+                    </ul>
+                    
+                    <div class="call-to-action">
+                        <h3>Start Measuring Your Impact Today</h3>
+                        <p>
+                            Understanding your software's carbon footprint is the first step toward meaningful reduction. 
+                            Start with simple measurements and gradually build more comprehensive tracking systems.
+                        </p>
+                        <a href="../index.html#contact" class="btn btn--primary">Get Carbon Assessment</a>
+                        <a href="../index.html#products" class="btn btn--secondary">Explore DDOGreen</a>
+                    </div>
+                    
+                    <h2>Resources and Tools</h2>
+                    
+                    <h3>Free Resources</h3>
+                    <ul>
+                        <li><a href="https://github.com/Green-Software-Foundation" target="_blank" rel="noopener">Green Software Foundation GitHub</a></li>
+                        <li><a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">Website Carbon Calculator</a></li>
+                        <li><a href="https://developers.google.com/web/tools/lighthouse" target="_blank" rel="noopener">Google Lighthouse</a></li>
+                        <li><a href="https://github.com/hubblo-org/scaphandre" target="_blank" rel="noopener">Scaphandre Power Monitoring</a></li>
+                    </ul>
+                    
+                    <h3>Research Papers and Standards</h3>
+                    <ul>
+                        <li>Software Carbon Intensity (SCI) Specification</li>
+                        <li>IPCC Guidelines for National Greenhouse Gas Inventories</li>
+                        <li>ISO 14040 Series: Life Cycle Assessment</li>
+                        <li>Green Software Foundation Measurement Standards</li>
+                    </ul>
+                    
+                </div>
+                
+                <!-- Article Sidebar -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Carbon Calculation Series</h3>
+                        <ul class="sidebar-links">
+                            <li><a href="#" class="sidebar-link sidebar-link--current">Carbon Footprint Basics</a></li>
+                            <li><a href="#" class="sidebar-link">Advanced Measurement Techniques</a></li>
+                            <li><a href="#" class="sidebar-link">Industry Benchmarks</a></li>
+                            <li><a href="#" class="sidebar-link">Automated Tracking Tools</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3>Calculation Tools</h3>
+                        <div class="resource-downloads">
+                            <a href="#" class="download-btn">Carbon Calculator Spreadsheet</a>
+                            <a href="#" class="download-btn">Measurement Checklist</a>
+                            <a href="#" class="download-btn">KPI Dashboard Template</a>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3>External Resources</h3>
+                        <ul class="sidebar-links">
+                            <li><a href="https://www.greensoftware.foundation/" class="sidebar-link" target="_blank" rel="noopener">Green Software Foundation</a></li>
+                            <li><a href="https://www.websitecarbon.com/" class="sidebar-link" target="_blank" rel="noopener">Website Carbon Calculator</a></li>
+                            <li><a href="https://sustainablewebdesign.org/" class="sidebar-link" target="_blank" rel="noopener">Sustainable Web Design</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </article>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+            <div class="related-articles__container">
+                <h2 class="related-articles__title">Related Articles</h2>
+                <div class="related-articles__grid">
+                    
+                    <article class="article">
+                        <div class="article__image">
+                            <div class="article__image-placeholder">
+                                <span class="article__image-icon">🌱</span>
+                            </div>
+                        </div>
+                        <div class="article__content">
+                            <div class="article__meta">
+                                <span class="article__category">Sustainable Development</span>
+                                <span class="article__date">September 15, 2025</span>
+                            </div>
+                            <h3 class="article__title">
+                                <a href="sustainable-software-development-principles.html">
+                                    The Future of Sustainable Software Development: 5 Key Principles
+                                </a>
+                            </h3>
+                            <p class="article__excerpt">
+                                Discover the fundamental principles that guide sustainable software development practices.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <article class="article">
+                        <div class="article__image">
+                            <div class="article__image-placeholder">
+                                <span class="article__image-icon">♻️</span>
+                            </div>
+                        </div>
+                        <div class="article__content">
+                            <div class="article__meta">
+                                <span class="article__category">Sustainable Development</span>
+                                <span class="article__date">August 25, 2025</span>
+                            </div>
+                            <h3 class="article__title">
+                                <a href="green-algorithms-performance-vs-efficiency.html">
+                                    Green Algorithms: Balancing Performance with Energy Efficiency
+                                </a>
+                            </h3>
+                            <p class="article__excerpt">
+                                Explore algorithmic choices that reduce computational complexity while maintaining performance.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <article class="article">
+                        <div class="article__image">
+                            <div class="article__image-placeholder">
+                                <span class="article__image-icon">⚡</span>
+                            </div>
+                        </div>
+                        <div class="article__content">
+                            <div class="article__meta">
+                                <span class="article__category">DDOGreen</span>
+                                <span class="article__date">September 10, 2025</span>
+                            </div>
+                            <h3 class="article__title">
+                                <a href="ddogreen-case-study-enterprise-deployment.html">
+                                    DDOGreen Enterprise Deployment: A Case Study
+                                </a>
+                            </h3>
+                            <p class="article__excerpt">
+                                Real-world results from a Fortune 500 company's DDOGreen implementation.
+                            </p>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">DDOSoft</h3>
+                    <p class="footer__tagline">Sustainable Software Solutions</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__title">Company</h4>
+                        <ul class="footer__list">
+                            <li><a href="../index.html#about" class="footer__link">About Us</a></li>
+                            <li><a href="../index.html#products" class="footer__link">Products</a></li>
+                            <li><a href="../articles.html" class="footer__link">Articles</a></li>
+                            <li><a href="../index.html#contact" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__title">Products</h4>
+                        <ul class="footer__list">
+                            <li><a href="../index.html#products" class="footer__link">DDOGreen</a></li>
+                            <li><a href="https://github.com/abkulakli/ddogreen" class="footer__link" target="_blank" rel="noopener">GitHub Repository</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__title">Connect</h4>
+                        <ul class="footer__list">
+                            <li><a href="https://www.linkedin.com/company/ddosoft" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="mailto:info@ddosoft.com" class="footer__link">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    Copyright 2025 – DDOSoft. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
