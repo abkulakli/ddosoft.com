@@ -6,7 +6,7 @@ class LanguageManager {
         this.defaultLanguage = 'en';
         this.init();
     }
-    
+
     async init() {
         try {
             this.currentLanguage = this.detectLanguage();
@@ -17,37 +17,37 @@ class LanguageManager {
             console.error('LanguageManager error:', error);
         }
     }
-    
+
     detectLanguage() {
         const urlLang = new URLSearchParams(window.location.search).get('lang');
         if (urlLang && this.supportedLanguages.includes(urlLang)) {
             localStorage.setItem('ddosoft-language', urlLang);
             return urlLang;
         }
-        
+
         const stored = localStorage.getItem('ddosoft-language');
         if (stored && this.supportedLanguages.includes(stored)) {
             return stored;
         }
-        
+
         const browser = navigator.language.substring(0, 2);
         if (this.supportedLanguages.includes(browser)) {
             return browser;
         }
-        
+
         return this.defaultLanguage;
     }
-    
+
     async loadLanguageData(language) {
         const response = await fetch(`/lang/${language}.json`);
         this.languageData = await response.json();
     }
-    
+
     applyLanguage() {
         document.documentElement.lang = this.currentLanguage;
         this.updateContent();
     }
-    
+
     updateContent() {
         const elements = document.querySelectorAll('[data-lang-key]');
         elements.forEach(el => {
@@ -56,7 +56,7 @@ class LanguageManager {
             if (text) el.textContent = text;
         });
     }
-    
+
     getTranslation(key) {
         const keys = key.split('.');
         let value = this.languageData;
@@ -66,7 +66,7 @@ class LanguageManager {
         }
         return value;
     }
-    
+
     async switchLanguage(lang) {
         if (this.supportedLanguages.includes(lang) && lang !== this.currentLanguage) {
             await this.loadLanguageData(lang);
@@ -75,7 +75,7 @@ class LanguageManager {
             this.applyLanguage();
         }
     }
-    
+
     setupLanguageToggle() {
         const toggle = document.querySelector('.nav__lang-switch');
         if (toggle) {

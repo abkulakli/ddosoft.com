@@ -79,12 +79,12 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
    - About Us with co-founder information (EN/TR)
    - Products section showcasing DDOGreen (EN/TR)
    - Simplified contact section (email + LinkedIn only) (EN/TR)
-   
+
 2. **articles.html** - Complete articles system (needs TR implementation)
    - Responsive grid layout for article previews
    - Search and filtering functionality
    - Professional thought leadership content
-   
+
 3. **Individual Article Pages** (4 articles - needs TR versions)
    - Sustainable software development practices
    - DDOGreen case studies and implementation

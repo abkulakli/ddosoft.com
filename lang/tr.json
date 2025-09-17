@@ -57,7 +57,7 @@
         },
         {
           "name": "Ali Burak KULAKLI",
-          "role": "Kurucu Ortak", 
+          "role": "Kurucu Ortak",
           "description": "Sistem optimizasyonu ve performans mühendisliği uzmanı."
         }
       ]
@@ -129,7 +129,7 @@
     "copyright": "© 2025 DDOSoft. Tüm hakları saklıdır.",
     "links": {
       "company": "Şirket",
-      "linkedin": "LinkedIn", 
+      "linkedin": "LinkedIn",
       "github": "GitHub"
     }
   },
@@ -140,7 +140,7 @@
     "filter": {
       "all": "Tüm Kategoriler",
       "sustainability": "Sürdürülebilirlik",
-      "technology": "Teknoloji", 
+      "technology": "Teknoloji",
       "case-studies": "Durum Çalışmaları",
       "tutorials": "Eğitimler"
     },
