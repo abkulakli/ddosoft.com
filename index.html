@@ -44,19 +44,22 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link">Home</a>
+                            <a href="#home" class="nav__link" data-lang-key="nav.home">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#about" class="nav__link">About</a>
+                            <a href="#about" class="nav__link" data-lang-key="nav.about">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#products" class="nav__link">Products</a>
+                            <a href="#products" class="nav__link" data-lang-key="nav.products">Products</a>
                         </li>
                         <li class="nav__item">
-                            <a href="articles.html" class="nav__link">Articles</a>
+                            <a href="articles.html" class="nav__link" data-lang-key="nav.articles">Articles</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#contact" class="nav__link">Contact</a>
+                            <a href="#contact" class="nav__link" data-lang-key="nav.contact">Contact</a>
+                        </li>
+                        <li class="nav__item nav__item--lang">
+                            <button class="nav__lang-switch" aria-label="Switch language">EN</button>
                         </li>
                     </ul>
                 </div>
@@ -76,16 +79,16 @@
         <section class="hero" id="home">
             <div class="hero__container">
                 <div class="hero__content">
-                    <h1 class="hero__title">
+                    <h1 class="hero__title" data-lang-key="hero.title">
                         Sustainable Software Solutions
                     </h1>
-                    <p class="hero__description">
+                    <p class="hero__description" data-lang-key="hero.subtitle">
                         We create intelligent, environmentally-conscious software that reduces energy consumption 
                         while delivering exceptional performance. Leading the future of green technology.
                     </p>
                     <div class="hero__actions">
-                        <a href="#about" class="btn btn--primary">Learn More</a>
-                        <a href="#products" class="btn btn--secondary">View Products</a>
+                        <a href="#about" class="btn btn--primary" data-lang-key="hero.scrollHint">Learn More</a>
+                        <a href="#products" class="btn btn--secondary" data-lang-key="hero.cta">View Products</a>
                     </div>
                 </div>
                 <div class="hero__visual">
@@ -101,23 +104,23 @@
         <section class="about" id="about">
             <div class="about__container">
                 <div class="section__header">
-                    <h2 class="section__title">About DDOSoft</h2>
-                    <p class="section__subtitle">
+                    <h2 class="section__title" data-lang-key="about.title">About DDOSoft</h2>
+                    <p class="section__subtitle" data-lang-key="about.subtitle">
                         Pioneering sustainable software development with a focus on environmental impact and performance
                     </p>
                 </div>
                 
                 <div class="about__content">
                     <div class="about__text">
-                        <h3>Our Mission</h3>
-                        <p>
+                        <h3 data-lang-key="about.mission.title">Our Mission</h3>
+                        <p data-lang-key="about.mission.text">
                             At DDOSoft, we believe that powerful software shouldn't come at the expense of our planet. 
                             We develop intelligent solutions that optimize system performance while significantly reducing 
                             energy consumption, helping businesses and individuals minimize their environmental footprint.
                         </p>
                         
-                        <h3>Our Approach</h3>
-                        <p>
+                        <h3 data-lang-key="about.vision.title">Our Approach</h3>
+                        <p data-lang-key="about.vision.text">
                             Through advanced algorithms, cross-platform engineering, and rigorous testing, we create 
                             production-ready software that works seamlessly across Linux and Windows environments. 
                             Our solutions require zero configuration while delivering measurable energy savings.
@@ -142,27 +145,26 @@
                 
                 <!-- Team Section -->
                 <div class="team">
-                    <h3 class="team__title">Meet Our Founders</h3>
+                    <h3 class="team__title" data-lang-key="about.founders.title">Meet Our Founders</h3>
                     <div class="team__grid">
                         <div class="team__member">
                             <div class="team__photo">
                                 <div class="team__placeholder">AP</div>
                             </div>
-                            <h4 class="team__name">Ayşe Pınar KULAKLI</h4>
-                            <p class="team__role">Co-Founder</p>
+                            <h4 class="team__name" data-lang-key="about.founders.people.0.name">Ayşe Pınar KULAKLI</h4>
+                            <p class="team__role" data-lang-key="about.founders.people.0.role">Co-Founder</p>
                             <div class="team__social">
                                 <a href="https://www.linkedin.com/in/apkulakli" class="team__link" target="_blank" rel="noopener" aria-label="Ayşe Pınar KULAKLI LinkedIn profile">
                                     LinkedIn
                                 </a>
-                            </div>
                         </div>
                         
                         <div class="team__member">
                             <div class="team__photo">
                                 <div class="team__placeholder">AB</div>
                             </div>
-                            <h4 class="team__name">Ali Burak KULAKLI</h4>
-                            <p class="team__role">Co-Founder & Lead Developer</p>
+                            <h4 class="team__name" data-lang-key="about.founders.people.1.name">Ali Burak KULAKLI</h4>
+                            <p class="team__role" data-lang-key="about.founders.people.1.role">Co-Founder & Lead Developer</p>
                             <div class="team__social">
                                 <a href="https://www.linkedin.com/in/abkulakli" class="team__link" target="_blank" rel="noopener" aria-label="Ali Burak KULAKLI LinkedIn profile">
                                     LinkedIn
@@ -181,8 +183,8 @@
         <section class="products" id="products">
             <div class="products__container">
                 <div class="section__header">
-                    <h2 class="section__title">Our Products</h2>
-                    <p class="section__subtitle">
+                    <h2 class="section__title" data-lang-key="products.title">Our Products</h2>
+                    <p class="section__subtitle" data-lang-key="products.subtitle">
                         Innovative solutions that make technology more sustainable and efficient
                     </p>
                 </div>
@@ -191,26 +193,26 @@
                 <div class="product-showcase">
                     <div class="product">
                         <div class="product__header">
-                            <h3 class="product__name">DDOGreen</h3>
-                            <p class="product__tagline">Smart Power Management That Just Works</p>
-                            <p class="product__version">Latest Version: v0.3.1</p>
+                            <h3 class="product__name" data-lang-key="products.ddogreen.name">DDOGreen</h3>
+                            <p class="product__tagline" data-lang-key="products.ddogreen.tagline">Smart Power Management That Just Works</p>
+                            <p class="product__version" data-lang-key="products.ddogreen.version">Latest Version: v0.3.1</p>
                         </div>
                         
                         <div class="product__content">
                             <div class="product__description">
-                                <p class="product__intro">
+                                <p class="product__intro" data-lang-key="products.ddogreen.intro">
                                     DDOGreen is an intelligent, production-ready power management tool that automatically 
                                     switches your laptop between high-performance and power-saving modes based on actual 
                                     system usage.
                                 </p>
                                 
                                 <div class="product__highlight">
-                                    <strong>20-30% longer battery life with zero performance compromise</strong>
+                                    <strong data-lang-key="products.ddogreen.highlight">20-30% longer battery life with zero performance compromise</strong>
                                 </div>
                             </div>
                             
                             <div class="product__features">
-                                <h4>Key Features</h4>
+                                <h4 data-lang-key="products.ddogreen.features.title">Key Features</h4>
                                 <ul class="feature-list">
                                     <li class="feature-item">
                                         <strong>Automatic Power Management:</strong> 
@@ -445,60 +447,33 @@
                 <div class="section__header">
                     <h2 class="section__title">Get In Touch</h2>
                     <p class="section__subtitle">
-                        Ready to make your software more sustainable? Let's discuss your project.
+                        Ready to make your software more sustainable? Connect with us directly.
                     </p>
                 </div>
                 
-                <div class="contact__content">
-                    <div class="contact__form-wrapper">
-                        <form class="contact__form" id="contact-form">
-                            <div class="form__group">
-                                <label for="name" class="form__label">Name</label>
-                                <input type="text" id="name" name="name" class="form__input" required>
-                            </div>
-                            
-                            <div class="form__group">
-                                <label for="email" class="form__label">Email</label>
-                                <input type="email" id="email" name="email" class="form__input" required>
-                            </div>
-                            
-                            <div class="form__group">
-                                <label for="company" class="form__label">Company (Optional)</label>
-                                <input type="text" id="company" name="company" class="form__input">
-                            </div>
-                            
-                            <div class="form__group">
-                                <label for="message" class="form__label">Message</label>
-                                <textarea id="message" name="message" class="form__textarea" rows="6" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn--primary form__submit">Send Message</button>
-                        </form>
-                    </div>
-                    
+                <div class="contact__content contact__content--simple">
                     <div class="contact__info">
                         <div class="contact__item">
-                            <h4>Email</h4>
-                            <a href="mailto:info@ddosoft.com" class="contact__link">info@ddosoft.com</a>
+                            <div class="contact__icon">📧</div>
+                            <div class="contact__details">
+                                <h4 class="contact__title">Email</h4>
+                                <a href="mailto:info@ddosoft.com" class="contact__link">info@ddosoft.com</a>
+                                <p class="contact__description">Drop us a line for project inquiries and partnerships</p>
+                            </div>
                         </div>
                         
                         <div class="contact__item">
-                            <h4>Follow Us</h4>
-                            <div class="social__links">
+                            <div class="contact__icon">🔗</div>
+                            <div class="contact__details">
+                                <h4 class="contact__title">LinkedIn</h4>
                                 <a href="https://www.linkedin.com/company/ddosoft" 
-                                   class="social__link" 
+                                   class="contact__link" 
                                    target="_blank" 
                                    rel="noopener"
                                    aria-label="DDOSoft LinkedIn company page">
-                                    LinkedIn
+                                    DDOSoft Company Page
                                 </a>
-                                <a href="https://www.github.com/abkulakli" 
-                                   class="social__link" 
-                                   target="_blank" 
-                                   rel="noopener"
-                                   aria-label="DDOSoft GitHub profile">
-                                    GitHub
-                                </a>
+                                <p class="contact__description">Follow us for updates and industry insights</p>
                             </div>
                         </div>
                     </div>
@@ -554,6 +529,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="js/language-manager.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
+    "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
+    "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "products": "Ürünler",
+    "articles": "Makaleler",
+    "contact": "İletişim",
+    "languageSwitch": "EN"
+  },
+  "hero": {
+    "title": "Sürdürülebilir Yazılım Çözümleri",
+    "subtitle": "Gezegenimize saygı gösteren ve performansı optimize eden yenilikçi teknoloji yaratıyoruz",
+    "cta": "DDOGreen'i Keşfedin",
+    "scrollHint": "Daha Fazla Bilgi"
+  },
+  "about": {
+    "title": "DDOSoft Hakkında",
+    "subtitle": "Sürdürülebilir yazılım geliştirmede öncülük",
+    "mission": {
+      "title": "Misyonumuz",
+      "text": "DDOSoft'ta teknolojinin çevremizi korurken hayatı iyileştirmesi gerektiğine inanıyoruz. Sistem performansını optimize eden, enerji tüketimini azaltan ve daha sürdürülebilir bir dijital geleceğe katkıda bulunan yazılım çözümleri geliştiriyoruz."
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "text": "Sürdürülebilir yazılım geliştirmede lider güç olmak ve verimlilik ile çevre sorumluluğunun el ele gittiğini kanıtlayan araçlar yaratmak."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "items": [
+        {
+          "title": "Önce Sürdürülebilirlik",
+          "text": "Yarattığımız her çözüm çevresel etki ve enerji verimliliğini önceliklendirir."
+        },
+        {
+          "title": "Performans Mükemmelliği",
+          "text": "Sürdürülebilirlik hedeflerine ulaşırken asla performanstan taviz vermeyiz."
+        },
+        {
+          "title": "Açık İnovasyon",
+          "text": "Açık kaynak işbirliğine ve şeffaf geliştirme süreçlerine inanıyoruz."
+        }
+      ]
+    },
+    "founders": {
+      "title": "Kurucularımız",
+      "text": "DDOSoft, fark yaratan teknoloji yaratmaya kendini adamış iki tutkulu yazılım mühendisi tarafından kuruldu.",
+      "people": [
+        {
+          "name": "Ayşe Pınar KULAKLI",
+          "role": "Kurucu Ortak",
+          "description": "Sürdürülebilir yazılım mimarisi ve yeşil bilişim çözümleri uzmanı."
+        },
+        {
+          "name": "Ali Burak KULAKLI",
+          "role": "Kurucu Ortak", 
+          "description": "Sistem optimizasyonu ve performans mühendisliği uzmanı."
+        }
+      ]
+    }
+  },
+  "products": {
+    "title": "Ürünlerimiz",
+    "subtitle": "Teknolojiyi daha sürdürülebilir ve verimli hale getiren yenilikçi çözümler",
+    "ddogreen": {
+      "name": "DDOGreen",
+      "tagline": "Akıllı Güç Yönetimi, Basitçe Çalışır",
+      "version": "Son Sürüm: v0.3.1",
+      "intro": "DDOGreen, dizüstü bilgisayarınızı gerçek sistem kullanımına dayalı olarak otomatik olarak yüksek performans ve güç tasarrufu modları arasında geçiren akıllı, üretime hazır bir güç yönetimi aracıdır.",
+      "highlight": "Sıfır performans kaybıyla %20-30 daha uzun pil ömrü",
+      "features": {
+        "title": "Temel Özellikler",
+        "list": [
+          "CPU yüküne dayalı otomatik güç modu geçişi",
+          "Akıllı histeresis davranışı (%70 yüksek performans, %30 güç tasarrufu)",
+          "Sıfır yapılandırma gerekli - kutudan çıkar çıkmaz çalışır",
+          "Çapraz platform desteği (Linux ve Windows)",
+          "Minimal kaynak kullanımı ve sistem etkisi",
+          "Profesyonel servis entegrasyonu hazır"
+        ]
+      },
+      "technical": {
+        "title": "Teknik Mükemmellik",
+        "list": [
+          "Modern C++20 implementasyonu",
+          "122 kapsamlı birim test",
+          "Systemd ve Windows Service entegrasyonu",
+          "Platform-spesifik optimizasyonlarla gerçek zamanlı CPU izleme",
+          "Kurumsal dağıtım desteği ile üretime hazır"
+        ]
+      },
+      "users": {
+        "title": "Kimler İçin Mükemmel",
+        "list": [
+          "Geliştiriciler ve yazılım mühendisleri",
+          "İş profesyonelleri ve uzaktan çalışanlar",
+          "Öğrenciler ve araştırmacılar",
+          "Sistem yöneticileri",
+          "Daha akıllı dizüstü güç yönetimi isteyen herkes"
+        ]
+      },
+      "cta": "DDOGreen'i İndirin"
+    }
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Yazılımınızı daha sürdürülebilir hale getirmeye hazır mısınız? Doğrudan bizimle iletişime geçin.",
+    "methods": [
+      {
+        "icon": "📧",
+        "title": "E-posta",
+        "link": "info@ddosoft.com",
+        "description": "Proje sorularınız ve ortaklık teklifleriniz için bize yazın"
+      },
+      {
+        "icon": "🔗",
+        "title": "LinkedIn",
+        "link": "DDOSoft Şirket Sayfası",
+        "description": "Güncellemeler ve sektör görüşleri için bizi takip edin"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Bugün yarının sürdürülebilir yazılımını inşa ediyoruz.",
+    "copyright": "© 2025 DDOSoft. Tüm hakları saklıdır.",
+    "links": {
+      "company": "Şirket",
+      "linkedin": "LinkedIn", 
+      "github": "GitHub"
+    }
+  },
+  "articles": {
+    "title": "Makaleler ve Görüşler",
+    "subtitle": "Sürdürülebilir yazılım geliştirme konusunda düşünce liderliği",
+    "search": "Makalelerde ara...",
+    "filter": {
+      "all": "Tüm Kategoriler",
+      "sustainability": "Sürdürülebilirlik",
+      "technology": "Teknoloji", 
+      "case-studies": "Durum Çalışmaları",
+      "tutorials": "Eğitimler"
+    },
+    "readMore": "Devamını Oku",
+    "backToArticles": "← Makalelere Dön"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "DDOSoft - Sustainable Software Solutions",
+    "description": "DDOSoft creates innovative, sustainable software solutions. Discover DDOGreen, our smart power management tool that extends laptop battery life by 20-30%.",
+    "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "articles": "Articles",
+    "contact": "Contact",
+    "languageSwitch": "TR"
+  },
+  "hero": {
+    "title": "Sustainable Software Solutions",
+    "subtitle": "Creating innovative technology that respects our planet and optimizes performance",
+    "cta": "Discover DDOGreen",
+    "scrollHint": "Learn More"
+  },
+  "about": {
+    "title": "About DDOSoft",
+    "subtitle": "Pioneering sustainable software development",
+    "mission": {
+      "title": "Our Mission",
+      "text": "At DDOSoft, we believe technology should enhance life while protecting our environment. We develop software solutions that optimize system performance, reduce energy consumption, and contribute to a more sustainable digital future."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the leading force in sustainable software development, creating tools that prove efficiency and environmental responsibility go hand in hand."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        {
+          "title": "Sustainability First",
+          "text": "Every solution we create prioritizes environmental impact and energy efficiency."
+        },
+        {
+          "title": "Performance Excellence",
+          "text": "We never compromise on performance while achieving sustainability goals."
+        },
+        {
+          "title": "Open Innovation",
+          "text": "We believe in open-source collaboration and transparent development processes."
+        }
+      ]
+    },
+    "founders": {
+      "title": "Our Founders",
+      "text": "DDOSoft was founded by two passionate software engineers committed to creating technology that makes a difference.",
+      "people": [
+        {
+          "name": "Ayşe Pınar KULAKLI",
+          "role": "Co-Founder",
+          "description": "Expert in sustainable software architecture and green computing solutions."
+        },
+        {
+          "name": "Ali Burak KULAKLI", 
+          "role": "Co-Founder",
+          "description": "Specialist in system optimization and performance engineering."
+        }
+      ]
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Innovative solutions that make technology more sustainable and efficient",
+    "ddogreen": {
+      "name": "DDOGreen",
+      "tagline": "Smart Power Management That Just Works",
+      "version": "Latest Version: v0.3.1",
+      "intro": "DDOGreen is an intelligent, production-ready power management tool that automatically switches your laptop between high-performance and power-saving modes based on actual system usage.",
+      "highlight": "20-30% longer battery life with zero performance compromise",
+      "features": {
+        "title": "Key Features",
+        "list": [
+          "Automatic power mode switching based on CPU load",
+          "Smart hysteresis behavior (70% high performance, 30% power save)",
+          "Zero configuration required - works out of the box",
+          "Cross-platform support (Linux and Windows)",
+          "Minimal resource usage and system impact",
+          "Professional service integration ready"
+        ]
+      },
+      "technical": {
+        "title": "Technical Excellence",
+        "list": [
+          "Modern C++20 implementation",
+          "122 comprehensive unit tests",
+          "Systemd and Windows Service integration",
+          "Real-time CPU monitoring with platform-specific optimizations",
+          "Production-ready with enterprise deployment support"
+        ]
+      },
+      "users": {
+        "title": "Perfect For",
+        "list": [
+          "Developers and software engineers",
+          "Business professionals and remote workers",
+          "Students and researchers",
+          "System administrators",
+          "Anyone wanting smarter laptop power management"
+        ]
+      },
+      "cta": "Download DDOGreen"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to make your software more sustainable? Connect with us directly.",
+    "methods": [
+      {
+        "icon": "📧",
+        "title": "Email",
+        "link": "info@ddosoft.com",
+        "description": "Drop us a line for project inquiries and partnerships"
+      },
+      {
+        "icon": "🔗",
+        "title": "LinkedIn",
+        "link": "DDOSoft Company Page",
+        "description": "Follow us for updates and industry insights"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Building tomorrow's sustainable software today.",
+    "copyright": "© 2025 DDOSoft. All rights reserved.",
+    "links": {
+      "company": "Company",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  },
+  "articles": {
+    "title": "Articles & Insights",
+    "subtitle": "Thought leadership on sustainable software development",
+    "search": "Search articles...",
+    "filter": {
+      "all": "All Categories",
+      "sustainability": "Sustainability",
+      "technology": "Technology",
+      "case-studies": "Case Studies",
+      "tutorials": "Tutorials"
+    },
+    "readMore": "Read More",
+    "backToArticles": "← Back to Articles"
+  }
+}

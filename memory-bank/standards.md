@@ -127,11 +127,77 @@
 - **Performance testing**: Lighthouse audit >90 scores
 - **Functional testing**: All interactive elements work correctly
 
-## Development Workflow
-1. **Planning**: Define requirements and approach
-2. **Structure**: Build semantic HTML foundation
-3. **Styling**: Implement responsive CSS design
-4. **Interaction**: Add JavaScript functionality
-5. **Content**: Optimize and integrate final content
-6. **Testing**: Comprehensive cross-platform testing
-7. **Optimization**: Performance and accessibility refinement
+## MANDATORY MULTILINGUAL STANDARDS
+
+### Internationalization (i18n) Requirements
+- **Language Support**: English (EN) and Turkish (TR) required for all content
+- **Language Detection**: URL parameter → localStorage → browser → default (EN)
+- **Content Translation**: Professional technical translation maintaining tone and accuracy
+- **SEO Multilingual**: Proper lang attributes, translated meta tags, hreflang implementation
+- **User Experience**: Seamless language switching without page reload
+- **Accessibility**: Language toggle with ARIA labels and keyboard navigation
+
+### Language Implementation Standards
+- **Data Attributes**: Use `data-lang-key` for all translatable content
+- **JSON Structure**: Hierarchical translation keys (e.g., "nav.home", "hero.title")
+- **LanguageManager**: Central JavaScript class for all i18n functionality
+- **CSS Integration**: Language-specific styling support, RTL-ready structure
+- **Storage Persistence**: User language preference stored in localStorage
+- **URL Integration**: Language parameter in URL for sharing and SEO
+
+### Turkish Translation Standards
+- **Technical Accuracy**: Proper software/technical terminology
+- **Professional Tone**: Business-appropriate Turkish for B2B context
+- **Cultural Adaptation**: Culturally appropriate messaging and structure
+- **Company Names**: Preserve brand names (DDOSoft, DDOGreen) in original form
+- **Technical Terms**: Use accepted Turkish IT terminology where appropriate
+
+## Development Workflow & Testing Standards
+
+### MANDATORY TESTING APPROACH
+- **Test Every Change**: Always run local server and verify changes work correctly
+- **Cross-Device Validation**: Test on multiple screen sizes during development
+- **Functional Testing**: Verify all links, navigation, and interactive elements
+- **Performance Monitoring**: Ensure changes don't degrade loading speed
+- **User Experience Testing**: Validate from end-user perspective
+
+### Local Development Standards
+- **Server**: Use `python3 -m http.server 8080` for local testing
+- **Port Management**: Kill existing servers before starting new ones
+- **Browser Testing**: Use Simple Browser for quick validation
+- **Change Verification**: Test immediately after each modification
+
+### Contact Section Standards (Current Implementation)
+- **Simplified Approach**: Email and LinkedIn contact methods only
+- **No Forms**: Avoid complex contact forms that require maintenance
+- **Direct Communication**: Provide direct links to email and social profiles
+- **Product Separation**: Never mix product information with contact methods
+- **Professional Layout**: Clean, card-based contact presentation
+
+### Memory Bank Update Requirements
+- **Update Frequency**: After major changes, user requests, or architectural discoveries
+- **Content Accuracy**: Reflect current state only, remove outdated information
+- **Universal vs Local**: Keep machine-specific information in local.md only
+- **Documentation Priority**: Standards > Context > Active > Local
+
+### Development Workflow
+1. **Planning**: Define requirements and validate approach with user
+2. **Implementation**: Build changes incrementally
+3. **Testing**: Verify each change works correctly (MANDATORY)
+4. **Validation**: Test user experience and functionality  
+5. **Documentation**: Update memory bank when significant changes made
+6. **User Feedback**: Incorporate feedback and iterate as needed
+
+### Quality Gates
+- **Expert Review Standard**: Target 9+ out of 10 rating
+- **Performance**: Fast loading (<3s initial load)
+- **Accessibility**: WCAG 2.1 AA compliance
+- **Responsiveness**: Perfect on all device sizes
+- **Professional Presentation**: Modern, clean, purposeful design
+
+### Code Maintenance Standards
+- **Clean Architecture**: Separate HTML structure, CSS styling, JS functionality
+- **Semantic HTML**: Use proper HTML5 semantic elements
+- **CSS Organization**: Mobile-first, BEM-style naming, logical structure
+- **JavaScript Quality**: Modern ES6+, event delegation, performance-conscious
+- **No Dependencies**: Pure vanilla web technologies only
