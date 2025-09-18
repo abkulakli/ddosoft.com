@@ -405,12 +405,12 @@ section {
         padding: 6px 24px 6px 10px;
         font-size: 12px;
     }
-    
+
     .nav__lang-select option {
         font-size: 14px;
         padding: 8px;
     }
-    
+
     .nav__item--lang {
         margin-left: var(--spacing-xs);
     }
@@ -1125,20 +1125,20 @@ section {
     .filter__controls {
         gap: var(--spacing-lg);
     }
-    
+
     .filter__categories {
         gap: var(--spacing-xs);
     }
-    
+
     .filter__btn {
         padding: var(--spacing-xs) var(--spacing-sm);
         font-size: var(--font-size-xs);
     }
-    
+
     .filter__search {
         max-width: 100%;
     }
-    
+
     .filter__search-input,
     .filter__search-btn {
         font-size: var(--font-size-sm);

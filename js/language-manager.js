@@ -234,7 +234,7 @@ class LanguageManager {
         if (select) {
             // Set initial value to current language
             select.value = this.currentLanguage;
-            
+
             // Listen for changes
             select.addEventListener('change', async (e) => {
                 const newLanguage = e.target.value;
