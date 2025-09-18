@@ -60,13 +60,16 @@
                             <a href="#products" class="nav__link" data-lang-key="nav.products">Products</a>
                         </li>
                         <li class="nav__item">
-                            <a href="articles.html" class="nav__link" data-lang-key="nav.articles">Articles</a>
+                            <a href="#articles" class="nav__link" data-lang-key="nav.articles">Articles</a>
                         </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link" data-lang-key="nav.contact">Contact</a>
                         </li>
                         <li class="nav__item nav__item--lang">
-                            <button class="nav__lang-switch" aria-label="Switch language">EN</button>
+                            <select class="nav__lang-select" aria-label="Select language">
+                                <option value="tr">TR</option>
+                                <option value="en">EN</option>
+                            </select>
                         </li>
                     </ul>
                 </div>
@@ -339,13 +342,30 @@
                 <div class="section__header">
                     <h2 class="section__title" data-lang-key="articles.sectionTitle">Latest Insights</h2>
                     <p class="section__subtitle" data-lang-key="articles.sectionSubtitle">
-                        Explore our thoughts on sustainable software development and green technology
+                        Explore our thoughts on sustainable software development, green technology, and industry best practices.
                     </p>
                 </div>
 
-                <div class="articles__grid">
+                <!-- Articles Filter & Search -->
+                <div class="articles-filter">
+                    <div class="filter__controls">
+                        <div class="filter__categories">
+                            <button class="filter__btn filter__btn--active" data-category="all" data-lang-key="articles.page.filter.all">All Categories</button>
+                            <button class="filter__btn" data-category="sustainability" data-lang-key="articles.page.filter.sustainability">Sustainability</button>
+                            <button class="filter__btn" data-category="technology" data-lang-key="articles.page.filter.technology">Technology</button>
+                            <button class="filter__btn" data-category="development" data-lang-key="articles.page.filter.development">Development</button>
+                            <button class="filter__btn" data-category="green-technology" data-lang-key="articles.page.filter.green-technology">Green Technology</button>
+                        </div>
+                        <div class="filter__search">
+                            <input type="search" class="filter__search-input" placeholder="Search articles..." aria-label="Search articles">
+                            <button class="filter__search-btn" aria-label="Search">🔍</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articles__grid" id="articles-grid">
                     <!-- Recent Article 1 -->
-                    <article class="article">
+                    <article class="article" data-category="technology">
                         <div class="article__image">
                             <div class="article__image-placeholder">
                                 <span class="article__image-icon">⚡</span>
@@ -371,7 +391,7 @@
                     </article>
 
                     <!-- Recent Article 2 -->
-                    <article class="article">
+                    <article class="article" data-category="development">
                         <div class="article__image">
                             <div class="article__image-placeholder">
                                 <span class="article__image-icon">🔧</span>
@@ -397,7 +417,7 @@
                     </article>
 
                     <!-- Recent Article 3 -->
-                    <article class="article">
+                    <article class="article" data-category="sustainability">
                         <div class="article__image">
                             <div class="article__image-placeholder">
                                 <span class="article__image-icon">♻️</span>
@@ -423,7 +443,7 @@
                     </article>
 
                     <!-- Recent Article 4 -->
-                    <article class="article">
+                    <article class="article" data-category="green-technology">
                         <div class="article__image">
                             <div class="article__image-placeholder">
                                 <span class="article__image-icon">🌍</span>
@@ -447,10 +467,62 @@
                             </a>
                         </div>
                     </article>
+
+                    <!-- Additional Articles -->
+                    <article class="article article--hidden" data-category="sustainability">
+                        <div class="article__image">
+                            <div class="article__image-placeholder">
+                                <span class="article__image-icon">📊</span>
+                            </div>
+                        </div>
+                        <div class="article__content">
+                            <div class="article__meta">
+                                <span class="article__category">Sustainability</span>
+                                <span class="article__date">August 25, 2025</span>
+                            </div>
+                            <h3 class="article__title">
+                                <a href="articles/sustainable-software-development-principles.html">
+                                    Sustainable Software Development: Core Principles
+                                </a>
+                            </h3>
+                            <p class="article__excerpt">
+                                Essential principles and practices for developing environmentally conscious software that minimizes energy consumption and maximizes efficiency.
+                            </p>
+                            <a href="articles/sustainable-software-development-principles.html" class="article__read-more">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="article article--hidden" data-category="development">
+                        <div class="article__image">
+                            <div class="article__image-placeholder">
+                                <span class="article__image-icon">🛠️</span>
+                            </div>
+                        </div>
+                        <div class="article__content">
+                            <div class="article__meta">
+                                <span class="article__category">Development</span>
+                                <span class="article__date">August 20, 2025</span>
+                            </div>
+                            <h3 class="article__title">
+                                <a href="articles/ddogreen-case-study-enterprise-deployment.html">
+                                    DDOGreen Case Study: Enterprise Deployment Success
+                                </a>
+                            </h3>
+                            <p class="article__excerpt">
+                                Real-world case study of DDOGreen implementation in a large enterprise environment, including challenges faced and solutions implemented.
+                            </p>
+                            <a href="articles/ddogreen-case-study-enterprise-deployment.html" class="article__read-more">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
                 </div>
 
-                <div class="articles__cta">
-                    <a href="articles.html" class="btn btn--primary" data-lang-key="articles.viewAll">View All Articles</a>
+                <!-- Load More Button -->
+                <div class="articles__load-more">
+                    <button class="btn btn--secondary" id="load-more-articles">Load More Articles</button>
                 </div>
             </div>
         </section>
@@ -512,7 +584,7 @@
                         <ul class="footer__list">
                             <li><a href="#about" class="footer__link" data-lang-key="footer.columns.company.links.0.text">About Us</a></li>
                             <li><a href="#products" class="footer__link" data-lang-key="footer.columns.company.links.1.text">Products</a></li>
-                            <li><a href="articles.html" class="footer__link" data-lang-key="footer.columns.company.links.2.text">Articles</a></li>
+                            <li><a href="#articles" class="footer__link" data-lang-key="footer.columns.company.links.2.text">Articles</a></li>
                             <li><a href="#contact" class="footer__link" data-lang-key="footer.columns.company.links.3.text">Contact</a></li>
                         </ul>
                     </div>
@@ -546,6 +618,7 @@
     <!-- Scripts -->
     <script src="js/language-manager.js"></script>
     <script src="js/structured-data-manager.js"></script>
+    <script src="js/homepage-articles.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -44,6 +44,18 @@
 - **Responsiveness**: Perfect on all device sizes
 - **Interactions**: Smooth, purposeful, not distracting
 
+### Language Selection UX Best Practices
+- **Clear Visibility**: Dropdown options must have high contrast (dark text on white background)
+- **Readable Text**: Minimum 14px font size for dropdown options, medium font weight
+- **Sufficient Padding**: 8px+ padding in dropdown options for comfortable selection
+- **Current State Indication**: Selected option should be visually distinct (bold, colored background)
+- **Hover Feedback**: Visual feedback on hover with background color change
+- **Focus States**: Clear focus indicators for keyboard navigation
+- **Accessibility**: Proper ARIA labels and screen reader support
+- **Cross-browser Compatibility**: Test dropdown appearance in all major browsers
+- **Mobile Optimization**: Larger touch targets (minimum 44px) and readable text on mobile
+- **Simple Selection**: Use native select element for 2 languages instead of complex dropdowns
+
 ## Content Standards
 
 ### Writing Style
@@ -172,6 +184,17 @@
 - **CSS Integration**: Language-specific styling support, RTL-ready structure
 - **Storage Persistence**: User language preference stored in localStorage
 - **URL Integration**: Language parameter in URL for sharing and SEO
+
+### Language Selector UI Standards (CRITICAL)
+- **Use Native Select Element**: For 2 languages, use HTML `<select>` instead of custom dropdowns
+- **High Contrast Options**: White background (#ffffff) with dark text (#374151) for dropdown options
+- **Readable Typography**: Minimum 14px font size, medium weight for options
+- **Proper Padding**: 8px+ padding in dropdown options for comfortable selection
+- **Current State Indication**: Selected option bold with primary color background
+- **Hover States**: Light gray background (#f3f4f6) on option hover
+- **Focus Management**: Clear focus indicators for keyboard accessibility
+- **Mobile Optimization**: 44px minimum touch targets, larger font sizes on mobile
+- **Cross-browser Testing**: Verify dropdown appearance in Chrome, Firefox, Safari, Edge
 
 ### Turkish Translation Standards
 - **Technical Accuracy**: Proper software/technical terminology

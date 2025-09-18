@@ -5,12 +5,19 @@
 **Current Focus**: GitHub Pages configuration and deployment preparation complete
 
 ## Current Active Work
-- **Domain Configuration Issue**: GitHub Pages deployment working, but ddosoft.com domain redirects to www.ddosoft.com/products/
-- **CNAME Temporarily Disabled**: Custom domain disabled to allow direct GitHub Pages access
-- **DNS Resolution Needed**: ddosoft.com domain needs DNS reconfiguration to point to GitHub Pages properly
-- **Alternative Access**: Site accessible at https://abkulakli.github.io/ddosoft.com without redirects
+- **Enhanced Language Selection**: Improved visual clarity and user experience for EN/TR language switching
+- **Better User Interface**: Language selector now shows both current and available languages clearly
+- **Accessibility Improvements**: Enhanced ARIA labels and screen reader support for language selection
+- **Visual Enhancements**: More prominent styling with hover effects and animations for better usability
 
 ## Recently Completed Major Milestones
+
+### ✅ Enhanced Language Selection (Latest)
+- **Clear Visual Design**: Language button now shows "EN/TR" format displaying both current and available languages
+- **Improved Accessibility**: Better ARIA labels in both languages for screen reader support
+- **Enhanced Styling**: More prominent button design with rounded corners, hover effects, and smooth animations
+- **Dynamic Updates**: JavaScript automatically updates button display and accessibility attributes when language changes
+- **Mobile Optimization**: Responsive design ensures language selection works well on all device sizes
 
 ### ⚠️ Current Issues (Needs Resolution)
 - **Domain Redirect Problem**: ddosoft.com domain has external redirect to www.ddosoft.com/products/

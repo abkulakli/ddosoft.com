@@ -230,13 +230,33 @@ class LanguageManager {
     }
 
     setupLanguageToggle() {
-        const toggle = document.querySelector('.nav__lang-switch');
-        if (toggle) {
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = this.currentLanguage === 'en' ? 'tr' : 'en';
-                this.switchLanguage(target);
+        const select = document.querySelector('.nav__lang-select');
+        if (select) {
+            // Set initial value to current language
+            select.value = this.currentLanguage;
+            
+            // Listen for changes
+            select.addEventListener('change', async (e) => {
+                const newLanguage = e.target.value;
+                if (newLanguage !== this.currentLanguage) {
+                    await this.switchLanguage(newLanguage);
+                }
             });
         }
+    }
+
+    updateLanguageDisplay() {
+        const select = document.querySelector('.nav__lang-select');
+        if (select) {
+            // Set the select value to current language
+            select.value = this.currentLanguage;
+        }
+    }
+
+    applyLanguage() {
+        document.documentElement.lang = this.currentLanguage;
+        this.updateContent();
+        this.updateMetaTags();
+        this.updateLanguageDisplay(); // Update the select display after switching
     }
 }
