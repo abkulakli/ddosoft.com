@@ -127,7 +127,35 @@
 - **Performance testing**: Lighthouse audit >90 scores
 - **Functional testing**: All interactive elements work correctly
 
-## MANDATORY MULTILINGUAL STANDARDS
+## MANDATORY PROJECT REQUIREMENTS
+
+### Core Implementation Mandates
+1. **Make site SEO friendly**: Complete technical SEO implementation required
+   - XML sitemap with multilingual support
+   - Comprehensive meta tags (title, description, keywords, Open Graph, Twitter Cards)
+   - Schema.org structured data for all content types
+   - robots.txt with proper crawler directives
+   - Canonical URLs and hreflang implementation
+
+2. **All content shall be both English and Turkish**: Bilingual content requirement
+   - Every text element must support EN/TR switching
+   - Professional Turkish translations with technical accuracy
+   - Language-specific SEO optimization
+   - Cultural adaptation for Turkish market
+
+3. **Review website after changes and fix problems**: Mandatory validation process
+   - Test on local server (localhost:8080) after every change
+   - Cross-device and browser testing
+   - Functional verification of all features
+   - User experience validation
+
+4. **Review code after changes and fix problems**: Code quality assurance
+   - Validate HTML syntax and semantics
+   - Check JavaScript functionality and errors
+   - CSS validation and responsive behavior
+   - Performance impact assessment
+
+### MANDATORY MULTILINGUAL STANDARDS
 
 ### Internationalization (i18n) Requirements
 - **Language Support**: English (EN) and Turkish (TR) required for all content
@@ -184,9 +212,12 @@
 1. **Planning**: Define requirements and validate approach with user
 2. **Implementation**: Build changes incrementally
 3. **Testing**: Verify each change works correctly (MANDATORY)
-4. **Validation**: Test user experience and functionality
-5. **Documentation**: Update memory bank when significant changes made
-6. **User Feedback**: Incorporate feedback and iterate as needed
+4. **Website Review**: Test website functionality and fix any problems found
+5. **Code Review**: Validate code quality and fix any issues discovered
+6. **SEO Validation**: Ensure SEO-friendly implementation maintained
+7. **Multilingual Testing**: Verify both English and Turkish content work correctly
+8. **Documentation**: Update memory bank when significant changes made
+9. **User Feedback**: Incorporate feedback and iterate as needed
 
 ### Quality Gates
 - **Expert Review Standard**: Target 9+ out of 10 rating
@@ -201,3 +232,37 @@
 - **CSS Organization**: Mobile-first, BEM-style naming, logical structure
 - **JavaScript Quality**: Modern ES6+, event delegation, performance-conscious
 - **No Dependencies**: Pure vanilla web technologies only
+
+## Working Restrictions and Patterns
+
+### File Edit Safety Requirements
+- **MANDATORY**: Always check current file contents before making edits
+- **Context Validation**: Read files that user has manually edited since last interaction
+- **Replace String Tool**: Always include 3-5 lines of unchanged code before and after target
+- **Ambiguity Prevention**: Use sufficient context to make edits unambiguous
+- **Edit Validation**: Verify edits don't break existing functionality
+
+### User Communication Patterns
+- **"Try Again" Requests**: Continue with current implementation, check for manual user edits first
+- **Manual Edit Detection**: When user edits files between interactions, validate current state
+- **Progress Updates**: Use todo list management for complex multi-step work
+- **Implementation Approach**: Plan first, then implement incrementally with testing
+
+### Development Response Standards
+- **No Assumptions**: Always gather context before performing tasks
+- **Tool Usage Priority**: Use appropriate tools rather than assuming or guessing
+- **Testing Requirement**: Test implementations on local server (localhost:8080)
+- **Memory Bank Updates**: Update memory bank after significant feature completions
+- **Code Review**: Validate implementations meet quality standards before completion
+
+### Communication Guidelines
+- **Clarity First**: Explain what was accomplished and current status
+- **Technical Details**: Include specific files modified and features implemented
+- **Business Impact**: Connect technical work to business value and user experience
+- **Next Steps**: Clear indication of what remains to be done if applicable
+
+### Error Prevention Protocols
+- **File State Verification**: Check if files were manually edited before making changes
+- **Context Gathering**: Use file reading tools to understand current implementation
+- **Incremental Changes**: Make smaller, testable changes rather than large modifications
+- **Validation Steps**: Test each significant change before moving to next step

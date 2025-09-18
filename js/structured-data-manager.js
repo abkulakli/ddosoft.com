@@ -13,7 +13,7 @@ class StructuredDataManager {
 
     generateOrganizationData() {
         const lang = this.languageManager.currentLanguage;
-        
+
         const organizationData = {
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -31,7 +31,7 @@ class StructuredDataManager {
                 },
                 {
                     "@type": "Person",
-                    "name": "Ali Burak KULAKLI", 
+                    "name": "Ali Burak KULAKLI",
                     "sameAs": [
                         "https://www.linkedin.com/in/abkulakli",
                         "https://www.github.com/abkulakli"
@@ -58,7 +58,7 @@ class StructuredDataManager {
 
     generateWebSiteData() {
         const lang = this.languageManager.currentLanguage;
-        
+
         const websiteData = {
             "@context": "https://schema.org",
             "@type": "WebSite",
@@ -82,7 +82,7 @@ class StructuredDataManager {
 
     generatePageSpecificData() {
         const currentPage = this.getCurrentPageType();
-        
+
         switch (currentPage) {
             case 'home':
                 this.generateHomePageData();
@@ -116,7 +116,7 @@ class StructuredDataManager {
             "license": "https://opensource.org/licenses/MIT",
             "features": [
                 "Automatic power mode switching",
-                "CPU load monitoring", 
+                "CPU load monitoring",
                 "20-30% battery life extension",
                 "Zero configuration required"
             ],
@@ -140,7 +140,7 @@ class StructuredDataManager {
             },
             "about": [
                 "Sustainable Software Development",
-                "Green Technology", 
+                "Green Technology",
                 "Energy Efficient Computing",
                 "Software Performance Optimization"
             ]
@@ -152,7 +152,7 @@ class StructuredDataManager {
     generateArticleData(articleKey) {
         const articleTitle = this.languageManager.getTranslation(`meta.articles.${articleKey}.title`);
         const articleDescription = this.languageManager.getTranslation(`meta.articles.${articleKey}.description`);
-        
+
         if (!articleTitle || !articleDescription) return;
 
         const articleData = {
@@ -194,28 +194,28 @@ class StructuredDataManager {
     getCurrentPageType() {
         const path = window.location.pathname;
         const filename = path.split('/').pop() || 'index.html';
-        
+
         if (filename === 'index.html' || filename === '') return 'home';
         if (filename === 'articles.html') return 'articles';
-        
+
         if (path.includes('/articles/') || filename.includes('.html')) {
             return filename.replace('.html', '');
         }
-        
+
         return 'home';
     }
 
     isArticlePage(pageType) {
-        return ['calculating-carbon-footprint-software', 
+        return ['calculating-carbon-footprint-software',
                 'ddogreen-case-study-enterprise-deployment',
-                'green-algorithms-performance-vs-efficiency', 
+                'green-algorithms-performance-vs-efficiency',
                 'sustainable-software-development-principles'].includes(pageType);
     }
 
     getArticlePublishDate(articleKey) {
         const publishDates = {
             'calculating-carbon-footprint-software': '2024-12-15',
-            'ddogreen-case-study-enterprise-deployment': '2024-12-20', 
+            'ddogreen-case-study-enterprise-deployment': '2024-12-20',
             'green-algorithms-performance-vs-efficiency': '2024-12-10',
             'sustainable-software-development-principles': '2024-12-05'
         };
@@ -245,7 +245,7 @@ class StructuredDataManager {
         // Remove all existing structured data
         const existingScripts = document.querySelectorAll('script[id^="structured-data-"]');
         existingScripts.forEach(script => script.remove());
-        
+
         // Regenerate all structured data
         this.init();
     }
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         if (window.languageManager) {
             window.structuredDataManager = new StructuredDataManager(window.languageManager);
-            
+
             // Update structured data when language changes
             const originalSwitchLanguage = window.languageManager.switchLanguage.bind(window.languageManager);
             window.languageManager.switchLanguage = async function(lang) {

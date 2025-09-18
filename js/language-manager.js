@@ -61,7 +61,7 @@ class LanguageManager {
     updateMetaTags() {
         // Get current page type for specific meta data
         const currentPage = this.getCurrentPageType();
-        
+
         // Update page title
         const title = this.getPageMeta(currentPage, 'title') || this.getTranslation('meta.site.title');
         if (title) {
@@ -130,12 +130,12 @@ class LanguageManager {
     getCurrentPageType() {
         const path = window.location.pathname;
         const filename = path.split('/').pop() || 'index.html';
-        
+
         if (filename === 'index.html' || filename === '') return 'home';
         if (filename === 'articles.html') return 'articles';
         if (filename.includes('about')) return 'about';
         if (filename.includes('contact')) return 'contact';
-        
+
         // Check if it's an article page
         if (path.includes('/articles/') || filename.includes('.html')) {
             const articleKey = filename.replace('.html', '');
@@ -143,7 +143,7 @@ class LanguageManager {
                 return articleKey;
             }
         }
-        
+
         return 'home';
     }
 
@@ -151,11 +151,11 @@ class LanguageManager {
         // First try page-specific meta
         const pageMeta = this.getTranslation(`meta.pages.${pageType}.${metaType}`);
         if (pageMeta) return pageMeta;
-        
+
         // Then try article-specific meta
         const articleMeta = this.getTranslation(`meta.articles.${pageType}.${metaType}`);
         if (articleMeta) return articleMeta;
-        
+
         return null;
     }
 
@@ -164,7 +164,7 @@ class LanguageManager {
         if (!tag && (attribute === 'rel')) {
             tag = document.querySelector(`link[${attribute}="${value}"]`);
         }
-        
+
         if (tag) {
             tag.setAttribute(contentAttribute, content);
         } else {
@@ -183,7 +183,7 @@ class LanguageManager {
 
         // Add hreflang tags for all supported languages
         const baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
-        
+
         this.supportedLanguages.forEach(lang => {
             const hreflangTag = document.createElement('link');
             hreflangTag.setAttribute('rel', 'alternate');
