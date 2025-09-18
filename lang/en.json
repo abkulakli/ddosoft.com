@@ -6,14 +6,14 @@
       "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development",
       "author": "DDOSoft",
       "robots": "index, follow",
-      "canonical": "https://ddosoft.com/"
+      "canonical": "https://www.ddosoft.com/"
     },
     "openGraph": {
       "title": "DDOSoft - Sustainable Software Solutions",
       "description": "Leading the future of green technology with intelligent software solutions",
       "type": "website",
-      "url": "https://ddosoft.com/",
-      "image": "https://ddosoft.com/images/og-image.jpg",
+      "url": "https://www.ddosoft.com/",
+      "image": "https://www.ddosoft.com/images/og-image.jpg",
       "siteName": "DDOSoft"
     },
     "twitter": {
@@ -21,7 +21,7 @@
       "site": "@ddosoft",
       "title": "DDOSoft - Sustainable Software Solutions",
       "description": "Leading the future of green technology with intelligent software solutions",
-      "image": "https://ddosoft.com/images/twitter-image.jpg"
+      "image": "https://www.ddosoft.com/images/twitter-image.jpg"
     },
     "pages": {
       "home": {

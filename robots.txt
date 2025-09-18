@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://ddosoft.com/sitemap.xml
+Sitemap: https://www.ddosoft.com/sitemap.xml
 
 # Disallow development files
 Disallow: /memory-bank/

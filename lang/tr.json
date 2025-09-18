@@ -14,14 +14,14 @@
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
-      "canonical": "https://ddosoft.com/tr/"
+      "canonical": "https://www.ddosoft.com/tr/"
     },
     "openGraph": {
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
       "description": "Akıllı yazılım çözümleri ile yeşil teknolojinin geleceğine öncülük ediyoruz",
       "type": "website",
-      "url": "https://ddosoft.com/tr/",
-      "image": "https://ddosoft.com/images/og-image-tr.jpg",
+      "url": "https://www.ddosoft.com/tr/",
+      "image": "https://www.ddosoft.com/images/og-image-tr.jpg",
       "siteName": "DDOSoft"
     },
     "twitter": {
@@ -29,7 +29,7 @@
       "site": "@ddosoft",
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
       "description": "Akıllı yazılım çözümleri ile yeşil teknolojinin geleceğine öncülük ediyoruz",
-      "image": "https://ddosoft.com/images/twitter-image-tr.jpg"
+      "image": "https://www.ddosoft.com/images/twitter-image-tr.jpg"
     },
     "pages": {
       "home": {
