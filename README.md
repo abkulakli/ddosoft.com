@@ -49,10 +49,10 @@ ddosoft.com/
    ```bash
    # Using Python 3
    python -m http.server 8000
-   
+
    # Using Node.js (if you have http-server installed)
    http-server
-   
+
    # Using PHP
    php -S localhost:8000
    ```
