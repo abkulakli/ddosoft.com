@@ -14,7 +14,7 @@
 
 ### ✅ GitHub Pages Deployment Setup (Latest)
 - **.nojekyll file**: Prevents GitHub Pages Jekyll processing that could interfere with static files
-- **CNAME configuration**: Custom domain setup for ddosoft.com 
+- **CNAME configuration**: Custom domain setup for ddosoft.com
 - **Path compatibility**: Updated absolute paths to relative paths for GitHub Pages hosting
 - **GitHub Actions workflow**: Automated deployment pipeline for continuous integration
 - **Multilingual testing**: Verified EN/TR language switching works with new path structure

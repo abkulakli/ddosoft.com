@@ -18,7 +18,7 @@ Professional website for DDOSoft - Sustainable software solutions specializing i
 This website is configured for seamless GitHub Pages deployment with custom domain support:
 
 ### Quick Setup
-1. **Enable GitHub Pages** in repository settings  
+1. **Enable GitHub Pages** in repository settings
 2. **Set source** to "Deploy from a branch" → `main` branch → `/ (root)`
 3. **Custom domain** (optional): CNAME file is configured for `ddosoft.com`
 
