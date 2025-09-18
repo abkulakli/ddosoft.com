@@ -88,7 +88,7 @@
           "title": "Linux Systems",
           "features": [
             "TLP integration (tlp ac / tlp bat)",
-            "Systemd service management", 
+            "Systemd service management",
             "DEB, RPM, and TGZ packages",
             "Native /proc/loadavg monitoring"
           ]
@@ -162,7 +162,7 @@
         "title": "Green Algorithms: Balancing Performance vs Efficiency",
         "excerpt": "Explore algorithmic choices that reduce computational complexity and energy consumption while maintaining high performance standards.",
         "category": "Sustainability",
-        "date": "September 5, 2025", 
+        "date": "September 5, 2025",
         "link": "articles/green-algorithms-performance-vs-efficiency.html"
       },
       {
@@ -185,7 +185,7 @@
       "search": "Search articles...",
       "filter": {
         "all": "All Categories",
-        "sustainability": "Sustainability", 
+        "sustainability": "Sustainability",
         "technology": "Technology",
         "development": "Development",
         "green-technology": "Green Technology"
