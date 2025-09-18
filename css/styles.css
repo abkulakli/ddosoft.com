@@ -2443,6 +2443,14 @@ section {
     margin-bottom: 0;
 }
 
+.footer__credit {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-600);
+    margin-top: var(--spacing-xs);
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
 /* ==========================================================================
    Responsive Design
    ========================================================================== */
