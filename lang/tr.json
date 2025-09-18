@@ -1,8 +1,72 @@
 {
   "meta": {
-    "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-    "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
-    "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme"
+    "site": {
+      "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
+      "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
+      "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
+      "author": "DDOSoft",
+      "robots": "index, follow",
+      "canonical": "https://ddosoft.com/tr/"
+    },
+    "openGraph": {
+      "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
+      "description": "Akıllı yazılım çözümleri ile yeşil teknolojinin geleceğine öncülük ediyoruz",
+      "type": "website",
+      "url": "https://ddosoft.com/tr/",
+      "image": "https://ddosoft.com/images/og-image-tr.jpg",
+      "siteName": "DDOSoft"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@ddosoft",
+      "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
+      "description": "Akıllı yazılım çözümleri ile yeşil teknolojinin geleceğine öncülük ediyoruz",
+      "image": "https://ddosoft.com/images/twitter-image-tr.jpg"
+    },
+    "pages": {
+      "home": {
+        "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
+        "description": "Enerji tüketimini azaltırken olağanüstü performans sunan akıllı, çevreye duyarlı yazılımlar geliştiriyoruz.",
+        "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, enerji optimizasyonu"
+      },
+      "articles": {
+        "title": "Makaleler - DDOSoft",
+        "description": "Sürdürülebilir yazılım geliştirme, yeşil algoritmalar ve enerji verimli programlama konularında uzman görüşleri.",
+        "keywords": "yazılım geliştirme, yeşil algoritmalar, sürdürülebilirlik, enerji verimliliği, programlama"
+      },
+      "about": {
+        "title": "Hakkımızda DDOSoft - Sürdürülebilir Yazılım Çözümleri",
+        "description": "DDOSoft'un çevresel etkiyi azaltan sürdürülebilir yazılım çözümleri yaratma misyonu hakkında bilgi edinin.",
+        "keywords": "ddosoft hakkında, sürdürülebilir yazılım şirketi, yeşil teknoloji misyonu"
+      },
+      "contact": {
+        "title": "İletişim DDOSoft - Bize Ulaşın",
+        "description": "Sürdürülebilir yazılım çözümleri ve yeşil teknoloji danışmanlığı için DDOSoft ile iletişime geçin.",
+        "keywords": "ddosoft iletişim, yeşil teknoloji danışmanlığı, sürdürülebilir yazılım desteği"
+      }
+    },
+    "articles": {
+      "calculating-carbon-footprint-software": {
+        "title": "Yazılımın Karbon Ayak İzini Hesaplama - DDOSoft",
+        "description": "Yazılım uygulamalarının çevresel etkisini ölçme ve azaltma metodolojilerini öğrenin.",
+        "keywords": "karbon ayak izi, yazılım sürdürülebilirliği, çevresel etki, yeşil bilişim"
+      },
+      "ddogreen-case-study-enterprise-deployment": {
+        "title": "DDOGreen Kurumsal Dağıtım Vaka Analizi - DDOSoft",
+        "description": "Kurumsal ortamda DDOGreen uygulamasının %25 enerji tasarrufu gösteren gerçek dünya vaka analizi.",
+        "keywords": "DDOGreen, kurumsal dağıtım, güç yönetimi, enerji tasarrufu, vaka analizi"
+      },
+      "green-algorithms-performance-vs-efficiency": {
+        "title": "Yeşil Algoritmalar: Performans vs Verimlilik - DDOSoft",
+        "description": "Modern algoritmalarda hesaplama performansı ve enerji verimliliği arasındaki dengeyi keşfedin.",
+        "keywords": "yeşil algoritmalar, performans optimizasyonu, enerji verimliliği, sürdürülebilir bilişim"
+      },
+      "sustainable-software-development-principles": {
+        "title": "Sürdürülebilir Yazılım Geliştirme İlkeleri - DDOSoft",
+        "description": "Çevreye duyarlı yazılım uygulamaları geliştirmek için temel ilkeler ve uygulamalar.",
+        "keywords": "sürdürülebilir geliştirme, yeşil yazılım ilkeleri, çevre dostu programlama"
+      }
+    }
   },
   "nav": {
     "home": "Ana Sayfa",

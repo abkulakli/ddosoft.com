@@ -59,62 +59,145 @@ class LanguageManager {
     }
 
     updateMetaTags() {
+        // Get current page type for specific meta data
+        const currentPage = this.getCurrentPageType();
+        
         // Update page title
-        const title = this.getTranslation('meta.title');
+        const title = this.getPageMeta(currentPage, 'title') || this.getTranslation('meta.site.title');
         if (title) {
             document.title = title;
         }
 
         // Update meta description
-        const description = this.getTranslation('meta.description');
+        const description = this.getPageMeta(currentPage, 'description') || this.getTranslation('meta.site.description');
         if (description) {
-            const metaDescription = document.querySelector('meta[name="description"]');
-            if (metaDescription) {
-                metaDescription.setAttribute('content', description);
-            }
+            this.updateMetaTag('name', 'description', 'content', description);
         }
 
         // Update meta keywords
-        const keywords = this.getTranslation('meta.keywords');
+        const keywords = this.getPageMeta(currentPage, 'keywords') || this.getTranslation('meta.site.keywords');
         if (keywords) {
-            const metaKeywords = document.querySelector('meta[name="keywords"]');
-            if (metaKeywords) {
-                metaKeywords.setAttribute('content', keywords);
-            }
+            this.updateMetaTag('name', 'keywords', 'content', keywords);
+        }
+
+        // Update canonical URL
+        const canonical = this.getTranslation('meta.site.canonical');
+        if (canonical) {
+            this.updateMetaTag('rel', 'canonical', 'href', canonical);
+        }
+
+        // Update robots meta
+        const robots = this.getTranslation('meta.site.robots');
+        if (robots) {
+            this.updateMetaTag('name', 'robots', 'content', robots);
         }
 
         // Update Open Graph meta tags
-        if (title) {
-            const ogTitle = document.querySelector('meta[property="og:title"]');
-            if (ogTitle) {
-                ogTitle.setAttribute('content', title);
-            }
-        }
+        const ogTitle = this.getTranslation('meta.openGraph.title');
+        const ogDescription = this.getTranslation('meta.openGraph.description');
+        const ogUrl = this.getTranslation('meta.openGraph.url');
+        const ogImage = this.getTranslation('meta.openGraph.image');
+        const ogType = this.getTranslation('meta.openGraph.type');
+        const ogSiteName = this.getTranslation('meta.openGraph.siteName');
 
-        if (description) {
-            const ogDescription = document.querySelector('meta[property="og:description"]');
-            if (ogDescription) {
-                ogDescription.setAttribute('content', description);
-            }
-        }
+        if (ogTitle) this.updateMetaTag('property', 'og:title', 'content', ogTitle);
+        if (ogDescription) this.updateMetaTag('property', 'og:description', 'content', ogDescription);
+        if (ogUrl) this.updateMetaTag('property', 'og:url', 'content', ogUrl);
+        if (ogImage) this.updateMetaTag('property', 'og:image', 'content', ogImage);
+        if (ogType) this.updateMetaTag('property', 'og:type', 'content', ogType);
+        if (ogSiteName) this.updateMetaTag('property', 'og:site_name', 'content', ogSiteName);
 
         // Update Twitter Card meta tags
-        if (title) {
-            const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-            if (twitterTitle) {
-                twitterTitle.setAttribute('content', title);
-            }
-        }
+        const twitterCard = this.getTranslation('meta.twitter.card');
+        const twitterSite = this.getTranslation('meta.twitter.site');
+        const twitterTitle = this.getTranslation('meta.twitter.title');
+        const twitterDescription = this.getTranslation('meta.twitter.description');
+        const twitterImage = this.getTranslation('meta.twitter.image');
 
-        if (description) {
-            const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-            if (twitterDescription) {
-                twitterDescription.setAttribute('content', description);
-            }
-        }
+        if (twitterCard) this.updateMetaTag('name', 'twitter:card', 'content', twitterCard);
+        if (twitterSite) this.updateMetaTag('name', 'twitter:site', 'content', twitterSite);
+        if (twitterTitle) this.updateMetaTag('name', 'twitter:title', 'content', twitterTitle);
+        if (twitterDescription) this.updateMetaTag('name', 'twitter:description', 'content', twitterDescription);
+        if (twitterImage) this.updateMetaTag('name', 'twitter:image', 'content', twitterImage);
+
+        // Update hreflang
+        this.updateHreflangTags();
 
         // Update language button text
         this.updateLanguageButton();
+    }
+
+    getCurrentPageType() {
+        const path = window.location.pathname;
+        const filename = path.split('/').pop() || 'index.html';
+        
+        if (filename === 'index.html' || filename === '') return 'home';
+        if (filename === 'articles.html') return 'articles';
+        if (filename.includes('about')) return 'about';
+        if (filename.includes('contact')) return 'contact';
+        
+        // Check if it's an article page
+        if (path.includes('/articles/') || filename.includes('.html')) {
+            const articleKey = filename.replace('.html', '');
+            if (this.getTranslation(`meta.articles.${articleKey}`)) {
+                return articleKey;
+            }
+        }
+        
+        return 'home';
+    }
+
+    getPageMeta(pageType, metaType) {
+        // First try page-specific meta
+        const pageMeta = this.getTranslation(`meta.pages.${pageType}.${metaType}`);
+        if (pageMeta) return pageMeta;
+        
+        // Then try article-specific meta
+        const articleMeta = this.getTranslation(`meta.articles.${pageType}.${metaType}`);
+        if (articleMeta) return articleMeta;
+        
+        return null;
+    }
+
+    updateMetaTag(attribute, value, contentAttribute, content) {
+        let tag = document.querySelector(`meta[${attribute}="${value}"]`);
+        if (!tag && (attribute === 'rel')) {
+            tag = document.querySelector(`link[${attribute}="${value}"]`);
+        }
+        
+        if (tag) {
+            tag.setAttribute(contentAttribute, content);
+        } else {
+            // Create new meta tag if it doesn't exist
+            const newTag = document.createElement(attribute === 'rel' ? 'link' : 'meta');
+            newTag.setAttribute(attribute, value);
+            newTag.setAttribute(contentAttribute, content);
+            document.head.appendChild(newTag);
+        }
+    }
+
+    updateHreflangTags() {
+        // Remove existing hreflang tags
+        const existingHreflang = document.querySelectorAll('link[rel="alternate"][hreflang]');
+        existingHreflang.forEach(tag => tag.remove());
+
+        // Add hreflang tags for all supported languages
+        const baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        
+        this.supportedLanguages.forEach(lang => {
+            const hreflangTag = document.createElement('link');
+            hreflangTag.setAttribute('rel', 'alternate');
+            hreflangTag.setAttribute('hreflang', lang);
+            hreflangTag.setAttribute('href', `${baseUrl}${lang === 'en' ? '' : '?lang=' + lang}`);
+            document.head.appendChild(hreflangTag);
+        });
+
+        // Add x-default hreflang
+        const defaultTag = document.createElement('link');
+        defaultTag.setAttribute('rel', 'alternate');
+        defaultTag.setAttribute('hreflang', 'x-default');
+        defaultTag.setAttribute('href', baseUrl);
+        document.head.appendChild(defaultTag);
     }
 
     updateLanguageButton() {

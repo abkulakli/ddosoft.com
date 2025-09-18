@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ddosoft.com/sitemap.xml
+
+# Disallow development files
+Disallow: /memory-bank/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /README.md
+Disallow: /.gitignore
+
+# Allow all main content
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /lang/
+Allow: /articles/
+Allow: /favicon.svg
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

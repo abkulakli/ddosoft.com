@@ -1,8 +1,72 @@
 {
   "meta": {
-    "title": "DDOSoft - Sustainable Software Solutions",
-    "description": "DDOSoft creates innovative, sustainable software solutions. Discover DDOGreen, our smart power management tool that extends laptop battery life by 20-30%.",
-    "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development"
+    "site": {
+      "title": "DDOSoft - Sustainable Software Solutions",
+      "description": "DDOSoft creates innovative, sustainable software solutions. Discover DDOGreen, our smart power management tool that extends laptop battery life by 20-30%.",
+      "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development",
+      "author": "DDOSoft",
+      "robots": "index, follow",
+      "canonical": "https://ddosoft.com/"
+    },
+    "openGraph": {
+      "title": "DDOSoft - Sustainable Software Solutions",
+      "description": "Leading the future of green technology with intelligent software solutions",
+      "type": "website",
+      "url": "https://ddosoft.com/",
+      "image": "https://ddosoft.com/images/og-image.jpg",
+      "siteName": "DDOSoft"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@ddosoft",
+      "title": "DDOSoft - Sustainable Software Solutions",
+      "description": "Leading the future of green technology with intelligent software solutions",
+      "image": "https://ddosoft.com/images/twitter-image.jpg"
+    },
+    "pages": {
+      "home": {
+        "title": "DDOSoft - Sustainable Software Solutions",
+        "description": "Create intelligent, environmentally-conscious software that reduces energy consumption while delivering exceptional performance.",
+        "keywords": "sustainable software, green technology, power management, energy optimization"
+      },
+      "articles": {
+        "title": "Articles - DDOSoft",
+        "description": "Expert insights on sustainable software development, green algorithms, and energy-efficient programming practices.",
+        "keywords": "software development, green algorithms, sustainability, energy efficiency, programming"
+      },
+      "about": {
+        "title": "About DDOSoft - Sustainable Software Solutions",
+        "description": "Learn about DDOSoft's mission to create sustainable software solutions that reduce environmental impact.",
+        "keywords": "about ddosoft, sustainable software company, green technology mission"
+      },
+      "contact": {
+        "title": "Contact DDOSoft - Get in Touch",
+        "description": "Connect with DDOSoft for sustainable software solutions and green technology consulting.",
+        "keywords": "contact ddosoft, green technology consulting, sustainable software support"
+      }
+    },
+    "articles": {
+      "calculating-carbon-footprint-software": {
+        "title": "Calculating Carbon Footprint of Software - DDOSoft",
+        "description": "Learn methodologies for measuring and reducing the environmental impact of software applications.",
+        "keywords": "carbon footprint, software sustainability, environmental impact, green computing"
+      },
+      "ddogreen-case-study-enterprise-deployment": {
+        "title": "DDOGreen Enterprise Deployment Case Study - DDOSoft",
+        "description": "Real-world case study of DDOGreen implementation in enterprise environment showing 25% energy savings.",
+        "keywords": "DDOGreen, enterprise deployment, power management, energy savings, case study"
+      },
+      "green-algorithms-performance-vs-efficiency": {
+        "title": "Green Algorithms: Performance vs Efficiency - DDOSoft",
+        "description": "Explore the balance between computational performance and energy efficiency in modern algorithms.",
+        "keywords": "green algorithms, performance optimization, energy efficiency, sustainable computing"
+      },
+      "sustainable-software-development-principles": {
+        "title": "Sustainable Software Development Principles - DDOSoft",
+        "description": "Essential principles and practices for developing environmentally sustainable software applications.",
+        "keywords": "sustainable development, green software principles, eco-friendly programming"
+      }
+    }
   },
   "nav": {
     "home": "Home",
