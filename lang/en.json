@@ -14,51 +14,36 @@
   },
   "hero": {
     "title": "Sustainable Software Solutions",
-    "subtitle": "Creating innovative technology that respects our planet and optimizes performance",
-    "cta": "Discover DDOGreen",
+    "subtitle": "We create intelligent, environmentally-conscious software that reduces energy consumption while delivering exceptional performance. Leading the future of green technology.",
+    "cta": "View Products",
     "scrollHint": "Learn More"
   },
   "about": {
     "title": "About DDOSoft",
-    "subtitle": "Pioneering sustainable software development",
+    "subtitle": "Pioneering sustainable software development with a focus on environmental impact and performance",
     "mission": {
       "title": "Our Mission",
-      "text": "At DDOSoft, we believe technology should enhance life while protecting our environment. We develop software solutions that optimize system performance, reduce energy consumption, and contribute to a more sustainable digital future."
+      "text": "At DDOSoft, we believe that powerful software shouldn't come at the expense of our planet. We develop intelligent solutions that optimize system performance while significantly reducing energy consumption, helping businesses and individuals minimize their environmental footprint."
     },
     "vision": {
-      "title": "Our Vision",
-      "text": "To be the leading force in sustainable software development, creating tools that prove efficiency and environmental responsibility go hand in hand."
+      "title": "Our Approach",
+      "text": "Through advanced algorithms, cross-platform engineering, and rigorous testing, we create production-ready software that works seamlessly across Linux and Windows environments. Our solutions require zero configuration while delivering measurable energy savings."
     },
-    "values": {
-      "title": "Our Values",
-      "items": [
-        {
-          "title": "Sustainability First",
-          "text": "Every solution we create prioritizes environmental impact and energy efficiency."
-        },
-        {
-          "title": "Performance Excellence",
-          "text": "We never compromise on performance while achieving sustainability goals."
-        },
-        {
-          "title": "Open Innovation",
-          "text": "We believe in open-source collaboration and transparent development processes."
-        }
-      ]
+    "stats": {
+      "energySavings": "Energy Savings",
+      "unitTests": "Unit Tests",
+      "platforms": "Platforms"
     },
     "founders": {
-      "title": "Our Founders",
-      "text": "DDOSoft was founded by two passionate software engineers committed to creating technology that makes a difference.",
+      "title": "Meet Our Founders",
       "people": [
         {
           "name": "Ayşe Pınar KULAKLI",
-          "role": "Co-Founder",
-          "description": "Expert in sustainable software architecture and green computing solutions."
+          "role": "Co-Founder"
         },
         {
           "name": "Ali Burak KULAKLI",
-          "role": "Co-Founder",
-          "description": "Specialist in system optimization and performance engineering."
+          "role": "Co-Founder & Lead Developer"
         }
       ]
     }
@@ -74,36 +59,66 @@
       "highlight": "20-30% longer battery life with zero performance compromise",
       "features": {
         "title": "Key Features",
-        "list": [
-          "Automatic power mode switching based on CPU load",
+        "items": [
+          {
+            "title": "Automatic Power Management:",
+            "description": "Intelligent switching based on CPU load monitoring"
+          },
+          {
+            "title": "Cross-Platform Support:",
+            "description": "Native Linux (TLP) and Windows (Power Plans) integration"
+          },
+          {
+            "title": "Zero Configuration:",
+            "description": "Works perfectly out of the box with hardcoded sensible defaults"
+          },
+          {
+            "title": "Enterprise Ready:",
+            "description": "Full systemd and Windows Service Manager integration"
+          },
+          {
+            "title": "Production Quality:",
+            "description": "122 comprehensive unit tests and professional CI/CD validation"
+          }
+        ]
+      },
+      "platforms": {
+        "title": "Platform Support",
+        "linux": {
+          "title": "Linux Systems",
+          "features": [
+            "TLP integration (tlp ac / tlp bat)",
+            "Systemd service management", 
+            "DEB, RPM, and TGZ packages",
+            "Native /proc/loadavg monitoring"
+          ]
+        },
+        "windows": {
+          "title": "Windows Systems",
+          "features": [
+            "Windows Power Plans integration",
+            "Service Manager integration",
+            "MSI installer package",
+            "Performance Counters monitoring"
+          ]
+        }
+      },
+      "architecture": {
+        "title": "Technical Architecture",
+        "features": [
+          "Modern C++20 with cross-platform compatibility",
           "Smart hysteresis behavior (70% high performance, 30% power save)",
-          "Zero configuration required - works out of the box",
-          "Cross-platform support (Linux and Windows)",
-          "Minimal resource usage and system impact",
-          "Professional service integration ready"
+          "Real-time CPU load monitoring with platform optimizations",
+          "Professional logging and error handling",
+          "Memory-efficient design with minimal system impact"
         ]
       },
-      "technical": {
-        "title": "Technical Excellence",
-        "list": [
-          "Modern C++20 implementation",
-          "122 comprehensive unit tests",
-          "Systemd and Windows Service integration",
-          "Real-time CPU monitoring with platform-specific optimizations",
-          "Production-ready with enterprise deployment support"
-        ]
-      },
-      "users": {
-        "title": "Perfect For",
-        "list": [
-          "Developers and software engineers",
-          "Business professionals and remote workers",
-          "Students and researchers",
-          "System administrators",
-          "Anyone wanting smarter laptop power management"
-        ]
-      },
-      "cta": "Download DDOGreen"
+      "download": {
+        "title": "Download DDOGreen",
+        "subtitle": "Get started with intelligent power management today",
+        "github": "View on GitHub",
+        "releases": "Download Latest Release"
+      }
     }
   },
   "contact": {
@@ -124,27 +139,90 @@
       }
     ]
   },
-  "footer": {
-    "tagline": "Building tomorrow's sustainable software today.",
-    "copyright": "© 2025 DDOSoft. All rights reserved.",
-    "links": {
-      "company": "Company",
-      "linkedin": "LinkedIn",
-      "github": "GitHub"
+  "articles": {
+    "sectionTitle": "Latest Insights",
+    "sectionSubtitle": "Explore our thoughts on sustainable software development and green technology",
+    "viewAll": "View All Articles",
+    "recent": [
+      {
+        "title": "The Evolution of Laptop Power Management",
+        "excerpt": "Discover how modern power management has evolved from basic battery saving to intelligent, context-aware systems that optimize performance and efficiency.",
+        "category": "Technology",
+        "date": "September 15, 2025",
+        "link": "articles/power-management-evolution.html"
+      },
+      {
+        "title": "Cross-Platform Development: Lessons from DDOGreen",
+        "excerpt": "Learn the challenges and solutions involved in creating software that works seamlessly across Linux and Windows environments.",
+        "category": "Development",
+        "date": "September 10, 2025",
+        "link": "articles/cross-platform-development.html"
+      },
+      {
+        "title": "Green Algorithms: Balancing Performance vs Efficiency",
+        "excerpt": "Explore algorithmic choices that reduce computational complexity and energy consumption while maintaining high performance standards.",
+        "category": "Sustainability",
+        "date": "September 5, 2025", 
+        "link": "articles/green-algorithms-performance-vs-efficiency.html"
+      },
+      {
+        "title": "Calculating the Carbon Footprint of Your Software",
+        "excerpt": "Learn practical methods to measure and reduce the environmental impact of your applications, from development to deployment and maintenance.",
+        "category": "Green Technology",
+        "date": "August 30, 2025",
+        "link": "articles/calculating-carbon-footprint-software.html"
+      }
+    ],
+    "readMore": "Read More →",
+    "page": {
+      "meta": {
+        "title": "Articles - DDOSoft | Sustainable Software Insights",
+        "description": "DDOSoft Articles - Insights on sustainable software development, green technology trends, power management, and environmental impact of software solutions.",
+        "keywords": "sustainable software articles, green technology blog, power management insights, DDOGreen updates, environmental software development"
+      },
+      "title": "Articles & Insights",
+      "subtitle": "Thought leadership on sustainable software development and green technology",
+      "search": "Search articles...",
+      "filter": {
+        "all": "All Categories",
+        "sustainability": "Sustainability", 
+        "technology": "Technology",
+        "development": "Development",
+        "green-technology": "Green Technology"
+      },
+      "backToHome": "← Back to Home"
     }
   },
-  "articles": {
-    "title": "Articles & Insights",
-    "subtitle": "Thought leadership on sustainable software development",
-    "search": "Search articles...",
-    "filter": {
-      "all": "All Categories",
-      "sustainability": "Sustainability",
-      "technology": "Technology",
-      "case-studies": "Case Studies",
-      "tutorials": "Tutorials"
+  "footer": {
+    "brand": {
+      "name": "DDOSoft",
+      "tagline": "Sustainable Software Solutions"
     },
-    "readMore": "Read More",
-    "backToArticles": "← Back to Articles"
+    "columns": {
+      "company": {
+        "title": "Company",
+        "links": [
+          {"text": "About Us", "href": "#about"},
+          {"text": "Products", "href": "#products"},
+          {"text": "Articles", "href": "articles.html"},
+          {"text": "Contact", "href": "#contact"}
+        ]
+      },
+      "products": {
+        "title": "Products",
+        "links": [
+          {"text": "DDOGreen", "href": "#products"},
+          {"text": "GitHub Repository", "href": "https://github.com/abkulakli/ddogreen"}
+        ]
+      },
+      "connect": {
+        "title": "Connect",
+        "links": [
+          {"text": "LinkedIn", "href": "https://www.linkedin.com/company/ddosoft"},
+          {"text": "Email", "href": "mailto:info@ddosoft.com"}
+        ]
+      }
+    },
+    "copyright": "Copyright 2025 – DDOSoft. All rights reserved."
   }
 }

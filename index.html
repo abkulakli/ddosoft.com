@@ -129,15 +129,15 @@
                         <div class="about__stats">
                             <div class="stat">
                                 <div class="stat__number">20-30%</div>
-                                <div class="stat__label">Energy Savings</div>
+                                <div class="stat__label" data-lang-key="about.stats.energySavings">Energy Savings</div>
                             </div>
                             <div class="stat">
                                 <div class="stat__number">122</div>
-                                <div class="stat__label">Unit Tests</div>
+                                <div class="stat__label" data-lang-key="about.stats.unitTests">Unit Tests</div>
                             </div>
                             <div class="stat">
                                 <div class="stat__number">2</div>
-                                <div class="stat__label">Platforms</div>
+                                <div class="stat__label" data-lang-key="about.stats.platforms">Platforms</div>
                             </div>
                         </div>
                     </div>
@@ -215,53 +215,63 @@
                                 <h4 data-lang-key="products.ddogreen.features.title">Key Features</h4>
                                 <ul class="feature-list">
                                     <li class="feature-item">
-                                        <strong>Automatic Power Management:</strong>
-                                        Intelligent switching based on CPU load monitoring
+                                        <strong data-lang-key="products.ddogreen.features.items.0.title">Automatic Power Management:</strong>
+                                        <span data-lang-key="products.ddogreen.features.items.0.description">Intelligent switching based on CPU load monitoring</span>
                                     </li>
                                     <li class="feature-item">
-                                        <strong>Cross-Platform Support:</strong>
-                                        Native Linux (TLP) and Windows (Power Plans) integration
+                                        <strong data-lang-key="products.ddogreen.features.items.1.title">Cross-Platform Support:</strong>
+                                        <span data-lang-key="products.ddogreen.features.items.1.description">Native Linux (TLP) and Windows (Power Plans) integration</span>
                                     </li>
                                     <li class="feature-item">
-                                        <strong>Zero Configuration:</strong>
-                                        Works perfectly out of the box with hardcoded sensible defaults
+                                        <strong data-lang-key="products.ddogreen.features.items.2.title">Zero Configuration:</strong>
+                                        <span data-lang-key="products.ddogreen.features.items.2.description">Works perfectly out of the box with hardcoded sensible defaults</span>
                                     </li>
                                     <li class="feature-item">
-                                        <strong>Enterprise Ready:</strong>
-                                        Full systemd and Windows Service Manager integration
+                                        <strong data-lang-key="products.ddogreen.features.items.3.title">Enterprise Ready:</strong>
+                                        <span data-lang-key="products.ddogreen.features.items.3.description">Full systemd and Windows Service Manager integration</span>
                                     </li>
                                     <li class="feature-item">
-                                        <strong>Production Quality:</strong>
-                                        122 comprehensive unit tests and professional CI/CD validation
+                                        <strong data-lang-key="products.ddogreen.features.items.4.title">Production Quality:</strong>
+                                        <span data-lang-key="products.ddogreen.features.items.4.description">122 comprehensive unit tests and professional CI/CD validation</span>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="product__platforms">
-                                <h4>Platform Support</h4>
+                                <h4 data-lang-key="products.ddogreen.platforms.title">Platform Support</h4>
                                 <div class="platforms">
                                     <div class="platform">
-                                        <h5>Linux Systems</h5>
+                                        <h5 data-lang-key="products.ddogreen.platforms.linux.title">Linux Systems</h5>
                                         <ul>
-                                            <li>TLP integration (tlp ac / tlp bat)</li>
-                                            <li>Systemd service management</li>
-                                            <li>DEB, RPM, and TGZ packages</li>
-                                            <li>Native /proc/loadavg monitoring</li>
+                                            <li data-lang-key="products.ddogreen.platforms.linux.features.0">TLP integration (tlp ac / tlp bat)</li>
+                                            <li data-lang-key="products.ddogreen.platforms.linux.features.1">Systemd service management</li>
+                                            <li data-lang-key="products.ddogreen.platforms.linux.features.2">DEB, RPM, and TGZ packages</li>
+                                            <li data-lang-key="products.ddogreen.platforms.linux.features.3">Native /proc/loadavg monitoring</li>
                                         </ul>
                                     </div>
+                                    
                                     <div class="platform">
-                                        <h5>Windows Systems</h5>
+                                        <h5 data-lang-key="products.ddogreen.platforms.windows.title">Windows Systems</h5>
                                         <ul>
-                                            <li>Windows Power Plans integration</li>
-                                            <li>Windows Service Manager support</li>
-                                            <li>MSI installer and ZIP archive</li>
-                                            <li>Performance Counters monitoring</li>
+                                            <li data-lang-key="products.ddogreen.platforms.windows.features.0">Windows Power Plans integration</li>
+                                            <li data-lang-key="products.ddogreen.platforms.windows.features.1">Service Manager integration</li>
+                                            <li data-lang-key="products.ddogreen.platforms.windows.features.2">MSI installer package</li>
+                                            <li data-lang-key="products.ddogreen.platforms.windows.features.3">Performance Counters monitoring</li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="product__cta">
+                                <div class="product__architecture">
+                                    <h4 data-lang-key="products.ddogreen.architecture.title">Technical Architecture</h4>
+                                    <ul class="feature-list">
+                                        <li data-lang-key="products.ddogreen.architecture.features.0">Modern C++20 with cross-platform compatibility</li>
+                                        <li data-lang-key="products.ddogreen.architecture.features.1">Smart hysteresis behavior (70% high performance, 30% power save)</li>
+                                        <li data-lang-key="products.ddogreen.architecture.features.2">Real-time CPU load monitoring with platform optimizations</li>
+                                        <li data-lang-key="products.ddogreen.architecture.features.3">Professional logging and error handling</li>
+                                        <li data-lang-key="products.ddogreen.architecture.features.4">Memory-efficient design with minimal system impact</li>
+                                    </ul>
+                                </div>
+                            </div>                            <div class="product__cta">
                                 <a href="https://github.com/abkulakli/ddogreen/releases/latest"
                                    class="btn btn--primary"
                                    target="_blank"
@@ -320,42 +330,14 @@
         <section class="articles" id="articles">
             <div class="articles__container">
                 <div class="section__header">
-                    <h2 class="section__title">Latest Articles</h2>
-                    <p class="section__subtitle">
-                        Insights on sustainable software development, green technology trends, and power management best practices
+                    <h2 class="section__title" data-lang-key="articles.sectionTitle">Latest Insights</h2>
+                    <p class="section__subtitle" data-lang-key="articles.sectionSubtitle">
+                        Explore our thoughts on sustainable software development and green technology
                     </p>
                 </div>
 
                 <div class="articles__grid">
-                    <!-- Featured Article -->
-                    <article class="article article--featured">
-                        <div class="article__image">
-                            <div class="article__image-placeholder">
-                                <span class="article__image-icon">🌱</span>
-                            </div>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__meta">
-                                <span class="article__category">Sustainable Development</span>
-                                <span class="article__date">September 15, 2025</span>
-                            </div>
-                            <h3 class="article__title">
-                                <a href="articles/sustainable-software-development-principles.html">
-                                    The Future of Sustainable Software Development: 5 Key Principles
-                                </a>
-                            </h3>
-                            <p class="article__excerpt">
-                                Discover how modern software development can reduce environmental impact while maintaining
-                                high performance. Learn about energy-efficient algorithms, optimized resource usage, and
-                                sustainable coding practices that make a real difference.
-                            </p>
-                            <a href="articles/sustainable-software-development-principles.html" class="article__read-more">
-                                Read More →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Regular Articles -->
+                    <!-- Recent Article 1 -->
                     <article class="article">
                         <div class="article__image">
                             <div class="article__image-placeholder">
@@ -364,24 +346,50 @@
                         </div>
                         <div class="article__content">
                             <div class="article__meta">
-                                <span class="article__category">DDOGreen</span>
-                                <span class="article__date">September 10, 2025</span>
+                                <span class="article__category" data-lang-key="articles.recent.0.category">Technology</span>
+                                <span class="article__date" data-lang-key="articles.recent.0.date">September 15, 2025</span>
                             </div>
                             <h3 class="article__title">
-                                <a href="articles/ddogreen-case-study-enterprise-deployment.html">
-                                    DDOGreen Enterprise Deployment: A Case Study
+                                <a href="articles/power-management-evolution.html" data-lang-key="articles.recent.0.title">
+                                    The Evolution of Laptop Power Management
                                 </a>
                             </h3>
-                            <p class="article__excerpt">
-                                How a Fortune 500 company reduced their laptop energy consumption by 28% across 5,000 devices
-                                using DDOGreen's intelligent power management.
+                            <p class="article__excerpt" data-lang-key="articles.recent.0.excerpt">
+                                Discover how modern power management has evolved from basic battery saving to intelligent, context-aware systems that optimize performance and efficiency.
                             </p>
-                            <a href="articles/ddogreen-case-study-enterprise-deployment.html" class="article__read-more">
+                            <a href="articles/power-management-evolution.html" class="article__read-more" data-lang-key="articles.readMore">
                                 Read More →
                             </a>
                         </div>
                     </article>
 
+                    <!-- Recent Article 2 -->
+                    <article class="article">
+                        <div class="article__image">
+                            <div class="article__image-placeholder">
+                                <span class="article__image-icon">🔧</span>
+                            </div>
+                        </div>
+                        <div class="article__content">
+                            <div class="article__meta">
+                                <span class="article__category" data-lang-key="articles.recent.1.category">Development</span>
+                                <span class="article__date" data-lang-key="articles.recent.1.date">September 10, 2025</span>
+                            </div>
+                            <h3 class="article__title">
+                                <a href="articles/cross-platform-development.html" data-lang-key="articles.recent.1.title">
+                                    Cross-Platform Development: Lessons from DDOGreen
+                                </a>
+                            </h3>
+                            <p class="article__excerpt" data-lang-key="articles.recent.1.excerpt">
+                                Learn the challenges and solutions involved in creating software that works seamlessly across Linux and Windows environments.
+                            </p>
+                            <a href="articles/cross-platform-development.html" class="article__read-more" data-lang-key="articles.readMore">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recent Article 3 -->
                     <article class="article">
                         <div class="article__image">
                             <div class="article__image-placeholder">
@@ -390,24 +398,24 @@
                         </div>
                         <div class="article__content">
                             <div class="article__meta">
-                                <span class="article__category">Sustainable Development</span>
-                                <span class="article__date">August 25, 2025</span>
+                                <span class="article__category" data-lang-key="articles.recent.2.category">Sustainability</span>
+                                <span class="article__date" data-lang-key="articles.recent.2.date">September 5, 2025</span>
                             </div>
                             <h3 class="article__title">
-                                <a href="articles/green-algorithms-performance-vs-efficiency.html">
-                                    Green Algorithms: Balancing Performance with Energy Efficiency
+                                <a href="articles/green-algorithms-performance-vs-efficiency.html" data-lang-key="articles.recent.2.title">
+                                    Green Algorithms: Balancing Performance vs Efficiency
                                 </a>
                             </h3>
-                            <p class="article__excerpt">
-                                Explore algorithmic choices that reduce computational complexity and energy consumption while
-                                maintaining high performance standards.
+                            <p class="article__excerpt" data-lang-key="articles.recent.2.excerpt">
+                                Explore algorithmic choices that reduce computational complexity and energy consumption while maintaining high performance standards.
                             </p>
-                            <a href="articles/green-algorithms-performance-vs-efficiency.html" class="article__read-more">
+                            <a href="articles/green-algorithms-performance-vs-efficiency.html" class="article__read-more" data-lang-key="articles.readMore">
                                 Read More →
                             </a>
                         </div>
                     </article>
 
+                    <!-- Recent Article 4 -->
                     <article class="article">
                         <div class="article__image">
                             <div class="article__image-placeholder">
@@ -416,19 +424,18 @@
                         </div>
                         <div class="article__content">
                             <div class="article__meta">
-                                <span class="article__category">Green Technology</span>
-                                <span class="article__date">August 30, 2025</span>
+                                <span class="article__category" data-lang-key="articles.recent.3.category">Green Technology</span>
+                                <span class="article__date" data-lang-key="articles.recent.3.date">August 30, 2025</span>
                             </div>
                             <h3 class="article__title">
-                                <a href="articles/calculating-carbon-footprint-software.html">
+                                <a href="articles/calculating-carbon-footprint-software.html" data-lang-key="articles.recent.3.title">
                                     Calculating the Carbon Footprint of Your Software
                                 </a>
                             </h3>
-                            <p class="article__excerpt">
-                                Learn practical methods to measure and reduce the environmental impact of your applications,
-                                from development to deployment and maintenance.
+                            <p class="article__excerpt" data-lang-key="articles.recent.3.excerpt">
+                                Learn practical methods to measure and reduce the environmental impact of your applications, from development to deployment and maintenance.
                             </p>
-                            <a href="articles/calculating-carbon-footprint-software.html" class="article__read-more">
+                            <a href="articles/calculating-carbon-footprint-software.html" class="article__read-more" data-lang-key="articles.readMore">
                                 Read More →
                             </a>
                         </div>
@@ -436,7 +443,7 @@
                 </div>
 
                 <div class="articles__cta">
-                    <a href="articles.html" class="btn btn--primary">View All Articles</a>
+                    <a href="articles.html" class="btn btn--primary" data-lang-key="articles.viewAll">View All Articles</a>
                 </div>
             </div>
         </section>
@@ -445,8 +452,8 @@
         <section class="contact" id="contact">
             <div class="contact__container">
                 <div class="section__header">
-                    <h2 class="section__title">Get In Touch</h2>
-                    <p class="section__subtitle">
+                    <h2 class="section__title" data-lang-key="contact.title">Get In Touch</h2>
+                    <p class="section__subtitle" data-lang-key="contact.subtitle">
                         Ready to make your software more sustainable? Connect with us directly.
                     </p>
                 </div>
@@ -454,26 +461,27 @@
                 <div class="contact__content contact__content--simple">
                     <div class="contact__info">
                         <div class="contact__item">
-                            <div class="contact__icon">📧</div>
+                            <div class="contact__icon" data-lang-key="contact.methods.0.icon">📧</div>
                             <div class="contact__details">
-                                <h4 class="contact__title">Email</h4>
-                                <a href="mailto:info@ddosoft.com" class="contact__link">info@ddosoft.com</a>
-                                <p class="contact__description">Drop us a line for project inquiries and partnerships</p>
+                                <h4 class="contact__title" data-lang-key="contact.methods.0.title">Email</h4>
+                                <a href="mailto:info@ddosoft.com" class="contact__link" data-lang-key="contact.methods.0.link">info@ddosoft.com</a>
+                                <p class="contact__description" data-lang-key="contact.methods.0.description">Drop us a line for project inquiries and partnerships</p>
                             </div>
                         </div>
 
                         <div class="contact__item">
-                            <div class="contact__icon">🔗</div>
+                            <div class="contact__icon" data-lang-key="contact.methods.1.icon">🔗</div>
                             <div class="contact__details">
-                                <h4 class="contact__title">LinkedIn</h4>
+                                <h4 class="contact__title" data-lang-key="contact.methods.1.title">LinkedIn</h4>
                                 <a href="https://www.linkedin.com/company/ddosoft"
                                    class="contact__link"
                                    target="_blank"
                                    rel="noopener"
-                                   aria-label="DDOSoft LinkedIn company page">
+                                   aria-label="DDOSoft LinkedIn company page"
+                                   data-lang-key="contact.methods.1.link">
                                     DDOSoft Company Page
                                 </a>
-                                <p class="contact__description">Follow us for updates and industry insights</p>
+                                <p class="contact__description" data-lang-key="contact.methods.1.description">Follow us for updates and industry insights</p>
                             </div>
                         </div>
                     </div>
@@ -487,41 +495,41 @@
         <div class="footer__container">
             <div class="footer__content">
                 <div class="footer__brand">
-                    <h3 class="footer__logo">DDOSoft</h3>
-                    <p class="footer__tagline">Sustainable Software Solutions</p>
+                    <h3 class="footer__logo" data-lang-key="footer.brand.name">DDOSoft</h3>
+                    <p class="footer__tagline" data-lang-key="footer.brand.tagline">Sustainable Software Solutions</p>
                 </div>
 
                 <div class="footer__links">
                     <div class="footer__column">
-                        <h4 class="footer__title">Company</h4>
+                        <h4 class="footer__title" data-lang-key="footer.columns.company.title">Company</h4>
                         <ul class="footer__list">
-                            <li><a href="#about" class="footer__link">About Us</a></li>
-                            <li><a href="#products" class="footer__link">Products</a></li>
-                            <li><a href="articles.html" class="footer__link">Articles</a></li>
-                            <li><a href="#contact" class="footer__link">Contact</a></li>
+                            <li><a href="#about" class="footer__link" data-lang-key="footer.columns.company.links.0.text">About Us</a></li>
+                            <li><a href="#products" class="footer__link" data-lang-key="footer.columns.company.links.1.text">Products</a></li>
+                            <li><a href="articles.html" class="footer__link" data-lang-key="footer.columns.company.links.2.text">Articles</a></li>
+                            <li><a href="#contact" class="footer__link" data-lang-key="footer.columns.company.links.3.text">Contact</a></li>
                         </ul>
                     </div>
 
                     <div class="footer__column">
-                        <h4 class="footer__title">Products</h4>
+                        <h4 class="footer__title" data-lang-key="footer.columns.products.title">Products</h4>
                         <ul class="footer__list">
-                            <li><a href="#products" class="footer__link">DDOGreen</a></li>
-                            <li><a href="https://github.com/abkulakli/ddogreen" class="footer__link" target="_blank" rel="noopener">GitHub Repository</a></li>
+                            <li><a href="#products" class="footer__link" data-lang-key="footer.columns.products.links.0.text">DDOGreen</a></li>
+                            <li><a href="https://github.com/abkulakli/ddogreen" class="footer__link" target="_blank" rel="noopener" data-lang-key="footer.columns.products.links.1.text">GitHub Repository</a></li>
                         </ul>
                     </div>
 
                     <div class="footer__column">
-                        <h4 class="footer__title">Connect</h4>
+                        <h4 class="footer__title" data-lang-key="footer.columns.connect.title">Connect</h4>
                         <ul class="footer__list">
-                            <li><a href="https://www.linkedin.com/company/ddosoft" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
-                            <li><a href="mailto:info@ddosoft.com" class="footer__link">Email</a></li>
+                            <li><a href="https://www.linkedin.com/company/ddosoft" class="footer__link" target="_blank" rel="noopener" data-lang-key="footer.columns.connect.links.0.text">LinkedIn</a></li>
+                            <li><a href="mailto:info@ddosoft.com" class="footer__link" data-lang-key="footer.columns.connect.links.1.text">Email</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="footer__bottom">
-                <p class="footer__copyright">
+                <p class="footer__copyright" data-lang-key="footer.copyright">
                     Copyright 2025 – DDOSoft. All rights reserved.
                 </p>
             </div>

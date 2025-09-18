@@ -46,6 +46,7 @@ class LanguageManager {
     applyLanguage() {
         document.documentElement.lang = this.currentLanguage;
         this.updateContent();
+        this.updateMetaTags();
     }
 
     updateContent() {
@@ -55,6 +56,75 @@ class LanguageManager {
             const text = this.getTranslation(key);
             if (text) el.textContent = text;
         });
+    }
+
+    updateMetaTags() {
+        // Update page title
+        const title = this.getTranslation('meta.title');
+        if (title) {
+            document.title = title;
+        }
+
+        // Update meta description
+        const description = this.getTranslation('meta.description');
+        if (description) {
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', description);
+            }
+        }
+
+        // Update meta keywords
+        const keywords = this.getTranslation('meta.keywords');
+        if (keywords) {
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords) {
+                metaKeywords.setAttribute('content', keywords);
+            }
+        }
+
+        // Update Open Graph meta tags
+        if (title) {
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) {
+                ogTitle.setAttribute('content', title);
+            }
+        }
+
+        if (description) {
+            const ogDescription = document.querySelector('meta[property="og:description"]');
+            if (ogDescription) {
+                ogDescription.setAttribute('content', description);
+            }
+        }
+
+        // Update Twitter Card meta tags
+        if (title) {
+            const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+            if (twitterTitle) {
+                twitterTitle.setAttribute('content', title);
+            }
+        }
+
+        if (description) {
+            const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+            if (twitterDescription) {
+                twitterDescription.setAttribute('content', description);
+            }
+        }
+
+        // Update language button text
+        this.updateLanguageButton();
+    }
+
+    updateLanguageButton() {
+        const langButton = document.querySelector('.nav__lang-switch');
+        if (langButton) {
+            const buttonText = this.getTranslation('nav.languageSwitch');
+            if (buttonText) {
+                langButton.textContent = buttonText;
+            }
+        }
     }
 
     getTranslation(key) {
