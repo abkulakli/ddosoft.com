@@ -197,6 +197,45 @@
 - **Page speed**: Optimized for Core Web Vitals
 - **Mobile-friendly**: Responsive design verified
 
+### Sitemap Maintenance (CRITICAL)
+**MANDATORY: Update sitemap.xml whenever pages are added or removed**
+
+**Sitemap Update Process:**
+1. **When Adding New Pages**:
+   - Add new `<url>` entry to `sitemap.xml` immediately after page creation
+   - Include proper lastmod date (current date in YYYY-MM-DD format)
+   - Add multilingual hreflang links for EN/TR support
+   - Set appropriate priority (homepage: 1.0, main pages: 0.8, articles: 0.8, other: 0.6)
+   - Set changefreq (homepage: monthly, articles: yearly, dynamic content: weekly)
+
+2. **When Removing Pages**:
+   - Remove corresponding `<url>` entry from `sitemap.xml`
+   - Check and remove any internal links to the deleted page
+   - Update navigation menus in shared components if needed
+
+3. **Regular Maintenance**:
+   - Audit sitemap quarterly by comparing with actual files: `find . -name "*.html" -not -path "./components/*"`
+   - Update lastmod dates when content is significantly modified
+   - Verify all URLs are accessible and return 200 status codes
+
+**Sitemap Structure Template:**
+```xml
+<url>
+    <loc>https://www.ddosoft.com/path/to/page.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly|monthly|weekly</changefreq>
+    <priority>1.0|0.8|0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/path/to/page.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/path/to/page.html?lang=tr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/path/to/page.html" />
+</url>
+```
+
+**EXCLUDE from Sitemap:**
+- Component files (`components/*.html`)
+- Development files (`memory-bank/*`, `.git/*`, etc.)
+- Non-indexable resources (CSS, JS, images)
+
 ## Testing Standards
 - **Cross-device testing**: Desktop, tablet, mobile
 - **Browser testing**: All supported browsers

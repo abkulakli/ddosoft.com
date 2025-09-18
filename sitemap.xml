@@ -5,7 +5,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://www.ddosoft.com/</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2025-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/" />
@@ -13,56 +13,25 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/" />
     </url>
 
-    <!-- Articles Page -->
-    <url>
-        <loc>https://www.ddosoft.com/articles.html</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles.html?lang=tr" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles.html" />
-    </url>
-
     <!-- Individual Articles -->
     <url>
-        <loc>https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html</loc>
-        <lastmod>2024-12-15</lastmod>
+        <loc>https://www.ddosoft.com/articles/power-management-evolution.html</loc>
+        <lastmod>2025-09-18</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html?lang=tr" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html" />
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/power-management-evolution.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/power-management-evolution.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/power-management-evolution.html" />
     </url>
 
     <url>
-        <loc>https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html</loc>
-        <lastmod>2024-12-20</lastmod>
+        <loc>https://www.ddosoft.com/articles/cross-platform-development.html</loc>
+        <lastmod>2025-09-18</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html?lang=tr" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html" />
-    </url>
-
-    <url>
-        <loc>https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html</loc>
-        <lastmod>2024-12-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html?lang=tr" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html" />
-    </url>
-
-    <url>
-        <loc>https://www.ddosoft.com/articles/sustainable-software-development-principles.html</loc>
-        <lastmod>2024-12-05</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/sustainable-software-development-principles.html" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/sustainable-software-development-principles.html?lang=tr" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/sustainable-software-development-principles.html" />
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/cross-platform-development.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/cross-platform-development.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/cross-platform-development.html" />
     </url>
 
 </urlset>
