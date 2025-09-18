@@ -14,12 +14,12 @@ class ComponentLoader {
      */
     getComponentsPath() {
         const currentPath = window.location.pathname;
-        
+
         // If we're in an article subdirectory, use relative path
         if (currentPath.includes('/articles/')) {
             return '../components/';
         }
-        
+
         // For root directory pages
         return 'components/';
     }
@@ -37,16 +37,16 @@ class ComponentLoader {
 
         try {
             const response = await fetch(`${this.componentsPath}${componentName}.html`);
-            
+
             if (!response.ok) {
                 throw new Error(`Failed to load component: ${componentName} (${response.status})`);
             }
-            
+
             const html = await response.text();
-            
+
             // Cache the component
             this.loadedComponents.set(componentName, html);
-            
+
             return html;
         } catch (error) {
             console.error(`Error loading component ${componentName}:`, error);
@@ -67,10 +67,10 @@ class ComponentLoader {
         try {
             const headerHtml = await this.loadComponent('header');
             headerPlaceholder.outerHTML = headerHtml;
-            
+
             // Update navigation links for article pages
             this.updateNavigationLinks();
-            
+
             console.log('Header component loaded successfully');
         } catch (error) {
             console.error('Failed to load header component:', error);
@@ -90,10 +90,10 @@ class ComponentLoader {
         try {
             const footerHtml = await this.loadComponent('footer');
             footerPlaceholder.outerHTML = footerHtml;
-            
+
             // Update footer links for article pages
             this.updateFooterLinks();
-            
+
             console.log('Footer component loaded successfully');
         } catch (error) {
             console.error('Failed to load footer component:', error);
@@ -105,7 +105,7 @@ class ComponentLoader {
      */
     updateNavigationLinks() {
         const currentPath = window.location.pathname;
-        
+
         if (currentPath.includes('/articles/')) {
             // Update navigation links to point back to index.html
             const navLinks = document.querySelectorAll('.nav__link[href^="#"]');
@@ -129,7 +129,7 @@ class ComponentLoader {
      */
     updateFooterLinks() {
         const currentPath = window.location.pathname;
-        
+
         if (currentPath.includes('/articles/')) {
             // Update footer links to point back to index.html
             const footerLinks = document.querySelectorAll('.footer__link[href^="#"]');

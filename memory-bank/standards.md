@@ -143,7 +143,7 @@
 
 3. **Page Implementation**:
    - All pages use `<div id="header-placeholder"></div>`
-   - All pages use `<div id="footer-placeholder"></div>`  
+   - All pages use `<div id="footer-placeholder"></div>`
    - Component loader script loaded first in all pages
    - **Zero hardcoded headers/footers anywhere**
 
