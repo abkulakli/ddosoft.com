@@ -256,6 +256,57 @@
         "green-technology": "Green Technology"
       },
       "backToHome": "← Back to Home"
+    },
+    "powerManagementEvolution": {
+      "title": "The Evolution of Laptop Power Management",
+      "excerpt": "Discover how modern power management has evolved from basic battery saving to intelligent, context-aware systems that optimize performance and efficiency.",
+      "category": "Technology",
+      "date": "September 15, 2025",
+      "content": {
+        "intro": "The landscape of laptop power management has undergone a remarkable transformation over the past decade. What once began as simple battery-saving modes has evolved into sophisticated, AI-driven systems that intelligently balance performance demands with energy conservation.",
+        "sections": {
+          "earlyDays": {
+            "title": "The Early Days: Basic Power Profiles",
+            "content": "In the early 2010s, power management was largely a manual affair. Users had to choose between predefined power profiles:",
+            "profiles": [
+              {"name": "High Performance", "description": "Maximum CPU speed, full screen brightness, all features enabled"},
+              {"name": "Balanced", "description": "A compromise between performance and battery life"},
+              {"name": "Power Saver", "description": "Minimal CPU speeds, reduced screen brightness, limited functionality"}
+            ]
+          },
+          "intelligence": {
+            "title": "The Intelligence Revolution",
+            "content": "Modern power management systems, like those implemented in DDOGreen, represent a paradigm shift toward intelligent, context-aware optimization."
+          },
+          "future": {
+            "title": "The Future of Power Management",
+            "content": "Looking ahead, power management systems are evolving toward even greater intelligence and integration with predictive optimization and ecosystem integration."
+          }
+        }
+      }
+    },
+    "crossPlatformDevelopment": {
+      "title": "Cross-Platform Development: Lessons from DDOGreen",
+      "excerpt": "Learn the challenges and solutions involved in creating software that works seamlessly across Linux and Windows environments.",
+      "category": "Development", 
+      "date": "September 10, 2025",
+      "content": {
+        "intro": "Developing software that works seamlessly across multiple operating systems is one of the most complex challenges in modern software development. The DDOGreen project provides an excellent case study in how to overcome these challenges while maintaining performance, reliability, and platform-specific optimizations.",
+        "sections": {
+          "imperative": {
+            "title": "The Cross-Platform Imperative",
+            "content": "In today's diverse computing environment, users expect software to work regardless of their operating system choice. For DDOGreen, this meant creating a power management solution that could deliver consistent functionality across Linux distributions and Windows versions while leveraging the unique capabilities of each platform."
+          },
+          "architecture": {
+            "title": "Architectural Decisions: Foundation for Success",
+            "content": "The success of any cross-platform project begins with smart architectural decisions. For DDOGreen, we chose Modern C++20 as our foundation, providing several key advantages."
+          },
+          "lessons": {
+            "title": "Lessons Learned and Best Practices",
+            "content": "The DDOGreen project demonstrates that effective cross-platform development requires more than just shared code—it demands deep understanding of each target platform, careful architectural planning, and rigorous testing across all supported environments."
+          }
+        }
+      }
     }
   },
   "footer": {

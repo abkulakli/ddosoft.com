@@ -256,6 +256,57 @@
         "green-technology": "Yeşil Teknoloji"
       },
       "backToHome": "← Ana Sayfaya Dön"
+    },
+    "powerManagementEvolution": {
+      "title": "Dizüstü Güç Yönetiminin Evrimi",
+      "excerpt": "Modern güç yönetiminin temel pil tasarrufundan performans ve verimliliği optimize eden akıllı, bağlam farkında sistemlere nasıl evrildiğini keşfedin.",
+      "category": "Teknoloji",
+      "date": "15 Eylül 2025",
+      "content": {
+        "intro": "Dizüstü güç yönetimi alanı son on yılda kayda değer bir dönüşüm geçirdi. Basit pil tasarrufu modları olarak başlayan alan, performans talebi ile enerji tasarrufu arasında akıllıca denge kuran sofistike, yapay zeka destekli sistemlere evrildi.",
+        "sections": {
+          "earlyDays": {
+            "title": "Başlangıç Dönemi: Temel Güç Profilleri",
+            "content": "2010'ların başında, güç yönetimi büyük ölçüde manuel bir işti. Kullanıcılar önceden tanımlanmış güç profilleri arasında seçim yapmak zorundaydı:",
+            "profiles": [
+              {"name": "Yüksek Performans", "description": "Maksimum CPU hızı, tam ekran parlaklığı, tüm özellikler etkin"},
+              {"name": "Dengeli", "description": "Performans ve pil ömrü arasında bir uzlaşma"},
+              {"name": "Güç Tasarrufu", "description": "Minimum CPU hızları, azaltılmış ekran parlaklığı, sınırlı işlevsellik"}
+            ]
+          },
+          "intelligence": {
+            "title": "Zeka Devrimi",
+            "content": "DDOGreen'de uygulanan gibi modern güç yönetimi sistemleri, akıllı, bağlam farkında optimizasyona doğru paradigma kaymasını temsil eder."
+          },
+          "future": {
+            "title": "Güç Yönetiminin Geleceği",
+            "content": "İleriye bakıldığında, güç yönetimi sistemleri tahminsel optimizasyon ve ekosistem entegrasyonu ile daha da büyük zeka ve entegrasyon yönünde gelişiyor."
+          }
+        }
+      }
+    },
+    "crossPlatformDevelopment": {
+      "title": "Çapraz Platform Geliştirme: DDOGreen'den Dersler",
+      "excerpt": "Linux ve Windows ortamlarında sorunsuz çalışan yazılım yaratmanın zorluklarını ve çözümlerini öğrenin.",
+      "category": "Geliştirme",
+      "date": "10 Eylül 2025", 
+      "content": {
+        "intro": "Birden fazla işletim sisteminde sorunsuz çalışan yazılım geliştirmek, modern yazılım geliştirmenin en karmaşık zorluklarından biridir. DDOGreen projesi, performans, güvenilirlik ve platforma özgü optimizasyonları korurken bu zorlukların nasıl aşılacağına dair mükemmel bir örnek olay sunar.",
+        "sections": {
+          "imperative": {
+            "title": "Çapraz Platform Zorunluluğu",
+            "content": "Günümüzün çeşitli bilişim ortamında, kullanıcılar yazılımın işletim sistemi tercihlerinden bağımsız çalışmasını bekler. DDOGreen için bu, Linux dağıtımları ve Windows sürümleri arasında tutarlı işlevsellik sunarken her platformun benzersiz yeteneklerini kullanan bir güç yönetimi çözümü yaratmak anlamına geliyordu."
+          },
+          "architecture": {
+            "title": "Mimari Kararlar: Başarının Temeli",
+            "content": "Herhangi bir çapraz platform projesinin başarısı akıllı mimari kararlarla başlar. DDOGreen için temel olarak Modern C++20'yi seçtik, bu da birçok önemli avantaj sağladı."
+          },
+          "lessons": {
+            "title": "Öğrenilen Dersler ve En İyi Uygulamalar",
+            "content": "DDOGreen projesi, etkili çapraz platform geliştirmenin sadece paylaşılan koddan daha fazlasını gerektirdiğini gösterir—her hedef platformun derinlemesine anlaşılması, dikkatli mimari planlama ve tüm desteklenen ortamlarda titiz test yapılması gerekir."
+          }
+        }
+      }
     }
   },
   "footer": {
