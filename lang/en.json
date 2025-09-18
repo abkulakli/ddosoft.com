@@ -288,7 +288,7 @@
     "crossPlatformDevelopment": {
       "title": "Cross-Platform Development: Lessons from DDOGreen",
       "excerpt": "Learn the challenges and solutions involved in creating software that works seamlessly across Linux and Windows environments.",
-      "category": "Development", 
+      "category": "Development",
       "date": "September 10, 2025",
       "content": {
         "intro": "Developing software that works seamlessly across multiple operating systems is one of the most complex challenges in modern software development. The DDOGreen project provides an excellent case study in how to overcome these challenges while maintaining performance, reliability, and platform-specific optimizations.",
