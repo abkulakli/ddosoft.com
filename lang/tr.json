@@ -81,6 +81,7 @@
     "about": "Hakkımızda",
     "services": "Hizmetler",
     "products": "Ürünler",
+    "references": "Referanslar",
     "articles": "Makaleler",
     "contact": "İletişim",
     "language": "Dil",
@@ -260,6 +261,32 @@
         "description": "Yüz yüze görüşmeler için ofisimizi ziyaret edin"
       }
     ]
+  },
+  "references": {
+    "title": "Güvenilir Ortaklar ve Teknolojiler",
+    "subtitle": "Endüstri lideri teknolojilerle çalışıyor ve profesyonel kuruluşlar tarafından güveniliyor",
+    "technologies": {
+      "title": "Uzman Olduğumuz Teknolojiler"
+    },
+    "metrics": {
+      "title": "Başarı Metriklerimiz",
+      "battery": {
+        "value": "%30",
+        "label": "Pil Ömrü Uzatması"
+      },
+      "platforms": {
+        "value": "2",
+        "label": "Çapraz Platform Desteği"
+      },
+      "tests": {
+        "value": "122+",
+        "label": "Birim Testleri"
+      },
+      "experience": {
+        "value": "15+",
+        "label": "Yıl Deneyim"
+      }
+    }
   },
   "articles": {
     "sectionTitle": "Son Görüşler",
