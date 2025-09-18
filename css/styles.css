@@ -2324,6 +2324,26 @@ section {
     font-weight: var(--font-weight-medium);
 }
 
+.contact__address {
+    font-style: normal;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: var(--color-primary);
+}
+
+.contact__address span {
+    display: block;
+}
+
+.contact__address span:last-child {
+    font-weight: var(--font-weight-semibold);
+    margin-top: 0.125rem;
+}
+
 .social__links {
     display: flex;
     gap: var(--spacing-md);

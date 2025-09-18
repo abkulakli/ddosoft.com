@@ -249,7 +249,10 @@
       {
         "icon": "📍",
         "title": "Address",
-        "link": "Süleymanşah mah. 1003. sok. No:7/3<br>Onikişubat/Kahramanmaraş, Turkey",
+        "line1": "Süleymanşah Mahallesi",
+        "line2": "1003. Sokak No: 7/3",
+        "line3": "Onikişubat/Kahramanmaraş",
+        "country": "Türkiye",
         "description": "Visit our office for in-person meetings"
       }
     ]
