@@ -49,6 +49,8 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
 - Highlight DDOSoft's expertise in sustainable software
 ## Technology Stack & Architecture
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (no frameworks)
+- **Architecture**: Static website with client-side internationalization
+- **Server Requirement**: Local HTTP server needed for AJAX/fetch operations (multilingual JSON loading)
 - **Internationalization**: Full EN/TR (English/Turkish) support with dynamic language switching
 - **Design**: Modern green sustainability theme with professional layout
 - **Responsive**: Mobile-first CSS Grid and Flexbox implementation

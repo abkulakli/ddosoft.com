@@ -183,6 +183,7 @@
 ## Development Workflow & Testing Standards
 
 ### MANDATORY TESTING APPROACH
+- **CRITICAL**: Always check generated website and review changes after generation
 - **Test Every Change**: Always run local server and verify changes work correctly
 - **Cross-Device Validation**: Test on multiple screen sizes during development
 - **Functional Testing**: Verify all links, navigation, and interactive elements
@@ -190,7 +191,10 @@
 - **User Experience Testing**: Validate from end-user perspective
 
 ### Local Development Standards
-- **Server**: Use local HTTP server for testing (specific command in local.md)
+- **Static Website**: Pure HTML/CSS/JavaScript with no server-side processing
+- **Server Requirement**: Local HTTP server needed for AJAX/fetch operations (language data loading)
+- **CORS Limitation**: Cannot test multilingual features by opening files directly due to browser CORS policy
+- **Server Command**: Use local HTTP server for testing (specific command in local.md)
 - **Port Management**: Kill existing servers before starting new ones
 - **Browser Testing**: Use Simple Browser for quick validation
 - **Change Verification**: Test immediately after each modification
@@ -212,7 +216,7 @@
 1. **Planning**: Define requirements and validate approach with user
 2. **Implementation**: Build changes incrementally
 3. **Testing**: Verify each change works correctly (MANDATORY)
-4. **Website Review**: Test website functionality and fix any problems found
+4. **Website Review**: ALWAYS check generated website and review changes after generation
 5. **Code Review**: Validate code quality and fix any issues discovered
 6. **SEO Validation**: Ensure SEO-friendly implementation maintained
 7. **Multilingual Testing**: Verify both English and Turkish content work correctly
