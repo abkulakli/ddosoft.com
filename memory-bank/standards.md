@@ -1,5 +1,36 @@
 # DDOSoft Website Development Standards
 
+## Core Development Principles
+
+### DRY (Don't Repeat Yourself) - CRITICAL
+**ALWAYS prioritize code reusability and eliminate duplication:**
+
+- **Header/Footer Components**: Use shared component system for headers and footers across all pages
+- **Component Architecture**: Create reusable HTML components in `components/` directory
+- **Dynamic Loading**: Use JavaScript component loader for consistent elements
+- **Single Source of Truth**: Common elements exist in ONE place only
+- **Template Patterns**: Extract repeated HTML patterns into reusable components
+- **CSS Reusability**: Use CSS classes that can be applied across multiple elements
+- **JavaScript Functions**: Create reusable utility functions instead of duplicating code
+- **Content Management**: Store repeated content (footer links, navigation) in single locations
+
+**DRY Implementation Strategy:**
+1. **Identify Duplication**: Before creating any repeated element, check if it already exists
+2. **Extract Components**: Move repeated HTML to `components/` directory
+3. **Create Loaders**: Use JavaScript to dynamically load shared components
+4. **Smart Path Handling**: Implement relative path resolution for different page locations
+5. **Maintenance First**: Design for easy updates - change once, apply everywhere
+
+**Never Duplicate:**
+- Navigation menus
+- Footer content
+- Header structures
+- Contact information
+- Social media links
+- Copyright notices
+- Script includes (where possible)
+- CSS utility classes
+
 ## Code Quality Standards
 
 ### HTML Standards
@@ -71,22 +102,56 @@
 - **Lists**: Used for easy reading
 - **CTAs**: Clear, action-oriented
 
-## File Organization
+## File Organization & Component Architecture
 
-### Project Structure
+### Current Project Structure (DRY Implementation)
 ```
 /
-├── index.html
+├── index.html                    # Uses component placeholders
+├── articles/
+│   ├── *.html                   # All use component placeholders
+├── components/                   # 🆕 SHARED COMPONENTS (DRY)
+│   ├── header.html              # Single source header
+│   └── footer.html              # Single source footer
 ├── css/
-│   ├── styles.css
-│   └── reset.css (if needed)
+│   └── styles.css               # Unified styling
 ├── js/
-│   └── main.js
+│   ├── component-loader.js      # 🆕 Dynamic component loader
+│   ├── language-manager.js
+│   ├── main.js
+│   └── *.js
+├── lang/
+│   ├── en.json                  # English translations
+│   └── tr.json                  # Turkish translations
 ├── images/
-│   ├── logo/
-│   ├── products/
-│   └── team/
-└── assets/
+└── memory-bank/                 # Development standards
+```
+
+### Component System Implementation
+**Current Architecture (MANDATORY to maintain):**
+
+1. **Shared Components** (`components/`):
+   - `header.html`: Single source navigation with all menu items
+   - `footer.html`: Single source footer with all links and sections
+   - **Never duplicate**: These components are loaded dynamically
+
+2. **Component Loading** (`js/component-loader.js`):
+   - Smart path resolution (root vs subdirectory)
+   - Automatic link adjustment for different page locations
+   - Error handling and fallback mechanisms
+   - Caching for performance optimization
+
+3. **Page Implementation**:
+   - All pages use `<div id="header-placeholder"></div>`
+   - All pages use `<div id="footer-placeholder"></div>`  
+   - Component loader script loaded first in all pages
+   - **Zero hardcoded headers/footers anywhere**
+
+**Maintenance Rules:**
+- ✅ Change header/footer: Edit component files only
+- ✅ Add new pages: Use placeholder system
+- ❌ Never copy/paste header/footer HTML
+- ❌ Never create duplicate navigation menus
     ├── icons/
     └── fonts/ (if custom fonts)
 ```
@@ -268,6 +333,29 @@
 - **Replace String Tool**: Always include 3-5 lines of unchanged code before and after target
 - **Ambiguity Prevention**: Use sufficient context to make edits unambiguous
 - **Edit Validation**: Verify edits don't break existing functionality
+
+### DRY ENFORCEMENT RULES (MANDATORY)
+**Before creating ANY new code:**
+1. **Duplication Check**: Scan existing codebase for similar patterns or components
+2. **Component Analysis**: Determine if new element should be a reusable component
+3. **Existing System**: Use current component system for headers, footers, navigation
+4. **Single Source**: If creating repeated content, extract to shared component immediately
+5. **Future Pages**: All new pages MUST use placeholder + component loader pattern
+
+**RED FLAGS - NEVER DO:**
+- ❌ Copy/paste header or footer HTML
+- ❌ Create duplicate navigation menus
+- ❌ Hardcode contact information in multiple places
+- ❌ Duplicate social media links
+- ❌ Create separate footer sections per page
+- ❌ Skip component loader script on new pages
+
+**GREEN LIGHTS - ALWAYS DO:**
+- ✅ Use `<div id="header-placeholder"></div>` pattern
+- ✅ Load `component-loader.js` first in script order
+- ✅ Extract repeated HTML to components/ directory
+- ✅ Create reusable CSS classes
+- ✅ Document component usage patterns
 
 ### User Communication Patterns
 - **"Try Again" Requests**: Continue with current implementation, check for manual user edits first

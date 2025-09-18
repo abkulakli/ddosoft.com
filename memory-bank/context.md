@@ -49,15 +49,34 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
 - Highlight DDOSoft's expertise in sustainable software
 ## Technology Stack & Architecture
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (no frameworks)
-- **Architecture**: Static website with client-side internationalization
+- **Architecture**: Static website with DRY component system and client-side internationalization
+- **Component System**: Shared header/footer components with dynamic loading (eliminates code duplication)
 - **Deployment**: GitHub Pages ready with custom domain (ddosoft.com)
-- **Server Requirement**: Local HTTP server needed for AJAX/fetch operations (multilingual JSON loading)
+- **Server Requirement**: Local HTTP server needed for AJAX/fetch operations (multilingual JSON loading and component loading)
 - **Internationalization**: Full EN/TR (English/Turkish) support with dynamic language switching
 - **Design**: Modern green sustainability theme with professional layout
 - **Responsive**: Mobile-first CSS Grid and Flexbox implementation
 - **Performance**: Expert-validated 9.2/10 rating, fast loading
 - **SEO**: Semantic HTML, comprehensive meta tags, structured data, multilingual hreflang
 - **Accessibility**: WCAG 2.1 AA compliant with ARIA labels
+
+## DRY Component Architecture (CURRENT IMPLEMENTATION)
+
+### Component System Details
+- **Shared Components**: `components/header.html` and `components/footer.html` (single source of truth)
+- **Dynamic Loading**: `js/component-loader.js` provides intelligent component loading with path resolution
+- **Zero Duplication**: All pages use placeholder divs, no hardcoded headers/footers anywhere
+- **Smart Path Handling**: Automatically adjusts relative paths for root vs subdirectory pages
+- **Maintenance**: Change header/footer once, applies to all pages immediately
+
+### Implementation Pattern
+```html
+<!-- All pages use this pattern -->
+<div id="header-placeholder"></div>
+<!-- page content -->
+<div id="footer-placeholder"></div>
+<script src="js/component-loader.js"></script>
+```
 
 ## Multilingual Architecture (EN/TR)
 
@@ -76,7 +95,7 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
 
 ## Current Website Structure
 
-### Core Pages (Multilingual)
+### Core Pages (Multilingual + DRY Components)
 1. **index.html** - Main homepage with complete bilingual content
    - Hero section with mission statement (EN/TR)
    - About Us with co-founder information (EN/TR)
