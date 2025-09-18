@@ -50,6 +50,7 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
 ## Technology Stack & Architecture
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (no frameworks)
 - **Architecture**: Static website with client-side internationalization
+- **Deployment**: GitHub Pages ready with custom domain (ddosoft.com)
 - **Server Requirement**: Local HTTP server needed for AJAX/fetch operations (multilingual JSON loading)
 - **Internationalization**: Full EN/TR (English/Turkish) support with dynamic language switching
 - **Design**: Modern green sustainability theme with professional layout

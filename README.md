@@ -1,21 +1,38 @@
 # DDOSoft Website
 
-A modern, responsive website for DDOSoft - a sustainable software solutions company specializing in green technology and intelligent power management.
+Professional website for DDOSoft - Sustainable software solutions specializing in green technology and intelligent power management.
 
 ## 🌟 Features
 
-- **Modern Design**: Clean, professional aesthetic with sustainability-focused green theme
+- **Multilingual Support**: Full English/Turkish (EN/TR) internationalization with real-time switching
+- **Modern Design**: Professional green sustainability theme with clean, spacious layout
+- **SEO Optimized**: Comprehensive SEO with structured data, XML sitemap, and multilingual meta tags
 - **Fully Responsive**: Mobile-first design that works perfectly on all device sizes
-- **Performance Optimized**: Fast loading times with optimized assets and code
-- **Accessibility Compliant**: WCAG 2.1 AA standards with full keyboard navigation
+- **Performance Optimized**: Fast loading times (<3s) with optimized assets and efficient code
+- **Accessibility Compliant**: WCAG 2.1 AA standards with full keyboard navigation and screen reader support
 - **SEO Optimized**: Semantic HTML, meta tags, and structured data
 - **Interactive Elements**: Smooth animations and engaging user interactions
 
-## 🛠 Technologies Used
+## � GitHub Pages Deployment
 
-- **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Modern features including CSS Grid, Flexbox, and custom properties
-- **Vanilla JavaScript**: No framework dependencies, lightweight and fast
+This website is configured for seamless GitHub Pages deployment with custom domain support:
+
+### Quick Setup
+1. **Enable GitHub Pages** in repository settings  
+2. **Set source** to "Deploy from a branch" → `main` branch → `/ (root)`
+3. **Custom domain** (optional): CNAME file is configured for `ddosoft.com`
+
+### GitHub Pages Configuration Files
+- `.nojekyll` - Prevents Jekyll processing that could interfere with static files
+- `CNAME` - Custom domain configuration for ddosoft.com
+- `.github/workflows/deploy.yml` - Automated deployment with GitHub Actions
+
+## �🛠 Technologies Used
+
+- **HTML5**: Semantic markup with multilingual support and accessibility features
+- **CSS3**: Modern responsive design with CSS Grid, Flexbox, and custom properties
+- **Vanilla JavaScript**: ES6+ features, no framework dependencies, lightweight and fast
+- **Internationalization**: Complete EN/TR bilingual system with real-time language switching
 - **Progressive Enhancement**: Works without JavaScript, enhanced with it
 
 ## 📁 Project Structure

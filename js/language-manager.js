@@ -39,7 +39,7 @@ class LanguageManager {
     }
 
     async loadLanguageData(language) {
-        const response = await fetch(`/lang/${language}.json`);
+        const response = await fetch(`./lang/${language}.json`);
         this.languageData = await response.json();
     }
 
