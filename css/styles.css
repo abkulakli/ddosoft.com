@@ -992,16 +992,16 @@ section {
     .products__grid {
         grid-template-columns: 1fr;
     }
-    
+
     .product-detail-modal__content {
         width: 95%;
         margin: var(--spacing-md);
     }
-    
+
     .product-detail-modal__body {
         padding: var(--spacing-lg);
     }
-    
+
     .platforms {
         grid-template-columns: 1fr;
     }

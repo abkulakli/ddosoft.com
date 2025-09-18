@@ -540,9 +540,9 @@ class ProductModal {
         // Product card click events
         this.productCards.forEach(card => {
             card.addEventListener('click', (e) => {
-                if (!e.target.classList.contains('product-card__details-btn') && 
+                if (!e.target.classList.contains('product-card__details-btn') &&
                     !e.target.closest('.product-card__details-btn')) return;
-                
+
                 e.preventDefault();
                 const productId = card.dataset.product;
                 this.showProductDetail(productId);
@@ -580,7 +580,7 @@ class ProductModal {
         if (!productData) return;
 
         this.modalContent.innerHTML = this.renderProductDetail(productData);
-        
+
         // Set up close button after content is rendered
         this.closeButton = this.modal.querySelector('.product-detail-modal__close');
         if (this.closeButton) {
@@ -736,7 +736,7 @@ class ProductModal {
 
         // Focus trap setup
         this.setupFocusTrap();
-        
+
         // Focus the close button
         setTimeout(() => {
             if (this.closeButton) {
@@ -749,7 +749,7 @@ class ProductModal {
         this.modal.classList.remove('is-active');
         document.body.style.overflow = '';
         this.isOpen = false;
-        
+
         // Return focus to the trigger element if possible
         const activeCard = document.querySelector('.product-card:focus-within');
         if (activeCard) {
