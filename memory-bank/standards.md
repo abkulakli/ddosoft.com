@@ -144,7 +144,7 @@
    - Cultural adaptation for Turkish market
 
 3. **Review website after changes and fix problems**: Mandatory validation process
-   - Test on local server (localhost:8080) after every change
+   - Test on local development server after every change
    - Cross-device and browser testing
    - Functional verification of all features
    - User experience validation
@@ -190,7 +190,7 @@
 - **User Experience Testing**: Validate from end-user perspective
 
 ### Local Development Standards
-- **Server**: Use `python3 -m http.server 8080` for local testing
+- **Server**: Use local HTTP server for testing (specific command in local.md)
 - **Port Management**: Kill existing servers before starting new ones
 - **Browser Testing**: Use Simple Browser for quick validation
 - **Change Verification**: Test immediately after each modification
@@ -251,7 +251,7 @@
 ### Development Response Standards
 - **No Assumptions**: Always gather context before performing tasks
 - **Tool Usage Priority**: Use appropriate tools rather than assuming or guessing
-- **Testing Requirement**: Test implementations on local server (localhost:8080)
+- **Testing Requirement**: Test implementations on local development server
 - **Memory Bank Updates**: Update memory bank after significant feature completions
 - **Code Review**: Validate implementations meet quality standards before completion
 
@@ -266,3 +266,28 @@
 - **Context Gathering**: Use file reading tools to understand current implementation
 - **Incremental Changes**: Make smaller, testable changes rather than large modifications
 - **Validation Steps**: Test each significant change before moving to next step
+
+## File Edit Safety Requirements (MANDATORY)
+- **Always Check Current State**: Read file contents before making any edits to verify current state
+- **Manual Edit Detection**: When user has manually edited files between interactions, validate current state
+- **Replace String Context**: Always include 3-5 lines of unchanged code before and after target changes
+- **Ambiguity Prevention**: Use sufficient context to make string replacements unambiguous
+- **Edit Validation**: Verify edits don't break existing functionality after changes
+
+## Communication and Response Patterns
+- **"Try Again" Requests**: Continue with current implementation, check for manual user edits first
+- **Manual Edit Handling**: When user edits files between interactions, validate current state before proceeding
+- **Progress Communication**: Use todo list management for complex multi-step work
+- **Implementation Approach**: Plan first, then implement incrementally with testing
+- **No Assumptions Policy**: Always gather context before performing tasks
+- **Tool Usage Priority**: Use appropriate tools rather than assuming or guessing
+- **Testing Requirement**: Test implementations on local development server
+- **Memory Bank Updates**: Update memory bank after significant feature completions
+
+## Development Response Standards
+- **Context First**: Always gather necessary context before starting work
+- **Incremental Work**: Make smaller, testable changes rather than large modifications  
+- **Testing Mandate**: Test each significant change before moving to next step
+- **Code Quality**: Validate implementations meet established quality standards before completion
+- **Clear Communication**: Explain what was accomplished and current project status
+- **Business Focus**: Connect technical work to business value and user experience
