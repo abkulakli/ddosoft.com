@@ -94,6 +94,19 @@
     "vision": {
       "title": "Our Approach",
       "text": "With 15+ years of proven experience in software architecture, cloud systems, and digital transformation, we deliver comprehensive solutions spanning from legacy system modernization to cutting-edge sustainable software development. Our expertise covers the full technology stack - from embedded systems to cloud platforms."
+    },
+    "founders": {
+      "title": "Meet Our Founders",
+      "people": [
+        {
+          "name": "Ayşe Pınar KULAKLI",
+          "role": "Co-Founder & Administrative"
+        },
+        {
+          "name": "Ali Burak KULAKLI",
+          "role": "Co-Founder & Technical Lead"
+        }
+      ]
     }
   },
   "services": {
