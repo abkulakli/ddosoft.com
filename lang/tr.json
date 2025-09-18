@@ -102,24 +102,6 @@
     "vision": {
       "title": "Yaklaşımımız",
       "text": "Gelişmiş algoritmalar, çapraz platform mühendisliği ve titiz testlerle, Linux ve Windows ortamlarında sorunsuz çalışan üretime hazır yazılımlar yaratıyoruz. Çözümlerimiz sıfır yapılandırma gerektirirken ölçülebilir enerji tasarrufu sağlar."
-    },
-    "stats": {
-      "energySavings": "Enerji Tasarrufu",
-      "unitTests": "Birim Test",
-      "platforms": "Platform"
-    },
-    "founders": {
-      "title": "Kurucularımızla Tanışın",
-      "people": [
-        {
-          "name": "Ayşe Pınar KULAKLI",
-          "role": "Kurucu Ortak - İdari"
-        },
-        {
-          "name": "Ali Burak KULAKLI",
-          "role": "Kurucu Ortak - Teknik"
-        }
-      ]
     }
   },
   "services": {
