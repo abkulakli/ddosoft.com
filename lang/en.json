@@ -71,6 +71,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
+    "services": "Services",
     "products": "Products",
     "articles": "Articles",
     "contact": "Contact",
@@ -79,7 +80,7 @@
   },
   "hero": {
     "title": "Sustainable Software Solutions",
-    "subtitle": "We create intelligent, environmentally-conscious software that reduces energy consumption while delivering exceptional performance. Leading the future of green technology.",
+    "subtitle": "Expert software consulting, digital transformation, and sustainable development services. We create intelligent, environmentally-conscious solutions that reduce energy consumption while delivering exceptional performance.",
     "cta": "View Products",
     "scrollHint": "Learn More"
   },
@@ -88,11 +89,11 @@
     "subtitle": "Pioneering sustainable software development with a focus on environmental impact and performance",
     "mission": {
       "title": "Our Mission",
-      "text": "At DDOSoft, we believe that powerful software shouldn't come at the expense of our planet. We develop intelligent solutions that optimize system performance while significantly reducing energy consumption, helping businesses and individuals minimize their environmental footprint."
+      "text": "At DDOSoft, we believe that powerful software shouldn't come at the expense of our planet. We provide expert consulting and development services to help organizations transform their technology infrastructure while significantly reducing energy consumption and environmental impact."
     },
     "vision": {
       "title": "Our Approach",
-      "text": "Through advanced algorithms, cross-platform engineering, and rigorous testing, we create production-ready software that works seamlessly across Linux and Windows environments. Our solutions require zero configuration while delivering measurable energy savings."
+      "text": "With 15+ years of proven experience in software architecture, cloud systems, and digital transformation, we deliver comprehensive solutions spanning from legacy system modernization to cutting-edge sustainable software development. Our expertise covers the full technology stack - from embedded systems to cloud platforms."
     },
     "stats": {
       "energySavings": "Energy Savings",
@@ -104,13 +105,47 @@
       "people": [
         {
           "name": "Ayşe Pınar KULAKLI",
-          "role": "Co-Founder"
+          "role": "Co-Founder & Administrative"
         },
         {
           "name": "Ali Burak KULAKLI",
-          "role": "Co-Founder & Lead Developer"
+          "role": "Co-Founder & Technical Lead"
         }
       ]
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Expert consulting and development services to transform your technology infrastructure",
+    "consulting": {
+      "title": "Software Consulting",
+      "description": "Expert guidance on software architecture, technology selection, and best practices for scalable solutions across cloud and embedded systems.",
+      "features": [
+        "System architecture design",
+        "Technology stack optimization",
+        "Performance analysis & improvement"
+      ]
+    },
+    "transformation": {
+      "title": "Digital Transformation",
+      "description": "Modernize legacy systems and processes with cloud migration, automation, and sustainable technology solutions.",
+      "features": [
+        "Cloud migration strategies",
+        "Legacy system modernization",
+        "Process automation"
+      ]
+    },
+    "development": {
+      "title": "Custom Development",
+      "description": "Backend systems, APIs, and cross-platform solutions built with Python, C++, and modern cloud technologies.",
+      "features": [
+        "Backend & API development",
+        "Cross-platform solutions",
+        "Integration & protocol development"
+      ]
+    },
+    "expertise": {
+      "title": "Our Expertise"
     }
   },
   "products": {
@@ -201,6 +236,18 @@
         "title": "LinkedIn",
         "link": "DDOSoft Company Page",
         "description": "Follow us for updates and industry insights"
+      },
+      {
+        "icon": "📞",
+        "title": "Phone",
+        "link": "+90 530 309 76 49",
+        "description": "Call us for urgent inquiries and consultations"
+      },
+      {
+        "icon": "📍",
+        "title": "Address",
+        "link": "Süleymanşah mah. 1003. sok. No:7/3<br>Onikişubat/Kahramanmaraş, Turkey",
+        "description": "Visit our office for in-person meetings"
       }
     ]
   },

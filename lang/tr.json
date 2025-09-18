@@ -2,7 +2,15 @@
   "meta": {
     "site": {
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-      "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
+    "mission": {
+      "title": "Misyonumuz",
+      "text": "DDOSoft olarak, güçlü yazılımların gezegenimiz pahasına olmaması gerektiğine inanıyoruz. Kuruluşların teknoloji altyapılarını dönüştürürken enerji tüketimini ve çevresel etkiyi önemli ölçüde azaltmalarına yardımcı olmak için uzman danışmanlık ve geliştirme hizmetleri sağlıyoruz."
+    },
+    "vision": {
+      "title": "Yaklaşımımız",
+      "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında kanıtlanmış 15+ yıllık deneyimimizle, eski sistem modernizasyonundan son teknoloji sürdürülebilir yazılım geliştirmeye kadar kapsamlı çözümler sunuyoruz. Uzmanlığımız gömülü sistemlerden bulut platformlarına kadar tüm teknoloji yığınını kapsar."
+    },
+    "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -71,6 +79,7 @@
   "nav": {
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
+    "services": "Hizmetler",
     "products": "Ürünler",
     "articles": "Makaleler",
     "contact": "İletişim",
@@ -79,7 +88,7 @@
   },
   "hero": {
     "title": "Sürdürülebilir Yazılım Çözümleri",
-    "subtitle": "Gezegenimize saygı gösteren ve performansı optimize eden yenilikçi teknoloji yaratıyoruz. Enerji tüketimini azaltırken olağanüstü performans sunan akıllı, çevreye duyarlı yazılımlar geliştiriyoruz. Yeşil teknolojinin geleceğine öncülük ediyoruz.",
+    "subtitle": "Uzman yazılım danışmanlığı, dijital dönüşüm ve sürdürülebilir geliştirme hizmetleri. Enerji tüketimini azaltırken olağanüstü performans sunan akıllı, çevre dostu çözümler yaratıyoruz.",
     "cta": "Ürünleri Görüntüle",
     "scrollHint": "Daha Fazla Bilgi"
   },
@@ -104,13 +113,47 @@
       "people": [
         {
           "name": "Ayşe Pınar KULAKLI",
-          "role": "Kurucu Ortak"
+          "role": "Kurucu Ortak - İdari"
         },
         {
           "name": "Ali Burak KULAKLI",
-          "role": "Kurucu Ortak & Baş Geliştirici"
+          "role": "Kurucu Ortak - Teknik"
         }
       ]
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Teknoloji altyapınızı dönüştürmek için uzman danışmanlık ve geliştirme hizmetleri",
+    "consulting": {
+      "title": "Yazılım Danışmanlığı",
+      "description": "Bulut ve gömülü sistemler genelinde ölçeklenebilir çözümler için yazılım mimarisi, teknoloji seçimi ve en iyi uygulamalar konusunda uzman rehberlik.",
+      "features": [
+        "Sistem mimarisi tasarımı",
+        "Teknoloji yığını optimizasyonu",
+        "Performans analizi ve iyileştirme"
+      ]
+    },
+    "transformation": {
+      "title": "Dijital Dönüşüm",
+      "description": "Bulut göçü, otomasyon ve sürdürülebilir teknoloji çözümleri ile eski sistemleri ve süreçleri modernize edin.",
+      "features": [
+        "Bulut göç stratejileri",
+        "Eski sistem modernizasyonu",
+        "Süreç otomasyonu"
+      ]
+    },
+    "development": {
+      "title": "Özel Geliştirme",
+      "description": "Python, C++ ve modern bulut teknolojileri ile geliştirilmiş backend sistemleri, API'ler ve çapraz platform çözümleri.",
+      "features": [
+        "Backend ve API geliştirme",
+        "Çapraz platform çözümleri",
+        "Entegrasyon ve protokol geliştirme"
+      ]
+    },
+    "expertise": {
+      "title": "Uzmanlık Alanlarımız"
     }
   },
   "products": {
@@ -201,6 +244,18 @@
         "title": "LinkedIn",
         "link": "DDOSoft Şirket Sayfası",
         "description": "Güncellemeler ve sektör görüşleri için bizi takip edin"
+      },
+      {
+        "icon": "📞",
+        "title": "Telefon",
+        "link": "+90 530 309 76 49",
+        "description": "Acil sorularınız ve danışmanlık için bizi arayın"
+      },
+      {
+        "icon": "📍",
+        "title": "Adres",
+        "link": "Süleymanşah mah. 1003. sok. No:7/3<br>Onikişubat/Kahramanmaraş, Türkiye",
+        "description": "Yüz yüze görüşmeler için ofisimizi ziyaret edin"
       }
     ]
   },
