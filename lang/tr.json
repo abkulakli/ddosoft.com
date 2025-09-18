@@ -160,6 +160,10 @@
       "version": "Son Sürüm: v0.3.1",
       "intro": "DDOGreen, dizüstü bilgisayarınızı gerçek sistem kullanımına dayalı olarak otomatik olarak yüksek performans ve güç tasarrufu modları arasında geçiren akıllı, üretime hazır bir güç yönetimi aracıdır.",
       "highlight": "Sıfır performans kaybıyla %20-30 daha uzun pil ömrü",
+      "card": {
+        "category": "Güç Yönetimi",
+        "excerpt": "Linux ve Windows platformlarında pil ömrünü %20-30 uzatan akıllı güç yönetimi aracı."
+      },
       "features": {
         "title": "Temel Özellikler",
         "items": [
@@ -222,6 +226,9 @@
         "github": "GitHub'da Görüntüle",
         "releases": "Son Sürümü İndirin"
       }
+    },
+    "card": {
+      "learnMore": "Daha Fazla Bilgi →"
     }
   },
   "contact": {

@@ -272,105 +272,77 @@
                     </p>
                 </div>
 
-                <!-- DDOGreen Product Showcase -->
-                <div class="product-showcase">
-                    <div class="product">
-                        <div class="product__header">
-                            <h3 class="product__name" data-lang-key="products.ddogreen.name">DDOGreen</h3>
-                            <p class="product__tagline" data-lang-key="products.ddogreen.tagline">Smart Power Management That Just Works</p>
-                            <p class="product__version" data-lang-key="products.ddogreen.version">Latest Version: v0.3.1</p>
+                <!-- Products Grid -->
+                <div class="products__grid" id="products-grid">
+                    <!-- DDOGreen Product Card -->
+                    <article class="product-card" data-product="ddogreen" data-category="power-management">
+                        <div class="product-card__image">
+                            <div class="product-card__image-placeholder">
+                                <span class="product-card__image-icon">🔋</span>
+                            </div>
                         </div>
-
-                        <div class="product__content">
-                            <div class="product__description">
-                                <p class="product__intro" data-lang-key="products.ddogreen.intro">
-                                    DDOGreen is an intelligent, production-ready power management tool that automatically
-                                    switches your laptop between high-performance and power-saving modes based on actual
-                                    system usage.
-                                </p>
-
-                                <div class="product__highlight">
-                                    <strong data-lang-key="products.ddogreen.highlight">20-30% longer battery life with zero performance compromise</strong>
-                                </div>
+                        <div class="product-card__content">
+                            <div class="product-card__meta">
+                                <span class="product-card__category" data-lang-key="products.ddogreen.card.category">Power Management</span>
+                                <span class="product-card__version" data-lang-key="products.ddogreen.version">v0.3.1</span>
                             </div>
-
-                            <div class="product__features">
-                                <h4 data-lang-key="products.ddogreen.features.title">Key Features</h4>
-                                <ul class="feature-list">
-                                    <li class="feature-item">
-                                        <strong data-lang-key="products.ddogreen.features.items.0.title">Automatic Power Management:</strong>
-                                        <span data-lang-key="products.ddogreen.features.items.0.description">Intelligent switching based on CPU load monitoring</span>
-                                    </li>
-                                    <li class="feature-item">
-                                        <strong data-lang-key="products.ddogreen.features.items.1.title">Cross-Platform Support:</strong>
-                                        <span data-lang-key="products.ddogreen.features.items.1.description">Native Linux (TLP) and Windows (Power Plans) integration</span>
-                                    </li>
-                                    <li class="feature-item">
-                                        <strong data-lang-key="products.ddogreen.features.items.2.title">Zero Configuration:</strong>
-                                        <span data-lang-key="products.ddogreen.features.items.2.description">Works perfectly out of the box with hardcoded sensible defaults</span>
-                                    </li>
-                                    <li class="feature-item">
-                                        <strong data-lang-key="products.ddogreen.features.items.3.title">Enterprise Ready:</strong>
-                                        <span data-lang-key="products.ddogreen.features.items.3.description">Full systemd and Windows Service Manager integration</span>
-                                    </li>
-                                    <li class="feature-item">
-                                        <strong data-lang-key="products.ddogreen.features.items.4.title">Production Quality:</strong>
-                                        <span data-lang-key="products.ddogreen.features.items.4.description">122 comprehensive unit tests and professional CI/CD validation</span>
-                                    </li>
-                                </ul>
+                            <h3 class="product-card__title" data-lang-key="products.ddogreen.name">DDOGreen</h3>
+                            <p class="product-card__tagline" data-lang-key="products.ddogreen.tagline">Smart Power Management That Just Works</p>
+                            <p class="product-card__excerpt" data-lang-key="products.ddogreen.card.excerpt">
+                                Intelligent power management tool that extends battery life by 20-30% across Linux and Windows platforms.
+                            </p>
+                            <div class="product-card__platforms">
+                                <span class="platform-badge">Linux</span>
+                                <span class="platform-badge">Windows</span>
                             </div>
+                            <button class="product-card__details-btn" data-lang-key="products.card.learnMore">
+                                Learn More →
+                            </button>
+                        </div>
+                    </article>
 
-                            <div class="product__platforms">
-                                <h4 data-lang-key="products.ddogreen.platforms.title">Platform Support</h4>
-                                <div class="platforms">
-                                    <div class="platform">
-                                        <h5 data-lang-key="products.ddogreen.platforms.linux.title">Linux Systems</h5>
-                                        <ul>
-                                            <li data-lang-key="products.ddogreen.platforms.linux.features.0">TLP integration (tlp ac / tlp bat)</li>
-                                            <li data-lang-key="products.ddogreen.platforms.linux.features.1">Systemd service management</li>
-                                            <li data-lang-key="products.ddogreen.platforms.linux.features.2">DEB, RPM, and TGZ packages</li>
-                                            <li data-lang-key="products.ddogreen.platforms.linux.features.3">Native /proc/loadavg monitoring</li>
-                                        </ul>
-                                    </div>
+                    <!-- Future product cards will be added here -->
+                    <!-- Example: Additional Product Card Template (commented for future use)
+                    <article class="product-card" data-product="future-product" data-category="development">
+                        <div class="product-card__image">
+                            <div class="product-card__image-placeholder">
+                                <span class="product-card__image-icon">⚙️</span>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__meta">
+                                <span class="product-card__category">Development Tools</span>
+                                <span class="product-card__version">v1.0.0</span>
+                            </div>
+                            <h3 class="product-card__title">Future Product</h3>
+                            <p class="product-card__tagline">Next generation development tool</p>
+                            <p class="product-card__excerpt">
+                                Description of the future product and its benefits.
+                            </p>
+                            <div class="product-card__platforms">
+                                <span class="platform-badge">Cross-Platform</span>
+                            </div>
+                            <button class="product-card__details-btn">
+                                Learn More →
+                            </button>
+                        </div>
+                    </article>
+                    -->
+                </div>
 
-                                    <div class="platform">
-                                        <h5 data-lang-key="products.ddogreen.platforms.windows.title">Windows Systems</h5>
-                                        <ul>
-                                            <li data-lang-key="products.ddogreen.platforms.windows.features.0">Windows Power Plans integration</li>
-                                            <li data-lang-key="products.ddogreen.platforms.windows.features.1">Service Manager integration</li>
-                                            <li data-lang-key="products.ddogreen.platforms.windows.features.2">MSI installer package</li>
-                                            <li data-lang-key="products.ddogreen.platforms.windows.features.3">Performance Counters monitoring</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="product__architecture">
-                                    <h4 data-lang-key="products.ddogreen.architecture.title">Technical Architecture</h4>
-                                    <ul class="feature-list">
-                                        <li data-lang-key="products.ddogreen.architecture.features.0">Modern C++20 with cross-platform compatibility</li>
-                                        <li data-lang-key="products.ddogreen.architecture.features.1">Smart hysteresis behavior (70% high performance, 30% power save)</li>
-                                        <li data-lang-key="products.ddogreen.architecture.features.2">Real-time CPU load monitoring with platform optimizations</li>
-                                        <li data-lang-key="products.ddogreen.architecture.features.3">Professional logging and error handling</li>
-                                        <li data-lang-key="products.ddogreen.architecture.features.4">Memory-efficient design with minimal system impact</li>
-                                    </ul>
-                                </div>
-                            </div>                            <div class="product__cta">
-                                <a href="https://github.com/abkulakli/ddogreen/releases/latest"
-                                   class="btn btn--primary"
-                                   target="_blank"
-                                   rel="noopener">
-                                    Download DDOGreen
-                                </a>
-                                <a href="https://github.com/abkulakli/ddogreen"
-                                   class="btn btn--secondary"
-                                   target="_blank"
-                                   rel="noopener">
-                                    View on GitHub
-                                </a>
+                <!-- Product Detail Modal -->
+                <div class="product-detail-modal" id="product-detail-modal">
+                    <div class="product-detail-modal__overlay">
+                        <div class="product-detail-modal__content">
+                            <button class="product-detail-modal__close" aria-label="Close details">×</button>
+                            <div class="product-detail-modal__body" id="product-detail-content">
+                                <!-- Product details will be dynamically loaded here -->
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
                 <!-- Benefits Section -->
                 <div class="benefits">

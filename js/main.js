@@ -449,7 +449,8 @@ class DDOSoftWebsite {
                 new HeaderScrollEffects(),
                 new ScrollAnimations(),
                 new PerformanceOptimizations(),
-                new AccessibilityEnhancements()
+                new AccessibilityEnhancements(),
+                new ProductModal()
             ];
 
             console.log('DDOSoft website initialized successfully');
@@ -513,3 +514,273 @@ dynamicStyles.textContent = `
 `;
 
 document.head.appendChild(dynamicStyles);
+
+// =============================================================================
+// Product Modal
+// =============================================================================
+
+class ProductModal {
+    constructor() {
+        this.modal = document.getElementById('product-detail-modal');
+        this.modalContent = document.getElementById('product-detail-content');
+        this.closeButton = null;
+        this.productCards = document.querySelectorAll('.product-card');
+        this.isOpen = false;
+
+        this.init();
+    }
+
+    init() {
+        if (!this.modal || !this.modalContent) return;
+
+        this.setupEventListeners();
+    }
+
+    setupEventListeners() {
+        // Product card click events
+        this.productCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('product-card__details-btn') && 
+                    !e.target.closest('.product-card__details-btn')) return;
+                
+                e.preventDefault();
+                const productId = card.dataset.product;
+                this.showProductDetail(productId);
+            });
+
+            // Add click event for the details button specifically
+            const detailsBtn = card.querySelector('.product-card__details-btn');
+            if (detailsBtn) {
+                detailsBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const productId = card.dataset.product;
+                    this.showProductDetail(productId);
+                });
+            }
+        });
+
+        // Close modal events
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal || e.target.classList.contains('product-detail-modal__overlay')) {
+                this.closeModal();
+            }
+        });
+
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isOpen) {
+                this.closeModal();
+            }
+        });
+    }
+
+    showProductDetail(productId) {
+        const productData = this.getProductData(productId);
+        if (!productData) return;
+
+        this.modalContent.innerHTML = this.renderProductDetail(productData);
+        
+        // Set up close button after content is rendered
+        this.closeButton = this.modal.querySelector('.product-detail-modal__close');
+        if (this.closeButton) {
+            this.closeButton.addEventListener('click', () => this.closeModal());
+        }
+
+        this.openModal();
+    }
+
+    getProductData(productId) {
+        // Product data definitions
+        const products = {
+            ddogreen: {
+                id: 'ddogreen',
+                name: 'DDOGreen',
+                tagline: 'Smart Power Management That Just Works',
+                version: 'v0.3.1',
+                intro: 'DDOGreen is an intelligent, production-ready power management tool that automatically switches your laptop between high-performance and power-saving modes based on actual system usage.',
+                highlight: '20-30% longer battery life with zero performance compromise',
+                features: [
+                    {
+                        title: 'Automatic Power Management',
+                        description: 'Intelligent switching based on CPU load monitoring'
+                    },
+                    {
+                        title: 'Cross-Platform Support',
+                        description: 'Native Linux (TLP) and Windows (Power Plans) integration'
+                    },
+                    {
+                        title: 'Zero Configuration',
+                        description: 'Works perfectly out of the box with hardcoded sensible defaults'
+                    },
+                    {
+                        title: 'Enterprise Ready',
+                        description: 'Full systemd and Windows Service Manager integration'
+                    },
+                    {
+                        title: 'Production Quality',
+                        description: '122 comprehensive unit tests and professional CI/CD validation'
+                    }
+                ],
+                platforms: {
+                    linux: {
+                        title: 'Linux Systems',
+                        features: [
+                            'TLP integration (tlp ac / tlp bat)',
+                            'Systemd service management',
+                            'DEB, RPM, and TGZ packages',
+                            'Native /proc/loadavg monitoring'
+                        ]
+                    },
+                    windows: {
+                        title: 'Windows Systems',
+                        features: [
+                            'Windows Power Plans integration',
+                            'Service Manager integration',
+                            'MSI installer package',
+                            'Performance Counters monitoring'
+                        ]
+                    }
+                },
+                architecture: {
+                    title: 'Technical Architecture',
+                    features: [
+                        'Modern C++20 with cross-platform compatibility',
+                        'Smart hysteresis behavior (70% high performance, 30% power save)',
+                        'Real-time CPU load monitoring with platform optimizations',
+                        'Professional logging and error handling',
+                        'Memory-efficient design with minimal system impact'
+                    ]
+                },
+                links: {
+                    download: 'https://github.com/abkulakli/ddogreen/releases/latest',
+                    github: 'https://github.com/abkulakli/ddogreen'
+                }
+            }
+        };
+
+        return products[productId] || null;
+    }
+
+    renderProductDetail(product) {
+        return `
+            <div class="product-detail">
+                <div class="product-detail__header">
+                    <h3 class="product-detail__name">${product.name}</h3>
+                    <p class="product-detail__tagline">${product.tagline}</p>
+                    <p class="product-detail__version">Latest Version: ${product.version}</p>
+                </div>
+
+                <div class="product-detail__content">
+                    <div class="product-detail__description">
+                        <p class="product-detail__intro">${product.intro}</p>
+                        <div class="product-detail__highlight">
+                            <strong>${product.highlight}</strong>
+                        </div>
+                    </div>
+
+                    <div class="product-detail__features">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            ${product.features.map(feature => `
+                                <li class="feature-item">
+                                    <strong>${feature.title}:</strong>
+                                    <span>${feature.description}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="product-detail__platforms">
+                        <h4>Platform Support</h4>
+                        <div class="platforms">
+                            <div class="platform">
+                                <h5>${product.platforms.linux.title}</h5>
+                                <ul>
+                                    ${product.platforms.linux.features.map(feature => `<li>${feature}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div class="platform">
+                                <h5>${product.platforms.windows.title}</h5>
+                                <ul>
+                                    ${product.platforms.windows.features.map(feature => `<li>${feature}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product-detail__architecture">
+                            <h4>${product.architecture.title}</h4>
+                            <ul class="feature-list">
+                                ${product.architecture.features.map(feature => `<li>${feature}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-detail__cta">
+                        <a href="${product.links.download}" class="btn btn--primary" target="_blank" rel="noopener">
+                            Download ${product.name}
+                        </a>
+                        <a href="${product.links.github}" class="btn btn--secondary" target="_blank" rel="noopener">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    openModal() {
+        this.modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+        this.isOpen = true;
+
+        // Focus trap setup
+        this.setupFocusTrap();
+        
+        // Focus the close button
+        setTimeout(() => {
+            if (this.closeButton) {
+                this.closeButton.focus();
+            }
+        }, 100);
+    }
+
+    closeModal() {
+        this.modal.classList.remove('is-active');
+        document.body.style.overflow = '';
+        this.isOpen = false;
+        
+        // Return focus to the trigger element if possible
+        const activeCard = document.querySelector('.product-card:focus-within');
+        if (activeCard) {
+            const detailsBtn = activeCard.querySelector('.product-card__details-btn');
+            if (detailsBtn) {
+                detailsBtn.focus();
+            }
+        }
+    }
+
+    setupFocusTrap() {
+        const focusableElements = this.modal.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        this.modal.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            }
+        });
+    }
+}

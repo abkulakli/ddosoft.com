@@ -152,6 +152,10 @@
       "version": "Latest Version: v0.3.1",
       "intro": "DDOGreen is an intelligent, production-ready power management tool that automatically switches your laptop between high-performance and power-saving modes based on actual system usage.",
       "highlight": "20-30% longer battery life with zero performance compromise",
+      "card": {
+        "category": "Power Management",
+        "excerpt": "Intelligent power management tool that extends battery life by 20-30% across Linux and Windows platforms."
+      },
       "features": {
         "title": "Key Features",
         "items": [
@@ -214,6 +218,9 @@
         "github": "View on GitHub",
         "releases": "Download Latest Release"
       }
+    },
+    "card": {
+      "learnMore": "Learn More →"
     }
   },
   "contact": {
