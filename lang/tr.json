@@ -746,8 +746,73 @@
             "title": "Gerçek Dünya Uygulaması: DDOGreen Vaka Çalışması"
           },
           "conclusion": {
-            "title": "Sonuç"
+            "title": "Sonuç",
+            "paragraph1": "Sürdürülebilir yazılım geliştirme sadece çevresel bir zorunluluk değil—aynı zamanda rekabet avantajıdır. Daha az enerji tüketen, cihaz pil ömrünü uzatan ve kaynak kullanımını minimize eden yazılım, çevresel korumaya katkıda bulunurken üstün kullanıcı deneyimleri sağlar.",
+            "paragraph2": "Bu kılavuzda özetlenen ilkeler, çevresel olarak bilinçli yazılım geliştirmek için bir temel sağlar. Gereksinim toplanmasından dağıtım ve izlemeye kadar geliştirmenin her aşamasına sürdürülebilirlik hususlarını entegre ederek, hem insan ihtiyaçlarına hem de gezegen sağlığına hizmet eden teknoloji yaratabiliriz.",
+            "paragraph3": "DDOGreen gibi projeler, sürdürülebilir yazılım geliştirmenin sadece mümkün değil aynı zamanda kârlı olduğunu göstermektedir. Bu ilkeleri benimser, geliştiriciler ve organizasyonlar kullanıcılara olağanüstü değer sunarken daha sürdürülebilir dijital geleceğe geçişte liderlik edebilir.",
+            "paragraph4": "Yazılım geliştirmenin geleceği sürdürülebilirdir. Soru bu ilkeleri benimseyyip benimsemeyeceğimiz değil, bunları endüstrimizde ne kadar hızlı uygulayabileceğimizdir. Bugün başlayın, etkimizi ölçün ve sürdürülebilir yazılım geliştirmeye adanmış büyüyen geliştirici topluluğuna katılın."
           }
+        },
+        "imperative": {
+          "intro": "Yazılım endüstrisinin çevresel etkisi, veri merkezlerinin bariz enerji tüketiminin çok ötesine uzanır. İnşa ettiğimiz her uygulama, uyguladığımız her algoritma ve aldığımız her mimari karar küresel enerji tüketimi ve karbon emisyonlarına katkıda bulunur.",
+          "understandingTitle": "Etkiyi Anlama",
+          "understanding": {
+            "globalEnergy": "<strong>Küresel Enerji Tüketimi:</strong> BİT sektörü küresel sera gazı emisyonlarının %4'ünü oluşturuyor",
+            "growthTrajectory": "<strong>Büyüme Yörüngesi:</strong> Dijital enerji tüketimi her 4 yılda ikiye katlanıyor",
+            "hiddenCosts": "<strong>Gizli Maliyetler:</strong> Üretim, dağıtım ve kullanım ömrü sonu bertaraf etkisi",
+            "userDeviceImpact": "<strong>Kullanıcı Cihaz Etkisi:</strong> Yazılım verimsizliği cihaz ömrünü azaltıyor"
+          }
+        },
+        "principles": {
+          "principle1Title": "İlke 1: Enerji Verimliliği Öncelik",
+          "principle1Description": "Enerji verimliliği, algoritma seçiminden mimari tasarıma kadar her geliştirme kararında birincil düşünce olmalıdır. Bu ilke hem yürütme sırasındaki doğrudan enerji tüketimini hem de kaynak kullanımı yoluyla dolaylı tüketimi kapsar.",
+          "principle1": {
+            "implementationStrategiesTitle": "Uygulama Stratejileri"
+          },
+          "principle2Title": "İlke 2: Kaynak Ayak İzini Minimize Etme",
+          "principle2Description": "Sürdürülebilir yazılım geliştirme, tüm boyutlarda kaynak tüketimini minimize etmek için bilinçli çaba gerektirir: CPU döngüleri, bellek kullanımı, depolama gereksinimleri ve ağ bant genişliği.",
+          "principle2": {
+            "memoryManagementTitle": "Bellek Yönetimi Mükemmelliği"
+          },
+          "principle3Title": "İlke 3: Uzun Ömür için Tasarım",
+          "principle3Description": "Sürdürülebilir yazılım dayanıklı olarak inşa edilir. Bu, uzun süreler boyunca işlevsel, verimli ve sürdürülebilir kalan uygulamalar yaratmak, sık yeniden yazma ve güncelleme ihtiyacını azaltmak anlamına gelir.",
+          "principle3": {
+            "architecturalPatternsTitle": "Mimari Uzun Ömür Desenleri"
+          },
+          "principle4Title": "İlke 4: Etkiyi Ölçme ve İzleme",
+          "principle4Description": "Ölçmediğiniz şeyi iyileştiremezsiniz. Sürdürülebilir yazılım geliştirme çevresel etki ve performans metriklerinin sürekli izlenmesini gerektirir.",
+          "principle4": {
+            "monitoringFrameworkTitle": "Kapsamlı İzleme Çerçevesi"
+          },
+          "principle5Title": "İlke 5: Kullanıcı Merkezli Sürdürülebilirlik",
+          "principle5Description": "Sürdürülebilir yazılım, işlevsellik veya kullanıcı deneyiminden ödün vermeden kullanıcıları çevresel bilinçli seçimler yapmaya teşvik etmelidir.",
+          "principle5": {
+            "uxDesignTitle": "Sürdürülebilir UX Tasarım"
+          }
+        },
+        "framework": {
+          "lifecycleIntegrationTitle": "Geliştirme Yaşam Döngüsü Entegrasyonu",
+          "requirementsPhaseTitle": "1. Gereksinimler Aşaması",
+          "requirementsPhase": {
+            "energyRequirements": "<strong>Enerji Gereksinimleri:</strong> Kabul edilebilir enerji tüketim sınırlarını tanımlayın",
+            "sustainabilityGoals": "<strong>Sürdürülebilirlik Hedefleri:</strong> Ölçülebilir çevresel etki hedefleri belirleyin",
+            "deviceLongevity": "<strong>Cihaz Uzun Ömrü:</strong> Cihaz pil ömrü ve donanım aşınması üzerindeki etkiyi göz önünde bulundurun",
+            "userChoice": "<strong>Kullanıcı Seçimi:</strong> Kullanıcının sürdürülebilirlik üzerinde kontrolünü sağlayan özellikler planlayın"
+          },
+          "designPhaseTitle": "2. Tasarım Aşaması"
+        },
+        "bestPractices": {
+          "teamGuidelinesTitle": "Geliştirme Ekibi Kılavuzları",
+          "codeReviewChecklistTitle": "1. Kod İnceleme Sürdürülebilirlik Kontrol Listesi",
+          "checklist": {
+            "algorithmComplexity": "□ Algoritma karmaşıklığı problem gereksinimleri için gerekçeli mi?",
+            "resourceManagement": "□ Kaynaklar düzgün şekilde yönetiliyor ve bertaraf ediliyor mu?",
+            "energyMinimization": "□ Kod enerji tüketimini minimize edecek şekilde tasarlandı mı?",
+            "cachingOptimization": "□ Önbellekleme veya optimizasyon fırsatları var mı?",
+            "adaptiveQuality": "□ Uygulama kaynaklara dayalı uyarlanabilir kaliteyi destekliyor mu?"
+          },
+          "performanceBalanceTitle": "2. Performans ve Sürdürülebilirlik Dengesi",
+          "organizationalIntegrationTitle": "Organizasyonel Entegrasyon"
         }
       }
     },
