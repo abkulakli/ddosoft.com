@@ -412,6 +412,174 @@
           "conclusion": {
             "title": "Sonuç: Çapraz Platform Avantajı"
           }
+        },
+        "whyMatters": {
+          "marketReach": "Pazar Erişimi: Tüm büyük platformlardaki kullanıcılara erişim",
+          "devEfficiency": "Geliştirme Verimliliği: Tek kod tabanı bakım yükünü azaltır",
+          "featureParity": "Özellik Eşitliği: Platformlar arası tutarlı kullanıcı deneyimi",
+          "costEffective": "Maliyet Etkinliği: Azaltılmış geliştirme ve test kaynakları"
+        },
+        "languageChoice": {
+          "title": "Dil Seçimi: C++20",
+          "content": "C++20, performans, çapraz platform desteği ve modern dil özellikleri arasında mükemmel denge sundu:",
+          "nativePerf": "Doğal Performans: Sistem seviyesi güç yönetimi için kritik",
+          "stdLibrary": "Standart Kütüphane: Kapsamlı çapraz platform işlevselliği",
+          "memoryMgmt": "Bellek Yönetimi: Kaynak kullanımı üzerinde hassas kontrol",
+          "modernFeatures": "Modern Özellikler: Daha temiz kod için kavramlar, modüller ve koroutinler"
+        },
+        "abstractionLayer": {
+          "title": "Soyutlama Katmanı Stratejisi",
+          "content": "Platforma özgü uygulamalardan platform bağımsız mantığı ayıran temiz bir soyutlama katmanı uyguladık:"
+        },
+        "linuxChallenges": {
+          "title": "Linux Entegrasyon Zorlukları",
+          "content": "Linux, çeşitli ekosistemi ve sistem seviyesi gereksinimleri nedeniyle benzersiz zorluklar sundu:",
+          "systemService": {
+            "title": "Sistem Servis Entegrasyonu",
+            "challenge": "Zorluk: Birden fazla başlatma sistemi (systemd, SysV, OpenRC)",
+            "solution": "Çözüm: Modern dağıtımlar için systemd'ye odaklandık ve geri dönüş algılaması ekledik",
+            "implementation": "Uygulama: Uygun bağımlılıklar ve başlatma sırasıyla systemd servis dosyaları oluşturduk"
+          },
+          "tlpIntegration": {
+            "title": "TLP Entegrasyonu",
+            "challenge": "Zorluk: TLP'nin güç yönetim sistemiyle arabirim oluşturma",
+            "solution": "Çözüm: Uygun hata yönetimi ile doğrudan komut yürütme",
+            "codeExample": "Kod Örneği:"
+          },
+          "cpuMonitoring": {
+            "title": "CPU Yük İzleme",
+            "challenge": "Zorluk: Doğru gerçek zamanlı CPU yük algılama",
+            "solution": "Çözüm: Minimal yük için doğrudan /proc/loadavg ayrıştırma",
+            "benefits": "Faydalar: Harici bağımlılıklar olmadan doğal sistem entegrasyonu"
+          }
+        },
+        "windowsChallenges": {
+          "title": "Windows Entegrasyon Zorlukları",
+          "content": "Windows, benzersiz API yapısı ve servis mimarisi nedeniyle farklı yaklaşımlar gerektirdi:",
+          "powerPlan": {
+            "title": "Güç Planı Yönetimi",
+            "challenge": "Zorluk: Windows Güç Planları API karmaşıklığı",
+            "solution": "Çözüm: Windows Güç Yönetimi API entegrasyonu",
+            "implementation": "Uygulama: Hassas kontrol için doğrudan API çağrıları"
+          },
+          "perfCounters": {
+            "title": "Performans Sayaçları",
+            "challenge": "Zorluk: Gerçek zamanlı sistem izleme",
+            "solution": "Çözüm: Performans Veri Yardımcısı (PDH) API kullanımı",
+            "advantage": "Avantaj: Minimal yük ile detaylı sistem metrikleri"
+          },
+          "serviceManager": {
+            "title": "Servis Yöneticisi Entegrasyonu",
+            "challenge": "Zorluk: Uygun Windows servis yaşam döngüsü yönetimi",
+            "solution": "Çözüm: Tam Servis Kontrol Yöneticisi entegrasyonu",
+            "features": "Özellikler: Otomatik başlatma, uygun kapatma, servis kurtarma"
+          }
+        },
+        "cmake": {
+          "title": "CMake: Evrensel Yapı Sistemi",
+          "content": "CMake, çapraz platform yapı sistemimizin temelini sağladı:"
+        },
+        "packaging": {
+          "title": "Platforma Özgü Paketleme",
+          "content": "Her platform kendi paketleme yaklaşımını gerektirdi:",
+          "linux": {
+            "title": "Linux Paketleme",
+            "deb": "DEB paketleri: Debian/Ubuntu dağıtımları için",
+            "rpm": "RPM paketleri: Red Hat/Fedora/SUSE dağıtımları için",
+            "tgz": "TGZ arşivleri: Evrensel uyumluluk için",
+            "packageMgr": "Paket yöneticileri: Otomatik bağımlılık çözümlemesi"
+          },
+          "windows": {
+            "title": "Windows Paketleme",
+            "msi": "MSI yükleyici: Profesyonel kurulum deneyimi",
+            "serviceReg": "Servis kaydı: Otomatik servis kurulumu",
+            "uninstall": "Kaldırma desteği: Temiz kaldırma süreci",
+            "registry": "Kayıt defteri entegrasyonu: Uygun Windows entegrasyonu"
+          }
+        },
+        "testingSuite": {
+          "title": "Kapsamlı Test Paketi",
+          "content": "DDOGreen, her iki platformda da işlevselliği doğrulayan 122 kapsamlı birim testi içerir:",
+          "unitTests": "Birim Testleri: Bireysel bileşen testi",
+          "integrationTests": "Entegrasyon Testleri: Platforma özgü işlevsellik",
+          "perfTests": "Performans Testleri: Yük ve stres testi",
+          "compatTests": "Uyumluluk Testleri: Çoklu OS sürüm desteği"
+        },
+        "ci": {
+          "title": "Sürekli Entegrasyon",
+          "content": "CI/CD hattımız platformlar arası kaliteyi sağlar:",
+          "multiPlatform": "Çoklu Platform Yapıları: Eşzamanlı Linux ve Windows derlemesi",
+          "autoTesting": "Otomatik Test: Her commit'te tam test paketi yürütme",
+          "packageValidation": "Paket Doğrulama: Kurulum ve işlevsellik testi",
+          "perfBenchmark": "Performans Karşılaştırma: Gerileme algılama"
+        },
+        "platformOptimizations": {
+          "title": "Platforma Özgü Optimizasyonlar",
+          "content": "Çapraz platform uyumluluğunu korurken, platforma özgü optimizasyonlar uyguladık:",
+          "linux": {
+            "title": "Linux Optimizasyonları",
+            "procAccess": "Doğrudan /proc erişimi: Minimal sistem çağrısı yükü",
+            "fsMonitoring": "Doğal dosya sistemi izleme: Verimli değişiklik algılama",
+            "memoryMapping": "Bellek eşleme: Hızlı veri erişim kalıpları"
+          },
+          "windows": {
+            "title": "Windows Optimizasyonları",
+            "perfCounters": "Performans sayaçları: Optimize edilmiş sistem izleme",
+            "apiUsage": "Windows API kullanımı: Doğal sistem entegrasyonu",
+            "memoryMgmt": "Bellek yönetimi: Windows'a özgü tahsis kalıpları"
+          }
+        },
+        "hysteresis": {
+          "title": "Akıllı Histerezis Uygulaması",
+          "content": "Histerezis algoritması platformlar arası aynı şekilde çalışır ancak platforma özgü yük raporlamasına uyum sağlar:"
+        },
+        "designPatterns": {
+          "title": "İşe Yarayan Tasarım Kalıpları",
+          "factory": "Fabrika Kalıbı: Platforma özgü nesne oluşturma",
+          "strategy": "Strateji Kalıbı: Değiştirilebilir algoritmalar",
+          "adapter": "Adaptör Kalıbı: Platform API normalleştirme",
+          "observer": "Gözlemci Kalıbı: Olay güdümlü mimari"
+        },
+        "pitfalls": {
+          "title": "Kaçınılması Gereken Yaygın Tuzaklar",
+          "uniformity": "Tekdüzelik varsayımı: Her platformun benzersiz özellikleri vardır",
+          "overAbstraction": "Aşırı soyutlama: Soyutlama ile performans arasında denge kurun",
+          "insufficientTesting": "Yetersiz test: Gerçek hedef platformlarda test yapın",
+          "featureCreep": "Özellik kayması: Temel işlevselliğe odaklanmayı koruyun"
+        },
+        "workflow": {
+          "title": "Geliştirme İş Akışı Optimizasyonu",
+          "parallelDev": "Paralel geliştirme: Platform takımları eşzamanlı çalışır",
+          "sharedCodebase": "Paylaşılan kod tabanı: Paylaşılan modüllerde ortak mantık",
+          "regularIntegration": "Düzenli entegrasyon: Sık çapraz platform testi",
+          "documentation": "Dokümantasyon: Platforma özgü davranış dokümantasyonu"
+        },
+        "emergingTech": {
+          "title": "Gelişmekte Olan Teknolojiler",
+          "content": "Çapraz platform geliştirme manzarası gelişmeye devam ediyor:",
+          "webassembly": "WebAssembly: Tarayıcılarda doğala yakın performans",
+          "containers": "Konteyner Teknolojileri: Platformlar arası basitleştirilmiş dağıtım",
+          "cloudNative": "Bulut-Doğal Uygulamalar: Platform belirsiz dağıtım",
+          "aiAssisted": "AI Destekli Geliştirme: Otomatik platform adaptasyonu"
+        },
+        "ddogreenEvolution": {
+          "title": "DDOGreen'in Evrimi",
+          "content": "Çapraz platform başarımıza dayanarak, gelecekteki DDOGreen sürümleri şunlara genişleyecek:",
+          "macos": "macOS Desteği: Tam masaüstü platform kapsamı",
+          "mobile": "Mobil Platformlar: Android ve iOS güç yönetimi",
+          "iot": "IoT Entegrasyonu: Kenar cihaz güç optimizasyonu",
+          "cloud": "Bulut Entegrasyonu: Merkezi yönetim ve izleme"
+        },
+        "conclusionContent": {
+          "intro": "DDOGreen projesi, etkili çapraz platform geliştirmenin sadece paylaşılan koddan daha fazlasını gerektirdiğini gösterir—her hedef platformun derinlemesine anlaşılması, dikkatli mimari planlama ve tüm desteklenen ortamlarda titiz test yapılması gerekir.",
+          "takeaways": "Çapraz platform yolculuğumuzdan önemli çıkarımlar:",
+          "architectureFirst": "Önce Mimari: Kod yazmadan önce soyutlama katmanlarınızı planlayın",
+          "embraceDifferences": "Farklılıkları Benimseyin: Platforma özgü yetenekleri kullanın",
+          "testRelentlessly": "Amansızca Test Edin: Kapsamlı test platforma özgü hataları önler",
+          "performanceMatters": "Performans Önemlidir: Çapraz platform performanstan ödün vermek anlamına gelmez",
+          "userExperience": "Kullanıcı Deneyimi: Platform konvansiyonları kullanıcı benimsemesi için önemlidir",
+          "byFollowing": "Bu ilkeleri takip ederek, DDOGreen sistem seviyesi yazılımdan kullanıcıların beklediği performans ve güvenilirliği korurken Linux ve Windows arasında tutarlı güç yönetimi işlevselliği sunar.",
+          "futureText": "Yazılımın geleceği doğası gereği çapraz platformdur. Bilgi işlem ortamları giderek çeşitlenirken, DDOGreen gibi projelerden öğrenilen dersler, platform seçiminden bağımsız olarak tüm kullanıcılara gerçekten hizmet eden yazılım oluşturmak isteyen herhangi bir geliştirici için temel olacaktır."
         }
       }
     },
@@ -545,6 +713,68 @@
           "conclusion": {
             "title": "Sonuç ve Öneriler"
           }
+        },
+        "metrics": {
+          "energySavings": "Enerji Tasarrufu",
+          "energySavingsValue": "Dizüstü bilgisayar güç tüketiminde ortalama %27,3 azalma", 
+          "costSavings": "Maliyet Tasarrufu",
+          "costSavingsValue": "Yıllık 847.000$ elektrik maliyeti azalması",
+          "carbonImpact": "Karbon Etkisi", 
+          "carbonImpactValue": "Yıllık 1.847 metrik ton CO₂e emisyon tasarrufu",
+          "deploymentScale": "Dağıtım Ölçeği",
+          "deploymentScaleValue": "47 ülkede 15.247 cihaz"
+        },
+        "companyProfile": {
+          "organizationOverview": "Organizasyon Genel Bakış",
+          "industry": "Sektör: Yazılım Geliştirme ve Teknoloji Hizmetleri",
+          "size": "Büyüklük: Küresel olarak 18.500 çalışan",
+          "locations": "Lokasyonlar: 6 kıtada 47 ülke",
+          "deviceFleet": "Cihaz Filosu: 15.247 dizüstü bilgisayar (Windows ve Linux)",
+          "sustainabilityGoal": "Sürdürülebilirlik Hedefi: 2030'a kadar karbon nötr",
+          "preImplementationChallenges": "Uygulama Öncesi Zorluklar",
+          "highEnergyCosts": "Yüksek Enerji Maliyetleri: Dizüstü bilgisayar kullanımı için yıllık 3.1M$ elektrik maliyeti",
+          "batteryComplaints": "Pil Şikayetleri: Yardım masası biletlerinin %23'ü pil ömrü sorunlarıyla ilgili",
+          "inconsistentPolicies": "Tutarsız Güç Politikaları: Lokasyonlar arası standartlaştırılmış güç yönetimi yok",
+          "environmentalGoals": "Çevresel Hedefler: Karbon azaltım hedeflerini karşılamakta zorlanma",
+          "userProductivity": "Kullanıcı Verimliliği: Güçle ilgili sorunlar nedeniyle sık kesintiler"
+        },
+        "phases": {
+          "phase1": {
+            "title": "Faz 1: Pilot Program (3 ay)",
+            "scope": "Pilot Kapsamı",
+            "participants": "Katılımcılar: Geliştirme ekiplerinden 500 gönüllü",
+            "regions": "Bölgeler: 3 ana ofis (ABD, AB, APAC)",
+            "devices": "Cihazlar: Dell, Lenovo ve HP dizüstü bilgisayarlarının karışık filosu",
+            "operatingSystems": "İşletim Sistemleri: Windows 11 (%70), Ubuntu 22.04 (%30)",
+            "configuration": "Pilot Konfigürasyonu",
+            "results": "Pilot Sonuçları"
+          },
+          "phase2": {
+            "title": "Faz 2: Bölgesel Yayılım (6 ay)",
+            "strategy": "Yayılım Stratejisi",
+            "adaptations": "Bölgesel Konfigürasyon Uyarlamaları"
+          },
+          "phase3": {
+            "title": "Faz 3: Küresel Dağıtım (4 ay)",
+            "architecture": "Merkezi Yönetim Mimarisi"
+          }
+        },
+        "regionalConfig": {
+          "northAmerica": "Kuzey Amerika",
+          "naGrid": "Şebeke Entegrasyonu: Karışık yenilenebilir/fosil yakıt şebekesi için optimize edilmiş",
+          "naPower": "Güç Profilleri: Yoğun saatlerde (14-18) agresif güç tasarrufu",
+          "naCompliance": "Uyumluluk: ENERGY STAR uyumluluk raporlaması",
+          "naUserBehavior": "Kullanıcı Davranışı: Kaynak yoğun geliştirme araçlarının yüksek kullanımı",
+          "europe": "Avrupa",
+          "euGdpr": "GDPR Uyumluluğu: Veri toplama için gelişmiş gizlilik kontrolleri",
+          "euGreen": "Yeşil Enerji Odağı: Yüksek yenilenebilir dönemlerde maksimize edilmiş verimlilik",
+          "euLanguage": "Çoklu Dil Desteği: 12 dil lokalizasyonu",
+          "euRegulatory": "Düzenleyici Raporlama: AB taksonomi uyumluluk metrikleri",
+          "asiaPacific": "Asya-Pasifik",
+          "apDensity": "Yüksek Yoğunluk Dağıtımları: Büyük geliştirme merkezleri için optimize edilmiş",
+          "apMobile": "Mobil Öncelikli Çalışanlar: Sık seyahat edenler için gelişmiş güç yönetimi",
+          "apClimate": "İklim Adaptasyonu: Yüksek sıcaklık ortamları için termal yönetim",
+          "apNetwork": "Ağ Optimizasyonu: Değişken ağ koşullarında verimli işletim"
         }
       }
     }
