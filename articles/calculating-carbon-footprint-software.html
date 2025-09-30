@@ -79,12 +79,12 @@
         "CN", 0.681,      // kg CO₂e/kWh - China average
         "RENEWABLES", 0.041 // kg CO₂e/kWh - Renewable energy average
     );
-    
+
     public double calculateEmissions(double energyKwh, String region) {
         return energyKwh * GRID_FACTORS.getOrDefault(region, 0.489);
     }
-    
-    public double estimateServerEmissions(double cpuUtilization, int servers, 
+
+    public double estimateServerEmissions(double cpuUtilization, int servers,
                                         int hoursRunning, String region) {
         // Typical server: 200W base + 300W max under load
         double avgPowerWatts = 200 + (300 * cpuUtilization);
@@ -105,13 +105,13 @@
         "server_xeon", 85,  // Watts
         "mobile_arm", 5     // Watts
     );
-    
-    public double estimateCpuEmissions(String cpuType, double utilizationPercent, 
+
+    public double estimateCpuEmissions(String cpuType, double utilizationPercent,
                                      int runtimeHours, String region) {
         int tdpWatts = CPU_TDP.getOrDefault(cpuType, 25);
         double avgPowerWatts = tdpWatts * (utilizationPercent / 100.0);
         double energyKwh = (avgPowerWatts * runtimeHours) / 1000.0;
-        
+
         return new CarbonFootprintCalculator()
             .calculateEmissions(energyKwh, region);
     }
@@ -123,7 +123,7 @@
                     <h4>AWS Carbon Footprint</h4>
                     <pre><code>// AWS provides carbon intensity data through CloudWatch
 public class AWSCarbonCalculator {
-    public double getEC2Emissions(String instanceType, String region, 
+    public double getEC2Emissions(String instanceType, String region,
                                 int hoursRunning) {
         // AWS Carbon Footprint Tool data
         Map&lt;String, Double&gt; instanceEmissions = Map.of(
@@ -132,16 +132,16 @@ public class AWSCarbonCalculator {
             "m5.large", 0.00008,   // kg CO₂e per hour
             "c5.xlarge", 0.00016   // kg CO₂e per hour
         );
-        
+
         double baseEmissions = instanceEmissions.getOrDefault(instanceType, 0.0001);
-        
+
         // Adjust for regional grid factors
         Map&lt;String, Double&gt; regionFactors = Map.of(
             "us-west-2", 0.351,  // Oregon - hydro power
             "us-east-1", 0.459,  // Virginia - mixed grid
             "eu-west-1", 0.316   // Ireland - renewable focus
         );
-        
+
         double regionFactor = regionFactors.getOrDefault(region, 0.45);
         return baseEmissions * hoursRunning * regionFactor;
     }
@@ -186,7 +186,7 @@ services:
           memory: 512M
     labels:
       - "carbon.monitor=true"
-      
+
   carbon-monitor:
     image: carbonfootprint/monitor:latest
     volumes:
@@ -199,22 +199,22 @@ services:
 
                     <h4>Website Carbon Calculator Integration</h4>
                     <pre><code>class WebCarbonCalculator {
-    public double calculatePageEmissions(int pageSizeKB, int monthlyVisits, 
+    public double calculatePageEmissions(int pageSizeKB, int monthlyVisits,
                                        boolean greenHosting) {
         // Energy per byte transferred: 0.000000000006 kWh/byte
         double energyPerByte = 6e-12;
         double bytesTransferred = pageSizeKB * 1024.0 * monthlyVisits;
         double energyKwh = bytesTransferred * energyPerByte;
-        
+
         // Green hosting reduces emissions by ~75%
         if (greenHosting) {
             energyKwh *= 0.25;
         }
-        
+
         // Global average grid intensity: 475g CO₂e/kWh
         return energyKwh * 0.475;
     }
-    
+
     // Example usage
     public void assessWebsite() {
         double emissions = calculatePageEmissions(
@@ -222,7 +222,7 @@ services:
             10000,     // 10k monthly visits
             true       // Green hosting
         );
-        
+
         System.out.printf("Monthly emissions: %.2f kg CO₂e%n", emissions);
     }
 }</code></pre>
@@ -238,29 +238,29 @@ services:
         double laptopHighPerfWatts = 45.0;
         double laptopPowerSaveWatts = 25.0;
         double energySavingsWatts = laptopHighPerfWatts - laptopPowerSaveWatts;
-        
+
         // DDOGreen achieves 25% average power savings
         double ddogreenSavingsWatts = laptopHighPerfWatts * 0.25;
-        
+
         // Calculate daily emissions reduction
         int dailyUsageHours = 8;
         double dailyEnergySavingsKwh = (ddogreenSavingsWatts * dailyUsageHours) / 1000.0;
-        
+
         // Global average emissions factor
         double gridFactor = 0.475; // kg CO₂e/kWh
         double dailyEmissionsReduction = dailyEnergySavingsKwh * gridFactor;
-        
+
         // Annual impact
         double annualReduction = dailyEmissionsReduction * 365;
-        
-        System.out.printf("Daily emissions reduction: %.3f kg CO₂e%n", 
+
+        System.out.printf("Daily emissions reduction: %.3f kg CO₂e%n",
                          dailyEmissionsReduction);
-        System.out.printf("Annual emissions reduction: %.1f kg CO₂e%n", 
+        System.out.printf("Annual emissions reduction: %.1f kg CO₂e%n",
                          annualReduction);
-        
+
         // Equivalent to planting trees (1 tree absorbs ~21.8 kg CO₂e/year)
         double treesEquivalent = annualReduction / 21.8;
-        System.out.printf("Equivalent to planting %.1f trees per user%n", 
+        System.out.printf("Equivalent to planting %.1f trees per user%n",
                          treesEquivalent);
     }
 }</code></pre>
@@ -324,21 +324,21 @@ public List&lt;String&gt; findDuplicatesEfficient(List&lt;String&gt; items) {
                     <pre><code>class CarbonDashboard {
     public void generateReport(String applicationName, Date startDate, Date endDate) {
         CarbonMetrics metrics = collectMetrics(applicationName, startDate, endDate);
-        
+
         System.out.println("=== Carbon Footprint Report ===");
         System.out.printf("Application: %s%n", applicationName);
         System.out.printf("Period: %s to %s%n", startDate, endDate);
         System.out.printf("Total Emissions: %.2f kg CO₂e%n", metrics.getTotalEmissions());
-        System.out.printf("Development: %.2f kg CO₂e (%.1f%%)%n", 
+        System.out.printf("Development: %.2f kg CO₂e (%.1f%%)%n",
                          metrics.getDevelopmentEmissions(),
                          metrics.getDevelopmentPercentage());
-        System.out.printf("Runtime: %.2f kg CO₂e (%.1f%%)%n", 
+        System.out.printf("Runtime: %.2f kg CO₂e (%.1f%%)%n",
                          metrics.getRuntimeEmissions(),
                          metrics.getRuntimePercentage());
-        System.out.printf("Data Transfer: %.2f kg CO₂e (%.1f%%)%n", 
+        System.out.printf("Data Transfer: %.2f kg CO₂e (%.1f%%)%n",
                          metrics.getTransferEmissions(),
                          metrics.getTransferPercentage());
-        
+
         // Recommendations
         generateRecommendations(metrics);
     }

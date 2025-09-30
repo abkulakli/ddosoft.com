@@ -68,7 +68,7 @@ public BufferedImage processImageInefficient(String imagePath) {
     BufferedImage image = ImageIO.read(new File(imagePath));
     BufferedImage processed = new BufferedImage(
         image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
-    
+
     // Process every pixel regardless of need
     for (int y = 0; y < image.getHeight(); y++) {
         for (int x = 0; x < image.getWidth(); x++) {
@@ -80,24 +80,24 @@ public BufferedImage processImageInefficient(String imagePath) {
 }
 
 // Sustainable approach - streaming with ROI processing
-public void processImageSustainable(String imagePath, String outputPath, 
+public void processImageSustainable(String imagePath, String outputPath,
                                   Rectangle roi) throws IOException {
     try (ImageInputStream input = ImageIO.createImageInputStream(new File(imagePath));
          ImageOutputStream output = ImageIO.createImageOutputStream(new File(outputPath))) {
-        
+
         ImageReader reader = ImageIO.getImageReaders(input).next();
         ImageWriter writer = ImageIO.getImageWriters(reader.getFormatName()).next();
-        
+
         reader.setInput(input);
         writer.setOutput(output);
-        
+
         // Process only region of interest to save energy
         ImageReadParam readParam = reader.getDefaultReadParam();
         readParam.setSourceRegion(roi);
-        
+
         BufferedImage roiImage = reader.read(0, readParam);
         BufferedImage processed = enhanceImageRegion(roiImage);
-        
+
         writer.write(processed);
     }
 }</code></pre>
@@ -111,7 +111,7 @@ public void processImageSustainable(String imagePath, String outputPath,
                     <pre><code>public class SustainableDataProcessor {
     private static final int BATCH_SIZE = 1000;
     private final ObjectPool&lt;ProcessingContext&gt; contextPool;
-    
+
     public SustainableDataProcessor() {
         // Reuse objects to reduce garbage collection pressure
         this.contextPool = new ObjectPool&lt;ProcessingContext&gt;() {
@@ -119,14 +119,14 @@ public void processImageSustainable(String imagePath, String outputPath,
             protected ProcessingContext create() {
                 return new ProcessingContext();
             }
-            
+
             @Override
             protected void reset(ProcessingContext context) {
                 context.clear();
             }
         };
     }
-    
+
     // Stream processing to handle large datasets without memory overload
     public Stream&lt;ProcessedData&gt; processLargeDataset(Path dataFile) throws IOException {
         return Files.lines(dataFile)
@@ -137,7 +137,7 @@ public void processImageSustainable(String imagePath, String outputPath,
             .stream()
             .flatMap(this::processBatch);
     }
-    
+
     private Stream&lt;ProcessedData&gt; processBatch(List&lt;String&gt; batch) {
         ProcessingContext context = contextPool.borrow();
         try {
@@ -202,10 +202,10 @@ public class SustainabilityConfig {
     private double maxCpuThreshold = 0.8;
     private double minBatteryThreshold = 0.2;
     private List&lt;String&gt; excludedProcesses = new ArrayList&lt;&gt;();
-    
+
     // Configuration allows adaptation without code changes
     public boolean shouldOptimize(SystemMetrics metrics) {
-        return adaptiveOptimization && 
+        return adaptiveOptimization &&
                metrics.getCpuUtilization() &gt; maxCpuThreshold ||
                metrics.getBatteryLevel() &lt; minBatteryThreshold;
     }
@@ -221,40 +221,40 @@ public class SustainabilityConfig {
 public class SustainabilityMetricsCollector {
     private final MeterRegistry meterRegistry;
     private final Timer.Sample energyMeasurementSample;
-    
+
     @EventListener
     public void handleApplicationStartup(ApplicationReadyEvent event) {
         // Initialize sustainability metrics
         Gauge.builder("sustainability.energy.efficiency")
             .description("Current energy efficiency ratio")
             .register(meterRegistry, this, SustainabilityMetricsCollector::getCurrentEfficiency);
-            
+
         Counter.builder("sustainability.carbon.saved")
             .description("Total carbon emissions saved")
             .baseUnit("kg_co2e")
             .register(meterRegistry);
     }
-    
+
     @Scheduled(fixedRate = 60000) // Every minute
     public void collectMetrics() {
         SystemMetrics current = systemMetricsService.getCurrentMetrics();
-        
+
         // Energy consumption metrics
         meterRegistry.gauge("sustainability.power.current_watts", current.getPowerConsumption());
         meterRegistry.gauge("sustainability.cpu.utilization", current.getCpuUtilization());
         meterRegistry.gauge("sustainability.memory.efficiency", current.getMemoryEfficiency());
-        
+
         // Performance vs sustainability balance
         double efficiency = calculateEnergyEfficiency(current);
         meterRegistry.gauge("sustainability.efficiency.ratio", efficiency);
-        
+
         // Carbon impact estimation
         double carbonRate = calculateCarbonEmissionRate(current);
         meterRegistry.gauge("sustainability.carbon.emission_rate", carbonRate);
-        
+
         // Log significant changes
         if (efficiency < previousEfficiency * 0.9) {
-            log.warn("Energy efficiency dropped by more than 10%: {} -> {}", 
+            log.warn("Energy efficiency dropped by more than 10%: {} -> {}",
                     previousEfficiency, efficiency);
         }
     }
@@ -269,11 +269,11 @@ public class SustainabilityMetricsCollector {
                     <pre><code>// User preference integration for sustainability
 @Service
 public class SustainableUserExperienceService {
-    
-    public UserInterface adaptInterfaceForSustainability(UserPreferences prefs, 
+
+    public UserInterface adaptInterfaceForSustainability(UserPreferences prefs,
                                                        DeviceCapabilities device) {
         UserInterface.Builder uiBuilder = UserInterface.builder();
-        
+
         // Adapt based on user sustainability preferences
         switch (prefs.getSustainabilityLevel()) {
             case ECO_MAXIMUM:
@@ -284,7 +284,7 @@ public class SustainableUserExperienceService {
                     .imageQuality(ImageQuality.OPTIMIZED)
                     .autoVideoQuality(false);
                 break;
-                
+
             case ECO_BALANCED:
                 uiBuilder
                     .theme(adaptiveTheme(device))
@@ -293,7 +293,7 @@ public class SustainableUserExperienceService {
                     .imageQuality(ImageQuality.ADAPTIVE)
                     .autoVideoQuality(true);
                 break;
-                
+
             case PERFORMANCE_FIRST:
             default:
                 uiBuilder
@@ -304,15 +304,15 @@ public class SustainableUserExperienceService {
                     .autoVideoQuality(false);
                 break;
         }
-        
+
         return uiBuilder.build();
     }
-    
+
     // Provide users with sustainability feedback
-    public SustainabilityReport generateUserSustainabilityReport(User user, 
+    public SustainabilityReport generateUserSustainabilityReport(User user,
                                                                Duration period) {
         UsageMetrics metrics = usageService.getMetrics(user, period);
-        
+
         return SustainabilityReport.builder()
             .user(user)
             .period(period)
@@ -340,7 +340,7 @@ public class SustainableUserExperienceService {
                     <h4>2. Design Phase</h4>
                     <pre><code>// Sustainable architecture design document template
 public class SustainableArchitectureDesign {
-    
+
     // Energy-aware architectural decisions
     @ArchitectureDecision("AD-001: Event-Driven Architecture for Energy Efficiency")
     public class EventDrivenDesign {
@@ -351,7 +351,7 @@ public class SustainableArchitectureDesign {
          * Trade-offs: Increased complexity in event handling logic
          */
     }
-    
+
     @ArchitectureDecision("AD-002: Lazy Initialization Pattern")
     public class LazyInitialization {
         /*
@@ -361,7 +361,7 @@ public class SustainableArchitectureDesign {
          * Trade-offs: Potential latency on first access to components
          */
     }
-    
+
     @ArchitectureDecision("AD-003: Adaptive Quality Based on Resources")
     public class AdaptiveQuality {
         /*
@@ -376,7 +376,7 @@ public class SustainableArchitectureDesign {
                     <h4>3. Implementation Phase</h4>
                     <pre><code>// Sustainable coding standards checklist
 public class SustainableCodingStandards {
-    
+
     // 1. Algorithm Efficiency Review
     public void reviewAlgorithmEfficiency() {
         /*
@@ -388,7 +388,7 @@ public class SustainableCodingStandards {
          * □ Are early exit conditions implemented?
          */
     }
-    
+
     // 2. Resource Management Review
     public void reviewResourceManagement() {
         /*
@@ -400,15 +400,15 @@ public class SustainableCodingStandards {
          * □ Are file operations streaming-based for large data?
          */
     }
-    
+
     // 3. Energy-Aware Code Patterns
     @EnergyAware
     public CompletableFuture&lt;ProcessingResult&gt; processDataSustainably(
             List&lt;DataItem&gt; items, ProcessingOptions options) {
-        
+
         // Batch processing reduces overhead
         int batchSize = calculateOptimalBatchSize(items.size(), options);
-        
+
         return CompletableFuture.supplyAsync(() -&gt; {
             return items.stream()
                 .collect(Collectors.groupingBy(item -&gt; item.hashCode() % batchSize))
@@ -425,61 +425,61 @@ public class SustainableCodingStandards {
                     <h4>Energy Consumption Testing</h4>
                     <pre><code>@TestMethodOrder(OrderAnnotation.class)
 public class SustainabilityPerformanceTest {
-    
+
     @Test
     @Order(1)
     @EnergyMeasurement
     public void testBaselineEnergy() {
         EnergyMeter.startMeasurement("baseline");
-        
+
         // Measure baseline energy consumption
         Thread.sleep(Duration.ofMinutes(1).toMillis());
-        
+
         EnergyMeasurement baseline = EnergyMeter.stopMeasurement("baseline");
         assertThat(baseline.getAverageWatts()).isLessThan(MAX_BASELINE_WATTS);
     }
-    
+
     @Test
     @Order(2)
     @EnergyMeasurement
     public void testProcessingEnergyEfficiency() {
         List&lt;TestData&gt; testDataset = generateTestData(10000);
-        
+
         EnergyMeter.startMeasurement("processing");
-        
+
         ProcessingResult result = sustainableProcessor.process(testDataset);
-        
+
         EnergyMeasurement measurement = EnergyMeter.stopMeasurement("processing");
-        
+
         // Verify functionality
         assertThat(result.getProcessedCount()).isEqualTo(testDataset.size());
         assertThat(result.hasErrors()).isFalse();
-        
+
         // Verify energy efficiency
         double energyPerItem = measurement.getTotalEnergyJoules() / testDataset.size();
         assertThat(energyPerItem).isLessThan(MAX_ENERGY_PER_ITEM);
-        
+
         // Verify no energy regression
         EnergyMeasurement previousBaseline = EnergyTestRepository.getLatestBaseline();
         double efficiencyRatio = measurement.getAverageWatts() / previousBaseline.getAverageWatts();
         assertThat(efficiencyRatio).isLessThan(1.1); // No more than 10% increase
     }
-    
+
     @Test
     @EnergyMeasurement
     public void testIdleStateEnergyConsumption() {
         // Ensure application efficiently handles idle states
         EnergyMeter.startMeasurement("idle");
-        
+
         // Application in idle state for 5 minutes
         sustainableApplication.enterIdleState();
         Thread.sleep(Duration.ofMinutes(5).toMillis());
-        
+
         EnergyMeasurement idle = EnergyMeter.stopMeasurement("idle");
-        
+
         // Idle energy consumption should be minimal
         assertThat(idle.getAverageWatts()).isLessThan(MAX_IDLE_WATTS);
-        
+
         // Application should still be responsive
         long responseTime = sustainableApplication.measureResponseTime();
         assertThat(responseTime).isLessThan(Duration.ofSeconds(2).toMillis());
@@ -515,7 +515,7 @@ public class SustainabilityPerformanceTest {
 
                     <h3>Measured Impact</h3>
                     <pre><code>public class DDOGreenSustainabilityMetrics {
-    public static final SustainabilityReport DDOGREEN_IMPACT = 
+    public static final SustainabilityReport DDOGREEN_IMPACT =
         SustainabilityReport.builder()
             .batteryLifeImprovement(0.25) // 25% improvement
             .averageEnergyReduction(0.23) // 23% energy reduction
@@ -523,12 +523,12 @@ public class SustainabilityPerformanceTest {
             .annualCarbonSaving(64.6) // 64.6kg CO₂e per year per user
             .treeEquivalent(2.96) // Equivalent to planting 2.96 trees per user annually
             .build();
-            
+
     // Scaling impact calculation
     public double calculateGlobalImpact(int userCount) {
         return DDOGREEN_IMPACT.getAnnualCarbonSaving() * userCount;
     }
-    
+
     // Example: 100,000 users would save 6,460 metric tons CO₂e annually
 }</code></pre>
 
@@ -548,12 +548,12 @@ public class SustainabilityPerformanceTest {
                     <h4>2. Performance vs Sustainability Balance</h4>
                     <pre><code>@Component
 public class PerformanceSustainabilityBalancer {
-    
+
     public OptimizationStrategy selectStrategy(SystemContext context) {
         SustainabilityPreference userPref = context.getUserSustainabilityPreference();
         SystemCapabilities capabilities = context.getSystemCapabilities();
         WorkloadCharacteristics workload = context.getCurrentWorkload();
-        
+
         if (userPref == SustainabilityPreference.ECO_MAXIMUM) {
             return OptimizationStrategy.builder()
                 .priorityOrder(ENERGY_FIRST, PERFORMANCE_SECOND)
@@ -561,7 +561,7 @@ public class PerformanceSustainabilityBalancer {
                 .energyTargetReduction(0.30) // Target 30% energy reduction
                 .build();
         }
-        
+
         if (capabilities.isBatteryPowered() && capabilities.getBatteryLevel() < 0.20) {
             return OptimizationStrategy.builder()
                 .priorityOrder(ENERGY_FIRST, FUNCTIONALITY_MAINTAINED)
@@ -569,7 +569,7 @@ public class PerformanceSustainabilityBalancer {
                 .energyTargetReduction(0.50)
                 .build();
         }
-        
+
         return OptimizationStrategy.balanced();
     }
 }</code></pre>
@@ -591,22 +591,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Energy Efficiency Analysis
         run: |
           # Static analysis for energy consumption patterns
           ./tools/energy-analyzer.sh src/
-          
+
       - name: Carbon Footprint Estimation
         run: |
           # Estimate build and test carbon footprint
           ./tools/carbon-calculator.sh
-          
+
       - name: Performance vs Energy Regression Test
         run: |
           # Ensure no energy regression while maintaining performance
           ./gradlew energyRegressionTest
-          
+
       - name: Sustainability Gate
         run: |
           # Fail build if sustainability metrics worsen

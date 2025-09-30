@@ -96,29 +96,29 @@ deployment:
   mode: "enterprise"
   management_server: "ddogreen-mgmt.company.com"
   reporting_endpoint: "https://analytics.company.com/ddogreen"
-  
+
 power_management:
   high_performance_threshold: 0.75  # More conservative for enterprise
   power_save_threshold: 0.25
   hysteresis_enabled: true
   adaptive_learning: true
-  
+
 monitoring:
   collect_anonymous_metrics: true
   report_interval: "300s"
   detailed_logging: false
-  
+
 policies:
   enforce_minimum_settings: true
   allow_user_override: true
   emergency_power_mode: true
   presentation_mode_detection: true
-  
+
 integration:
   active_directory: true
   group_policy: true
   endpoint_management: "SCCM"
-  
+
 notifications:
   battery_low_threshold: 0.15
   efficiency_reports: "weekly"
@@ -169,11 +169,11 @@ notifications:
                     <h4>Rollout Strategy</h4>
                     <pre><code>// Enterprise Deployment Manager
 public class EnterpriseDeploymentManager {
-    
+
     private final RegionalConfigurationService configService;
     private final DeviceManagementService deviceService;
     private final MetricsCollectionService metricsService;
-    
+
     public DeploymentPlan createRegionalPlan(Region region) {
         return DeploymentPlan.builder()
             .region(region)
@@ -184,20 +184,20 @@ public class EnterpriseDeploymentManager {
             .successMetrics(defineSu ccessCriteria(region))
             .build();
     }
-    
+
     private List&lt;DeploymentPhase&gt; calculateOptimalPhases(Region region) {
         int totalDevices = deviceService.getDeviceCount(region);
         int maxPhaseSize = Math.min(1000, totalDevices / 5); // 20% maximum per phase
-        
+
         List&lt;DeploymentPhase&gt; phases = new ArrayList&lt;&gt;();
         List&lt;Department&gt; departments = region.getDepartments();
-        
+
         // Prioritize departments based on pilot success and criticality
         departments.sort(Comparator
             .comparing(dept -&gt; dept.getPilotSuccessScore())
             .reversed()
             .thenComparing(dept -&gt; dept.getCriticalityLevel()));
-        
+
         for (Department dept : departments) {
             phases.add(DeploymentPhase.builder()
                 .department(dept)
@@ -207,7 +207,7 @@ public class EnterpriseDeploymentManager {
                 .rolloutStrategy(dept.getPreferredRolloutStrategy())
                 .build());
         }
-        
+
         return phases;
     }
 }</code></pre>
@@ -245,13 +245,13 @@ public class EnterpriseDeploymentManager {
 @RestController
 @RequestMapping("/api/enterprise")
 public class DDOGreenEnterpriseController {
-    
+
     @Autowired
     private GlobalMetricsService globalMetricsService;
-    
+
     @Autowired
     private PolicyManagementService policyService;
-    
+
     @GetMapping("/dashboard/global")
     public GlobalDashboard getGlobalDashboard() {
         return GlobalDashboard.builder()
@@ -264,37 +264,37 @@ public class DDOGreenEnterpriseController {
             .alerts(globalMetricsService.getActiveAlerts())
             .build();
     }
-    
+
     @PostMapping("/policy/update")
     public ResponseEntity&lt;PolicyUpdateResult&gt; updateGlobalPolicy(
             @RequestBody GlobalPolicyUpdate policyUpdate) {
-        
+
         // Validate policy update
         PolicyValidationResult validation = policyService.validatePolicy(policyUpdate);
         if (!validation.isValid()) {
             return ResponseEntity.badRequest()
                 .body(PolicyUpdateResult.failure(validation.getErrors()));
         }
-        
+
         // Calculate impact of policy change
         PolicyImpactAnalysis impact = policyService.analyzeImpact(policyUpdate);
-        
+
         // Apply policy in phases to minimize risk
-        CompletableFuture&lt;PolicyUpdateResult&gt; deployment = 
+        CompletableFuture&lt;PolicyUpdateResult&gt; deployment =
             policyService.deployPolicyPhased(policyUpdate, impact);
-            
+
         return ResponseEntity.accepted()
             .body(PolicyUpdateResult.inProgress(deployment.toString()));
     }
-    
+
     @GetMapping("/reports/sustainability")
     public SustainabilityReport generateSustainabilityReport(
             @RequestParam String startDate,
             @RequestParam String endDate,
             @RequestParam(required = false) String region) {
-        
+
         DateRange reportPeriod = DateRange.of(startDate, endDate);
-        
+
         return SustainabilityReport.builder()
             .reportPeriod(reportPeriod)
             .scope(region != null ? ReportScope.regional(region) : ReportScope.global())
@@ -317,9 +317,9 @@ public class DDOGreenEnterpriseController {
                     <h4>Solution: Adaptive Hardware Profiles</h4>
                     <pre><code>@Service
 public class HardwareAdaptationService {
-    
+
     private final Map&lt;String, HardwareProfile&gt; hardwareProfiles = new ConcurrentHashMap&lt;&gt;();
-    
+
     @PostConstruct
     public void initializeHardwareProfiles() {
         // Dell OptiPlex series
@@ -340,7 +340,7 @@ public class HardwareAdaptationService {
                 .fanCurve(FanCurve.AGGRESSIVE)
                 .build())
             .build());
-            
+
         // Lenovo ThinkPad series
         hardwareProfiles.put("Lenovo ThinkPad X1 Carbon", HardwareProfile.builder()
             .manufacturer("Lenovo")
@@ -360,17 +360,17 @@ public class HardwareAdaptationService {
                 .build())
             .build());
     }
-    
+
     public OptimizationStrategy getOptimizedStrategy(SystemInfo systemInfo) {
         String deviceModel = systemInfo.getDeviceModel();
         HardwareProfile profile = hardwareProfiles.get(deviceModel);
-        
+
         if (profile == null) {
             // Use machine learning to create profile for unknown hardware
             profile = createDynamicProfile(systemInfo);
             hardwareProfiles.put(deviceModel, profile);
         }
-        
+
         return OptimizationStrategy.builder()
             .hardwareProfile(profile)
             .currentSystemState(systemInfo.getCurrentState())
@@ -389,7 +389,7 @@ public class HardwareAdaptationService {
                     <pre><code>@Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class EnterpriseSecurityConfiguration {
-    
+
     @Bean
     public DDOGreenSecurityManager securityManager() {
         return DDOGreenSecurityManager.builder()
@@ -399,7 +399,7 @@ public class EnterpriseSecurityConfiguration {
             .certificateValidator(X509CertificateValidator.create())
             .build();
     }
-    
+
     @Bean
     public MetricsSecurityFilter metricsSecurityFilter() {
         return new MetricsSecurityFilter() {
@@ -407,27 +407,27 @@ public class EnterpriseSecurityConfiguration {
             public MetricsData filterSensitiveData(MetricsData rawMetrics, User user) {
                 // Remove personally identifiable information
                 MetricsData filtered = rawMetrics.copy();
-                
+
                 if (!user.hasRole("ADMIN")) {
                     filtered.removeField("hostname");
                     filtered.removeField("username");
                     filtered.removeField("process_list");
                 }
-                
+
                 if (!user.hasRole("SECURITY_ANALYST")) {
                     filtered.removeField("network_interfaces");
                     filtered.removeField("installed_software");
                 }
-                
+
                 // Always remove sensitive system information
                 filtered.removeField("system_serial");
                 filtered.removeField("mac_addresses");
-                
+
                 return filtered;
             }
         };
     }
-    
+
     @EventListener
     public void handleSecurityEvent(DDOGreenSecurityEvent event) {
         // Log all security-relevant events for compliance
@@ -441,7 +441,7 @@ public class EnterpriseSecurityConfiguration {
             .deviceId(event.getDeviceId())
             .build()
             .submit();
-            
+
         // Trigger automated response for critical events
         if (event.getSeverity() == SecuritySeverity.CRITICAL) {
             securityResponseService.handleCriticalEvent(event);
@@ -468,10 +468,10 @@ public class EnterpriseSecurityConfiguration {
                     <pre><code>// Gamified Training System
 @Service
 public class DDOGreenTrainingService {
-    
+
     public TrainingPath createPersonalizedTraining(User user) {
         UserProfile profile = userProfileService.getProfile(user);
-        
+
         return TrainingPath.builder()
             .user(user)
             .modules(selectTrainingModules(profile))
@@ -479,34 +479,34 @@ public class DDOGreenTrainingService {
             .completionIncentives(defineIncentives(profile))
             .build();
     }
-    
+
     private List&lt;TrainingModule&gt; selectTrainingModules(UserProfile profile) {
         List&lt;TrainingModule&gt; modules = new ArrayList&lt;&gt;();
-        
+
         // Core modules for all users
         modules.add(TrainingModule.DDOGREEN_BASICS);
         modules.add(TrainingModule.PERSONAL_BENEFITS);
         modules.add(TrainingModule.ENVIRONMENTAL_IMPACT);
-        
+
         // Role-specific modules
         if (profile.getRole() == Role.DEVELOPER) {
             modules.add(TrainingModule.DEVELOPMENT_PRODUCTIVITY);
             modules.add(TrainingModule.BUILD_OPTIMIZATION);
         }
-        
+
         if (profile.getRole() == Role.DATA_SCIENTIST) {
             modules.add(TrainingModule.ML_WORKLOAD_OPTIMIZATION);
             modules.add(TrainingModule.JUPYTER_INTEGRATION);
         }
-        
+
         if (profile.isManager()) {
             modules.add(TrainingModule.TEAM_DASHBOARD);
             modules.add(TrainingModule.COST_REPORTING);
         }
-        
+
         return modules;
     }
-    
+
     private GamificationPlan createGamificationPlan(UserProfile profile) {
         return GamificationPlan.builder()
             .achievements(List.of(
@@ -533,18 +533,18 @@ public class DDOGreenTrainingService {
                     <h4>Solution: Enterprise Integration Framework</h4>
                     <pre><code>@Component
 public class EnterpriseIntegrationManager {
-    
+
     private final ActiveDirectoryService adService;
     private final SCCMIntegrationService sccmService;
     private final MonitoringIntegrationService monitoringService;
-    
+
     @PostConstruct
     public void initializeIntegrations() {
         setupActiveDirectoryIntegration();
         configureSCCMDeployment();
         establishMonitoringConnections();
     }
-    
+
     private void setupActiveDirectoryIntegration() {
         ActiveDirectoryConfiguration config = ActiveDirectoryConfiguration.builder()
             .domain("company.com")
@@ -555,43 +555,43 @@ public class EnterpriseIntegrationManager {
                 "OU=DevOps,DC=company,DC=com"))
             .groupPolicySettings(createGroupPolicySettings())
             .build();
-            
+
         adService.configure(config);
-        
+
         // Automatically apply DDOGreen policies based on AD group membership
         adService.setGroupPolicyProcessor(this::processGroupMembership);
     }
-    
+
     private DDOGreenPolicy processGroupMembership(User user, List&lt;ADGroup&gt; groups) {
         DDOGreenPolicy.Builder policyBuilder = DDOGreenPolicy.builder();
-        
+
         for (ADGroup group : groups) {
             switch (group.getName()) {
                 case "High-Performance-Users":
                     policyBuilder.allowPerformanceOverride(true)
                                .minPerformanceLevel(0.8);
                     break;
-                    
+
                 case "Mobile-Workers":
                     policyBuilder.aggressivePowerSaving(true)
                                .travelModeEnabled(true);
                     break;
-                    
+
                 case "Sustainability-Champions":
                     policyBuilder.maxEcoMode(true)
                                .detailedReporting(true);
                     break;
-                    
+
                 case "Executives":
                     policyBuilder.presentationModeDetection(true)
                                .prioritizeReliability(true);
                     break;
             }
         }
-        
+
         return policyBuilder.build();
     }
-    
+
     private void configureSCCMDeployment() {
         SCCMConfiguration sccmConfig = SCCMConfiguration.builder()
             .managementPoint("sccm-mp.company.com")
@@ -600,10 +600,10 @@ public class EnterpriseIntegrationManager {
             .updateSchedule(CronExpression.parse("0 2 * * SUN")) // Weekly updates
             .rollbackPolicy(RollbackPolicy.AUTOMATIC_ON_FAILURE)
             .build();
-            
+
         sccmService.configure(sccmConfig);
     }
-    
+
     private void establishMonitoringConnections() {
         // Integration with existing enterprise monitoring
         MonitoringConfiguration monConfig = MonitoringConfiguration.builder()
@@ -613,7 +613,7 @@ public class EnterpriseIntegrationManager {
             .customDashboards(createEnterpriseMonitoringDashboards())
             .alertRules(createEnterpriseAlertRules())
             .build();
-            
+
         monitoringService.configure(monConfig);
     }
 }</code></pre>
@@ -646,34 +646,34 @@ Annual      | 10,270.7       | 7,455.6        | 2,815.1   | 27.4%</code></pre>
                     <h4>Financial Impact</h4>
                     <pre><code>// Annual Cost Savings Calculation
 public class CostSavingsAnalysis {
-    
+
     private static final double AVG_ELECTRICITY_COST_PER_KWH = 0.12; // USD
     private static final double ANNUAL_ENERGY_SAVINGS_MWH = 2815.1;
     private static final int TOTAL_DEVICES = 15247;
-    
+
     public FinancialImpactReport calculateAnnualSavings() {
         double energyCostSavings = ANNUAL_ENERGY_SAVINGS_MWH * 1000 * AVG_ELECTRICITY_COST_PER_KWH;
-        
+
         // Additional cost savings
         double reducedHelpDeskCosts = calculateHelpDeskSavings();
         double improvedProductivity = calculateProductivityGains();
         double reducedHardwareReplacement = calculateHardwareLifeExtension();
         double carbonCreditValue = calculateCarbonCreditValue();
-        
+
         return FinancialImpactReport.builder()
             .energyCostSavings(energyCostSavings)                    // $337,812
             .helpDeskCostReduction(reducedHelpDeskCosts)             // $156,000
             .productivityGains(improvedProductivity)                 // $1,247,500
             .hardwareLifeExtension(reducedHardwareReplacement)       // $425,000
             .carbonCreditValue(carbonCreditValue)                    // $55,410
-            .totalAnnualSavings(energyCostSavings + reducedHelpDeskCosts + 
-                              improvedProductivity + reducedHardwareReplacement + 
+            .totalAnnualSavings(energyCostSavings + reducedHelpDeskCosts +
+                              improvedProductivity + reducedHardwareReplacement +
                               carbonCreditValue)                     // $2,221,722
             .roiPercentage(calculateROI())                          // 1,847%
             .paybackPeriod(Duration.ofDays(20))                     // 20 days
             .build();
     }
-    
+
     private double calculateHelpDeskSavings() {
         // 81.9% reduction in power-related tickets
         // Average ticket cost: $45
@@ -681,7 +681,7 @@ public class CostSavingsAnalysis {
         int ticketReduction = (int)(6096 * 0.819);
         return ticketReduction * 45.0; // $156,000
     }
-    
+
     private double calculateProductivityGains() {
         // 27.6% increase in battery life = reduced downtime
         // Average developer hourly rate: $75
@@ -696,14 +696,14 @@ public class CostSavingsAnalysis {
                     <h4>Carbon Footprint Reduction</h4>
                     <pre><code>// Carbon Impact Analysis
 public class CarbonImpactCalculator {
-    
+
     // Global average grid emission factor
     private static final double GRID_EMISSION_FACTOR = 0.475; // kg CO₂e per kWh
-    
+
     public CarbonImpactReport calculateAnnualImpact() {
         double energySavingsKwh = 2_815_100; // Annual savings in kWh
         double carbonReduction = energySavingsKwh * GRID_EMISSION_FACTOR;
-        
+
         return CarbonImpactReport.builder()
             .annualEnergyReduction(energySavingsKwh)
             .carbonEmissionsAvoided(carbonReduction)              // 1,847,172 kg CO₂e
@@ -713,7 +713,7 @@ public class CarbonImpactCalculator {
             .percentageOfCompanyTarget(calculateTargetProgress())  // 23.4% of 2030 goal
             .build();
     }
-    
+
     // Regional breakdown of carbon impact
     public Map&lt;Region, Double&gt; getRegionalCarbonImpact() {
         Map&lt;Region, Double&gt; regionalFactors = Map.of(
@@ -721,22 +721,22 @@ public class CarbonImpactCalculator {
             Region.EUROPE, 0.295,        // More renewable energy
             Region.ASIA_PACIFIC, 0.681   // Higher coal dependency
         );
-        
+
         Map&lt;Region, Integer&gt; deviceDistribution = Map.of(
             Region.NORTH_AMERICA, 6847,
             Region.EUROPE, 4129,
             Region.ASIA_PACIFIC, 4271
         );
-        
+
         Map&lt;Region, Double&gt; regionalImpact = new HashMap&lt;&gt;();
         double totalEnergyPerDevice = 2_815_100.0 / 15247;
-        
+
         for (Region region : regionalFactors.keySet()) {
             double regionEnergyReduction = totalEnergyPerDevice * deviceDistribution.get(region);
             double regionCarbonReduction = regionEnergyReduction * regionalFactors.get(region);
             regionalImpact.put(region, regionCarbonReduction);
         }
-        
+
         return regionalImpact;
     }
 }</code></pre>
@@ -778,11 +778,11 @@ public class CarbonImpactCalculator {
                     <pre><code>// Lesson: Create hardware-specific optimization profiles
 @Service
 public class HardwareOptimizationService {
-    
+
     public OptimizationProfile createHardwareProfile(SystemInfo systemInfo) {
         // Machine learning approach to optimize for unknown hardware
         MLModel optimizationModel = modelService.getModel("hardware-optimization-v2");
-        
+
         HardwareFeatures features = HardwareFeatures.builder()
             .cpuArchitecture(systemInfo.getCpuArchitecture())
             .thermalDesignPower(systemInfo.getTdp())
@@ -791,9 +791,9 @@ public class HardwareOptimizationService {
             .batteryCapacity(systemInfo.getBatteryCapacity())
             .displayType(systemInfo.getDisplayType())
             .build();
-            
+
         OptimizationParameters params = optimizationModel.predict(features);
-        
+
         return OptimizationProfile.builder()
             .hardwareId(systemInfo.getHardwareId())
             .optimalThresholds(params.getThresholds())
