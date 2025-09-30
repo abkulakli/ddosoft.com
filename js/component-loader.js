@@ -143,6 +143,22 @@ class ComponentLoader {
     }
 
     /**
+     * Fix navigation links based on current page location
+     */
+    fixNavigationLinks() {
+        const currentPath = window.location.pathname;
+        const isInSubdirectory = currentPath.includes('/articles/');
+
+        if (isInSubdirectory) {
+            // Update navigation links to point back to homepage sections
+            document.querySelectorAll('[data-nav-target]').forEach(link => {
+                const target = link.getAttribute('data-nav-target');
+                link.href = `../index.html#${target}`;
+            });
+        }
+    }
+
+    /**
      * Load all components (header and footer)
      */
     async loadAllComponents() {
@@ -150,6 +166,9 @@ class ComponentLoader {
             this.loadHeader(),
             this.loadFooter()
         ]);
+
+        // Fix navigation links after components are loaded
+        this.fixNavigationLinks();
     }
 }
 

@@ -39,8 +39,21 @@ class LanguageManager {
     }
 
     async loadLanguageData(language) {
-        const response = await fetch(`./lang/${language}.json`);
+        // Determine the correct path based on current location
+        const pathToLang = this.getLanguageFilePath();
+        const response = await fetch(`${pathToLang}/lang/${language}.json`);
         this.languageData = await response.json();
+    }
+
+    getLanguageFilePath() {
+        // Check if we're in a subdirectory (like articles/)
+        const path = window.location.pathname;
+        const depth = (path.match(/\//g) || []).length - 1; // Count directory depth
+
+        if (depth > 1 || path.includes('/articles/')) {
+            return '..'; // We're in a subdirectory, go up one level
+        }
+        return '.'; // We're in the root directory
     }
 
     applyLanguage() {

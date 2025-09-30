@@ -28,12 +28,14 @@
 - ✅ **Reduced File Size**: Eliminated thousands of lines of duplicate code
 - ✅ **Future-Proof**: New pages automatically inherit consistent structure
 
-## Recent Major Achievement - Complete Article System (✅ COMPLETED)
+## Recent Major Achievement - Complete Bilingual Article System (✅ COMPLETED)
 
-### ✅ All 404 Errors Eliminated (Latest Achievement)
-**COMPLETE ARTICLE COVERAGE ACHIEVED:**
+### ✅ All 404 Errors Eliminated + Full Language Support (Latest Achievement)
+**COMPLETE BILINGUAL ARTICLE COVERAGE ACHIEVED:**
 - **Missing Articles Created**: All 4 missing articles now exist with comprehensive, professional content
 - **Zero 404 Errors**: Every link from index.html now points to existing, functional article pages
+- **Full Bilingual Support**: Language switching now works correctly on all article pages
+- **Smart Path Resolution**: Fixed language file loading for subdirectory pages
 - **Professional Content**: Technical depth matching DDOSoft's expertise in sustainable software
 - **Consistent Structure**: All articles follow the same architectural patterns and design standards
 
@@ -45,8 +47,11 @@
   - `calculating-carbon-footprint-software.html` (✅ CREATED)
   - `sustainable-software-development-principles.html` (✅ CREATED)
   - `ddogreen-case-study-enterprise-deployment.html` (✅ CREATED)
-- **Component Integration**: All new articles use DRY component system with header/footer placeholders
-- **Language Integration**: Prepared for full multilingual support with data-lang-key attributes
+- **Component Integration**: All articles use DRY component system with header/footer placeholders
+- **Full Language Support**: Language switching now works on all article pages (✅ FIXED)
+  - Smart path resolution in language-manager.js for subdirectory pages
+  - Navigation links correctly route back to homepage sections from articles
+  - All articles have data-lang-key attributes for bilingual content
 - **SEO Optimization**: Complete meta tags, canonical URLs, and structured content
 - **Professional Quality**: Comprehensive technical content with code examples and real-world applications
 
