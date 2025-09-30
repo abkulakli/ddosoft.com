@@ -371,18 +371,38 @@
       "date": "September 10, 2025",
       "content": {
         "intro": "Developing software that works seamlessly across multiple operating systems is one of the most complex challenges in modern software development. The DDOGreen project provides an excellent case study in how to overcome these challenges while maintaining performance, reliability, and platform-specific optimizations.",
+        "mainTitle": "Building Once, Running Everywhere: The Cross-Platform Challenge",
         "sections": {
           "imperative": {
             "title": "The Cross-Platform Imperative",
-            "content": "In today's diverse computing environment, users expect software to work regardless of their operating system choice. For DDOGreen, this meant creating a power management solution that could deliver consistent functionality across Linux distributions and Windows versions while leveraging the unique capabilities of each platform."
+            "content": "In today's diverse computing environment, users expect software to work regardless of their operating system choice. For DDOGreen, this meant creating a power management solution that could deliver consistent functionality across Linux distributions and Windows versions while leveraging the unique capabilities of each platform.",
+            "whyTitle": "Why Cross-Platform Matters"
           },
           "architecture": {
             "title": "Architectural Decisions: Foundation for Success",
             "content": "The success of any cross-platform project begins with smart architectural decisions. For DDOGreen, we chose Modern C++20 as our foundation, providing several key advantages."
           },
+          "implementation": {
+            "title": "Platform-Specific Implementation Details"
+          },
+          "buildSystem": {
+            "title": "Build System and Packaging"
+          },
+          "testing": {
+            "title": "Testing Strategy: Ensuring Reliability Across Platforms"
+          },
+          "performance": {
+            "title": "Performance Optimization Strategies"
+          },
           "lessons": {
             "title": "Lessons Learned and Best Practices",
             "content": "The DDOGreen project demonstrates that effective cross-platform development requires more than just shared code—it demands deep understanding of each target platform, careful architectural planning, and rigorous testing across all supported environments."
+          },
+          "future": {
+            "title": "Future of Cross-Platform Development"
+          },
+          "conclusion": {
+            "title": "Conclusion: The Cross-Platform Advantage"
           }
         }
       }
@@ -401,6 +421,12 @@
           },
           "designPrinciples": {
             "title": "Green Algorithm Design Principles"
+          },
+          "measurement": {
+            "title": "Measuring Algorithm Energy Efficiency"
+          },
+          "bestPractices": {
+            "title": "Best Practices for Developers"
           },
           "caseStudy": {
             "title": "Real-World Applications: DDOGreen Case Study"
@@ -426,6 +452,18 @@
           "methodologies": {
             "title": "Measurement Methodologies"
           },
+          "tools": {
+            "title": "Practical Measurement Tools"
+          },
+          "reduction": {
+            "title": "Reduction Strategies"
+          },
+          "reporting": {
+            "title": "Reporting and Compliance"
+          },
+          "future": {
+            "title": "Future Trends and Technologies"
+          },
           "caseStudy": {
             "title": "Real-World Case Study: DDOGreen Impact Assessment"
           },
@@ -449,6 +487,15 @@
           "principles": {
             "title": "Core Principles of Sustainable Software Development"
           },
+          "framework": {
+            "title": "Implementation Framework"
+          },
+          "bestPractices": {
+            "title": "Best Practices and Guidelines"
+          },
+          "future": {
+            "title": "Future of Sustainable Software Development"
+          },
           "caseStudy": {
             "title": "Real-World Implementation: DDOGreen Case Study"
           },
@@ -464,7 +511,33 @@
       "date": "August 20, 2025",
       "excerpt": "Real-world case study of DDOGreen implementation in a large enterprise environment, including challenges faced and solutions implemented.",
       "content": {
-        "intro": "The successful deployment of DDOGreen in a large enterprise environment demonstrates the practical benefits of intelligent power management solutions. This comprehensive case study examines the implementation process, challenges encountered, and measurable results achieved during a 12-month enterprise rollout."
+        "intro": "The successful deployment of DDOGreen in a large enterprise environment demonstrates the practical benefits of intelligent power management solutions. This comprehensive case study examines the implementation process, challenges encountered, and measurable results achieved during a 12-month enterprise rollout.",
+        "sections": {
+          "summary": {
+            "title": "Executive Summary"
+          },
+          "profile": {
+            "title": "Company Profile"
+          },
+          "strategy": {
+            "title": "Implementation Strategy"
+          },
+          "challenges": {
+            "title": "Implementation Challenges and Solutions"
+          },
+          "results": {
+            "title": "Results and Impact Analysis"
+          },
+          "lessons": {
+            "title": "Lessons Learned and Best Practices"
+          },
+          "future": {
+            "title": "Future Enhancements and Roadmap"
+          },
+          "conclusion": {
+            "title": "Conclusion and Recommendations"
+          }
+        }
       }
     }
   },

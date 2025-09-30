@@ -379,18 +379,38 @@
       "date": "10 Eylül 2025",
       "content": {
         "intro": "Birden fazla işletim sisteminde sorunsuz çalışan yazılım geliştirmek, modern yazılım geliştirmenin en karmaşık zorluklarından biridir. DDOGreen projesi, performans, güvenilirlik ve platforma özgü optimizasyonları korurken bu zorlukların nasıl aşılacağına dair mükemmel bir örnek olay sunar.",
+        "mainTitle": "Bir Kez İnşa Et, Her Yerde Çalıştır: Çapraz Platform Zorluğu",
         "sections": {
           "imperative": {
             "title": "Çapraz Platform Zorunluluğu",
-            "content": "Günümüzün çeşitli bilişim ortamında, kullanıcılar yazılımın işletim sistemi tercihlerinden bağımsız çalışmasını bekler. DDOGreen için bu, Linux dağıtımları ve Windows sürümleri arasında tutarlı işlevsellik sunarken her platformun benzersiz yeteneklerini kullanan bir güç yönetimi çözümü yaratmak anlamına geliyordu."
+            "content": "Günümüzün çeşitli bilişim ortamında, kullanıcılar yazılımın işletim sistemi tercihlerinden bağımsız çalışmasını bekler. DDOGreen için bu, Linux dağıtımları ve Windows sürümleri arasında tutarlı işlevsellik sunarken her platformun benzersiz yeteneklerini kullanan bir güç yönetimi çözümü yaratmak anlamına geliyordu.",
+            "whyTitle": "Çapraz Platform Neden Önemli"
           },
           "architecture": {
             "title": "Mimari Kararlar: Başarının Temeli",
             "content": "Herhangi bir çapraz platform projesinin başarısı akıllı mimari kararlarla başlar. DDOGreen için temel olarak Modern C++20'yi seçtik, bu da birçok önemli avantaj sağladı."
           },
+          "implementation": {
+            "title": "Platforma Özgü Uygulama Detayları"
+          },
+          "buildSystem": {
+            "title": "Yapı Sistemi ve Paketleme"
+          },
+          "testing": {
+            "title": "Test Stratejisi: Platformlar Arası Güvenilirliği Sağlama"
+          },
+          "performance": {
+            "title": "Performans Optimizasyon Stratejileri"
+          },
           "lessons": {
             "title": "Öğrenilen Dersler ve En İyi Uygulamalar",
             "content": "DDOGreen projesi, etkili çapraz platform geliştirmenin sadece paylaşılan koddan daha fazlasını gerektirdiğini gösterir—her hedef platformun derinlemesine anlaşılması, dikkatli mimari planlama ve tüm desteklenen ortamlarda titiz test yapılması gerekir."
+          },
+          "future": {
+            "title": "Çapraz Platform Geliştirmenin Geleceği"
+          },
+          "conclusion": {
+            "title": "Sonuç: Çapraz Platform Avantajı"
           }
         }
       }
@@ -409,6 +429,12 @@
           },
           "designPrinciples": {
             "title": "Yeşil Algoritma Tasarım İlkeleri"
+          },
+          "measurement": {
+            "title": "Algoritma Enerji Verimliliğini Ölçme"
+          },
+          "bestPractices": {
+            "title": "Geliştiriciler için En İyi Uygulamalar"
           },
           "caseStudy": {
             "title": "Gerçek Dünya Uygulamaları: DDOGreen Vaka Çalışması"
@@ -434,6 +460,18 @@
           "methodologies": {
             "title": "Ölçüm Metodolojileri"
           },
+          "tools": {
+            "title": "Pratik Ölçüm Araçları"
+          },
+          "reduction": {
+            "title": "Azaltma Stratejileri"
+          },
+          "reporting": {
+            "title": "Raporlama ve Uyumluluk"
+          },
+          "future": {
+            "title": "Gelecek Trendleri ve Teknolojiler"
+          },
           "caseStudy": {
             "title": "Gerçek Dünya Vaka Çalışması: DDOGreen Etki Değerlendirmesi"
           },
@@ -457,6 +495,15 @@
           "principles": {
             "title": "Sürdürülebilir Yazılım Geliştirmenin Temel İlkeleri"
           },
+          "framework": {
+            "title": "Uygulama Çerçevesi"
+          },
+          "bestPractices": {
+            "title": "En İyi Uygulamalar ve Kılavuzlar"
+          },
+          "future": {
+            "title": "Sürdürülebilir Yazılım Geliştirmenin Geleceği"
+          },
           "caseStudy": {
             "title": "Gerçek Dünya Uygulaması: DDOGreen Vaka Çalışması"
           },
@@ -472,7 +519,33 @@
       "date": "20 Ağustos 2025",
       "excerpt": "Büyük kurumsal ortamda DDOGreen uygulamasının gerçek dünya vaka çalışması, karşılaşılan zorluklar ve uygulanan çözümler dahil.",
       "content": {
-        "intro": "Büyük kurumsal ortamda DDOGreen'in başarılı dağıtımı, akıllı güç yönetimi çözümlerinin pratik faydalarını göstermektedir. Bu kapsamlı vaka çalışması, 12 aylık kurumsal yayılım sırasında uygulama sürecini, karşılaşılan zorlukları ve elde edilen ölçülebilir sonuçları inceler."
+        "intro": "Büyük kurumsal ortamda DDOGreen'in başarılı dağıtımı, akıllı güç yönetimi çözümlerinin pratik faydalarını göstermektedir. Bu kapsamlı vaka çalışması, 12 aylık kurumsal yayılım sırasında uygulama sürecini, karşılaşılan zorlukları ve elde edilen ölçülebilir sonuçları inceler.",
+        "sections": {
+          "summary": {
+            "title": "Yönetici Özeti"
+          },
+          "profile": {
+            "title": "Şirket Profili"
+          },
+          "strategy": {
+            "title": "Uygulama Stratejisi"
+          },
+          "challenges": {
+            "title": "Uygulama Zorlukları ve Çözümleri"
+          },
+          "results": {
+            "title": "Sonuçlar ve Etki Analizi"
+          },
+          "lessons": {
+            "title": "Öğrenilen Dersler ve En İyi Uygulamalar"
+          },
+          "future": {
+            "title": "Gelecek İyileştirmeler ve Yol Haritası"
+          },
+          "conclusion": {
+            "title": "Sonuç ve Öneriler"
+          }
+        }
       }
     }
   },
