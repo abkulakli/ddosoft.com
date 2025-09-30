@@ -399,25 +399,81 @@
       "title": "Yeşil Algoritmalar: Performans vs Verimlilik Dengesi",
       "category": "Sürdürülebilirlik",
       "date": "5 Eylül 2025",
-      "excerpt": "Yüksek performans standartlarını korurken hesaplama karmaşıklığını ve enerji tüketimini azaltan algoritmik seçimleri keşfedin."
+      "excerpt": "Yüksek performans standartlarını korurken hesaplama karmaşıklığını ve enerji tüketimini azaltan algoritmik seçimleri keşfedin.",
+      "content": {
+        "intro": "İklim bilinci ve çevresel sorumluluk çağında, yazılım geliştiricileri yeni bir zorlukla karşı karşıya: sadece iyi performans gösteren değil, aynı zamanda enerji tüketimini minimize eden algoritmalar yaratmak. Yeşil algoritmalar, geleneksel performans metrikleri ile çevresel etkiyi dengeleyerek hesaplama problemlerine yaklaşımımızda paradigma değişimini temsil eder.",
+        "sections": {
+          "environmentalCost": {
+            "title": "Bilgi İşlemin Çevresel Maliyeti",
+            "content": "Yazdığımız her algoritmanın çevresel ayak izi vardır. Yürütme sırasında tüketilen enerjiden işlemciler tarafından üretilen ısıya kadar, hesaplama seçimleri gezegenimizin kaynaklarını doğrudan etkiler. Bu gerçekleri göz önünde bulundurun:"
+          },
+          "designPrinciples": {
+            "title": "Yeşil Algoritma Tasarım İlkeleri"
+          },
+          "caseStudy": {
+            "title": "Gerçek Dünya Uygulamaları: DDOGreen Vaka Çalışması"
+          },
+          "conclusion": {
+            "title": "Sonuç",
+            "content": "Yeşil algoritmalar sürdürülebilir yazılım geliştirmenin geleceğini temsil eder. Performans ile enerji verimliliğini dengeleyerek, sadece kullanıcı ihtiyaçlarını karşılamakla kalmayıp aynı zamanda çevresel korumaya da katkıda bulunan çözümler yaratabiliriz."
+          }
+        }
+      }
     },
     "carbonFootprint": {
       "title": "Yazılımınızın Karbon Ayak İzini Hesaplama",
       "category": "Yeşil Teknoloji",
       "date": "30 Ağustos 2025",
-      "excerpt": "Geliştirmeden dağıtım ve bakıma kadar uygulamalarınızın çevresel etkisini ölçmek ve azaltmak için pratik yöntemler öğrenin."
+      "excerpt": "Geliştirmeden dağıtım ve bakıma kadar uygulamalarınızın çevresel etkisini ölçmek ve azaltmak için pratik yöntemler öğrenin.",
+      "content": {
+        "intro": "Dijital ekonomi büyümeye devam ettikçe, yazılım uygulamaları küresel karbon emisyonlarına önemli katkıda bulunanlara dönüştü. Yazılımınızın çevresel etkisini anlamak ve ölçmek artık isteğe bağlı değil—sorumlu geliştirme için gereklidir. Bu kapsamlı kılavuz, yazılımınızın karbon ayak izini hesaplamak ve azaltmak için pratik yöntemler sunar.",
+        "sections": {
+          "understanding": {
+            "title": "Yazılım Karbon Ayak İzini Anlama"
+          },
+          "methodologies": {
+            "title": "Ölçüm Metodolojileri"
+          },
+          "caseStudy": {
+            "title": "Gerçek Dünya Vaka Çalışması: DDOGreen Etki Değerlendirmesi"
+          },
+          "conclusion": {
+            "title": "Sonuç"
+          }
+        }
+      }
     },
     "sustainableDevelopment": {
       "title": "Sürdürülebilir Yazılım Geliştirme: Temel İlkeler",
       "category": "Sürdürülebilirlik",
       "date": "25 Ağustos 2025",
-      "excerpt": "Enerji tüketimini minimize eden ve verimliliği maksimize eden çevre bilincine sahip yazılım geliştirme için temel ilkeler ve uygulamalar."
+      "excerpt": "Enerji tüketimini minimize eden ve verimliliği maksimize eden çevre bilincine sahip yazılım geliştirme için temel ilkeler ve uygulamalar.",
+      "content": {
+        "intro": "Sürdürülebilir yazılım geliştirme, uygulamaları nasıl tasarladığımız, inşa ettiğimiz ve sürdürdüğümüzde temel bir değişimi temsil eder. Teknolojinin çevresel etkisi giderek daha belirgin hale geldikçe, geliştiriciler enerji tüketimini minimize eden, kaynak israfını azaltan ve uzun ömürlü, verimli çözümler yaratan ilkeleri benimser. Bu kapsamlı kılavuz, çevre bilincine sahip yazılım geliştirme için gerekli temel ilkeleri ve uygulamaları özetlemektedir.",
+        "sections": {
+          "imperative": {
+            "title": "Sürdürülebilir Yazılım İhtiyacı"
+          },
+          "principles": {
+            "title": "Sürdürülebilir Yazılım Geliştirmenin Temel İlkeleri"
+          },
+          "caseStudy": {
+            "title": "Gerçek Dünya Uygulaması: DDOGreen Vaka Çalışması"
+          },
+          "conclusion": {
+            "title": "Sonuç"
+          }
+        }
+      }
     },
     "ddogreenCaseStudy": {
       "title": "DDOGreen Vaka Çalışması: Kurumsal Dağıtım Başarısı",
       "category": "Geliştirme",
       "date": "20 Ağustos 2025",
-      "excerpt": "Büyük kurumsal ortamda DDOGreen uygulamasının gerçek dünya vaka çalışması, karşılaşılan zorluklar ve uygulanan çözümler dahil."
+      "excerpt": "Büyük kurumsal ortamda DDOGreen uygulamasının gerçek dünya vaka çalışması, karşılaşılan zorluklar ve uygulanan çözümler dahil.",
+      "content": {
+        "intro": "Büyük kurumsal ortamda DDOGreen'in başarılı dağıtımı, akıllı güç yönetimi çözümlerinin pratik faydalarını göstermektedir. Bu kapsamlı vaka çalışması, 12 aylık kurumsal yayılım sırasında uygulama sürecini, karşılaşılan zorlukları ve elde edilen ölçülebilir sonuçları inceler."
+      }
     }
   },
   "footer": {
