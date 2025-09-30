@@ -35,43 +35,43 @@
 
                     <h2 data-lang-key="articles.carbonFootprint.content.sections.understanding.title">Understanding Software Carbon Footprint</h2>
 
-                    <p>
+                    <p data-lang-key="articles.carbonFootprint.content.understanding.intro">
                         Software carbon footprint encompasses all greenhouse gas emissions associated with your application throughout its lifecycle. This includes direct emissions from energy consumption and indirect emissions from infrastructure, development, and maintenance activities.
                     </p>
 
-                    <h3>The Three Scopes of Software Emissions</h3>
+                    <h3 data-lang-key="articles.carbonFootprint.content.understanding.threeScopesTitle">The Three Scopes of Software Emissions</h3>
 
-                    <h4>Scope 1: Direct Emissions</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.understanding.scope1Title">Scope 1: Direct Emissions</h4>
                     <ul>
-                        <li><strong>Development Hardware:</strong> Emissions from developers' computers, servers, and equipment</li>
-                        <li><strong>Office Facilities:</strong> Energy consumption from development offices and facilities</li>
-                        <li><strong>Company Vehicles:</strong> Transportation for software-related business activities</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope1.developmentHardware"><strong>Development Hardware:</strong> Emissions from developers' computers, servers, and equipment</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope1.officeFacilities"><strong>Office Facilities:</strong> Energy consumption from development offices and facilities</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope1.companyVehicles"><strong>Company Vehicles:</strong> Transportation for software-related business activities</li>
                     </ul>
 
-                    <h4>Scope 2: Indirect Energy Emissions</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.understanding.scope2Title">Scope 2: Indirect Energy Emissions</h4>
                     <ul>
-                        <li><strong>Electricity Consumption:</strong> Grid electricity used for development and deployment</li>
-                        <li><strong>Cloud Services:</strong> Energy consumed by cloud infrastructure hosting your applications</li>
-                        <li><strong>Data Centers:</strong> Power consumption of servers running your software</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope2.electricityConsumption"><strong>Electricity Consumption:</strong> Grid electricity used for development and deployment</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope2.cloudServices"><strong>Cloud Services:</strong> Energy consumed by cloud infrastructure hosting your applications</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope2.dataCenters"><strong>Data Centers:</strong> Power consumption of servers running your software</li>
                     </ul>
 
-                    <h4>Scope 3: Other Indirect Emissions</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.understanding.scope3Title">Scope 3: Other Indirect Emissions</h4>
                     <ul>
-                        <li><strong>User Devices:</strong> Energy consumed by end-user devices running your software</li>
-                        <li><strong>Network Transmission:</strong> Data transfer between clients and servers</li>
-                        <li><strong>Third-party Services:</strong> Emissions from external APIs and services</li>
-                        <li><strong>Software Updates:</strong> Distribution and installation of updates</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope3.userDevices"><strong>User Devices:</strong> Energy consumed by end-user devices running your software</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope3.networkTransmission"><strong>Network Transmission:</strong> Data transfer between clients and servers</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope3.thirdPartyServices"><strong>Third-party Services:</strong> Emissions from external APIs and services</li>
+                        <li data-lang-key="articles.carbonFootprint.content.understanding.scope3.softwareUpdates"><strong>Software Updates:</strong> Distribution and installation of updates</li>
                     </ul>
 
                     <h2 data-lang-key="articles.carbonFootprint.content.sections.methodologies.title">Measurement Methodologies</h2>
 
-                    <h3>1. Energy-Based Calculation</h3>
-                    <p>The most accurate method involves measuring actual energy consumption and converting it to carbon emissions:</p>
+                    <h3 data-lang-key="articles.carbonFootprint.content.methodologies.energyBasedTitle">1. Energy-Based Calculation</h3>
+                    <p data-lang-key="articles.carbonFootprint.content.methodologies.energyBasedDescription">The most accurate method involves measuring actual energy consumption and converting it to carbon emissions:</p>
 
-                    <h4>Basic Formula</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.methodologies.basicFormulaTitle">Basic Formula</h4>
                     <pre><code>Carbon Emissions (kg CO₂e) = Energy Consumption (kWh) × Grid Emission Factor (kg CO₂e/kWh)</code></pre>
 
-                    <h4>Implementation Example</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.methodologies.implementationExampleTitle">Implementation Example</h4>
                     <pre><code>class CarbonFootprintCalculator {
     private static final Map&lt;String, Double&gt; GRID_FACTORS = Map.of(
         "EU", 0.295,      // kg CO₂e/kWh - European Union average
@@ -93,10 +93,10 @@
     }
 }</code></pre>
 
-                    <h3>2. Resource-Based Estimation</h3>
-                    <p>When direct measurement isn't possible, estimate based on resource consumption:</p>
+                    <h3 data-lang-key="articles.carbonFootprint.content.methodologies.resourceBasedTitle">2. Resource-Based Estimation</h3>
+                    <p data-lang-key="articles.carbonFootprint.content.methodologies.resourceBasedDescription">When direct measurement isn't possible, estimate based on resource consumption:</p>
 
-                    <h4>CPU-Based Estimation</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.methodologies.cpuBasedTitle">CPU-Based Estimation</h4>
                     <pre><code>public class ResourceFootprintEstimator {
     // Thermal Design Power (TDP) for common processors
     private static final Map&lt;String, Integer&gt; CPU_TDP = Map.of(
@@ -149,16 +149,16 @@ public class AWSCarbonCalculator {
 
                     <h2 data-lang-key="articles.carbonFootprint.content.sections.tools.title">Practical Measurement Tools</h2>
 
-                    <h3>Development Environment Monitoring</h3>
+                    <h3 data-lang-key="articles.carbonFootprint.content.tools.developmentMonitoringTitle">Development Environment Monitoring</h3>
 
-                    <h4>PowerTOP (Linux)</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.tools.powerTopTitle">PowerTOP (Linux)</h4>
                     <pre><code># Monitor real-time power consumption during development
 sudo powertop --html=development-power-report.html
 
 # Example output analysis
 grep -E "(CPU|GPU|Package)" development-power-report.html</code></pre>
 
-                    <h4>Activity Monitor (macOS)</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.tools.activityMonitorTitle">Activity Monitor (macOS)</h4>
                     <pre><code># Monitor energy impact of development tools
 #!/bin/bash
 while true; do
@@ -167,12 +167,12 @@ while true; do
     sleep 300  # Log every 5 minutes
 done</code></pre>
 
-                    <h4>Windows Performance Monitor</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.tools.windowsPerformanceTitle">Windows Performance Monitor</h4>
                     <pre><code>// PowerShell script for Windows development monitoring
 Get-Counter "\Processor(_Total)\% Processor Time" -SampleInterval 5 -MaxSamples 720 |
 Export-Counter -Path "development-cpu-usage.csv" -FileFormat CSV</code></pre>
 
-                    <h3>Application Runtime Monitoring</h3>
+                    <h3 data-lang-key="articles.carbonFootprint.content.tools.runtimeMonitoringTitle">Application Runtime Monitoring</h3>
 
                     <h4>Docker Container Monitoring</h4>
                     <pre><code>version: '3.8'
@@ -275,9 +275,9 @@ services:
 
                     <h2 data-lang-key="articles.carbonFootprint.content.sections.reduction.title">Reduction Strategies</h2>
 
-                    <h3>Code-Level Optimizations</h3>
+                    <h3 data-lang-key="articles.carbonFootprint.content.reduction.codeLevelTitle">Code-Level Optimizations</h3>
 
-                    <h4>Algorithm Efficiency</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.reduction.algorithmEfficiencyTitle">Algorithm Efficiency</h4>
                     <pre><code>// Inefficient: O(n²) - High carbon footprint
 public List&lt;String&gt; findDuplicatesInefficient(List&lt;String&gt; items) {
     List&lt;String&gt; duplicates = new ArrayList&lt;&gt;();
@@ -300,22 +300,22 @@ public List&lt;String&gt; findDuplicatesEfficient(List&lt;String&gt; items) {
         .collect(Collectors.toList());
 }</code></pre>
 
-                    <h3>Infrastructure Optimization</h3>
+                    <h3 data-lang-key="articles.carbonFootprint.content.reduction.infrastructureTitle">Infrastructure Optimization</h3>
 
-                    <h4>Right-Sizing Resources</h4>
+                    <h4 data-lang-key="articles.carbonFootprint.content.reduction.rightSizingTitle">Right-Sizing Resources</h4>
                     <ul>
-                        <li><strong>CPU Scaling:</strong> Use auto-scaling to match actual demand</li>
-                        <li><strong>Memory Optimization:</strong> Reduce memory footprint to enable smaller instances</li>
-                        <li><strong>Storage Efficiency:</strong> Implement data compression and deduplication</li>
-                        <li><strong>Network Optimization:</strong> Minimize data transfer through caching and CDNs</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.rightSizing.cpuScaling"><strong>CPU Scaling:</strong> Use auto-scaling to match actual demand</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.rightSizing.memoryOptimization"><strong>Memory Optimization:</strong> Reduce memory footprint to enable smaller instances</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.rightSizing.storageEfficiency"><strong>Storage Efficiency:</strong> Implement data compression and deduplication</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.rightSizing.networkOptimization"><strong>Network Optimization:</strong> Minimize data transfer through caching and CDNs</li>
                     </ul>
 
-                    <h3>Green Hosting Choices</h3>
+                    <h3 data-lang-key="articles.carbonFootprint.content.reduction.greenHostingTitle">Green Hosting Choices</h3>
                     <ul>
-                        <li><strong>Renewable Energy Providers:</strong> Choose hosting providers committed to renewable energy</li>
-                        <li><strong>Geographic Optimization:</strong> Deploy in regions with clean energy grids</li>
-                        <li><strong>Edge Computing:</strong> Reduce latency and energy consumption through edge deployment</li>
-                        <li><strong>Efficient Data Centers:</strong> Select providers with high PUE (Power Usage Effectiveness) ratings</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.greenHosting.renewableProviders"><strong>Renewable Energy Providers:</strong> Choose hosting providers committed to renewable energy</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.greenHosting.geographicOptimization"><strong>Geographic Optimization:</strong> Deploy in regions with clean energy grids</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.greenHosting.edgeComputing"><strong>Edge Computing:</strong> Reduce latency and energy consumption through edge deployment</li>
+                        <li data-lang-key="articles.carbonFootprint.content.reduction.greenHosting.efficientDataCenters"><strong>Efficient Data Centers:</strong> Select providers with high PUE (Power Usage Effectiveness) ratings</li>
                     </ul>
 
                     <h2 data-lang-key="articles.carbonFootprint.content.sections.reporting.title">Reporting and Compliance</h2>
@@ -362,21 +362,21 @@ public List&lt;String&gt; findDuplicatesEfficient(List&lt;String&gt; items) {
                         <li><strong>Quantum Computing:</strong> Exponential efficiency improvements for complex calculations</li>
                     </ul>
 
-                    <h3>Industry Integration</h3>
+                    <h3 data-lang-key="articles.carbonFootprint.content.future.industryIntegrationTitle">Industry Integration</h3>
                     <ul>
-                        <li><strong>CI/CD Carbon Gates:</strong> Automated carbon footprint checks in deployment pipelines</li>
-                        <li><strong>Carbon-Aware Scheduling:</strong> Running workloads when renewable energy is abundant</li>
-                        <li><strong>Green Software Engineering:</strong> Carbon considerations integrated into software design</li>
-                        <li><strong>Regulatory Compliance:</strong> Mandatory carbon reporting for digital services</li>
+                        <li data-lang-key="articles.carbonFootprint.content.future.industryIntegration.cicdGates"><strong>CI/CD Carbon Gates:</strong> Automated carbon footprint checks in deployment pipelines</li>
+                        <li data-lang-key="articles.carbonFootprint.content.future.industryIntegration.carbonAwareScheduling"><strong>Carbon-Aware Scheduling:</strong> Running workloads when renewable energy is abundant</li>
+                        <li data-lang-key="articles.carbonFootprint.content.future.industryIntegration.greenEngineering"><strong>Green Software Engineering:</strong> Carbon considerations integrated into software design</li>
+                        <li data-lang-key="articles.carbonFootprint.content.future.industryIntegration.regulatoryCompliance"><strong>Regulatory Compliance:</strong> Mandatory carbon reporting for digital services</li>
                     </ul>
 
                     <h2 data-lang-key="articles.carbonFootprint.content.sections.conclusion.title">Conclusion</h2>
 
-                    <p>Calculating your software's carbon footprint is the first step toward building a more sustainable digital future. By understanding the environmental impact of your applications, you can make informed decisions that reduce emissions while maintaining performance and user experience.</p>
+                    <p data-lang-key="articles.carbonFootprint.content.conclusion.paragraph1">Calculating your software's carbon footprint is the first step toward building a more sustainable digital future. By understanding the environmental impact of your applications, you can make informed decisions that reduce emissions while maintaining performance and user experience.</p>
 
-                    <p>Tools like DDOGreen demonstrate that software can be both a solution to environmental challenges and a contributor to sustainability goals. Every optimization, every efficient algorithm, and every thoughtful architectural decision contributes to a cleaner, more sustainable digital ecosystem.</p>
+                    <p data-lang-key="articles.carbonFootprint.content.conclusion.paragraph2">Tools like DDOGreen demonstrate that software can be both a solution to environmental challenges and a contributor to sustainability goals. Every optimization, every efficient algorithm, and every thoughtful architectural decision contributes to a cleaner, more sustainable digital ecosystem.</p>
 
-                    <p>The path to carbon-neutral software development requires measurement, optimization, and continuous improvement. Start measuring today, and join the growing community of developers committed to sustainable software development.</p>
+                    <p data-lang-key="articles.carbonFootprint.content.conclusion.paragraph3">The path to carbon-neutral software development requires measurement, optimization, and continuous improvement. Start measuring today, and join the growing community of developers committed to sustainable software development.</p>
                 </div>
 
                 <footer class="article-footer">

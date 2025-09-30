@@ -644,7 +644,77 @@
             "title": "Gerçek Dünya Vaka Çalışması: DDOGreen Etki Değerlendirmesi"
           },
           "conclusion": {
-            "title": "Sonuç"
+            "title": "Sonuç",
+            "paragraph1": "Yazılımınızın karbon ayak izini hesaplamak, daha sürdürülebilir bir dijital gelecek inşa etmenin ilk adımıdır. Uygulamalarınızın çevresel etkisini anlayarak, performans ve kullanıcı deneyimini korurken emisyonları azaltan bilinçli kararlar verebilirsiniz.",
+            "paragraph2": "DDOGreen gibi araçlar, yazılımın hem çevresel zorlukların çözümü hem de sürdürülebilirlik hedeflerine katkıda bulunan bir faktör olabileceğini göstermektedir. Her optimizasyon, her verimli algoritma ve her düşünceli mimari karar, daha temiz ve sürdürülebilir dijital ekosisteme katkıda bulunur.",
+            "paragraph3": "Karbon nötr yazılım geliştirme yolu ölçüm, optimizasyon ve sürekli iyileştirme gerektirir. Bugün ölçmeye başlayın ve sürdürülebilir yazılım geliştirmeye adanmış büyüyen geliştirici topluluğuna katılın."
+          }
+        },
+        "understanding": {
+          "intro": "Yazılım karbon ayak izi, uygulamanızla yaşam döngüsü boyunca ilişkilendirilen tüm sera gazı emisyonlarını kapsar. Bu, enerji tüketiminden kaynaklanan doğrudan emisyonları ve altyapı, geliştirme ve bakım aktivitelerinden kaynaklanan dolaylı emisyonları içerir.",
+          "threeScopesTitle": "Yazılım Emisyonlarının Üç Kapsamı",
+          "scope1Title": "Kapsam 1: Doğrudan Emisyonlar",
+          "scope1": {
+            "developmentHardware": "<strong>Geliştirme Donanımı:</strong> Geliştiricilerin bilgisayarları, sunucuları ve ekipmanlarından emisyonlar",
+            "officeFacilities": "<strong>Ofis Tesisleri:</strong> Geliştirme ofisleri ve tesislerinden enerji tüketimi",
+            "companyVehicles": "<strong>Şirket Araçları:</strong> Yazılımla ilgili iş aktiviteleri için ulaşım"
+          },
+          "scope2Title": "Kapsam 2: Dolaylı Enerji Emisyonları",
+          "scope2": {
+            "electricityConsumption": "<strong>Elektrik Tüketimi:</strong> Geliştirme ve dağıtım için kullanılan şebeke elektriği",
+            "cloudServices": "<strong>Cloud Hizmetleri:</strong> Uygulamalarınızı barındıran cloud altyapısı tarafından tüketilen enerji",
+            "dataCenters": "<strong>Veri Merkezleri:</strong> Yazılımınızı çalıştıran sunucuların güç tüketimi"
+          },
+          "scope3Title": "Kapsam 3: Diğer Dolaylı Emisyonlar",
+          "scope3": {
+            "userDevices": "<strong>Kullanıcı Cihazları:</strong> Yazılımınızı çalıştıran son kullanıcı cihazlarının enerji tüketimi",
+            "networkTransmission": "<strong>Ağ İletimi:</strong> İstemci ve sunucular arasında veri transferi",
+            "thirdPartyServices": "<strong>Üçüncü Parti Hizmetler:</strong> Harici API'ler ve hizmetlerden emisyonlar",
+            "softwareUpdates": "<strong>Yazılım Güncellemeleri:</strong> Güncellemelerin dağıtımı ve kurulumu"
+          }
+        },
+        "methodologies": {
+          "energyBasedTitle": "1. Enerji Tabanlı Hesaplama",
+          "energyBasedDescription": "En doğru yöntem, gerçek enerji tüketimini ölçmeyi ve karbon emisyonlarına dönüştürmeyi içerir:",
+          "basicFormulaTitle": "Temel Formül",
+          "implementationExampleTitle": "Uygulama Örneği",
+          "resourceBasedTitle": "2. Kaynak Tabanlı Tahmin",
+          "resourceBasedDescription": "Doğrudan ölçüm mümkün olmadığında, kaynak tüketimine dayalı tahmin yapın:",
+          "cpuBasedTitle": "CPU Tabanlı Tahmin"
+        },
+        "tools": {
+          "developmentMonitoringTitle": "Geliştirme Ortamı İzleme",
+          "powerTopTitle": "PowerTOP (Linux)",
+          "activityMonitorTitle": "Activity Monitor (macOS)",
+          "windowsPerformanceTitle": "Windows Performance Monitor",
+          "runtimeMonitoringTitle": "Uygulama Çalışma Zamanı İzleme"
+        },
+        "reduction": {
+          "codeLevelTitle": "Kod Seviyesi Optimizasyonları",
+          "algorithmEfficiencyTitle": "Algoritma Verimliliği",
+          "infrastructureTitle": "Altyapı Optimizasyonu",
+          "rightSizingTitle": "Doğru Boyutlandırma Kaynakları",
+          "rightSizing": {
+            "cpuScaling": "<strong>CPU Ölçeklendirme:</strong> Gerçek talebe uyacak otomatik ölçeklendirme kullanın",
+            "memoryOptimization": "<strong>Bellek Optimizasyonu:</strong> Daha küçük örnekleri etkinleştirmek için bellek ayak izini azaltın",
+            "storageEfficiency": "<strong>Depolama Verimliliği:</strong> Veri sıkıştırma ve tekilleştirme uygulayın",
+            "networkOptimization": "<strong>Ağ Optimizasyonu:</strong> Önbellekleme ve CDN'ler aracılığıyla veri transferini minimize edin"
+          },
+          "greenHostingTitle": "Yeşil Barındırma Seçimleri",
+          "greenHosting": {
+            "renewableProviders": "<strong>Yenilenebilir Enerji Sağlayıcıları:</strong> Yenilenebilir enerjiye adanmış barındırma sağlayıcıları seçin",
+            "geographicOptimization": "<strong>Coğrafi Optimizasyon:</strong> Temiz enerji şebekelerine sahip bölgelerde dağıtım yapın",
+            "edgeComputing": "<strong>Edge Computing:</strong> Edge dağıtımı ile gecikme ve enerji tüketimini azaltın",
+            "efficientDataCenters": "<strong>Verimli Veri Merkezleri:</strong> Yüksek PUE (Güç Kullanım Etkinliği) derecelendirmesine sahip sağlayıcılar seçin"
+          }
+        },
+        "future": {
+          "industryIntegrationTitle": "Endüstri Entegrasyonu",
+          "industryIntegration": {
+            "cicdGates": "<strong>CI/CD Karbon Kapıları:</strong> Dağıtım pipeline'larında otomatik karbon ayak izi kontrolleri",
+            "carbonAwareScheduling": "<strong>Karbon Bilinçli Zamanlama:</strong> Yenilenebilir enerji bol olduğunda iş yüklerini çalıştırma",
+            "greenEngineering": "<strong>Yeşil Yazılım Mühendisliği:</strong> Yazılım tasarımına entegre edilmiş karbon hususları",
+            "regulatoryCompliance": "<strong>Düzenleyici Uyumluluk:</strong> Dijital hizmetler için zorunlu karbon raporlaması"
           }
         }
       }
