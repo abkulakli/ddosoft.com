@@ -716,10 +716,10 @@
         },
         "metrics": {
           "energySavings": "Enerji Tasarrufu",
-          "energySavingsValue": "Dizüstü bilgisayar güç tüketiminde ortalama %27,3 azalma", 
+          "energySavingsValue": "Dizüstü bilgisayar güç tüketiminde ortalama %27,3 azalma",
           "costSavings": "Maliyet Tasarrufu",
           "costSavingsValue": "Yıllık 847.000$ elektrik maliyeti azalması",
-          "carbonImpact": "Karbon Etkisi", 
+          "carbonImpact": "Karbon Etkisi",
           "carbonImpactValue": "Yıllık 1.847 metrik ton CO₂e emisyon tasarrufu",
           "deploymentScale": "Dağıtım Ölçeği",
           "deploymentScaleValue": "47 ülkede 15.247 cihaz"
@@ -776,6 +776,31 @@
           "apClimate": "İklim Adaptasyonu: Yüksek sıcaklık ortamları için termal yönetim",
           "apNetwork": "Ağ Optimizasyonu: Değişken ağ koşullarında verimli işletim"
         }
+      },
+      "results": {
+        "quantitativeResults": "Nicelik Sonuçları",
+        "energyConsumptionAnalysis": "Enerji Tüketim Analizi",
+        "financialImpact": "Finansal Etki"
+      },
+      "conclusion": {
+        "intro": "DDOGreen kurumsal dağıtımı, akıllı güç yönetiminin birden fazla boyutta önemli faydalar sağlayabileceğini göstermektedir:",
+        "financialImpact": "<strong>Finansal Etki:</strong> 20 günlük geri ödeme süresi ile yıllık 2.2 milyon dolar tasarruf",
+        "environmentalBenefits": "<strong>Çevresel Faydalar:</strong> Yıllık 1.847 metrik ton CO₂e emisyon azaltımı",
+        "userExperience": "<strong>Kullanıcı Deneyimi:</strong> İyileştirilmiş verimlilik ve memnuniyet puanları",
+        "operationalExcellence": "<strong>Operasyonel Mükemmellik:</strong> Azaltılmış BT destek yükü ve geliştirilmiş sistem güvenilirliği",
+        "recommendationsTitle": "Benzer Dağıtımlar için Ana Öneriler",
+        "recommendation1Title": "1. Üst Yönetim Desteği ile Başlayın",
+        "recommendation1Content": "İş faydalarına odaklanarak güçlü liderlik desteği sağlayın: maliyet tasarrufları, verimlilik iyileştirmeleri ve sürdürülebilirlikte rekabet avantajı.",
+        "recommendation2Title": "2. Kapsamlı Entegrasyon için Plan Yapın",
+        "recommendation2Content": "Mevcut kurumsal sistemlerle entegrasyon için yeterli zaman ve kaynak bütçeleyin. Bu, karmaşık ortamlarda başarı için kritiktir.",
+        "recommendation3Title": "3. Değişim Yönetimine Yatırım Yapın",
+        "recommendation3Content": "Kullanıcı adaptasyonu sonuçları yönlendirir. Kapsamlı eğitim, net iletişim ve duyarlı destek temel yatırımlardır.",
+        "recommendation4Title": "4. Başarıyı Ölçün ve İletişimini Kurun",
+        "recommendation4Content": "Finansal, çevresel ve kullanıcı deneyimi metrikleri üzerine düzenli raporlama momentum sağlar ve değeri gösterir.",
+        "recommendation5Title": "5. Ölçeklenebilirlik için Plan Yapın",
+        "recommendation5Content": "Organizasyonun ihtiyaçlarının büyümesi ve evrimini ele alacak dağıtım ve yönetim altyapısı tasarlayın.",
+        "closingParagraph1": "Bu vaka çalışması, DDOGreen gibi sürdürülebilir yazılım çözümlerinin uygun şekilde uygulandığında dönüştürücü sonuçlar sağlayabileceğini göstermektedir. Akıllı teknoloji, kapsamlı değişim yönetimi ve güçlü organizasyonel desteğin kombinasyonu, hem iş hem de çevresel hedeflere ulaşmak için güçlü bir temel oluşturur.",
+        "closingParagraph2": "Benzer girişimlere başlayan organizasyonlar sürdürülebilirlik yazılımını bir maliyet merkezi olarak değil, küresel çevresel hedeflere katkıda bulunurken ölçülebilir getiriler sağlayan stratejik bir yatırım olarak görmelidir. Kurumsal bilgi işlemin geleceği hem yüksek performanslı hem de sürdürülebilirdir—DDOGreen bu hedeflerin sadece uyumlu değil, sinerjik olduğunu kanıtlar."
       }
     }
   },
