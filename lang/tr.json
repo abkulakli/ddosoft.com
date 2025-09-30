@@ -394,6 +394,30 @@
           }
         }
       }
+    },
+    "greenAlgorithms": {
+      "title": "Yeşil Algoritmalar: Performans vs Verimlilik Dengesi",
+      "category": "Sürdürülebilirlik",
+      "date": "5 Eylül 2025",
+      "excerpt": "Yüksek performans standartlarını korurken hesaplama karmaşıklığını ve enerji tüketimini azaltan algoritmik seçimleri keşfedin."
+    },
+    "carbonFootprint": {
+      "title": "Yazılımınızın Karbon Ayak İzini Hesaplama",
+      "category": "Yeşil Teknoloji",
+      "date": "30 Ağustos 2025",
+      "excerpt": "Geliştirmeden dağıtım ve bakıma kadar uygulamalarınızın çevresel etkisini ölçmek ve azaltmak için pratik yöntemler öğrenin."
+    },
+    "sustainableDevelopment": {
+      "title": "Sürdürülebilir Yazılım Geliştirme: Temel İlkeler",
+      "category": "Sürdürülebilirlik",
+      "date": "25 Ağustos 2025",
+      "excerpt": "Enerji tüketimini minimize eden ve verimliliği maksimize eden çevre bilincine sahip yazılım geliştirme için temel ilkeler ve uygulamalar."
+    },
+    "ddogreenCaseStudy": {
+      "title": "DDOGreen Vaka Çalışması: Kurumsal Dağıtım Başarısı",
+      "category": "Geliştirme",
+      "date": "20 Ağustos 2025",
+      "excerpt": "Büyük kurumsal ortamda DDOGreen uygulamasının gerçek dünya vaka çalışması, karşılaşılan zorluklar ve uygulanan çözümler dahil."
     }
   },
   "footer": {

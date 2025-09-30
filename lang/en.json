@@ -386,6 +386,30 @@
           }
         }
       }
+    },
+    "greenAlgorithms": {
+      "title": "Green Algorithms: Balancing Performance vs Efficiency",
+      "category": "Sustainability",
+      "date": "September 5, 2025",
+      "excerpt": "Explore algorithmic choices that reduce computational complexity and energy consumption while maintaining high performance standards."
+    },
+    "carbonFootprint": {
+      "title": "Calculating the Carbon Footprint of Your Software",
+      "category": "Green Technology",
+      "date": "August 30, 2025",
+      "excerpt": "Learn practical methods to measure and reduce the environmental impact of your applications, from development to deployment and maintenance."
+    },
+    "sustainableDevelopment": {
+      "title": "Sustainable Software Development: Core Principles",
+      "category": "Sustainability",
+      "date": "August 25, 2025",
+      "excerpt": "Essential principles and practices for developing environmentally conscious software that minimizes energy consumption and maximizes efficiency."
+    },
+    "ddogreenCaseStudy": {
+      "title": "DDOGreen Case Study: Enterprise Deployment Success",
+      "category": "Development",
+      "date": "August 20, 2025",
+      "excerpt": "Real-world case study of DDOGreen implementation in a large enterprise environment, including challenges faced and solutions implemented."
     }
   },
   "footer": {
