@@ -40,13 +40,13 @@
                     </p>
 
                     <ul>
-                        <li><strong>Data Centers</strong> consume approximately 1% of global electricity</li>
-                        <li><strong>Software Inefficiencies</strong> can increase energy consumption by 30-50%</li>
-                        <li><strong>Algorithmic Choices</strong> can reduce power consumption by up to 25%</li>
-                        <li><strong>Mobile Applications</strong> with poor algorithms drain batteries 40% faster</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.environmentalCost.dataCenters"><strong>Data Centers</strong> consume approximately 1% of global electricity</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.environmentalCost.softwareInefficiencies"><strong>Software Inefficiencies</strong> can increase energy consumption by 30-50%</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.environmentalCost.algorithmicChoices"><strong>Algorithmic Choices</strong> can reduce power consumption by up to 25%</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.environmentalCost.mobileApplications"><strong>Mobile Applications</strong> with poor algorithms drain batteries 40% faster</li>
                     </ul>
 
-                    <h3>Understanding Algorithm Energy Consumption</h3>
+                    <h3 data-lang-key="articles.greenAlgorithms.content.environmentalCost.understandingTitle">Understanding Algorithm Energy Consumption</h3>
 
                     <p>Energy consumption in algorithms depends on several factors:</p>
 
@@ -72,10 +72,10 @@
 
                     <h2 data-lang-key="articles.greenAlgorithms.content.sections.designPrinciples.title">Green Algorithm Design Principles</h2>
 
-                    <h3>1. Minimize Computational Steps</h3>
-                    <p>The most direct way to reduce energy consumption is to perform fewer operations:</p>
+                    <h3 data-lang-key="articles.greenAlgorithms.content.designPrinciples.principle1Title">1. Minimize Computational Steps</h3>
+                    <p data-lang-key="articles.greenAlgorithms.content.designPrinciples.principle1Description">The most direct way to reduce energy consumption is to perform fewer operations:</p>
 
-                    <h4>Example: Efficient Prime Number Detection</h4>
+                    <h4 data-lang-key="articles.greenAlgorithms.content.designPrinciples.principle1ExampleTitle">Example: Efficient Prime Number Detection</h4>
                     <pre><code>// Energy-Inefficient Approach
 bool isPrimeNaive(int n) {
     for (int i = 2; i < n; i++) {
@@ -97,22 +97,22 @@ bool isPrimeEfficient(int n) {
     return true;
 }</code></pre>
 
-                    <h3>2. Optimize Data Structures</h3>
-                    <p>Choosing the right data structure can dramatically impact energy consumption:</p>
+                    <h3 data-lang-key="articles.greenAlgorithms.content.designPrinciples.principle2Title">2. Optimize Data Structures</h3>
+                    <p data-lang-key="articles.greenAlgorithms.content.designPrinciples.principle2Description">Choosing the right data structure can dramatically impact energy consumption:</p>
 
-                    <h4>Memory-Efficient Structures</h4>
+                    <h4 data-lang-key="articles.greenAlgorithms.content.designPrinciples.memoryEfficientTitle">Memory-Efficient Structures</h4>
                     <ul>
-                        <li><strong>Arrays vs Linked Lists:</strong> Arrays provide better cache locality</li>
-                        <li><strong>Hash Tables:</strong> O(1) average access time reduces CPU cycles</li>
-                        <li><strong>Bloom Filters:</strong> Probabilistic data structures for memory efficiency</li>
-                        <li><strong>Compressed Data:</strong> Reduces memory bandwidth requirements</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.designPrinciples.memoryEfficient.arraysVsLists"><strong>Arrays vs Linked Lists:</strong> Arrays provide better cache locality</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.designPrinciples.memoryEfficient.hashTables"><strong>Hash Tables:</strong> O(1) average access time reduces CPU cycles</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.designPrinciples.memoryEfficient.bloomFilters"><strong>Bloom Filters:</strong> Probabilistic data structures for memory efficiency</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.designPrinciples.memoryEfficient.compressedData"><strong>Compressed Data:</strong> Reduces memory bandwidth requirements</li>
                     </ul>
 
-                    <h3>3. Leverage Hardware Capabilities</h3>
-                    <p>Modern processors offer energy-efficient features that green algorithms should utilize:</p>
+                    <h3 data-lang-key="articles.greenAlgorithms.content.designPrinciples.principle3Title">3. Leverage Hardware Capabilities</h3>
+                    <p data-lang-key="articles.greenAlgorithms.content.designPrinciples.principle3Description">Modern processors offer energy-efficient features that green algorithms should utilize:</p>
 
-                    <h4>SIMD Instructions</h4>
-                    <p>Single Instruction, Multiple Data operations can process multiple values simultaneously:</p>
+                    <h4 data-lang-key="articles.greenAlgorithms.content.designPrinciples.simdTitle">SIMD Instructions</h4>
+                    <p data-lang-key="articles.greenAlgorithms.content.designPrinciples.simdDescription">Single Instruction, Multiple Data operations can process multiple values simultaneously:</p>
 
                     <pre><code>// Traditional Loop
 void addArrays(float* a, float* b, float* result, int size) {
@@ -167,31 +167,31 @@ public:
 
                     <h2 data-lang-key="articles.greenAlgorithms.content.sections.measurement.title">Measuring Algorithm Energy Efficiency</h2>
 
-                    <h3>Metrics That Matter</h3>
+                    <h3 data-lang-key="articles.greenAlgorithms.content.measurement.metricsTitle">Metrics That Matter</h3>
                     <ul>
-                        <li><strong>Energy per Operation:</strong> Joules consumed per computational unit</li>
-                        <li><strong>Performance per Watt:</strong> Computational throughput relative to power consumption</li>
-                        <li><strong>Battery Impact:</strong> Effect on mobile device battery life</li>
-                        <li><strong>Thermal Efficiency:</strong> Heat generation relative to useful work</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.metrics.energyPerOperation"><strong>Energy per Operation:</strong> Joules consumed per computational unit</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.metrics.performancePerWatt"><strong>Performance per Watt:</strong> Computational throughput relative to power consumption</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.metrics.batteryImpact"><strong>Battery Impact:</strong> Effect on mobile device battery life</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.metrics.thermalEfficiency"><strong>Thermal Efficiency:</strong> Heat generation relative to useful work</li>
                     </ul>
 
-                    <h3>Profiling Tools</h3>
-                    <p>Modern development environments provide energy profiling capabilities:</p>
+                    <h3 data-lang-key="articles.greenAlgorithms.content.measurement.profilingToolsTitle">Profiling Tools</h3>
+                    <p data-lang-key="articles.greenAlgorithms.content.measurement.profilingToolsDescription">Modern development environments provide energy profiling capabilities:</p>
                     <ul>
-                        <li><strong>Intel VTune:</strong> Energy analysis for Intel processors</li>
-                        <li><strong>ARM Streamline:</strong> Power profiling for ARM architectures</li>
-                        <li><strong>NVIDIA Nsight:</strong> GPU energy consumption analysis</li>
-                        <li><strong>PowerAPI:</strong> Software-defined power meters for application monitoring</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.tools.intelVTune"><strong>Intel VTune:</strong> Energy analysis for Intel processors</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.tools.armStreamline"><strong>ARM Streamline:</strong> Power profiling for ARM architectures</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.tools.nvidiaNsight"><strong>NVIDIA Nsight:</strong> GPU energy consumption analysis</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.measurement.tools.powerAPI"><strong>PowerAPI:</strong> Software-defined power meters for application monitoring</li>
                     </ul>
 
-                    <h2>The Future of Green Computing</h2>
+                    <h2 data-lang-key="articles.greenAlgorithms.content.future.title">The Future of Green Computing</h2>
 
-                    <h3>Emerging Trends</h3>
+                    <h3 data-lang-key="articles.greenAlgorithms.content.future.emergingTrendsTitle">Emerging Trends</h3>
                     <ul>
-                        <li><strong>AI-Optimized Algorithms:</strong> Machine learning for energy-efficient computation</li>
-                        <li><strong>Quantum-Inspired Algorithms:</strong> Exponential efficiency improvements</li>
-                        <li><strong>Edge Computing:</strong> Reducing data transmission energy costs</li>
-                        <li><strong>Neuromorphic Computing:</strong> Brain-inspired energy-efficient processing</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.future.trends.aiOptimized"><strong>AI-Optimized Algorithms:</strong> Machine learning for energy-efficient computation</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.future.trends.quantumInspired"><strong>Quantum-Inspired Algorithms:</strong> Exponential efficiency improvements</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.future.trends.edgeComputing"><strong>Edge Computing:</strong> Reducing data transmission energy costs</li>
+                        <li data-lang-key="articles.greenAlgorithms.content.future.trends.neuromorphic"><strong>Neuromorphic Computing:</strong> Brain-inspired energy-efficient processing</li>
                     </ul>
 
                     <h3>Industry Impact</h3>
@@ -227,9 +227,9 @@ public:
 
                     <p data-lang-key="articles.greenAlgorithms.content.sections.conclusion.content">Green algorithms represent the future of sustainable software development. By balancing performance with energy efficiency, we can create solutions that not only meet user needs but also contribute to environmental conservation.</p>
 
-                    <p>The transition to green computing isn't just about responsibility—it's about innovation. As DDOGreen demonstrates, algorithms that prioritize efficiency often deliver better user experiences while reducing environmental impact.</p>
+                    <p data-lang-key="articles.greenAlgorithms.content.sections.conclusion.innovation">The transition to green computing isn't just about responsibility—it's about innovation. As DDOGreen demonstrates, algorithms that prioritize efficiency often deliver better user experiences while reducing environmental impact.</p>
 
-                    <p>Every line of code we write is an opportunity to make a positive environmental impact. By embracing green algorithm principles, developers can lead the charge toward a more sustainable digital future.</p>
+                    <p data-lang-key="articles.greenAlgorithms.content.sections.conclusion.future">Every line of code we write is an opportunity to make a positive environmental impact. By embracing green algorithm principles, developers can lead the charge toward a more sustainable digital future.</p>
                 </div>
 
                 <footer class="article-footer">
