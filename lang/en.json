@@ -645,7 +645,9 @@
           },
           "understanding": {
             "title": "Understanding Algorithm Energy Consumption",
-            "description": "To improve energy efficiency, we must first understand how algorithms consume energy."
+            "description": "To improve energy efficiency, we must first understand how algorithms consume energy.",
+            "computationalComplexity": "Computational Complexity",
+            "memoryPatterns": "Memory Access Patterns"
           },
           "principles": {
             "title": "Green Algorithm Design Principles",
@@ -706,13 +708,18 @@
               "neuromorphic": "Neuromorphic chips - Brain-like energy efficiency",
               "approximate": "Approximate computing - Trading precision for energy",
               "edge": "Edge computing - Reducing data transfer energy consumption"
-            }
+            },
+            "industryImpact": "Industry Impact"
           },
           "bestPractices": {
-            "title": "Best Practices for Developers"
+            "title": "Best Practices for Developers",
+            "guidelines": "Development Guidelines",
+            "checklist": "Code Review Checklist"
           },
           "caseStudy": {
-            "title": "Real-World Applications: DDOGreen Case Study"
+            "title": "Real-World Applications: DDOGreen Case Study",
+            "hysteresis": "Hysteresis Algorithm",
+            "benefits": "Benefits of Green Algorithm Design"
           },
           "conclusion": {
             "title": "Conclusion",
@@ -735,10 +742,13 @@
             "title": "Understanding Software Carbon Footprint"
           },
           "methodologies": {
-            "title": "Measurement Methodologies"
+            "title": "Measurement Methodologies",
+            "cloudMetrics": "3. Cloud Provider Carbon Metrics",
+            "awsFootprint": "AWS Carbon Footprint"
           },
           "tools": {
-            "title": "Practical Measurement Tools"
+            "title": "Practical Measurement Tools",
+            "webApplication": "Web Application Carbon Footprint"
           },
           "reduction": {
             "title": "Reduction Strategies"
@@ -747,10 +757,12 @@
             "title": "Reporting and Compliance"
           },
           "future": {
-            "title": "Future Trends and Technologies"
+            "title": "Future Trends and Technologies",
+            "standards": "Industry Standards and Frameworks"
           },
           "caseStudy": {
-            "title": "Real-World Case Study: DDOGreen Impact Assessment"
+            "title": "Real-World Case Study: DDOGreen Impact Assessment",
+            "dashboard": "Carbon Footprint Dashboard"
           },
           "conclusion": {
             "title": "Conclusion",
@@ -843,16 +855,21 @@
             "title": "Core Principles of Sustainable Software Development"
           },
           "framework": {
-            "title": "Implementation Framework"
+            "title": "Implementation Framework",
+            "testing": "Testing for Sustainability",
+            "energyTesting": "Energy Consumption Testing"
           },
           "bestPractices": {
             "title": "Best Practices and Guidelines"
           },
           "future": {
-            "title": "Future of Sustainable Software Development"
+            "title": "Future of Sustainable Software Development",
+            "emerging": "Emerging Technologies and Practices"
           },
           "caseStudy": {
-            "title": "Real-World Implementation: DDOGreen Case Study"
+            "title": "Real-World Implementation: DDOGreen Case Study",
+            "application": "Principle Application in DDOGreen",
+            "impact": "Measured Impact"
           },
           "conclusion": {
             "title": "Conclusion",

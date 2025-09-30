@@ -604,7 +604,9 @@
           },
           "understanding": {
             "title": "Algoritma Enerji Tüketimini Anlamak",
-            "description": "Enerji verimliliğini artırmak için önce algoritmaların enerjiyi nasıl tükettiğini anlamamız gerekir."
+            "description": "Enerji verimliliğini artırmak için önce algoritmaların enerjiyi nasıl tükettiğini anlamamız gerekir.",
+            "computationalComplexity": "Hesaplama Karmaşıklığı",
+            "memoryPatterns": "Bellek Erişim Desenleri"
           },
           "principles": {
             "title": "Yeşil Algoritma Tasarım İlkeleri",
@@ -665,13 +667,18 @@
               "neuromorphic": "Nöromorfik çipler - Beyin benzeri enerji verimliliği",
               "approximate": "Yaklaşık hesaplama - Hassasiyet ve enerji arasında denge",
               "edge": "Kenar hesaplama - Veri aktarımını azaltarak enerji tasarrufu"
-            }
+            },
+            "industryImpact": "Endüstri Etkisi"
           },
           "bestPractices": {
-            "title": "Geliştiriciler için En İyi Uygulamalar"
+            "title": "Geliştiriciler için En İyi Uygulamalar",
+            "guidelines": "Geliştirme Kılavuzları",
+            "checklist": "Kod İnceleme Kontrol Listesi"
           },
           "caseStudy": {
-            "title": "Gerçek Dünya Uygulamaları: DDOGreen Vaka Çalışması"
+            "title": "Gerçek Dünya Uygulamaları: DDOGreen Vaka Çalışması",
+            "hysteresis": "Histerezis Algoritması",
+            "benefits": "Yeşil Algoritma Tasarımının Faydaları"
           },
           "conclusion": {
             "title": "Sonuç",
@@ -694,10 +701,13 @@
             "title": "Yazılım Karbon Ayak İzini Anlama"
           },
           "methodologies": {
-            "title": "Ölçüm Metodolojileri"
+            "title": "Ölçüm Metodolojileri",
+            "cloudMetrics": "3. Bulut Sağlayıcı Karbon Metrikleri",
+            "awsFootprint": "AWS Karbon Ayak İzi"
           },
           "tools": {
-            "title": "Pratik Ölçüm Araçları"
+            "title": "Pratik Ölçüm Araçları",
+            "webApplication": "Web Uygulaması Karbon Ayak İzi"
           },
           "reduction": {
             "title": "Azaltma Stratejileri"
@@ -706,10 +716,12 @@
             "title": "Raporlama ve Uyumluluk"
           },
           "future": {
-            "title": "Gelecek Trendleri ve Teknolojiler"
+            "title": "Gelecek Trendleri ve Teknolojiler",
+            "standards": "Endüstri Standartları ve Çerçeveleri"
           },
           "caseStudy": {
-            "title": "Gerçek Dünya Vaka Çalışması: DDOGreen Etki Değerlendirmesi"
+            "title": "Gerçek Dünya Vaka Çalışması: DDOGreen Etki Değerlendirmesi",
+            "dashboard": "Karbon Ayak İzi Kontrol Paneli"
           },
           "conclusion": {
             "title": "Sonuç",
@@ -802,16 +814,21 @@
             "title": "Sürdürülebilir Yazılım Geliştirmenin Temel İlkeleri"
           },
           "framework": {
-            "title": "Uygulama Çerçevesi"
+            "title": "Uygulama Çerçevesi",
+            "testing": "Sürdürülebilirlik için Test",
+            "energyTesting": "Enerji Tüketimi Testi"
           },
           "bestPractices": {
             "title": "En İyi Uygulamalar ve Kılavuzlar"
           },
           "future": {
-            "title": "Sürdürülebilir Yazılım Geliştirmenin Geleceği"
+            "title": "Sürdürülebilir Yazılım Geliştirmenin Geleceği",
+            "emerging": "Gelişen Teknolojiler ve Uygulamalar"
           },
           "caseStudy": {
-            "title": "Gerçek Dünya Uygulaması: DDOGreen Vaka Çalışması"
+            "title": "Gerçek Dünya Uygulaması: DDOGreen Vaka Çalışması",
+            "application": "DDOGreen'de İlke Uygulaması",
+            "impact": "Ölçülen Etki"
           },
           "conclusion": {
             "title": "Sonuç",
