@@ -105,15 +105,11 @@
       "text": "Gelişmiş algoritmalar, çapraz platform mühendisliği ve titiz testlerle, Linux ve Windows ortamlarında sorunsuz çalışan üretime hazır yazılımlar yaratıyoruz. Çözümlerimiz sıfır yapılandırma gerektirirken ölçülebilir enerji tasarrufu sağlar."
     },
     "founders": {
-      "title": "Kurucularımızla Tanışın",
+      "title": "Kurucumuzla Tanışın",
       "people": [
         {
           "name": "Ayşe Pınar KULAKLI",
-          "role": "Kurucu Ortak & İdari"
-        },
-        {
-          "name": "Ali Burak KULAKLI",
-          "role": "Kurucu Ortak & Teknik Lider"
+          "role": "Kurucu & İdari"
         }
       ]
     }
@@ -247,12 +243,6 @@
         "title": "LinkedIn",
         "link": "DDOSoft Şirket Sayfası",
         "description": "Güncellemeler ve sektör görüşleri için bizi takip edin"
-      },
-      {
-        "icon": "📞",
-        "title": "Telefon",
-        "link": "+90 530 309 76 49",
-        "description": "Acil sorularınız ve danışmanlık için bizi arayın"
       },
       {
         "icon": "📍",

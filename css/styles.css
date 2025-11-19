@@ -553,12 +553,11 @@ section {
 }
 
 .team__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
     gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
-    justify-items: center;
 }
 
 @media (max-width: 768px) {
