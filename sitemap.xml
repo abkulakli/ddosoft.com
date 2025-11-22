@@ -34,4 +34,44 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/cross-platform-development.html" />
     </url>
 
+    <url>
+        <loc>https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/green-algorithms-performance-vs-efficiency.html" />
+    </url>
+
+    <url>
+        <loc>https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/calculating-carbon-footprint-software.html" />
+    </url>
+
+    <url>
+        <loc>https://www.ddosoft.com/articles/sustainable-software-development-principles.html</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/sustainable-software-development-principles.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/sustainable-software-development-principles.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/sustainable-software-development-principles.html" />
+    </url>
+
+    <url>
+        <loc>https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/ddogreen-case-study-enterprise-deployment.html" />
+    </url>
+
 </urlset>
