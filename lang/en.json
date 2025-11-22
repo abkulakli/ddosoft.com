@@ -73,7 +73,6 @@
     "about": "About",
     "services": "Services",
     "products": "Products",
-    "references": "References",
     "articles": "Articles",
     "contact": "Contact",
     "language": "Language",
@@ -327,32 +326,6 @@
         "description": "Visit our office for in-person meetings"
       }
     ]
-  },
-  "references": {
-    "title": "Trusted Partners & Technologies",
-    "subtitle": "Working with industry-leading technologies and trusted by professional organizations",
-    "technologies": {
-      "title": "Technologies We Master"
-    },
-    "metrics": {
-      "title": "Our Success Metrics",
-      "battery": {
-        "value": "30%",
-        "label": "Battery Life Extension"
-      },
-      "platforms": {
-        "value": "2",
-        "label": "Cross-Platform Support"
-      },
-      "tests": {
-        "value": "122+",
-        "label": "Unit Tests"
-      },
-      "experience": {
-        "value": "15+",
-        "label": "Years Experience"
-      }
-    }
   },
   "articles": {
     "sectionTitle": "Latest Insights",

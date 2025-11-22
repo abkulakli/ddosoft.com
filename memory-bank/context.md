@@ -99,8 +99,11 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
 1. **index.html** - Main homepage with complete bilingual content
    - Hero section with mission statement (EN/TR)
    - About Us with co-founder information (EN/TR)
+   - Services section highlighting expertise areas (EN/TR)
    - Products section showcasing DDOGreen (EN/TR)
+   - Articles section with featured content (EN/TR)
    - Simplified contact section (email + LinkedIn only) (EN/TR)
+   - **Note**: References section (technology logos, partner references, success metrics) removed for streamlined content
 
 2. **articles.html** - Complete articles system (needs TR implementation)
    - Responsive grid layout for article previews
