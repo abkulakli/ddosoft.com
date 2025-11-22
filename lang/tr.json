@@ -224,8 +224,89 @@
         "releases": "Son Sürümü İndirin"
       }
     },
+    "tefaster": {
+      "name": "Tefaster",
+      "tagline": "Türk Yatırım Fonları için Profesyonel Portföy Yönetimi",
+      "version": "Beta",
+      "intro": "Tefaster, günlük TEFAS veri entegrasyonu ile Türk yatırım fonu portföylerini yönetmek için tasarlanmış, üretime hazır bir Django uygulamasıdır. Modern web teknolojileri ve kurumsal düzeyde uygulamalarla inşa edilen Tefaster, yatırımları takip etmek, fon performansını analiz etmek ve bilinçli portföy kararları almak için kapsamlı bir çözüm sunar.",
+      "highlight": "2.316+ Türk yatırım fonunu günlük otomatik güncellemeler ve akıllı analizlerle yönetin",
+      "card": {
+        "category": "Portföy Yönetimi",
+        "excerpt": "Günlük TEFAS veri entegrasyonu ile Türk yatırım fonu portföylerini yönetmek için üretime hazır Django uygulaması."
+      },
+      "features": {
+        "title": "Temel Özellikler",
+        "items": [
+          {
+            "title": "Çok Kullanıcılı Portföy Yönetimi:",
+            "description": "Kimlik doğrulama ve yetkilendirme ile birden fazla kullanıcı için güvenli, izole portföy takibi"
+          },
+          {
+            "title": "Günlük TEFAS Entegrasyonu:",
+            "description": "2.316+ Türk yatırım fonu için güncel fiyatlarla otomatik günlük güncellemeler"
+          },
+          {
+            "title": "İşlem Takibi:",
+            "description": "Otomatik holding hesaplamaları ile kapsamlı alış/satış işlem yönetimi"
+          },
+          {
+            "title": "Fon Etiketleme Sistemi:",
+            "description": "Fonları organize etmek ve filtrelemek için etiket gruplarıyla esnek kategorizasyon"
+          },
+          {
+            "title": "Akıllı Fiyat Yedekleme:",
+            "description": "Doğru işlem değerlemesi için otomatik hafta sonu/tatil fiyat işleme"
+          },
+          {
+            "title": "Performans Analitiği:",
+            "description": "Portföy performans takibi için etkileşimli grafikler ve metrikler"
+          }
+        ]
+      },
+      "platforms": {
+        "title": "Teknoloji Yığını",
+        "backend": {
+          "title": "Arka Uç",
+          "features": [
+            "Django 5.2 ve Django REST Framework",
+            "PostgreSQL 15 veritabanı",
+            "Redis aracısı ile Celery 5.4",
+            "Yenileme token'ları ile JWT kimlik doğrulaması",
+            "Docker Compose dağıtımı"
+          ]
+        },
+        "frontend": {
+          "title": "Ön Uç",
+          "features": [
+            "Bootstrap 5 duyarlı tasarım",
+            "Modern glassmorphism kullanıcı arayüzü",
+            "Etkileşimli Chart.js görselleştirmeleri",
+            "Google OAuth 2.0 sosyal giriş",
+            "Tam Türkçe/İngilizce i18n desteği"
+          ]
+        }
+      },
+      "architecture": {
+        "title": "Teknik Mükemmellik",
+        "features": [
+          "%40-45 kapsama ile 170 kapsamlı otomatik test",
+          "Bot koruması ve hız sınırlama ile kurumsal güvenlik",
+          "N+1 sorgu önleme ile veritabanı optimizasyonu (%83 azalma)",
+          "Ruff linting ve Black formatlama ile pre-commit hook'ları",
+          "Sağlık kontrolleri ile üretime hazır Docker kurulumu",
+          "Otomatik güncellemeler için Celery ile arka plan görev işleme"
+        ]
+      },
+      "download": {
+        "title": "Tefaster'ı Deneyin",
+        "subtitle": "Bugün Türk yatırım fonu portföyünüzü yönetmeye başlayın",
+        "live": "Canlı Demo'yu Deneyin",
+        "github": "GitHub'da Görüntüle"
+      }
+    },
     "card": {
-      "learnMore": "Daha Fazla Bilgi →"
+      "learnMore": "Daha Fazla Bilgi →",
+      "tryNow": "Şimdi Dene →"
     }
   },
   "contact": {

@@ -216,8 +216,89 @@
         "releases": "Download Latest Release"
       }
     },
+    "tefaster": {
+      "name": "Tefaster",
+      "tagline": "Professional Portfolio Management for Turkish Mutual Funds",
+      "version": "Beta",
+      "intro": "Tefaster is a production-ready Django application designed for managing Turkish mutual fund portfolios with daily TEFAS data integration. Built with modern web technologies and enterprise-grade practices, Tefaster provides a comprehensive solution for tracking investments, analyzing fund performance, and making informed portfolio decisions.",
+      "highlight": "Manage 2,316+ Turkish mutual funds with daily automatic updates and intelligent analytics",
+      "card": {
+        "category": "Portfolio Management",
+        "excerpt": "Production-ready Django application for managing Turkish mutual fund portfolios with daily TEFAS data integration."
+      },
+      "features": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Multi-User Portfolio Management:",
+            "description": "Secure, isolated portfolio tracking for multiple users with authentication and authorization"
+          },
+          {
+            "title": "Daily TEFAS Integration:",
+            "description": "Automatic daily updates for 2,316+ Turkish mutual funds with current pricing"
+          },
+          {
+            "title": "Transaction Tracking:",
+            "description": "Comprehensive buy/sell transaction management with automatic holding calculations"
+          },
+          {
+            "title": "Fund Tagging System:",
+            "description": "Flexible categorization with tag groups for organizing and filtering funds"
+          },
+          {
+            "title": "Smart Price Fallback:",
+            "description": "Automatic weekend/holiday price handling for accurate transaction valuation"
+          },
+          {
+            "title": "Performance Analytics:",
+            "description": "Interactive charts and metrics for portfolio performance tracking"
+          }
+        ]
+      },
+      "platforms": {
+        "title": "Technology Stack",
+        "backend": {
+          "title": "Backend",
+          "features": [
+            "Django 5.2 & Django REST Framework",
+            "PostgreSQL 15 database",
+            "Celery 5.4 with Redis broker",
+            "JWT authentication with refresh tokens",
+            "Docker Compose deployment"
+          ]
+        },
+        "frontend": {
+          "title": "Frontend",
+          "features": [
+            "Bootstrap 5 responsive design",
+            "Modern glassmorphism UI",
+            "Interactive Chart.js visualizations",
+            "Google OAuth 2.0 social login",
+            "Full Turkish/English i18n support"
+          ]
+        }
+      },
+      "architecture": {
+        "title": "Technical Excellence",
+        "features": [
+          "170 comprehensive automated tests with 40-45% coverage",
+          "Enterprise security with bot protection and rate limiting",
+          "Database optimization with N+1 query prevention (83% reduction)",
+          "Pre-commit hooks with Ruff linting and Black formatting",
+          "Production-ready Docker setup with health checks",
+          "Background task processing with Celery for automatic updates"
+        ]
+      },
+      "download": {
+        "title": "Try Tefaster",
+        "subtitle": "Start managing your Turkish mutual fund portfolio today",
+        "live": "Try Live Demo",
+        "github": "View on GitHub"
+      }
+    },
     "card": {
-      "learnMore": "Learn More →"
+      "learnMore": "Learn More →",
+      "tryNow": "Try Now →"
     }
   },
   "contact": {
