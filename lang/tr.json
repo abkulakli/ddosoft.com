@@ -88,7 +88,7 @@
   },
   "hero": {
     "title": "Sürdürülebilir Yazılım Çözümleri",
-    "subtitle": "Uzman yazılım danışmanlığı, dijital dönüşüm ve sürdürülebilir geliştirme hizmetleri. Enerji tüketimini azaltırken olağanüstü performans sunan akıllı, çevre dostu çözümler yaratıyoruz.",
+    "subtitle": "Uzman yazılım danışmanlığı, dijital dönüşüm ve sürdürülebilir geliştirme hizmetleri. Kuruluşların teknoloji altyapılarını modernize ederken enerji tüketimini ve çevresel etkiyi azaltmalarına yardımcı oluyoruz.",
     "cta": "Ürünleri Görüntüle",
     "scrollHint": "Daha Fazla Bilgi"
   },
@@ -118,29 +118,29 @@
     "subtitle": "Teknoloji altyapınızı dönüştürmek için uzman danışmanlık ve geliştirme hizmetleri",
     "consulting": {
       "title": "Yazılım Danışmanlığı",
-      "description": "Bulut ve gömülü sistemler genelinde ölçeklenebilir çözümler için yazılım mimarisi, teknoloji seçimi ve en iyi uygulamalar konusunda uzman rehberlik.",
+      "description": "Yazılım mimarisi, teknoloji seçimi ve en iyi uygulamalar konusunda 15+ yıllık uzmanlık. OCPP 1.6 protokol implementasyonu, EV şarj sistemleri, AWS bulut platformları ve kurumsal sistem entegrasyonunda uzmanlaşmış.",
       "features": [
-        "Sistem mimarisi tasarımı",
-        "Teknoloji yığını optimizasyonu",
-        "Performans analizi ve iyileştirme"
+        "Sistem mimarisi tasarımı ve optimizasyonu",
+        "OCPP protokol ve EV şarj uzmanlığı",
+        "AWS bulut altyapısı ve göçü"
       ]
     },
     "transformation": {
       "title": "Dijital Dönüşüm",
-      "description": "Bulut göçü, otomasyon ve sürdürülebilir teknoloji çözümleri ile eski sistemleri ve süreçleri modernize edin.",
+      "description": "Kurumsal sistemleri AWS bulut göçü, süreç otomasyonu ve sürdürülebilir teknoloji çözümleri için CMMI uyumlu geliştirme pratikleri ile modernize etmede kanıtlanmış başarı.",
       "features": [
-        "Bulut göç stratejileri",
-        "Eski sistem modernizasyonu",
-        "Süreç otomasyonu"
+        "AWS bulut göçü ve optimizasyonu",
+        "Eski sistem modernizasyonu ve entegrasyonu",
+        "CMMI süreç implementasyonu ve otomasyon"
       ]
     },
     "development": {
       "title": "Özel Geliştirme",
-      "description": "Python, C++ ve modern bulut teknolojileri ile geliştirilmiş backend sistemleri, API'ler ve çapraz platform çözümleri.",
+      "description": "Python, modern C++20 ve bulut-native teknolojileri kullanarak üretime hazır backend sistemleri, RESTful API'ler ve çapraz platform çözümleri. Protokol geliştirme ve sistem entegrasyonunda uzmanlaşmış.",
       "features": [
-        "Backend ve API geliştirme",
-        "Çapraz platform çözümleri",
-        "Entegrasyon ve protokol geliştirme"
+        "Backend ve RESTful API geliştirme (Python, Django)",
+        "Çapraz platform çözümleri (C++20, Linux/Windows)",
+        "Protokol implementasyonu (OCPP, WebSocket)"
       ]
     },
     "expertise": {
@@ -1087,7 +1087,8 @@
         "title": "Ürünler",
         "links": [
           {"text": "DDOGreen", "href": "#products"},
-          {"text": "GitHub Deposu", "href": "https://github.com/abkulakli/ddogreen"}
+          {"text": "GitHub Deposu", "href": "https://github.com/abkulakli/ddogreen"},
+          {"text": "Tefaster", "href": "https://tefaster.ddosoft.com"}
         ]
       },
       "connect": {

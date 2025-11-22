@@ -80,7 +80,7 @@
   },
   "hero": {
     "title": "Sustainable Software Solutions",
-    "subtitle": "Expert software consulting, digital transformation, and sustainable development services. We create intelligent, environmentally-conscious solutions that reduce energy consumption while delivering exceptional performance.",
+    "subtitle": "Expert software consulting, digital transformation, and sustainable development services. We help organizations modernize their technology infrastructure while reducing energy consumption and environmental impact.",
     "cta": "View Products",
     "scrollHint": "Learn More"
   },
@@ -93,7 +93,7 @@
     },
     "vision": {
       "title": "Our Approach",
-      "text": "With 15+ years of proven experience in software architecture, cloud systems, and digital transformation, we deliver comprehensive solutions spanning from legacy system modernization to cutting-edge sustainable software development. Our expertise covers the full technology stack - from embedded systems to cloud platforms."
+      "text": "With 15+ years of proven experience in software architecture, cloud systems, and digital transformation, we deliver comprehensive solutions spanning from legacy system modernization to cutting-edge sustainable software development. Our expertise includes OCPP protocol implementation for EV charging systems, AWS cloud infrastructure optimization, embedded systems development, and enterprise-grade system integration."
     },
     "founders": {
       "title": "Meet Our Founder",
@@ -110,29 +110,29 @@
     "subtitle": "Expert consulting and development services to transform your technology infrastructure",
     "consulting": {
       "title": "Software Consulting",
-      "description": "Expert guidance on software architecture, technology selection, and best practices for scalable solutions across cloud and embedded systems.",
+      "description": "15+ years of expertise in software architecture, technology selection, and best practices. Specialized in OCPP 1.6 protocol implementation, EV charging systems, AWS cloud platforms, and enterprise system integration.",
       "features": [
-        "System architecture design",
-        "Technology stack optimization",
-        "Performance analysis & improvement"
+        "System architecture design & optimization",
+        "OCPP protocol & EV charging expertise",
+        "AWS cloud infrastructure & migration"
       ]
     },
     "transformation": {
       "title": "Digital Transformation",
-      "description": "Modernize legacy systems and processes with cloud migration, automation, and sustainable technology solutions.",
+      "description": "Proven track record in modernizing enterprise systems with AWS cloud migration, process automation, and CMMI-compliant development practices for sustainable technology solutions.",
       "features": [
-        "Cloud migration strategies",
-        "Legacy system modernization",
-        "Process automation"
+        "AWS cloud migration & optimization",
+        "Legacy system modernization & integration",
+        "CMMI process implementation & automation"
       ]
     },
     "development": {
       "title": "Custom Development",
-      "description": "Backend systems, APIs, and cross-platform solutions built with Python, C++, and modern cloud technologies.",
+      "description": "Production-ready backend systems, RESTful APIs, and cross-platform solutions using Python, modern C++20, and cloud-native technologies. Specialized in protocol development and system integration.",
       "features": [
-        "Backend & API development",
-        "Cross-platform solutions",
-        "Integration & protocol development"
+        "Backend & RESTful API development (Python, Django)",
+        "Cross-platform solutions (C++20, Linux/Windows)",
+        "Protocol implementation (OCPP, WebSocket)"
       ]
     },
     "expertise": {
@@ -1128,7 +1128,8 @@
         "title": "Products",
         "links": [
           {"text": "DDOGreen", "href": "#products"},
-          {"text": "GitHub Repository", "href": "https://github.com/abkulakli/ddogreen"}
+          {"text": "GitHub Repository", "href": "https://github.com/abkulakli/ddogreen"},
+          {"text": "Tefaster", "href": "https://tefaster.ddosoft.com"}
         ]
       },
       "connect": {
