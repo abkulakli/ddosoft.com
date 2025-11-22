@@ -7,13 +7,12 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
 
 ### Company: DDOSoft
 - **Focus**: Sustainable software solutions, green technology
-- **Founded**: By co-founders Ayşe Pınar KULAKLI and Ali Burak KULAKLI
+- **Founded**: By Ayşe Pınar KULAKLI
 - **Contact**: info@ddosoft.com
 - **LinkedIn**: https://www.linkedin.com/company/ddosoft
 
-### Co-Founders
-- **Ayşe Pınar KULAKLI**: LinkedIn - https://www.linkedin.com/in/apkulakli
-- **Ali Burak KULAKLI**: LinkedIn - https://www.linkedin.com/in/abkulakli, GitHub - https://www.github.com/abkulakli
+### Founder
+- **Ayşe Pınar KULAKLI**: Founder, LinkedIn - https://www.linkedin.com/in/apkulakli
 
 ## Products
 
@@ -98,7 +97,7 @@ Creating a modern, professional HTML/CSS/JS website to replace the current basic
 ### Core Pages (Multilingual + DRY Components)
 1. **index.html** - Main homepage with complete bilingual content
    - Hero section with mission statement (EN/TR)
-   - About Us with co-founder information (EN/TR)
+   - About Us with founder information (EN/TR)
    - Services section highlighting expertise areas (EN/TR)
    - Products section showcasing DDOGreen (EN/TR)
    - Articles section with featured content (EN/TR)

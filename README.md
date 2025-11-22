@@ -84,7 +84,7 @@ ddosoft.com/
 ### About Section
 - Company mission and approach
 - Key statistics and achievements
-- Co-founders information with social links
+- Founder information with social links
 
 ### Products Section
 - **DDOGreen**: Smart power management software

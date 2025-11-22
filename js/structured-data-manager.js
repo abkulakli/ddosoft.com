@@ -23,21 +23,11 @@ class StructuredDataManager {
             "logo": `${this.baseUrl}/images/logo.svg`,
             "description": this.languageManager.getTranslation('meta.site.description'),
             "foundingDate": "2024",
-            "founders": [
-                {
-                    "@type": "Person",
-                    "name": "Ayşe Pınar KULAKLI",
-                    "sameAs": "https://www.linkedin.com/in/apkulakli"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Ali Burak KULAKLI",
-                    "sameAs": [
-                        "https://www.linkedin.com/in/abkulakli",
-                        "https://www.github.com/abkulakli"
-                    ]
-                }
-            ],
+            "founder": {
+                "@type": "Person",
+                "name": "Ayşe Pınar KULAKLI",
+                "sameAs": "https://www.linkedin.com/in/apkulakli"
+            },
             "contactPoint": {
                 "@type": "ContactPoint",
                 "email": "info@ddosoft.com",
