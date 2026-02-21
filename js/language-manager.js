@@ -13,6 +13,11 @@ class LanguageManager {
             await this.loadLanguageData(this.currentLanguage);
             this.applyLanguage();
             this.setupLanguageToggle();
+            // Re-apply after header/footer components are dynamically injected
+            document.addEventListener('componentsLoaded', () => {
+                this.applyLanguage();
+                this.setupLanguageToggle();
+            });
         } catch (error) {
             console.error('LanguageManager error:', error);
         }
@@ -54,12 +59,6 @@ class LanguageManager {
             return '..'; // We're in a subdirectory, go up one level
         }
         return '.'; // We're in the root directory
-    }
-
-    applyLanguage() {
-        document.documentElement.lang = this.currentLanguage;
-        this.updateContent();
-        this.updateMetaTags();
     }
 
     updateContent() {

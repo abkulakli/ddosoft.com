@@ -178,6 +178,8 @@ let componentLoader;
 document.addEventListener('DOMContentLoaded', async () => {
     componentLoader = new ComponentLoader();
     await componentLoader.loadAllComponents();
+    document.dispatchEvent(new CustomEvent('componentsLoaded'));
+    window.componentLoader = componentLoader;
 });
 
 // Export for use in other scripts
