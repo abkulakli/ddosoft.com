@@ -1,8 +1,15 @@
 <header class="header" id="header">
     <nav class="nav" aria-label="Main navigation">
         <div class="nav__container">
+
             <a href="#home" class="nav__logo" aria-label="DDOSoft home">
-                <span class="nav__logo-text">DDOSoft</span>
+                <div class="nav__logo-mark" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 1L14 4.5V11.5L8 15L2 11.5V4.5L8 1Z" fill="#050d07"/>
+                        <path d="M8 5L11 6.75V10.25L8 12L5 10.25V6.75L8 5Z" fill="#050d07" opacity="0.4"/>
+                    </svg>
+                </div>
+                <span class="nav__logo-text">DDO<span>Soft</span></span>
             </a>
 
             <div class="nav__menu" id="nav-menu">
@@ -20,9 +27,6 @@
                         <a href="#products" class="nav__link" data-nav-target="products" data-lang-key="nav.products">Products</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#articles" class="nav__link" data-nav-target="articles" data-lang-key="nav.articles">Articles</a>
-                    </li>
-                    <li class="nav__item">
                         <a href="#contact" class="nav__link" data-nav-target="contact" data-lang-key="nav.contact">Contact</a>
                     </li>
                     <li class="nav__item nav__item--lang">
@@ -34,11 +38,12 @@
                 </ul>
             </div>
 
-            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="nav__toggle-bar"></span>
                 <span class="nav__toggle-bar"></span>
                 <span class="nav__toggle-bar"></span>
             </button>
+
         </div>
     </nav>
 </header>

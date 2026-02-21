@@ -303,6 +303,15 @@
         "github": "GitHub'da Görüntüle"
       }
     },
+    "simit": {
+      "name": "SimIt",
+      "tagline": "Fiziksel Donanım Olmadan EV Şarj Altyapısını Test Edin",
+      "version": "Beta",
+      "card": {
+        "category": "EV Şarj Simülatörü",
+        "excerpt": "CSMS testleri için OCPP 1.6 simülatörü — çoklu EVSE desteği, gerçekçi SOC takibi, REST API ve 65.536 eş zamanlı bağlantıya kadar Docker dağıtımı."
+      }
+    },
     "card": {
       "learnMore": "Daha Fazla Bilgi →",
       "tryNow": "Şimdi Dene →"

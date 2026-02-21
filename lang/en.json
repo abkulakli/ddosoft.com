@@ -295,6 +295,15 @@
         "github": "View on GitHub"
       }
     },
+    "simit": {
+      "name": "SimIt",
+      "tagline": "Test EV Charging Infrastructure Without the Hardware",
+      "version": "Beta",
+      "card": {
+        "category": "EV Charging Simulator",
+        "excerpt": "OCPP 1.6 simulator for CSMS testing — multi-EVSE support, realistic SOC tracking, REST API, and Docker deployment up to 65,536 concurrent connections."
+      }
+    },
     "card": {
       "learnMore": "Learn More →",
       "tryNow": "Try Now →"

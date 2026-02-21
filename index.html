@@ -9,69 +9,101 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.ddosoft.com/">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="DDOSoft - Sustainable Software Solutions">
-    <meta property="og:description" content="Leading sustainable software solutions with DDOGreen smart power management - extending battery life by 20-30% across Linux and Windows platforms.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ddosoft.com/">
-    <meta property="og:site_name" content="DDOSoft">
-    <meta property="og:image" content="https://ddosoft.com/images/og-image.jpg">
-    <meta property="og:locale" content="en_US">
+    <!-- Open Graph -->
+    <meta property="og:title"            content="DDOSoft - Sustainable Software Solutions">
+    <meta property="og:description"      content="Leading sustainable software solutions with DDOGreen smart power management — extending battery life by 20-30% across Linux and Windows.">
+    <meta property="og:type"             content="website">
+    <meta property="og:url"              content="https://ddosoft.com/">
+    <meta property="og:site_name"        content="DDOSoft">
+    <meta property="og:locale"           content="en_US">
     <meta property="og:locale:alternate" content="tr_TR">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ddosoft">
-    <meta name="twitter:title" content="DDOSoft - Sustainable Software Solutions">
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="DDOSoft - Sustainable Software Solutions">
     <meta name="twitter:description" content="Intelligent power management solutions that save energy and extend battery life.">
-    <meta name="twitter:image" content="https://ddosoft.com/images/twitter-image.jpg">
 
     <title>DDOSoft - Sustainable Software Solutions</title>
 
-    <!-- Preload critical resources -->
     <link rel="preload" href="css/styles.css" as="style">
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Icons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-    <!-- Header Component Placeholder -->
+
     <div id="header-placeholder"></div>
 
-    <!-- Main Content -->
     <main class="main">
-        <!-- Hero Section -->
+
+        <!-- ── Hero ─────────────────────────────────────────────── -->
         <section class="hero" id="home">
             <div class="hero__container">
+
                 <div class="hero__content">
+                    <div class="hero__eyebrow" data-lang-key="hero.eyebrow">Sustainable Software Consulting</div>
+
                     <h1 class="hero__title" data-lang-key="hero.title">
-                        Sustainable Software Solutions
+                        Sustainable<br><em>Software</em><br>Solutions
                     </h1>
+
                     <p class="hero__description" data-lang-key="hero.subtitle">
-                        Expert software consulting, digital transformation, and sustainable development services. We help organizations modernize their technology infrastructure while reducing energy consumption and environmental impact.
+                        Expert software consulting, digital transformation, and sustainable development services. We help organisations modernise their technology while reducing energy consumption.
                     </p>
+
                     <div class="hero__actions">
-                        <a href="#about" class="btn btn--primary" data-lang-key="hero.scrollHint">Learn More</a>
+                        <a href="#about"    class="btn btn--primary"   data-lang-key="hero.scrollHint">Learn More</a>
                         <a href="#products" class="btn btn--secondary" data-lang-key="hero.cta">View Products</a>
                     </div>
-                </div>
-                <div class="hero__visual">
-                    <div class="hero__graphic">
-                        <!-- Animated graphic placeholder -->
-                        <div class="hero__icon">🌱</div>
+
+                    <div class="hero__stats">
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">15+</span>
+                            <span class="hero__stat-label" data-lang-key="hero.stats.experience">Years experience</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">20–30%</span>
+                            <span class="hero__stat-label" data-lang-key="hero.stats.battery">Battery savings</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">2</span>
+                            <span class="hero__stat-label" data-lang-key="hero.stats.products">Live products</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">0</span>
+                            <span class="hero__stat-label" data-lang-key="hero.stats.config">Config needed</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="hero__visual">
+                    <div class="hero__graphic">
+                        <div class="hero__card-stack">
+                            <div class="hero__card hero__card--bg" aria-hidden="true"></div>
+                            <div class="hero__card hero__card--main" aria-hidden="true">
+                                <div class="hero__card-header">
+                                    <div class="hero__card-icon">🔋</div>
+                                    <div>
+                                        <p class="hero__card-title">DDOGreen</p>
+                                        <p class="hero__card-sub">Smart Power Management</p>
+                                    </div>
+                                </div>
+                                <p class="hero__card-stat">+27%</p>
+                                <p class="hero__card-sub">average battery life extension</p>
+                                <div class="hero__card-bar">
+                                    <div class="hero__card-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about" id="about">
+        <!-- ── About ─────────────────────────────────────────────── -->
+        <section class="about section--alt" id="about">
             <div class="about__container">
+
                 <div class="section__header">
                     <h2 class="section__title" data-lang-key="about.title">About DDOSoft</h2>
                     <p class="section__subtitle" data-lang-key="about.subtitle">
@@ -84,8 +116,8 @@
                         <h3 data-lang-key="about.mission.title">Our Mission</h3>
                         <p data-lang-key="about.mission.text">
                             At DDOSoft, we believe that powerful software shouldn't come at the expense of our planet.
-                            We develop intelligent solutions that optimize system performance while significantly reducing
-                            energy consumption, helping businesses and individuals minimize their environmental footprint.
+                            We develop intelligent solutions that optimise system performance while significantly reducing
+                            energy consumption, helping businesses and individuals minimise their environmental footprint.
                         </p>
 
                         <h3 data-lang-key="about.vision.title">Our Approach</h3>
@@ -95,32 +127,37 @@
                             Our solutions require zero configuration while delivering measurable energy savings.
                         </p>
                     </div>
+
                 </div>
 
-                <!-- Team Section -->
                 <div class="team">
                     <h3 class="team__title" data-lang-key="about.founders.title">Meet Our Founder</h3>
                     <div class="team__grid">
                         <div class="team__card">
                             <div class="team__photo">
-                                <div class="team__placeholder">AP</div>
+                                <div class="team__placeholder" aria-hidden="true">AP</div>
                             </div>
-                            <h4 class="team__name" data-lang-key="about.founders.people.0.name">Ayşe Pınar KULAKLI</h4>
-                            <p class="team__role" data-lang-key="about.founders.people.0.role">Founder & Administrative</p>
+                            <h4 class="team__name"  data-lang-key="about.founders.people.0.name">Ayşe Pınar KULAKLI</h4>
+                            <p class="team__role"   data-lang-key="about.founders.people.0.role">Founder</p>
                             <div class="team__social">
-                                <a href="https://www.linkedin.com/in/apkulakli" class="team__link" target="_blank" rel="noopener" aria-label="Ayşe Pınar KULAKLI LinkedIn profile">
+                                <a href="https://www.linkedin.com/in/apkulakli"
+                                   class="team__link"
+                                   target="_blank" rel="noopener"
+                                   aria-label="Ayşe Pınar KULAKLI LinkedIn profile">
                                     LinkedIn
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- ── Services ──────────────────────────────────────────── -->
         <section class="services" id="services">
             <div class="services__container">
+
                 <div class="section__header">
                     <h2 class="section__title" data-lang-key="services.title">Our Services</h2>
                     <p class="section__subtitle" data-lang-key="services.subtitle">
@@ -129,9 +166,10 @@
                 </div>
 
                 <div class="services__grid">
+
                     <div class="service__card">
                         <div class="service__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                                 <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
                                 <line x1="12" y1="22.08" x2="12" y2="12"/>
@@ -143,14 +181,14 @@
                         </p>
                         <ul class="service__features">
                             <li data-lang-key="services.consulting.features.0">System architecture design</li>
-                            <li data-lang-key="services.consulting.features.1">Technology stack optimization</li>
-                            <li data-lang-key="services.consulting.features.2">Performance analysis & improvement</li>
+                            <li data-lang-key="services.consulting.features.1">Technology stack optimisation</li>
+                            <li data-lang-key="services.consulting.features.2">Performance analysis &amp; improvement</li>
                         </ul>
                     </div>
 
                     <div class="service__card">
                         <div class="service__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                                 <line x1="8" y1="21" x2="16" y2="21"/>
                                 <line x1="12" y1="17" x2="12" y2="21"/>
@@ -158,18 +196,18 @@
                         </div>
                         <h3 class="service__title" data-lang-key="services.transformation.title">Digital Transformation</h3>
                         <p class="service__description" data-lang-key="services.transformation.description">
-                            Modernize legacy systems and processes with cloud migration, automation, and sustainable technology solutions.
+                            Modernise legacy systems and processes with cloud migration, automation, and sustainable technology solutions.
                         </p>
                         <ul class="service__features">
                             <li data-lang-key="services.transformation.features.0">Cloud migration strategies</li>
-                            <li data-lang-key="services.transformation.features.1">Legacy system modernization</li>
+                            <li data-lang-key="services.transformation.features.1">Legacy system modernisation</li>
                             <li data-lang-key="services.transformation.features.2">Process automation</li>
                         </ul>
                     </div>
 
                     <div class="service__card">
                         <div class="service__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <polyline points="16,18 22,12 16,6"/>
                                 <polyline points="8,6 2,12 8,18"/>
                             </svg>
@@ -179,32 +217,21 @@
                             Backend systems, APIs, and cross-platform solutions built with Python, C++, and modern cloud technologies.
                         </p>
                         <ul class="service__features">
-                            <li data-lang-key="services.development.features.0">Backend & API development</li>
+                            <li data-lang-key="services.development.features.0">Backend &amp; API development</li>
                             <li data-lang-key="services.development.features.1">Cross-platform solutions</li>
-                            <li data-lang-key="services.development.features.2">Integration & protocol development</li>
+                            <li data-lang-key="services.development.features.2">Integration &amp; protocol development</li>
                         </ul>
                     </div>
+
                 </div>
 
-                <div class="services__expertise">
-                    <h3 class="expertise__title" data-lang-key="services.expertise.title">Our Expertise</h3>
-                    <div class="expertise__tags">
-                        <span class="expertise__tag">Python</span>
-                        <span class="expertise__tag">C/C++</span>
-                        <span class="expertise__tag">AWS Cloud</span>
-                        <span class="expertise__tag">OCPP Protocol</span>
-                        <span class="expertise__tag">EV Charging</span>
-                        <span class="expertise__tag">System Integration</span>
-                        <span class="expertise__tag">Team Leadership</span>
-                        <span class="expertise__tag">CMMI Processes</span>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Products Section -->
-        <section class="products" id="products">
+        <!-- ── Products ──────────────────────────────────────────── -->
+        <section class="products section--alt" id="products">
             <div class="products__container">
+
                 <div class="section__header">
                     <h2 class="section__title" data-lang-key="products.title">Our Products</h2>
                     <p class="section__subtitle" data-lang-key="products.subtitle">
@@ -212,10 +239,10 @@
                     </p>
                 </div>
 
-                <!-- Products Grid -->
                 <div class="products__grid" id="products-grid">
-                    <!-- DDOGreen Product Card -->
-                    <article class="product-card" data-product="ddogreen" data-category="power-management">
+
+                    <!-- DDOGreen -->
+                    <article class="product-card" data-product="ddogreen">
                         <div class="product-card__image">
                             <div class="product-card__image-placeholder">
                                 <span class="product-card__image-icon">🔋</span>
@@ -229,20 +256,20 @@
                             <h3 class="product-card__title" data-lang-key="products.ddogreen.name">DDOGreen</h3>
                             <p class="product-card__tagline" data-lang-key="products.ddogreen.tagline">Smart Power Management That Just Works</p>
                             <p class="product-card__excerpt" data-lang-key="products.ddogreen.card.excerpt">
-                                Intelligent power management tool that extends battery life by 20-30% across Linux and Windows platforms.
+                                Intelligent power management tool that extends battery life by 20–30% across Linux and Windows platforms with zero configuration required.
                             </p>
                             <div class="product-card__platforms">
                                 <span class="platform-badge">Linux</span>
                                 <span class="platform-badge">Windows</span>
                             </div>
-                            <button class="product-card__details-btn" data-lang-key="products.card.learnMore">
+                            <button type="button" class="product-card__details-btn" data-lang-key="products.card.learnMore">
                                 Learn More →
                             </button>
                         </div>
                     </article>
 
-                    <!-- Tefaster Product Card -->
-                    <article class="product-card" data-product="tefaster" data-category="portfolio-management">
+                    <!-- Tefaster -->
+                    <article class="product-card" data-product="tefaster">
                         <div class="product-card__image">
                             <div class="product-card__image-placeholder">
                                 <span class="product-card__image-icon">📊</span>
@@ -262,223 +289,65 @@
                                 <span class="platform-badge">Web</span>
                                 <span class="platform-badge">Docker</span>
                             </div>
-                            <button class="product-card__details-btn" onclick="window.open('https://tefaster.ddosoft.com', '_blank')" data-lang-key="products.card.tryNow">
+                            <button type="button"
+                                    class="product-card__details-btn"
+                                    onclick="window.open('https://tefaster.ddosoft.com','_blank')"
+                                    data-lang-key="products.card.tryNow">
                                 Try Now →
                             </button>
                         </div>
                     </article>
 
-                    <!-- Future product cards will be added here -->
+                    <!-- SimIt -->
+                    <article class="product-card" data-product="simit">
+                        <div class="product-card__image">
+                            <div class="product-card__image-placeholder">
+                                <span class="product-card__image-icon">⚡</span>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__meta">
+                                <span class="product-card__category" data-lang-key="products.simit.card.category">EV Charging Simulator</span>
+                                <span class="product-card__version" data-lang-key="products.simit.version">Beta</span>
+                            </div>
+                            <h3 class="product-card__title" data-lang-key="products.simit.name">SimIt</h3>
+                            <p class="product-card__tagline" data-lang-key="products.simit.tagline">Test EV Charging Infrastructure Without the Hardware</p>
+                            <p class="product-card__excerpt" data-lang-key="products.simit.card.excerpt">
+                                OCPP 1.6 simulator for CSMS testing — multi-EVSE support, realistic SOC tracking, REST API, and Docker deployment up to 65,536 concurrent connections.
+                            </p>
+                            <div class="product-card__platforms">
+                                <span class="platform-badge">Web</span>
+                                <span class="platform-badge">Docker</span>
+                                <span class="platform-badge">OCPP 1.6</span>
+                            </div>
+                            <button type="button"
+                                    class="product-card__details-btn"
+                                    onclick="window.open('https://simit.ddosoft.com','_blank')"
+                                    data-lang-key="products.card.tryNow">
+                                Try Now →
+                            </button>
+                        </div>
+                    </article>
+
                 </div>
 
                 <!-- Product Detail Modal -->
-                <div class="product-detail-modal" id="product-detail-modal">
+                <div class="product-detail-modal" id="product-detail-modal" role="dialog" aria-modal="true" aria-label="Product details">
                     <div class="product-detail-modal__overlay">
                         <div class="product-detail-modal__content">
-                            <button class="product-detail-modal__close" aria-label="Close details">×</button>
-                            <div class="product-detail-modal__body" id="product-detail-content">
-                                <!-- Product details will be dynamically loaded here -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Articles Section -->
-        <section class="articles" id="articles">
-            <div class="articles__container">
-                <div class="section__header">
-                    <h2 class="section__title" data-lang-key="articles.sectionTitle">Latest Insights</h2>
-                    <p class="section__subtitle" data-lang-key="articles.sectionSubtitle">
-                        Explore our thoughts on sustainable software development, green technology, and industry best practices.
-                    </p>
-                </div>
-
-                <!-- Articles Filter & Search -->
-                <div class="articles-filter">
-                    <div class="filter__controls">
-                        <div class="filter__categories">
-                            <button class="filter__btn filter__btn--active" data-category="all" data-lang-key="articles.page.filter.all">All Categories</button>
-                            <button class="filter__btn" data-category="sustainability" data-lang-key="articles.page.filter.sustainability">Sustainability</button>
-                            <button class="filter__btn" data-category="technology" data-lang-key="articles.page.filter.technology">Technology</button>
-                            <button class="filter__btn" data-category="development" data-lang-key="articles.page.filter.development">Development</button>
-                            <button class="filter__btn" data-category="green-technology" data-lang-key="articles.page.filter.green-technology">Green Technology</button>
-                        </div>
-                        <div class="filter__search">
-                            <input type="search" class="filter__search-input" placeholder="Search articles..." aria-label="Search articles">
-                            <button class="filter__search-btn" aria-label="Search">🔍</button>
+                            <button type="button" class="product-detail-modal__close" aria-label="Close details">×</button>
+                            <div class="product-detail-modal__body" id="product-detail-content"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="articles__grid" id="articles-grid">
-                    <!-- Recent Article 1 -->
-                    <article class="article" data-category="technology">
-                        <div class="article__image">
-                            <div class="article__image-placeholder">
-                                <span class="article__image-icon">⚡</span>
-                            </div>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__meta">
-                                <span class="article__category" data-lang-key="articles.recent.0.category">Technology</span>
-                                <span class="article__date" data-lang-key="articles.recent.0.date">September 15, 2025</span>
-                            </div>
-                            <h3 class="article__title">
-                                <a href="articles/power-management-evolution.html" data-lang-key="articles.recent.0.title">
-                                    The Evolution of Laptop Power Management
-                                </a>
-                            </h3>
-                            <p class="article__excerpt" data-lang-key="articles.recent.0.excerpt">
-                                Discover how modern power management has evolved from basic battery saving to intelligent, context-aware systems that optimize performance and efficiency.
-                            </p>
-                            <a href="articles/power-management-evolution.html" class="article__read-more" data-lang-key="articles.readMore">
-                                Read More →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Recent Article 2 -->
-                    <article class="article" data-category="development">
-                        <div class="article__image">
-                            <div class="article__image-placeholder">
-                                <span class="article__image-icon">🔧</span>
-                            </div>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__meta">
-                                <span class="article__category" data-lang-key="articles.recent.1.category">Development</span>
-                                <span class="article__date" data-lang-key="articles.recent.1.date">September 10, 2025</span>
-                            </div>
-                            <h3 class="article__title">
-                                <a href="articles/cross-platform-development.html" data-lang-key="articles.recent.1.title">
-                                    Cross-Platform Development: Lessons from DDOGreen
-                                </a>
-                            </h3>
-                            <p class="article__excerpt" data-lang-key="articles.recent.1.excerpt">
-                                Learn the challenges and solutions involved in creating software that works seamlessly across Linux and Windows environments.
-                            </p>
-                            <a href="articles/cross-platform-development.html" class="article__read-more" data-lang-key="articles.readMore">
-                                Read More →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Recent Article 3 -->
-                    <article class="article" data-category="sustainability">
-                        <div class="article__image">
-                            <div class="article__image-placeholder">
-                                <span class="article__image-icon">♻️</span>
-                            </div>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__meta">
-                                <span class="article__category" data-lang-key="articles.recent.2.category">Sustainability</span>
-                                <span class="article__date" data-lang-key="articles.recent.2.date">September 5, 2025</span>
-                            </div>
-                            <h3 class="article__title">
-                                <a href="articles/green-algorithms-performance-vs-efficiency.html" data-lang-key="articles.recent.2.title">
-                                    Green Algorithms: Balancing Performance vs Efficiency
-                                </a>
-                            </h3>
-                            <p class="article__excerpt" data-lang-key="articles.recent.2.excerpt">
-                                Explore algorithmic choices that reduce computational complexity and energy consumption while maintaining high performance standards.
-                            </p>
-                            <a href="articles/green-algorithms-performance-vs-efficiency.html" class="article__read-more" data-lang-key="articles.readMore">
-                                Read More →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Recent Article 4 -->
-                    <article class="article" data-category="green-technology">
-                        <div class="article__image">
-                            <div class="article__image-placeholder">
-                                <span class="article__image-icon">🌍</span>
-                            </div>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__meta">
-                                <span class="article__category" data-lang-key="articles.recent.3.category">Green Technology</span>
-                                <span class="article__date" data-lang-key="articles.recent.3.date">August 30, 2025</span>
-                            </div>
-                            <h3 class="article__title">
-                                <a href="articles/calculating-carbon-footprint-software.html" data-lang-key="articles.recent.3.title">
-                                    Calculating the Carbon Footprint of Your Software
-                                </a>
-                            </h3>
-                            <p class="article__excerpt" data-lang-key="articles.recent.3.excerpt">
-                                Learn practical methods to measure and reduce the environmental impact of your applications, from development to deployment and maintenance.
-                            </p>
-                            <a href="articles/calculating-carbon-footprint-software.html" class="article__read-more" data-lang-key="articles.readMore">
-                                Read More →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Additional Articles -->
-                    <article class="article article--hidden" data-category="sustainability">
-                        <div class="article__image">
-                            <div class="article__image-placeholder">
-                                <span class="article__image-icon">📊</span>
-                            </div>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__meta">
-                                <span class="article__category">Sustainability</span>
-                                <span class="article__date">August 25, 2025</span>
-                            </div>
-                            <h3 class="article__title">
-                                <a href="articles/sustainable-software-development-principles.html">
-                                    Sustainable Software Development: Core Principles
-                                </a>
-                            </h3>
-                            <p class="article__excerpt">
-                                Essential principles and practices for developing environmentally conscious software that minimizes energy consumption and maximizes efficiency.
-                            </p>
-                            <a href="articles/sustainable-software-development-principles.html" class="article__read-more">
-                                Read More →
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="article article--hidden" data-category="development">
-                        <div class="article__image">
-                            <div class="article__image-placeholder">
-                                <span class="article__image-icon">🛠️</span>
-                            </div>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__meta">
-                                <span class="article__category">Development</span>
-                                <span class="article__date">August 20, 2025</span>
-                            </div>
-                            <h3 class="article__title">
-                                <a href="articles/ddogreen-case-study-enterprise-deployment.html">
-                                    DDOGreen Case Study: Enterprise Deployment Success
-                                </a>
-                            </h3>
-                            <p class="article__excerpt">
-                                Real-world case study of DDOGreen implementation in a large enterprise environment, including challenges faced and solutions implemented.
-                            </p>
-                            <a href="articles/ddogreen-case-study-enterprise-deployment.html" class="article__read-more">
-                                Read More →
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Load More Button -->
-                <div class="articles__load-more">
-                    <button class="btn btn--secondary" id="load-more-articles">Load More Articles</button>
-                </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- ── Contact ───────────────────────────────────────────── -->
         <section class="contact" id="contact">
             <div class="contact__container">
+
                 <div class="section__header">
                     <h2 class="section__title" data-lang-key="contact.title">Get In Touch</h2>
                     <p class="section__subtitle" data-lang-key="contact.subtitle">
@@ -488,23 +357,23 @@
 
                 <div class="contact__content contact__content--simple">
                     <div class="contact__info">
+
                         <div class="contact__item">
-                            <div class="contact__icon" data-lang-key="contact.methods.0.icon">📧</div>
+                            <div class="contact__icon" aria-hidden="true">📧</div>
                             <div class="contact__details">
                                 <h4 class="contact__title" data-lang-key="contact.methods.0.title">Email</h4>
-                                <a href="mailto:info@ddosoft.com" class="contact__link" data-lang-key="contact.methods.0.link">info@ddosoft.com</a>
+                                <a href="mailto:info@ddosoft.com" class="contact__link">info@ddosoft.com</a>
                                 <p class="contact__description" data-lang-key="contact.methods.0.description">Drop us a line for project inquiries and partnerships</p>
                             </div>
                         </div>
 
                         <div class="contact__item">
-                            <div class="contact__icon" data-lang-key="contact.methods.1.icon">🔗</div>
+                            <div class="contact__icon" aria-hidden="true">🔗</div>
                             <div class="contact__details">
                                 <h4 class="contact__title" data-lang-key="contact.methods.1.title">LinkedIn</h4>
                                 <a href="https://www.linkedin.com/company/ddosoft"
                                    class="contact__link"
-                                   target="_blank"
-                                   rel="noopener"
+                                   target="_blank" rel="noopener"
                                    aria-label="DDOSoft LinkedIn company page"
                                    data-lang-key="contact.methods.1.link">
                                     DDOSoft Company Page
@@ -514,7 +383,7 @@
                         </div>
 
                         <div class="contact__item">
-                            <div class="contact__icon" data-lang-key="contact.methods.2.icon">📍</div>
+                            <div class="contact__icon" aria-hidden="true">📍</div>
                             <div class="contact__details">
                                 <h4 class="contact__title" data-lang-key="contact.methods.2.title">Address</h4>
                                 <address class="contact__address">
@@ -523,23 +392,22 @@
                                     <span data-lang-key="contact.methods.2.line3">Onikişubat/Kahramanmaraş</span>
                                     <span data-lang-key="contact.methods.2.country">Turkey</span>
                                 </address>
-                                <p class="contact__description" data-lang-key="contact.methods.2.description">Visit our office for in-person meetings</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </section>
+
     </main>
 
-    <!-- Footer Component Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
     <script src="js/component-loader.js"></script>
     <script src="js/language-manager.js"></script>
     <script src="js/structured-data-manager.js"></script>
-    <script src="js/homepage-articles.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
