@@ -135,6 +135,15 @@
         "Protocol implementation (OCPP, WebSocket)"
       ]
     },
+    "agentic": {
+      "title": "Agentic Development",
+      "description": "End-to-end design and implementation of AI agent systems — from single-agent tools to multi-agent pipelines with autonomous task execution.",
+      "features": [
+        "LLM integration & prompt engineering (Claude, GPT)",
+        "Multi-agent workflows & orchestration",
+        "Tool use, RAG pipelines & autonomous task execution"
+      ]
+    },
     "expertise": {
       "title": "Our Expertise"
     }
