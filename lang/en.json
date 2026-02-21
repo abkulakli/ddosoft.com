@@ -79,7 +79,8 @@
     "languageSwitch": "TR"
   },
   "hero": {
-    "title": "Sustainable Software Solutions",
+    "eyebrow": "Sustainable Software Consulting",
+    "title": "Sustainable<br><em>Software</em><br>Solutions",
     "subtitle": "Expert software consulting, digital transformation, and sustainable development services. We help organizations modernize their technology infrastructure while reducing energy consumption and environmental impact.",
     "cta": "View Products",
     "scrollHint": "Learn More"
@@ -471,7 +472,6 @@
           "title": "Conclusion",
           "content": "The evolution of laptop power management from simple profiles to intelligent, adaptive systems represents one of the most significant advances in computing efficiency. As we move forward, these systems will become even more sophisticated, helping us build a more sustainable and efficient digital future.",
           "ddogreen": "Solutions like DDOGreen demonstrate that we no longer need to choose between performance and efficiency - intelligent systems can deliver both, adapting seamlessly to our needs while maximizing battery life and minimizing environmental impact."
-        }
         }
       }
     },
@@ -1146,6 +1146,7 @@
         "title": "Products",
         "links": [
           {"text": "DDOGreen", "href": "#products"},
+          {"text": "GitHub", "href": "https://github.com/abkulakli/ddogreen"},
           {"text": "Tefaster", "href": "https://tefaster.ddosoft.com"}
         ]
       },

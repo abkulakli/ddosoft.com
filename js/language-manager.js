@@ -64,7 +64,7 @@ class LanguageManager {
         elements.forEach(el => {
             const key = el.getAttribute('data-lang-key');
             const text = this.getTranslation(key);
-            if (text) el.textContent = text;
+            if (text) el.innerHTML = text;
         });
     }
 

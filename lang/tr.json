@@ -87,7 +87,8 @@
     "languageSwitch": "EN"
   },
   "hero": {
-    "title": "Sürdürülebilir Yazılım Çözümleri",
+    "eyebrow": "Sürdürülebilir Yazılım Danışmanlığı",
+    "title": "Sürdürülebilir<br><em>Yazılım</em><br>Çözümleri",
     "subtitle": "Uzman yazılım danışmanlığı, dijital dönüşüm ve sürdürülebilir geliştirme hizmetleri. Kuruluşların teknoloji altyapılarını modernize ederken enerji tüketimini ve çevresel etkiyi azaltmalarına yardımcı oluyoruz.",
     "cta": "Ürünleri Görüntüle",
     "scrollHint": "Daha Fazla Bilgi"
@@ -1105,6 +1106,7 @@
         "title": "Ürünler",
         "links": [
           {"text": "DDOGreen", "href": "#products"},
+          {"text": "GitHub", "href": "https://github.com/abkulakli/ddogreen"},
           {"text": "Tefaster", "href": "https://tefaster.ddosoft.com"}
         ]
       },
