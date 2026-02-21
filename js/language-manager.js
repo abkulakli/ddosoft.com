@@ -12,11 +12,9 @@ class LanguageManager {
             this.currentLanguage = this.detectLanguage();
             await this.loadLanguageData(this.currentLanguage);
             this.applyLanguage();
-            this.setupLanguageToggle();
             // Re-apply after header/footer components are dynamically injected
             document.addEventListener('componentsLoaded', () => {
                 this.applyLanguage();
-                this.setupLanguageToggle();
             });
         } catch (error) {
             console.error('LanguageManager error:', error);
@@ -232,43 +230,9 @@ class LanguageManager {
         return value;
     }
 
-    async switchLanguage(lang) {
-        if (this.supportedLanguages.includes(lang) && lang !== this.currentLanguage) {
-            await this.loadLanguageData(lang);
-            this.currentLanguage = lang;
-            localStorage.setItem('ddosoft-language', lang);
-            this.applyLanguage();
-        }
-    }
-
-    setupLanguageToggle() {
-        const select = document.querySelector('.nav__lang-select');
-        if (select) {
-            // Set initial value to current language
-            select.value = this.currentLanguage;
-
-            // Listen for changes
-            select.addEventListener('change', async (e) => {
-                const newLanguage = e.target.value;
-                if (newLanguage !== this.currentLanguage) {
-                    await this.switchLanguage(newLanguage);
-                }
-            });
-        }
-    }
-
-    updateLanguageDisplay() {
-        const select = document.querySelector('.nav__lang-select');
-        if (select) {
-            // Set the select value to current language
-            select.value = this.currentLanguage;
-        }
-    }
-
     applyLanguage() {
         document.documentElement.lang = this.currentLanguage;
         this.updateContent();
         this.updateMetaTags();
-        this.updateLanguageDisplay(); // Update the select display after switching
     }
 }
