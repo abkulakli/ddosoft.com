@@ -144,15 +144,6 @@
         "Protokol implementasyonu (OCPP, WebSocket)"
       ]
     },
-    "agentic": {
-      "title": "Ajanlı Geliştirme",
-      "description": "Tek ajanlı araçlardan çok ajanlı pipeline'lara kadar yapay zeka ajan sistemlerinin uçtan uca tasarımı ve implementasyonu — otonom görev yürütme ile.",
-      "features": [
-        "LLM entegrasyonu ve prompt mühendisliği (Claude, GPT)",
-        "Çok ajanlı iş akışları ve orkestrasyon",
-        "Araç kullanımı, RAG pipeline'ları ve otonom görev yürütme"
-      ]
-    },
     "expertise": {
       "title": "Uzmanlık Alanlarımız"
     }

@@ -28,16 +28,8 @@ class LanguageManager {
             return urlLang;
         }
 
-        const stored = localStorage.getItem('ddosoft-language');
-        if (stored && this.supportedLanguages.includes(stored)) {
-            return stored;
-        }
-
-        const browser = navigator.language.substring(0, 2);
-        if (this.supportedLanguages.includes(browser)) {
-            return browser;
-        }
-
+        // No lang param — redirect to English as the canonical default
+        window.location.replace('?lang=en' + window.location.hash);
         return this.defaultLanguage;
     }
 
@@ -198,7 +190,7 @@ class LanguageManager {
             const hreflangTag = document.createElement('link');
             hreflangTag.setAttribute('rel', 'alternate');
             hreflangTag.setAttribute('hreflang', lang);
-            hreflangTag.setAttribute('href', `${baseUrl}${lang === 'en' ? '' : '?lang=' + lang}`);
+            hreflangTag.setAttribute('href', `${baseUrl}?lang=${lang}`);
             document.head.appendChild(hreflangTag);
         });
 
@@ -206,7 +198,7 @@ class LanguageManager {
         const defaultTag = document.createElement('link');
         defaultTag.setAttribute('rel', 'alternate');
         defaultTag.setAttribute('hreflang', 'x-default');
-        defaultTag.setAttribute('href', baseUrl);
+        defaultTag.setAttribute('href', `${baseUrl}?lang=en`);
         document.head.appendChild(defaultTag);
     }
 
