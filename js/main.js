@@ -539,18 +539,9 @@ class ProductModal {
     setupEventListeners() {
         // Product card click events
         this.productCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (!e.target.classList.contains('product-card__details-btn') &&
-                    !e.target.closest('.product-card__details-btn')) return;
-
-                e.preventDefault();
-                const productId = card.dataset.product;
-                this.showProductDetail(productId);
-            });
-
             // Add click event for the details button specifically
             const detailsBtn = card.querySelector('.product-card__details-btn');
-            if (detailsBtn) {
+            if (detailsBtn && detailsBtn.tagName !== 'A') {
                 detailsBtn.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();

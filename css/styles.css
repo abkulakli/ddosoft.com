@@ -835,6 +835,8 @@ section { padding: clamp(4rem, 10vw, 7rem) 0; }
     display: inline-block;
 }
 .product-card__details-btn:hover { background: var(--accent); border-color: var(--accent); color: var(--bg-0); transform: translateX(4px); }
+.product-card__cta { align-self: flex-start; margin-top: .5rem; background: transparent; border: 1px solid var(--border-1); border-radius: var(--radius); color: var(--text-0); font-family: var(--font-body); font-size: .88rem; font-weight: 600; padding: .6rem 1.25rem; cursor: pointer; transition: all var(--t-mid); text-decoration: none; display: inline-block; }
+.product-card__cta:hover { background: var(--accent); border-color: var(--accent); color: var(--bg-0); transform: translateX(4px); }
 
 /* Product modal */
 .product-detail-modal {
