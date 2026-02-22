@@ -1097,7 +1097,7 @@
         "title": "Ürünler",
         "links": [
           {"text": "DDOGreen", "href": "#products"},
-          {"text": "GitHub", "href": "https://github.com/abkulakli/ddogreen"},
+          {"text": "GitHub", "href": "https://github.com/abkulakli/ddogreen/releases"},
           {"text": "Tefaster", "href": "https://tefaster.ddosoft.com"}
         ]
       },

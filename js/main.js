@@ -653,8 +653,8 @@ class ProductModal {
                     ]
                 },
                 links: {
-                    download: 'https://github.com/abkulakli/ddogreen/releases/latest',
-                    github: 'https://github.com/abkulakli/ddogreen'
+                    download: 'https://github.com/abkulakli/ddogreen/releases',
+                    github: 'https://github.com/abkulakli/ddogreen/releases'
                 }
             }
         };
