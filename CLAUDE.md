@@ -6,13 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 DDOSoft is a static single-page landing website for a sustainable software consulting company. Built with pure HTML5/CSS3/Vanilla JavaScript — no build tools, no npm, no frameworks.
 
-**Live site**: ddosoft.com (deployed via GitHub Pages)
-**Founder**: Ayşe Pınar KULAKLI — [LinkedIn](https://www.linkedin.com/in/apkulakli)
-**Contact**: info@ddosoft.com
+**Live site**: ddosoft.com (deployed via GitHub Pages)  
+**Founder**: Ayşe Pınar KULAKLI — [LinkedIn](https://www.linkedin.com/in/apkulakli)  
+**Contact**: info@ddosoft.com  
+**LinkedIn**: [linkedin.com/company/ddosoft](https://www.linkedin.com/company/ddosoft)
 
 ### Products
 - **DDOGreen** v0.3.1 — cross-platform power management tool (C++20, Linux/Windows). 20–30% battery savings, zero config, 122 unit tests. [GitHub](https://github.com/abkulakli/ddogreen)
 - **Tefaster** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [tefaster.ddosoft.com](https://tefaster.ddosoft.com)
+- **SimIt** — [simit.ddosoft.com](https://simit.ddosoft.com)
 
 ### Services
 Software consulting (OCPP 1.6, EV charging, AWS, embedded), digital transformation (cloud migration, CMMI), custom development (Python/Django, C++20, WebSocket protocols). 15+ years experience.
@@ -29,7 +31,7 @@ php -S localhost:8000        # PHP
 
 No install, build, or compile step. Changes are live on page refresh.
 
-**Deployment**: Push to `main` → GitHub Actions deploys to GitHub Pages automatically.
+**Deployment**: Push to `main` → GitHub Actions (`.github/workflows/deploy.yml`) deploys to GitHub Pages automatically. `.nojekyll` prevents Jekyll processing. `CNAME` sets the custom domain.
 
 ## Architecture
 
@@ -44,7 +46,7 @@ Header and footer live **only** in `components/header.html` and `components/foot
 <script src="js/component-loader.js"></script>   <!-- must be first script -->
 ```
 
-`js/component-loader.js` resolves relative paths for root vs. subdirectory pages then injects the components.
+`js/component-loader.js` resolves relative paths for root vs. subdirectory pages then injects the components. For `/articles/` pages it prepends `../` to all internal links.
 
 ### Multilingual System (EN/TR)
 
@@ -64,6 +66,10 @@ Translations live in `lang/en.json` and `lang/tr.json`. Every visible text eleme
 - `js/` — component-loader, language-manager, main, structured-data-manager
 - `css/styles.css` — single stylesheet, BEM-style, mobile-first, dark theme
 
+### Brand & Logo
+
+`logo.png` — transparent PNG, white background removed. Used as favicon and in nav/footer. Source of truth for the brand mark. Use absolute path `/logo.png` in components so it resolves correctly from both root and subdirectory pages.
+
 ### Design Tokens (css/styles.css)
 
 | Token | Value | Use |
@@ -80,9 +86,17 @@ Translations live in `lang/en.json` and `lang/tr.json`. Every visible text eleme
 
 `js/structured-data-manager.js` injects JSON-LD schema.org markup dynamically.
 
+## Quality Targets
+
+- **Performance**: FCP < 1.5s, LCP < 2.5s, CLS < 0.1, total page < 2MB
+- **Accessibility**: WCAG 2.1 AA — semantic HTML, ARIA labels, keyboard navigation, screen reader support
+- **Browser support**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+- **Responsive**: mobile-first, tested at 320px / 768px / 1024px+
+
 ## Key Standards
 
 - **DRY**: Never hardcode nav, footer, or contact info. Use the component system.
 - **Translations**: All visible text needs a `data-lang-key` and entries in both JSON files.
 - **No frameworks**: Vanilla JS only. No jQuery, no npm packages.
 - **CSS**: Keep BEM class naming. Add `-webkit-` prefixes before unprefixed vendor properties.
+- **Images**: Use absolute paths (`/logo.png`) in shared components to work from any page depth.

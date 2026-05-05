@@ -1,69 +1,41 @@
-# DDOSoft Website .gitignore
-
-# Local environment file (machine-specific information)
-memory-bank/local.md
-
-# Development files
+# Editor
 .vscode/
 .idea/
-*.tmp
-*.temp
-.DS_Store
-Thumbs.db
+*.swp
+*.swo
+*~
 
-# Log files
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# Logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Dependencies (if added later)
 node_modules/
 bower_components/
 
-# Build outputs (if build process added)
+# Build outputs (if added later)
 dist/
 build/
 public/
 
-# Environment variables (if added)
+# Environment
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 
-# Editor files
-*.swp
-*.swo
-*~
-
-# System files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Backup files
+# Temp
+*.tmp
+*.temp
 *.bak
 *.backup
 *.orig
-
-# Cache
-.cache/
-*.cache
-
-# Runtime files
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-
-# Temporary folders
 tmp/
 temp/
+.cache/
+*.cache
+coverage/
