@@ -151,7 +151,7 @@
       "highlight": "20-30% longer battery life with zero performance compromise",
       "card": {
         "category": "Power Management",
-        "excerpt": "Intelligent power management tool that extends battery life by 20-30% across Linux and Windows platforms."
+        "excerpt": "Automatically extends your laptop's battery life by 20–30% — just install and it works silently in the background, no setup needed."
       },
       "features": {
         "title": "Key Features",
@@ -224,7 +224,7 @@
       "highlight": "Manage 2,316+ Turkish mutual funds with daily automatic updates and intelligent analytics",
       "card": {
         "category": "Portfolio Management",
-        "excerpt": "Production-ready Django application for managing Turkish mutual fund portfolios with daily TEFAS data integration."
+        "excerpt": "Analyze and track all Turkish investment funds in one place. Prices update daily from TEFAS automatically. Free to start, no credit card required."
       },
       "features": {
         "title": "Key Features",
@@ -302,7 +302,7 @@
       "version": "Beta",
       "card": {
         "category": "EV Charging Simulator",
-        "excerpt": "OCPP 1.6 simulator for CSMS testing — multi-EVSE support, realistic SOC tracking, REST API, and Docker deployment up to 65,536 concurrent connections."
+        "excerpt": "Test your EV charging systems without any hardware. Supports OCPP 1.6 and 2.0.1. Simulate real chargers in the cloud and run load tests instantly. Free plan available."
       }
     },
     "card": {

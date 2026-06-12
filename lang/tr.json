@@ -159,7 +159,7 @@
       "highlight": "Sıfır performans kaybıyla %20-30 daha uzun pil ömrü",
       "card": {
         "category": "Güç Yönetimi",
-        "excerpt": "Linux ve Windows platformlarında pil ömrünü %20-30 uzatan akıllı güç yönetimi aracı."
+        "excerpt": "Dizüstü bilgisayarınızın pil ömrünü otomatik olarak %20–30 uzatır — yükleyin, gerisini arka planda sessizce halleder. Hiçbir ayar gerekmez."
       },
       "features": {
         "title": "Temel Özellikler",
@@ -232,7 +232,7 @@
       "highlight": "2.316+ Türk yatırım fonunu günlük otomatik güncellemeler ve akıllı analizlerle yönetin",
       "card": {
         "category": "Portföy Yönetimi",
-        "excerpt": "Günlük TEFAS veri entegrasyonu ile Türk yatırım fonu portföylerini yönetmek için üretime hazır Django uygulaması."
+        "excerpt": "Tüm Türk yatırım fonlarını tek yerden analiz edin ve takip edin. Fiyatlar TEFAS'tan günlük otomatik güncellenir. Ücretsiz başlayın, kredi kartı gerekmez."
       },
       "features": {
         "title": "Temel Özellikler",
@@ -310,7 +310,7 @@
       "version": "Beta",
       "card": {
         "category": "EV Şarj Simülatörü",
-        "excerpt": "CSMS testleri için OCPP 1.6 simülatörü — çoklu EVSE desteği, gerçekçi SOC takibi, REST API ve 65.536 eş zamanlı bağlantıya kadar Docker dağıtımı."
+        "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. OCPP 1.6 ve 2.0.1 destekler. Gerçek şarj istasyonlarını bulutta simüle edin ve anında yük testi yapın. Ücretsiz plan mevcut."
       }
     },
     "card": {
