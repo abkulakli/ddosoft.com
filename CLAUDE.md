@@ -58,6 +58,8 @@ Translations live in `lang/en.json` and `lang/tr.json`. Every visible text eleme
 
 `js/language-manager.js` handles detection (URL param `?lang=tr` → localStorage → browser lang → EN default), real-time switching without reload, and meta tag / `<html lang>` updates.
 
+**Important:** If no `?lang=` param is present, `language-manager.js` immediately redirects to `?lang=en`. The bare URL `https://www.ddosoft.com/` never serves content directly. Always use `?lang=en` / `?lang=tr` in canonical URLs, sitemap `<loc>` values, OG URLs, and hreflang `href` attributes.
+
 ### Page Structure
 
 - `index.html` — single-page: Hero · About · Services · Products · Contact
