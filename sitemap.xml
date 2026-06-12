@@ -3,7 +3,17 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
     <url>
-        <loc>https://www.ddosoft.com/</loc>
+        <loc>https://www.ddosoft.com/?lang=en</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en"        href="https://www.ddosoft.com/?lang=en" />
+        <xhtml:link rel="alternate" hreflang="tr"        href="https://www.ddosoft.com/?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/?lang=en" />
+    </url>
+
+    <url>
+        <loc>https://www.ddosoft.com/?lang=tr</loc>
         <lastmod>2026-02-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
