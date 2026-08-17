@@ -2,15 +2,15 @@
   "meta": {
     "site": {
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-    "mission": {
-      "title": "Misyonumuz",
-      "text": "DDOSoft olarak, güçlü yazılımların gezegenimiz pahasına olmaması gerektiğine inanıyoruz. Kuruluşların teknoloji altyapılarını dönüştürürken enerji tüketimini ve çevresel etkiyi önemli ölçüde azaltmalarına yardımcı olmak için uzman danışmanlık ve geliştirme hizmetleri sağlıyoruz."
-    },
-    "vision": {
-      "title": "Yaklaşımımız",
-      "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında kanıtlanmış 15+ yıllık deneyimimizle, eski sistem modernizasyonundan son teknoloji sürdürülebilir yazılım geliştirmeye kadar kapsamlı çözümler sunuyoruz. Uzmanlığımız gömülü sistemlerden bulut platformlarına kadar tüm teknoloji yığınını kapsar."
-    },
-    "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
+      "mission": {
+        "title": "Misyonumuz",
+        "text": "DDOSoft olarak, güçlü yazılımların gezegenimiz pahasına olmaması gerektiğine inanıyoruz. Kuruluşların teknoloji altyapılarını dönüştürürken enerji tüketimini ve çevresel etkiyi önemli ölçüde azaltmalarına yardımcı olmak için uzman danışmanlık ve geliştirme hizmetleri sağlıyoruz."
+      },
+      "vision": {
+        "title": "Yaklaşımımız",
+        "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında kanıtlanmış 15+ yıllık deneyimimizle, eski sistem modernizasyonundan son teknoloji sürdürülebilir yazılım geliştirmeye kadar kapsamlı çözümler sunuyoruz. Uzmanlığımız gömülü sistemlerden bulut platformlarına kadar tüm teknoloji yığınını kapsar."
+      },
+      "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -38,9 +38,9 @@
         "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, enerji optimizasyonu"
       },
       "articles": {
-        "title": "Makaleler - DDOSoft",
-        "description": "Sürdürülebilir yazılım geliştirme, yeşil algoritmalar ve enerji verimli programlama konularında uzman görüşleri.",
-        "keywords": "yazılım geliştirme, yeşil algoritmalar, sürdürülebilirlik, enerji verimliliği, programlama"
+        "title": "Mühendislik Notları - DDOSoft",
+        "description": "DDOGreen ve SimIt'i geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
+        "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım"
       },
       "about": {
         "title": "Hakkımızda DDOSoft - Sürdürülebilir Yazılım Çözümleri",
@@ -51,28 +51,6 @@
         "title": "İletişim DDOSoft - Bize Ulaşın",
         "description": "Sürdürülebilir yazılım çözümleri ve yeşil teknoloji danışmanlığı için DDOSoft ile iletişime geçin.",
         "keywords": "ddosoft iletişim, yeşil teknoloji danışmanlığı, sürdürülebilir yazılım desteği"
-      }
-    },
-    "articles": {
-      "calculating-carbon-footprint-software": {
-        "title": "Yazılımın Karbon Ayak İzini Hesaplama - DDOSoft",
-        "description": "Yazılım uygulamalarının çevresel etkisini ölçme ve azaltma metodolojilerini öğrenin.",
-        "keywords": "karbon ayak izi, yazılım sürdürülebilirliği, çevresel etki, yeşil bilişim"
-      },
-      "ddogreen-case-study-enterprise-deployment": {
-        "title": "DDOGreen Kurumsal Dağıtım Vaka Analizi - DDOSoft",
-        "description": "Kurumsal ortamda DDOGreen uygulamasının %25 enerji tasarrufu gösteren gerçek dünya vaka analizi.",
-        "keywords": "DDOGreen, kurumsal dağıtım, güç yönetimi, enerji tasarrufu, vaka analizi"
-      },
-      "green-algorithms-performance-vs-efficiency": {
-        "title": "Yeşil Algoritmalar: Performans vs Verimlilik - DDOSoft",
-        "description": "Modern algoritmalarda hesaplama performansı ve enerji verimliliği arasındaki dengeyi keşfedin.",
-        "keywords": "yeşil algoritmalar, performans optimizasyonu, enerji verimliliği, sürdürülebilir bilişim"
-      },
-      "sustainable-software-development-principles": {
-        "title": "Sürdürülebilir Yazılım Geliştirme İlkeleri - DDOSoft",
-        "description": "Çevreye duyarlı yazılım uygulamaları geliştirmek için temel ilkeler ve uygulamalar.",
-        "keywords": "sürdürülebilir geliştirme, yeşil yazılım ilkeleri, çevre dostu programlama"
       }
     }
   },
@@ -346,736 +324,35 @@
     ]
   },
   "articles": {
-    "sectionTitle": "Son Görüşler",
-    "sectionSubtitle": "Sürdürülebilir yazılım geliştirme ve yeşil teknoloji konularındaki düşüncelerimizi keşfedin",
-    "viewAll": "Tüm Makaleleri Görüntüle",
+    "sectionTitle": "Mühendislik Notları",
+    "sectionSubtitle": "Kendi ürünlerimizi geliştirirken öğrendiklerimiz — güç yönetiminin iç işleyişi ve gerçek yük altında OCPP entegrasyonu.",
+    "viewAll": "Tüm Makaleler",
+    "readMore": "Devamını oku →",
     "recent": [
       {
-        "title": "Dizüstü Güç Yönetiminin Evrimi",
-        "excerpt": "Modern güç yönetiminin temel pil tasarrufundan performans ve verimliliği optimize eden akıllı, bağlam farkında sistemlere nasıl evrildiğini keşfedin.",
-        "category": "Teknoloji",
-        "date": "15 Eylül 2025",
-        "link": "articles/power-management-evolution.html"
+        "title": "DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor",
+        "excerpt": "Bir güç yönetimi servisini modlar arasında gidip gelmekten koruyan çift eşikli histerezis — ve neden hiç varsayılan değer vermiyor.",
+        "category": "Güç Yönetimi",
+        "date": "17 Ağustos 2026",
+        "link": "articles/tr/ddogreen-guc-yonetimi.html"
       },
       {
-        "title": "Çapraz Platform Geliştirme: DDOGreen'den Dersler",
-        "excerpt": "Linux ve Windows ortamlarında sorunsuz çalışan yazılım yaratmanın zorluklarını ve çözümlerini öğrenin.",
-        "category": "Geliştirme",
-        "date": "10 Eylül 2025",
-        "link": "articles/cross-platform-development.html"
-      },
-      {
-        "title": "Yeşil Algoritmalar: Performans ve Verimlilik Dengesi",
-        "excerpt": "Yüksek performans standartlarını korurken hesaplama karmaşıklığını ve enerji tüketimini azaltan algoritma seçimlerini keşfedin.",
-        "category": "Sürdürülebilirlik",
-        "date": "5 Eylül 2025",
-        "link": "articles/green-algorithms-performance-vs-efficiency.html"
-      },
-      {
-        "title": "Yazılımınızın Karbon Ayak İzini Hesaplamak",
-        "excerpt": "Geliştirmeden dağıtıma ve bakıma kadar uygulamalarınızın çevresel etkisini ölçmek ve azaltmak için pratik yöntemler öğrenin.",
-        "category": "Yeşil Teknoloji",
-        "date": "30 Ağustos 2025",
-        "link": "articles/calculating-carbon-footprint-software.html"
+        "title": "Sahada OCPP 1.6: Şarj İstasyonu Simülatöründen Dersler",
+        "excerpt": "Konnektör eşleme, şarj profili önceliği, çevrimdışı yetkilendirme ve bütün bir filoyu sessizce deviren yeniden bağlanma döngüsü.",
+        "category": "EV Şarj",
+        "date": "17 Ağustos 2026",
+        "link": "articles/tr/ocpp-16-entegrasyon-dersleri.html"
       }
     ],
-    "readMore": "Devamını Oku →",
     "page": {
       "meta": {
-        "title": "Makaleler - DDOSoft | Sürdürülebilir Yazılım Görüşleri",
-        "description": "DDOSoft Makaleleri - Sürdürülebilir yazılım geliştirme, yeşil teknoloji trendleri, güç yönetimi ve yazılım çözümlerinin çevresel etkisi konularında görüşler.",
-        "keywords": "sürdürülebilir yazılım makaleleri, yeşil teknoloji blogu, güç yönetimi görüşleri, DDOGreen güncellemeleri, çevreci yazılım geliştirme"
+        "title": "Mühendislik Notları - DDOSoft",
+        "description": "DDOGreen ve SimIt'i geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
+        "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım"
       },
-      "title": "Makaleler ve Görüşler",
-      "subtitle": "Sürdürülebilir yazılım geliştirme ve yeşil teknoloji konularında düşünce liderliği",
-      "search": "Makalelerde ara...",
-      "filter": {
-        "all": "Tüm Kategoriler",
-        "sustainability": "Sürdürülebilirlik",
-        "technology": "Teknoloji",
-        "development": "Geliştirme",
-        "green-technology": "Yeşil Teknoloji"
-      },
-      "backToHome": "← Ana Sayfaya Dön"
-    },
-    "powerManagementEvolution": {
-      "title": "Dizüstü Güç Yönetiminin Evrimi",
-      "excerpt": "Modern güç yönetiminin temel pil tasarrufundan performans ve verimliliği optimize eden akıllı, bağlam farkında sistemlere nasıl evrildiğini keşfedin.",
-      "category": "Teknoloji",
-      "date": "15 Eylül 2025",
-      "content": {
-        "intro": "Dizüstü güç yönetimi alanı son on yılda kayda değer bir dönüşüm geçirdi. Basit pil tasarrufu modları olarak başlayan alan, performans talebi ile enerji tasarrufu arasında akıllıca denge kuran sofistike, yapay zeka destekli sistemlere evrildi.",
-        "sections": {
-          "earlyDays": {
-            "title": "Başlangıç Dönemi: Temel Güç Profilleri",
-            "content": "2010'ların başında, güç yönetimi büyük ölçüde manuel bir işti. Kullanıcılar önceden tanımlanmış güç profilleri arasında seçim yapmak zorundaydı:",
-            "profiles": [
-              {"name": "Yüksek Performans", "description": "Maksimum CPU hızı, tam ekran parlaklığı, tüm özellikler etkin"},
-              {"name": "Dengeli", "description": "Performans ve pil ömrü arasında bir uzlaşma"},
-              {"name": "Güç Tasarrufu", "description": "Minimum CPU hızları, azaltılmış ekran parlaklığı, sınırlı işlevsellik"}
-            ]
-          },
-          "intelligence": {
-            "title": "Zeka Devrimi",
-            "content": "DDOGreen'de uygulanan gibi modern güç yönetimi sistemleri, akıllı, bağlam farkında optimizasyona doğru paradigma kaymasını temsil eder."
-          },
-          "future": {
-            "title": "Güç Yönetiminin Geleceği",
-            "content": "İleriye bakıldığında, güç yönetimi sistemleri tahminsel optimizasyon ve ekosistem entegrasyonu ile daha da büyük zeka ve entegrasyon yönünde gelişiyor."
-          }
-        }
-      }
-    },
-    "crossPlatformDevelopment": {
-      "title": "Çapraz Platform Geliştirme: DDOGreen'den Dersler",
-      "excerpt": "Linux ve Windows ortamlarında sorunsuz çalışan yazılım yaratmanın zorluklarını ve çözümlerini öğrenin.",
-      "category": "Geliştirme",
-      "date": "10 Eylül 2025",
-      "content": {
-        "intro": "Birden fazla işletim sisteminde sorunsuz çalışan yazılım geliştirmek, modern yazılım geliştirmenin en karmaşık zorluklarından biridir. DDOGreen projesi, performans, güvenilirlik ve platforma özgü optimizasyonları korurken bu zorlukların nasıl aşılacağına dair mükemmel bir örnek olay sunar.",
-        "mainTitle": "Bir Kez İnşa Et, Her Yerde Çalıştır: Çapraz Platform Zorluğu",
-        "sections": {
-          "imperative": {
-            "title": "Çapraz Platform Zorunluluğu",
-            "content": "Günümüzün çeşitli bilişim ortamında, kullanıcılar yazılımın işletim sistemi tercihlerinden bağımsız çalışmasını bekler. DDOGreen için bu, Linux dağıtımları ve Windows sürümleri arasında tutarlı işlevsellik sunarken her platformun benzersiz yeteneklerini kullanan bir güç yönetimi çözümü yaratmak anlamına geliyordu.",
-            "whyTitle": "Çapraz Platform Neden Önemli"
-          },
-          "architecture": {
-            "title": "Mimari Kararlar: Başarının Temeli",
-            "content": "Herhangi bir çapraz platform projesinin başarısı akıllı mimari kararlarla başlar. DDOGreen için temel olarak Modern C++20'yi seçtik, bu da birçok önemli avantaj sağladı."
-          },
-          "implementation": {
-            "title": "Platforma Özgü Uygulama Detayları"
-          },
-          "buildSystem": {
-            "title": "Yapı Sistemi ve Paketleme"
-          },
-          "testing": {
-            "title": "Test Stratejisi: Platformlar Arası Güvenilirliği Sağlama"
-          },
-          "performance": {
-            "title": "Performans Optimizasyon Stratejileri"
-          },
-          "lessons": {
-            "title": "Öğrenilen Dersler ve En İyi Uygulamalar",
-            "content": "DDOGreen projesi, etkili çapraz platform geliştirmenin sadece paylaşılan koddan daha fazlasını gerektirdiğini gösterir—her hedef platformun derinlemesine anlaşılması, dikkatli mimari planlama ve tüm desteklenen ortamlarda titiz test yapılması gerekir."
-          },
-          "future": {
-            "title": "Çapraz Platform Geliştirmenin Geleceği"
-          },
-          "conclusion": {
-            "title": "Sonuç: Çapraz Platform Avantajı"
-          }
-        },
-        "whyMatters": {
-          "marketReach": "Pazar Erişimi: Tüm büyük platformlardaki kullanıcılara erişim",
-          "devEfficiency": "Geliştirme Verimliliği: Tek kod tabanı bakım yükünü azaltır",
-          "featureParity": "Özellik Eşitliği: Platformlar arası tutarlı kullanıcı deneyimi",
-          "costEffective": "Maliyet Etkinliği: Azaltılmış geliştirme ve test kaynakları"
-        },
-        "languageChoice": {
-          "title": "Dil Seçimi: C++20",
-          "content": "C++20, performans, çapraz platform desteği ve modern dil özellikleri arasında mükemmel denge sundu:",
-          "nativePerf": "Doğal Performans: Sistem seviyesi güç yönetimi için kritik",
-          "stdLibrary": "Standart Kütüphane: Kapsamlı çapraz platform işlevselliği",
-          "memoryMgmt": "Bellek Yönetimi: Kaynak kullanımı üzerinde hassas kontrol",
-          "modernFeatures": "Modern Özellikler: Daha temiz kod için kavramlar, modüller ve koroutinler"
-        },
-        "abstractionLayer": {
-          "title": "Soyutlama Katmanı Stratejisi",
-          "content": "Platforma özgü uygulamalardan platform bağımsız mantığı ayıran temiz bir soyutlama katmanı uyguladık:"
-        },
-        "linuxChallenges": {
-          "title": "Linux Entegrasyon Zorlukları",
-          "content": "Linux, çeşitli ekosistemi ve sistem seviyesi gereksinimleri nedeniyle benzersiz zorluklar sundu:",
-          "systemService": {
-            "title": "Sistem Servis Entegrasyonu",
-            "challenge": "Zorluk: Birden fazla başlatma sistemi (systemd, SysV, OpenRC)",
-            "solution": "Çözüm: Modern dağıtımlar için systemd'ye odaklandık ve geri dönüş algılaması ekledik",
-            "implementation": "Uygulama: Uygun bağımlılıklar ve başlatma sırasıyla systemd servis dosyaları oluşturduk"
-          },
-          "tlpIntegration": {
-            "title": "TLP Entegrasyonu",
-            "challenge": "Zorluk: TLP'nin güç yönetim sistemiyle arabirim oluşturma",
-            "solution": "Çözüm: Uygun hata yönetimi ile doğrudan komut yürütme",
-            "codeExample": "Kod Örneği:"
-          },
-          "cpuMonitoring": {
-            "title": "CPU Yük İzleme",
-            "challenge": "Zorluk: Doğru gerçek zamanlı CPU yük algılama",
-            "solution": "Çözüm: Minimal yük için doğrudan /proc/loadavg ayrıştırma",
-            "benefits": "Faydalar: Harici bağımlılıklar olmadan doğal sistem entegrasyonu"
-          }
-        },
-        "windowsChallenges": {
-          "title": "Windows Entegrasyon Zorlukları",
-          "content": "Windows, benzersiz API yapısı ve servis mimarisi nedeniyle farklı yaklaşımlar gerektirdi:",
-          "powerPlan": {
-            "title": "Güç Planı Yönetimi",
-            "challenge": "Zorluk: Windows Güç Planları API karmaşıklığı",
-            "solution": "Çözüm: Windows Güç Yönetimi API entegrasyonu",
-            "implementation": "Uygulama: Hassas kontrol için doğrudan API çağrıları"
-          },
-          "perfCounters": {
-            "title": "Performans Sayaçları",
-            "challenge": "Zorluk: Gerçek zamanlı sistem izleme",
-            "solution": "Çözüm: Performans Veri Yardımcısı (PDH) API kullanımı",
-            "advantage": "Avantaj: Minimal yük ile detaylı sistem metrikleri"
-          },
-          "serviceManager": {
-            "title": "Servis Yöneticisi Entegrasyonu",
-            "challenge": "Zorluk: Uygun Windows servis yaşam döngüsü yönetimi",
-            "solution": "Çözüm: Tam Servis Kontrol Yöneticisi entegrasyonu",
-            "features": "Özellikler: Otomatik başlatma, uygun kapatma, servis kurtarma"
-          }
-        },
-        "cmake": {
-          "title": "CMake: Evrensel Yapı Sistemi",
-          "content": "CMake, çapraz platform yapı sistemimizin temelini sağladı:"
-        },
-        "packaging": {
-          "title": "Platforma Özgü Paketleme",
-          "content": "Her platform kendi paketleme yaklaşımını gerektirdi:",
-          "linux": {
-            "title": "Linux Paketleme",
-            "deb": "DEB paketleri: Debian/Ubuntu dağıtımları için",
-            "rpm": "RPM paketleri: Red Hat/Fedora/SUSE dağıtımları için",
-            "tgz": "TGZ arşivleri: Evrensel uyumluluk için",
-            "packageMgr": "Paket yöneticileri: Otomatik bağımlılık çözümlemesi"
-          },
-          "windows": {
-            "title": "Windows Paketleme",
-            "msi": "MSI yükleyici: Profesyonel kurulum deneyimi",
-            "serviceReg": "Servis kaydı: Otomatik servis kurulumu",
-            "uninstall": "Kaldırma desteği: Temiz kaldırma süreci",
-            "registry": "Kayıt defteri entegrasyonu: Uygun Windows entegrasyonu"
-          }
-        },
-        "testingSuite": {
-          "title": "Kapsamlı Test Paketi",
-          "content": "DDOGreen, her iki platformda da işlevselliği doğrulayan 122 kapsamlı birim testi içerir:",
-          "unitTests": "Birim Testleri: Bireysel bileşen testi",
-          "integrationTests": "Entegrasyon Testleri: Platforma özgü işlevsellik",
-          "perfTests": "Performans Testleri: Yük ve stres testi",
-          "compatTests": "Uyumluluk Testleri: Çoklu OS sürüm desteği"
-        },
-        "ci": {
-          "title": "Sürekli Entegrasyon",
-          "content": "CI/CD hattımız platformlar arası kaliteyi sağlar:",
-          "multiPlatform": "Çoklu Platform Yapıları: Eşzamanlı Linux ve Windows derlemesi",
-          "autoTesting": "Otomatik Test: Her commit'te tam test paketi yürütme",
-          "packageValidation": "Paket Doğrulama: Kurulum ve işlevsellik testi",
-          "perfBenchmark": "Performans Karşılaştırma: Gerileme algılama"
-        },
-        "platformOptimizations": {
-          "title": "Platforma Özgü Optimizasyonlar",
-          "content": "Çapraz platform uyumluluğunu korurken, platforma özgü optimizasyonlar uyguladık:",
-          "linux": {
-            "title": "Linux Optimizasyonları",
-            "procAccess": "Doğrudan /proc erişimi: Minimal sistem çağrısı yükü",
-            "fsMonitoring": "Doğal dosya sistemi izleme: Verimli değişiklik algılama",
-            "memoryMapping": "Bellek eşleme: Hızlı veri erişim kalıpları"
-          },
-          "windows": {
-            "title": "Windows Optimizasyonları",
-            "perfCounters": "Performans sayaçları: Optimize edilmiş sistem izleme",
-            "apiUsage": "Windows API kullanımı: Doğal sistem entegrasyonu",
-            "memoryMgmt": "Bellek yönetimi: Windows'a özgü tahsis kalıpları"
-          }
-        },
-        "hysteresis": {
-          "title": "Akıllı Histerezis Uygulaması",
-          "content": "Histerezis algoritması platformlar arası aynı şekilde çalışır ancak platforma özgü yük raporlamasına uyum sağlar:"
-        },
-        "designPatterns": {
-          "title": "İşe Yarayan Tasarım Kalıpları",
-          "factory": "Fabrika Kalıbı: Platforma özgü nesne oluşturma",
-          "strategy": "Strateji Kalıbı: Değiştirilebilir algoritmalar",
-          "adapter": "Adaptör Kalıbı: Platform API normalleştirme",
-          "observer": "Gözlemci Kalıbı: Olay güdümlü mimari"
-        },
-        "pitfalls": {
-          "title": "Kaçınılması Gereken Yaygın Tuzaklar",
-          "uniformity": "Tekdüzelik varsayımı: Her platformun benzersiz özellikleri vardır",
-          "overAbstraction": "Aşırı soyutlama: Soyutlama ile performans arasında denge kurun",
-          "insufficientTesting": "Yetersiz test: Gerçek hedef platformlarda test yapın",
-          "featureCreep": "Özellik kayması: Temel işlevselliğe odaklanmayı koruyun"
-        },
-        "workflow": {
-          "title": "Geliştirme İş Akışı Optimizasyonu",
-          "parallelDev": "Paralel geliştirme: Platform takımları eşzamanlı çalışır",
-          "sharedCodebase": "Paylaşılan kod tabanı: Paylaşılan modüllerde ortak mantık",
-          "regularIntegration": "Düzenli entegrasyon: Sık çapraz platform testi",
-          "documentation": "Dokümantasyon: Platforma özgü davranış dokümantasyonu"
-        },
-        "emergingTech": {
-          "title": "Gelişmekte Olan Teknolojiler",
-          "content": "Çapraz platform geliştirme manzarası gelişmeye devam ediyor:",
-          "webassembly": "WebAssembly: Tarayıcılarda doğala yakın performans",
-          "containers": "Konteyner Teknolojileri: Platformlar arası basitleştirilmiş dağıtım",
-          "cloudNative": "Bulut-Doğal Uygulamalar: Platform belirsiz dağıtım",
-          "aiAssisted": "AI Destekli Geliştirme: Otomatik platform adaptasyonu"
-        },
-        "ddogreenEvolution": {
-          "title": "DDOGreen'in Evrimi",
-          "content": "Çapraz platform başarımıza dayanarak, gelecekteki DDOGreen sürümleri şunlara genişleyecek:",
-          "macos": "macOS Desteği: Tam masaüstü platform kapsamı",
-          "mobile": "Mobil Platformlar: Android ve iOS güç yönetimi",
-          "iot": "IoT Entegrasyonu: Kenar cihaz güç optimizasyonu",
-          "cloud": "Bulut Entegrasyonu: Merkezi yönetim ve izleme"
-        },
-        "conclusionContent": {
-          "intro": "DDOGreen projesi, etkili çapraz platform geliştirmenin sadece paylaşılan koddan daha fazlasını gerektirdiğini gösterir—her hedef platformun derinlemesine anlaşılması, dikkatli mimari planlama ve tüm desteklenen ortamlarda titiz test yapılması gerekir.",
-          "takeaways": "Çapraz platform yolculuğumuzdan önemli çıkarımlar:",
-          "architectureFirst": "Önce Mimari: Kod yazmadan önce soyutlama katmanlarınızı planlayın",
-          "embraceDifferences": "Farklılıkları Benimseyin: Platforma özgü yetenekleri kullanın",
-          "testRelentlessly": "Amansızca Test Edin: Kapsamlı test platforma özgü hataları önler",
-          "performanceMatters": "Performans Önemlidir: Çapraz platform performanstan ödün vermek anlamına gelmez",
-          "userExperience": "Kullanıcı Deneyimi: Platform konvansiyonları kullanıcı benimsemesi için önemlidir",
-          "byFollowing": "Bu ilkeleri takip ederek, DDOGreen sistem seviyesi yazılımdan kullanıcıların beklediği performans ve güvenilirliği korurken Linux ve Windows arasında tutarlı güç yönetimi işlevselliği sunar.",
-          "futureText": "Yazılımın geleceği doğası gereği çapraz platformdur. Bilgi işlem ortamları giderek çeşitlenirken, DDOGreen gibi projelerden öğrenilen dersler, platform seçiminden bağımsız olarak tüm kullanıcılara gerçekten hizmet eden yazılım oluşturmak isteyen herhangi bir geliştirici için temel olacaktır."
-        }
-      }
-    },
-    "greenAlgorithms": {
-      "title": "Yeşil Algoritmalar: Performans vs Verimlilik Dengesi",
-      "category": "Sürdürülebilirlik",
-      "date": "5 Eylül 2025",
-      "excerpt": "Yüksek performans standartlarını korurken hesaplama karmaşıklığını ve enerji tüketimini azaltan algoritmik seçimleri keşfedin.",
-      "content": {
-        "intro": "Dijital dönüşümün hızlandığı günümüzde, yazılım algoritmaları yalnızca performans açısından değil, çevresel etkileri bakımından da değerlendirilmelidir. Yeşil algoritmalar, hesaplamalı verimliliği çevresel sürdürülebilirlik ile harmanlayan yenilikçi bir yaklaşımdır.",
-        "keyInsight": "Etkili algoritma tasarımı, hem performansı artırır hem de enerji tüketimini azaltır.",
-        "sections": {
-          "environmentalCost": {
-            "title": "Algoritmaların Çevresel Maliyeti",
-            "description": "Her hesaplama işlemi fiziksel olarak enerji tüketir. İnetkili algoritmalar, veri merkezlerinde yılda milyarlarca kilowatt-saat enerji harcayan gereksiz işlemler yaratır.",
-            "statistics": {
-              "globalImpact": "Küresel IT sektörü, toplam enerji tüketiminin %4'ünden sorumludur",
-              "dataCenter": "Veri merkezleri dünya elektrik tüketiminin %1'ini kullanır",
-              "optimization": "Algoritma optimizasyonu enerji kullanımını %30'a kadar azaltabilir",
-              "future": "2030'a kadar dijital karbon ayak izi üç katına çıkacak"
-            }
-          },
-          "understanding": {
-            "title": "Algoritma Enerji Tüketimini Anlamak",
-            "description": "Enerji verimliliğini artırmak için önce algoritmaların enerjiyi nasıl tükettiğini anlamamız gerekir.",
-            "computationalComplexity": "Hesaplama Karmaşıklığı",
-            "memoryPatterns": "Bellek Erişim Desenleri"
-          },
-          "principles": {
-            "title": "Yeşil Algoritma Tasarım İlkeleri",
-            "principle1": {
-              "title": "Hesaplama Adımlarını Minimize Etme",
-              "description": "Daha az işlem, daha az enerji tüketimi anlamına gelir.",
-              "elements": {
-                "complexity": "O(n log n) yerine O(n) karmaşıklığı tercih edin",
-                "caching": "Tekrarlanan hesaplamaları önlemek için önbellekleme kullanın",
-                "early": "Mümkün olduğunda erken çıkış stratejileri uygulayın"
-              }
-            },
-            "principle2": {
-              "title": "Veri Yapılarını Optimize Etme",
-              "description": "Verimli veri yapıları hem bellek hem de işlemci kullanımını azaltır.",
-              "elements": {
-                "structures": "Görev için uygun veri yapısını seçin",
-                "locality": "Önbellek lokalitesini artırmak için veri düzenini optimize edin",
-                "compression": "Mümkün olduğunda veri sıkıştırma tekniklerini kullanın"
-              }
-            },
-            "principle3": {
-              "title": "Donanım Yeteneklerinden Yararlanma",
-              "description": "Modern donanım, verimliliği artırmak için özel özellikler sunar.",
-              "elements": {
-                "parallel": "Çoklu çekirdekleri kullanmak için paralel işleme uygulayın",
-                "vectorization": "SIMD talimatlarını kullanarak vektörel işleme yapın",
-                "specialized": "GPU'lar gibi özel işlemcileri kullanın"
-              }
-            }
-          },
-          "simd": {
-            "title": "SIMD Talimatları",
-            "description": "Tek Talimat Çoklu Veri (SIMD) talimatları, aynı işlemi birden fazla veri noktasına aynı anda uygulayarak paralel işleme imkanı sağlar."
-          },
-          "measurement": {
-            "title": "Ölçüm ve Analiz",
-            "description": "Yeşil algoritmaların etkisini değerlendirmek için çeşitli metrikler kullanılır:",
-            "metrics": {
-              "energy": "Enerji Tüketimi - Joule cinsinden toplam enerji kullanımı",
-              "carbon": "Karbon Ayak İzi - CO2 eşdeğeri emisyonlar",
-              "performance": "Performans/Watt - Enerji birimi başına işlem gücü",
-              "efficiency": "Algoritma Verimliliği - Çıktı kalitesi ve enerji dengeleme"
-            },
-            "tools": {
-              "title": "Profilleme Araçları:",
-              "intel": "Intel VTune - CPU ve enerji analizi",
-              "nvidia": "NVIDIA Nsight - GPU performans profilleme",
-              "perf": "Linux perf - Sistem seviyesi performans izleme",
-              "power": "PowerAPI - Gerçek zamanlı güç tüketimi ölçümü"
-            }
-          },
-          "future": {
-            "title": "Yeşil Hesaplamanın Geleceği",
-            "description": "Sürdürülebilir algoritmaların geleceği umut verici:",
-            "trends": {
-              "quantum": "Kuantum hesaplama - Belirli problemler için üstel verimlilik artışı",
-              "neuromorphic": "Nöromorfik çipler - Beyin benzeri enerji verimliliği",
-              "approximate": "Yaklaşık hesaplama - Hassasiyet ve enerji arasında denge",
-              "edge": "Kenar hesaplama - Veri aktarımını azaltarak enerji tasarrufu"
-            },
-            "industryImpact": "Endüstri Etkisi"
-          },
-          "bestPractices": {
-            "title": "Geliştiriciler için En İyi Uygulamalar",
-            "guidelines": "Geliştirme Kılavuzları",
-            "checklist": "Kod İnceleme Kontrol Listesi"
-          },
-          "caseStudy": {
-            "title": "Gerçek Dünya Uygulamaları: DDOGreen Vaka Çalışması",
-            "hysteresis": "Histerezis Algoritması",
-            "benefits": "Yeşil Algoritma Tasarımının Faydaları"
-          },
-          "conclusion": {
-            "title": "Sonuç",
-            "content": "Yeşil algoritmalar, sürdürülebilir yazılım geliştirmenin geleceğini temsil eder. Performansı enerji verimliliği ile dengeleyerek, yalnızca kullanıcı ihtiyaçlarını karşılamakla kalmayıp aynı zamanda çevresel korumaya da katkıda bulunan çözümler oluşturabiliriz.",
-            "innovation": "Yeşil hesaplamaya geçiş yalnızca sorumluluk meselesi değil—aynı zamanda yenilik meselesidir. DDOGreen'in gösterdiği gibi, verimliliği önceleyerek tasarlanan algoritmalar genellikle çevresel etkiyi azaltırken daha iyi kullanıcı deneyimleri sunar.",
-            "future": "Yazdığımız her kod satırı, olumlu çevresel etki yaratma fırsatıdır. Yeşil algoritma ilkelerini benimseyerek, geliştiriciler daha sürdürülebilir dijital geleceğe öncülük edebilir."
-          }
-        }
-      }
-    },
-    "carbonFootprint": {
-      "title": "Yazılımınızın Karbon Ayak İzini Hesaplama",
-      "category": "Yeşil Teknoloji",
-      "date": "30 Ağustos 2025",
-      "excerpt": "Geliştirmeden dağıtım ve bakıma kadar uygulamalarınızın çevresel etkisini ölçmek ve azaltmak için pratik yöntemler öğrenin.",
-      "content": {
-        "intro": "Dijital ekonomi büyümeye devam ettikçe, yazılım uygulamaları küresel karbon emisyonlarına önemli katkıda bulunanlara dönüştü. Yazılımınızın çevresel etkisini anlamak ve ölçmek artık isteğe bağlı değil—sorumlu geliştirme için gereklidir. Bu kapsamlı kılavuz, yazılımınızın karbon ayak izini hesaplamak ve azaltmak için pratik yöntemler sunar.",
-        "sections": {
-          "understanding": {
-            "title": "Yazılım Karbon Ayak İzini Anlama"
-          },
-          "methodologies": {
-            "title": "Ölçüm Metodolojileri",
-            "cloudMetrics": "3. Bulut Sağlayıcı Karbon Metrikleri",
-            "awsFootprint": "AWS Karbon Ayak İzi"
-          },
-          "tools": {
-            "title": "Pratik Ölçüm Araçları",
-            "webApplication": "Web Uygulaması Karbon Ayak İzi"
-          },
-          "reduction": {
-            "title": "Azaltma Stratejileri"
-          },
-          "reporting": {
-            "title": "Raporlama ve Uyumluluk"
-          },
-          "future": {
-            "title": "Gelecek Trendleri ve Teknolojiler",
-            "standards": "Endüstri Standartları ve Çerçeveleri"
-          },
-          "caseStudy": {
-            "title": "Gerçek Dünya Vaka Çalışması: DDOGreen Etki Değerlendirmesi",
-            "dashboard": "Karbon Ayak İzi Kontrol Paneli"
-          },
-          "conclusion": {
-            "title": "Sonuç",
-            "paragraph1": "Yazılımınızın karbon ayak izini hesaplamak, daha sürdürülebilir bir dijital gelecek inşa etmenin ilk adımıdır. Uygulamalarınızın çevresel etkisini anlayarak, performans ve kullanıcı deneyimini korurken emisyonları azaltan bilinçli kararlar verebilirsiniz.",
-            "paragraph2": "DDOGreen gibi araçlar, yazılımın hem çevresel zorlukların çözümü hem de sürdürülebilirlik hedeflerine katkıda bulunan bir faktör olabileceğini göstermektedir. Her optimizasyon, her verimli algoritma ve her düşünceli mimari karar, daha temiz ve sürdürülebilir dijital ekosisteme katkıda bulunur.",
-            "paragraph3": "Karbon nötr yazılım geliştirme yolu ölçüm, optimizasyon ve sürekli iyileştirme gerektirir. Bugün ölçmeye başlayın ve sürdürülebilir yazılım geliştirmeye adanmış büyüyen geliştirici topluluğuna katılın."
-          }
-        },
-        "understanding": {
-          "intro": "Yazılım karbon ayak izi, uygulamanızla yaşam döngüsü boyunca ilişkilendirilen tüm sera gazı emisyonlarını kapsar. Bu, enerji tüketiminden kaynaklanan doğrudan emisyonları ve altyapı, geliştirme ve bakım aktivitelerinden kaynaklanan dolaylı emisyonları içerir.",
-          "threeScopesTitle": "Yazılım Emisyonlarının Üç Kapsamı",
-          "scope1Title": "Kapsam 1: Doğrudan Emisyonlar",
-          "scope1": {
-            "developmentHardware": "<strong>Geliştirme Donanımı:</strong> Geliştiricilerin bilgisayarları, sunucuları ve ekipmanlarından emisyonlar",
-            "officeFacilities": "<strong>Ofis Tesisleri:</strong> Geliştirme ofisleri ve tesislerinden enerji tüketimi",
-            "companyVehicles": "<strong>Şirket Araçları:</strong> Yazılımla ilgili iş aktiviteleri için ulaşım"
-          },
-          "scope2Title": "Kapsam 2: Dolaylı Enerji Emisyonları",
-          "scope2": {
-            "electricityConsumption": "<strong>Elektrik Tüketimi:</strong> Geliştirme ve dağıtım için kullanılan şebeke elektriği",
-            "cloudServices": "<strong>Cloud Hizmetleri:</strong> Uygulamalarınızı barındıran cloud altyapısı tarafından tüketilen enerji",
-            "dataCenters": "<strong>Veri Merkezleri:</strong> Yazılımınızı çalıştıran sunucuların güç tüketimi"
-          },
-          "scope3Title": "Kapsam 3: Diğer Dolaylı Emisyonlar",
-          "scope3": {
-            "userDevices": "<strong>Kullanıcı Cihazları:</strong> Yazılımınızı çalıştıran son kullanıcı cihazlarının enerji tüketimi",
-            "networkTransmission": "<strong>Ağ İletimi:</strong> İstemci ve sunucular arasında veri transferi",
-            "thirdPartyServices": "<strong>Üçüncü Parti Hizmetler:</strong> Harici API'ler ve hizmetlerden emisyonlar",
-            "softwareUpdates": "<strong>Yazılım Güncellemeleri:</strong> Güncellemelerin dağıtımı ve kurulumu"
-          }
-        },
-        "methodologies": {
-          "energyBasedTitle": "1. Enerji Tabanlı Hesaplama",
-          "energyBasedDescription": "En doğru yöntem, gerçek enerji tüketimini ölçmeyi ve karbon emisyonlarına dönüştürmeyi içerir:",
-          "basicFormulaTitle": "Temel Formül",
-          "implementationExampleTitle": "Uygulama Örneği",
-          "resourceBasedTitle": "2. Kaynak Tabanlı Tahmin",
-          "resourceBasedDescription": "Doğrudan ölçüm mümkün olmadığında, kaynak tüketimine dayalı tahmin yapın:",
-          "cpuBasedTitle": "CPU Tabanlı Tahmin"
-        },
-        "tools": {
-          "developmentMonitoringTitle": "Geliştirme Ortamı İzleme",
-          "powerTopTitle": "PowerTOP (Linux)",
-          "activityMonitorTitle": "Activity Monitor (macOS)",
-          "windowsPerformanceTitle": "Windows Performance Monitor",
-          "runtimeMonitoringTitle": "Uygulama Çalışma Zamanı İzleme"
-        },
-        "reduction": {
-          "codeLevelTitle": "Kod Seviyesi Optimizasyonları",
-          "algorithmEfficiencyTitle": "Algoritma Verimliliği",
-          "infrastructureTitle": "Altyapı Optimizasyonu",
-          "rightSizingTitle": "Doğru Boyutlandırma Kaynakları",
-          "rightSizing": {
-            "cpuScaling": "<strong>CPU Ölçeklendirme:</strong> Gerçek talebe uyacak otomatik ölçeklendirme kullanın",
-            "memoryOptimization": "<strong>Bellek Optimizasyonu:</strong> Daha küçük örnekleri etkinleştirmek için bellek ayak izini azaltın",
-            "storageEfficiency": "<strong>Depolama Verimliliği:</strong> Veri sıkıştırma ve tekilleştirme uygulayın",
-            "networkOptimization": "<strong>Ağ Optimizasyonu:</strong> Önbellekleme ve CDN'ler aracılığıyla veri transferini minimize edin"
-          },
-          "greenHostingTitle": "Yeşil Barındırma Seçimleri",
-          "greenHosting": {
-            "renewableProviders": "<strong>Yenilenebilir Enerji Sağlayıcıları:</strong> Yenilenebilir enerjiye adanmış barındırma sağlayıcıları seçin",
-            "geographicOptimization": "<strong>Coğrafi Optimizasyon:</strong> Temiz enerji şebekelerine sahip bölgelerde dağıtım yapın",
-            "edgeComputing": "<strong>Edge Computing:</strong> Edge dağıtımı ile gecikme ve enerji tüketimini azaltın",
-            "efficientDataCenters": "<strong>Verimli Veri Merkezleri:</strong> Yüksek PUE (Güç Kullanım Etkinliği) derecelendirmesine sahip sağlayıcılar seçin"
-          }
-        },
-        "future": {
-          "industryIntegrationTitle": "Endüstri Entegrasyonu",
-          "industryIntegration": {
-            "cicdGates": "<strong>CI/CD Karbon Kapıları:</strong> Dağıtım pipeline'larında otomatik karbon ayak izi kontrolleri",
-            "carbonAwareScheduling": "<strong>Karbon Bilinçli Zamanlama:</strong> Yenilenebilir enerji bol olduğunda iş yüklerini çalıştırma",
-            "greenEngineering": "<strong>Yeşil Yazılım Mühendisliği:</strong> Yazılım tasarımına entegre edilmiş karbon hususları",
-            "regulatoryCompliance": "<strong>Düzenleyici Uyumluluk:</strong> Dijital hizmetler için zorunlu karbon raporlaması"
-          }
-        }
-      }
-    },
-    "sustainableDevelopment": {
-      "title": "Sürdürülebilir Yazılım Geliştirme: Temel İlkeler",
-      "category": "Sürdürülebilirlik",
-      "date": "25 Ağustos 2025",
-      "excerpt": "Enerji tüketimini minimize eden ve verimliliği maksimize eden çevre bilincine sahip yazılım geliştirme için temel ilkeler ve uygulamalar.",
-      "content": {
-        "intro": "Sürdürülebilir yazılım geliştirme, uygulamaları nasıl tasarladığımız, inşa ettiğimiz ve sürdürdüğümüzde temel bir değişimi temsil eder. Teknolojinin çevresel etkisi giderek daha belirgin hale geldikçe, geliştiriciler enerji tüketimini minimize eden, kaynak israfını azaltan ve uzun ömürlü, verimli çözümler yaratan ilkeleri benimser. Bu kapsamlı kılavuz, çevre bilincine sahip yazılım geliştirme için gerekli temel ilkeleri ve uygulamaları özetlemektedir.",
-        "sections": {
-          "imperative": {
-            "title": "Sürdürülebilir Yazılım İhtiyacı"
-          },
-          "principles": {
-            "title": "Sürdürülebilir Yazılım Geliştirmenin Temel İlkeleri"
-          },
-          "framework": {
-            "title": "Uygulama Çerçevesi",
-            "testing": "Sürdürülebilirlik için Test",
-            "energyTesting": "Enerji Tüketimi Testi"
-          },
-          "bestPractices": {
-            "title": "En İyi Uygulamalar ve Kılavuzlar"
-          },
-          "future": {
-            "title": "Sürdürülebilir Yazılım Geliştirmenin Geleceği",
-            "emerging": "Gelişen Teknolojiler ve Uygulamalar"
-          },
-          "caseStudy": {
-            "title": "Gerçek Dünya Uygulaması: DDOGreen Vaka Çalışması",
-            "application": "DDOGreen'de İlke Uygulaması",
-            "impact": "Ölçülen Etki"
-          },
-          "conclusion": {
-            "title": "Sonuç",
-            "paragraph1": "Sürdürülebilir yazılım geliştirme sadece çevresel bir zorunluluk değil—aynı zamanda rekabet avantajıdır. Daha az enerji tüketen, cihaz pil ömrünü uzatan ve kaynak kullanımını minimize eden yazılım, çevresel korumaya katkıda bulunurken üstün kullanıcı deneyimleri sağlar.",
-            "paragraph2": "Bu kılavuzda özetlenen ilkeler, çevresel olarak bilinçli yazılım geliştirmek için bir temel sağlar. Gereksinim toplanmasından dağıtım ve izlemeye kadar geliştirmenin her aşamasına sürdürülebilirlik hususlarını entegre ederek, hem insan ihtiyaçlarına hem de gezegen sağlığına hizmet eden teknoloji yaratabiliriz.",
-            "paragraph3": "DDOGreen gibi projeler, sürdürülebilir yazılım geliştirmenin sadece mümkün değil aynı zamanda kârlı olduğunu göstermektedir. Bu ilkeleri benimser, geliştiriciler ve organizasyonlar kullanıcılara olağanüstü değer sunarken daha sürdürülebilir dijital geleceğe geçişte liderlik edebilir.",
-            "paragraph4": "Yazılım geliştirmenin geleceği sürdürülebilirdir. Soru bu ilkeleri benimseyyip benimsemeyeceğimiz değil, bunları endüstrimizde ne kadar hızlı uygulayabileceğimizdir. Bugün başlayın, etkimizi ölçün ve sürdürülebilir yazılım geliştirmeye adanmış büyüyen geliştirici topluluğuna katılın."
-          }
-        },
-        "imperative": {
-          "intro": "Yazılım endüstrisinin çevresel etkisi, veri merkezlerinin bariz enerji tüketiminin çok ötesine uzanır. İnşa ettiğimiz her uygulama, uyguladığımız her algoritma ve aldığımız her mimari karar küresel enerji tüketimi ve karbon emisyonlarına katkıda bulunur.",
-          "understandingTitle": "Etkiyi Anlama",
-          "understanding": {
-            "globalEnergy": "<strong>Küresel Enerji Tüketimi:</strong> BİT sektörü küresel sera gazı emisyonlarının %4'ünü oluşturuyor",
-            "growthTrajectory": "<strong>Büyüme Yörüngesi:</strong> Dijital enerji tüketimi her 4 yılda ikiye katlanıyor",
-            "hiddenCosts": "<strong>Gizli Maliyetler:</strong> Üretim, dağıtım ve kullanım ömrü sonu bertaraf etkisi",
-            "userDeviceImpact": "<strong>Kullanıcı Cihaz Etkisi:</strong> Yazılım verimsizliği cihaz ömrünü azaltıyor"
-          }
-        },
-        "principles": {
-          "principle1Title": "İlke 1: Enerji Verimliliği Öncelik",
-          "principle1Description": "Enerji verimliliği, algoritma seçiminden mimari tasarıma kadar her geliştirme kararında birincil düşünce olmalıdır. Bu ilke hem yürütme sırasındaki doğrudan enerji tüketimini hem de kaynak kullanımı yoluyla dolaylı tüketimi kapsar.",
-          "principle1": {
-            "implementationStrategiesTitle": "Uygulama Stratejileri"
-          },
-          "principle2Title": "İlke 2: Kaynak Ayak İzini Minimize Etme",
-          "principle2Description": "Sürdürülebilir yazılım geliştirme, tüm boyutlarda kaynak tüketimini minimize etmek için bilinçli çaba gerektirir: CPU döngüleri, bellek kullanımı, depolama gereksinimleri ve ağ bant genişliği.",
-          "principle2": {
-            "memoryManagementTitle": "Bellek Yönetimi Mükemmelliği"
-          },
-          "principle3Title": "İlke 3: Uzun Ömür için Tasarım",
-          "principle3Description": "Sürdürülebilir yazılım dayanıklı olarak inşa edilir. Bu, uzun süreler boyunca işlevsel, verimli ve sürdürülebilir kalan uygulamalar yaratmak, sık yeniden yazma ve güncelleme ihtiyacını azaltmak anlamına gelir.",
-          "principle3": {
-            "architecturalPatternsTitle": "Mimari Uzun Ömür Desenleri"
-          },
-          "principle4Title": "İlke 4: Etkiyi Ölçme ve İzleme",
-          "principle4Description": "Ölçmediğiniz şeyi iyileştiremezsiniz. Sürdürülebilir yazılım geliştirme çevresel etki ve performans metriklerinin sürekli izlenmesini gerektirir.",
-          "principle4": {
-            "monitoringFrameworkTitle": "Kapsamlı İzleme Çerçevesi"
-          },
-          "principle5Title": "İlke 5: Kullanıcı Merkezli Sürdürülebilirlik",
-          "principle5Description": "Sürdürülebilir yazılım, işlevsellik veya kullanıcı deneyiminden ödün vermeden kullanıcıları çevresel bilinçli seçimler yapmaya teşvik etmelidir.",
-          "principle5": {
-            "uxDesignTitle": "Sürdürülebilir UX Tasarım"
-          }
-        },
-        "framework": {
-          "lifecycleIntegrationTitle": "Geliştirme Yaşam Döngüsü Entegrasyonu",
-          "requirementsPhaseTitle": "1. Gereksinimler Aşaması",
-          "requirementsPhase": {
-            "energyRequirements": "<strong>Enerji Gereksinimleri:</strong> Kabul edilebilir enerji tüketim sınırlarını tanımlayın",
-            "sustainabilityGoals": "<strong>Sürdürülebilirlik Hedefleri:</strong> Ölçülebilir çevresel etki hedefleri belirleyin",
-            "deviceLongevity": "<strong>Cihaz Uzun Ömrü:</strong> Cihaz pil ömrü ve donanım aşınması üzerindeki etkiyi göz önünde bulundurun",
-            "userChoice": "<strong>Kullanıcı Seçimi:</strong> Kullanıcının sürdürülebilirlik üzerinde kontrolünü sağlayan özellikler planlayın"
-          },
-          "designPhaseTitle": "2. Tasarım Aşaması"
-        },
-        "bestPractices": {
-          "teamGuidelinesTitle": "Geliştirme Ekibi Kılavuzları",
-          "codeReviewChecklistTitle": "1. Kod İnceleme Sürdürülebilirlik Kontrol Listesi",
-          "checklist": {
-            "algorithmComplexity": "□ Algoritma karmaşıklığı problem gereksinimleri için gerekçeli mi?",
-            "resourceManagement": "□ Kaynaklar düzgün şekilde yönetiliyor ve bertaraf ediliyor mu?",
-            "energyMinimization": "□ Kod enerji tüketimini minimize edecek şekilde tasarlandı mı?",
-            "cachingOptimization": "□ Önbellekleme veya optimizasyon fırsatları var mı?",
-            "adaptiveQuality": "□ Uygulama kaynaklara dayalı uyarlanabilir kaliteyi destekliyor mu?"
-          },
-          "performanceBalanceTitle": "2. Performans ve Sürdürülebilirlik Dengesi",
-          "organizationalIntegrationTitle": "Organizasyonel Entegrasyon"
-        }
-      }
-    },
-    "ddogreenCaseStudy": {
-      "title": "DDOGreen Vaka Çalışması: Kurumsal Dağıtım Başarısı",
-      "category": "Geliştirme",
-      "date": "20 Ağustos 2025",
-      "excerpt": "Büyük kurumsal ortamda DDOGreen uygulamasının gerçek dünya vaka çalışması, karşılaşılan zorluklar ve uygulanan çözümler dahil.",
-      "content": {
-        "intro": "Büyük kurumsal ortamda DDOGreen'in başarılı dağıtımı, akıllı güç yönetimi çözümlerinin pratik faydalarını göstermektedir. Bu kapsamlı vaka çalışması, 12 aylık kurumsal yayılım sırasında uygulama sürecini, karşılaşılan zorlukları ve elde edilen ölçülebilir sonuçları inceler.",
-        "sections": {
-          "summary": {
-            "title": "Yönetici Özeti"
-          },
-          "profile": {
-            "title": "Şirket Profili"
-          },
-          "strategy": {
-            "title": "Uygulama Stratejisi"
-          },
-          "challenges": {
-            "title": "Uygulama Zorlukları ve Çözümleri"
-          },
-          "results": {
-            "title": "Sonuçlar ve Etki Analizi"
-          },
-          "lessons": {
-            "title": "Öğrenilen Dersler ve En İyi Uygulamalar"
-          },
-          "future": {
-            "title": "Gelecek İyileştirmeler ve Yol Haritası"
-          },
-          "conclusion": {
-            "title": "Sonuç ve Öneriler"
-          }
-        },
-        "metrics": {
-          "energySavings": "Enerji Tasarrufu",
-          "energySavingsValue": "Dizüstü bilgisayar güç tüketiminde ortalama %27,3 azalma",
-          "costSavings": "Maliyet Tasarrufu",
-          "costSavingsValue": "Yıllık 847.000$ elektrik maliyeti azalması",
-          "carbonImpact": "Karbon Etkisi",
-          "carbonImpactValue": "Yıllık 1.847 metrik ton CO₂e emisyon tasarrufu",
-          "deploymentScale": "Dağıtım Ölçeği",
-          "deploymentScaleValue": "47 ülkede 15.247 cihaz"
-        },
-        "companyProfile": {
-          "organizationOverview": "Organizasyon Genel Bakış",
-          "industry": "Sektör: Yazılım Geliştirme ve Teknoloji Hizmetleri",
-          "size": "Büyüklük: Küresel olarak 18.500 çalışan",
-          "locations": "Lokasyonlar: 6 kıtada 47 ülke",
-          "deviceFleet": "Cihaz Filosu: 15.247 dizüstü bilgisayar (Windows ve Linux)",
-          "sustainabilityGoal": "Sürdürülebilirlik Hedefi: 2030'a kadar karbon nötr",
-          "preImplementationChallenges": "Uygulama Öncesi Zorluklar",
-          "highEnergyCosts": "Yüksek Enerji Maliyetleri: Dizüstü bilgisayar kullanımı için yıllık 3.1M$ elektrik maliyeti",
-          "batteryComplaints": "Pil Şikayetleri: Yardım masası biletlerinin %23'ü pil ömrü sorunlarıyla ilgili",
-          "inconsistentPolicies": "Tutarsız Güç Politikaları: Lokasyonlar arası standartlaştırılmış güç yönetimi yok",
-          "environmentalGoals": "Çevresel Hedefler: Karbon azaltım hedeflerini karşılamakta zorlanma",
-          "userProductivity": "Kullanıcı Verimliliği: Güçle ilgili sorunlar nedeniyle sık kesintiler"
-        },
-        "phases": {
-          "phase1": {
-            "title": "Faz 1: Pilot Program (3 ay)",
-            "scope": "Pilot Kapsamı",
-            "participants": "Katılımcılar: Geliştirme ekiplerinden 500 gönüllü",
-            "regions": "Bölgeler: 3 ana ofis (ABD, AB, APAC)",
-            "devices": "Cihazlar: Dell, Lenovo ve HP dizüstü bilgisayarlarının karışık filosu",
-            "operatingSystems": "İşletim Sistemleri: Windows 11 (%70), Ubuntu 22.04 (%30)",
-            "configuration": "Pilot Konfigürasyonu",
-            "results": "Pilot Sonuçları"
-          },
-          "phase2": {
-            "title": "Faz 2: Bölgesel Yayılım (6 ay)",
-            "strategy": "Yayılım Stratejisi",
-            "adaptations": "Bölgesel Konfigürasyon Uyarlamaları"
-          },
-          "phase3": {
-            "title": "Faz 3: Küresel Dağıtım (4 ay)",
-            "architecture": "Merkezi Yönetim Mimarisi"
-          }
-        },
-        "regionalConfig": {
-          "northAmerica": "Kuzey Amerika",
-          "naGrid": "Şebeke Entegrasyonu: Karışık yenilenebilir/fosil yakıt şebekesi için optimize edilmiş",
-          "naPower": "Güç Profilleri: Yoğun saatlerde (14-18) agresif güç tasarrufu",
-          "naCompliance": "Uyumluluk: ENERGY STAR uyumluluk raporlaması",
-          "naUserBehavior": "Kullanıcı Davranışı: Kaynak yoğun geliştirme araçlarının yüksek kullanımı",
-          "europe": "Avrupa",
-          "euGdpr": "GDPR Uyumluluğu: Veri toplama için gelişmiş gizlilik kontrolleri",
-          "euGreen": "Yeşil Enerji Odağı: Yüksek yenilenebilir dönemlerde maksimize edilmiş verimlilik",
-          "euLanguage": "Çoklu Dil Desteği: 12 dil lokalizasyonu",
-          "euRegulatory": "Düzenleyici Raporlama: AB taksonomi uyumluluk metrikleri",
-          "asiaPacific": "Asya-Pasifik",
-          "apDensity": "Yüksek Yoğunluk Dağıtımları: Büyük geliştirme merkezleri için optimize edilmiş",
-          "apMobile": "Mobil Öncelikli Çalışanlar: Sık seyahat edenler için gelişmiş güç yönetimi",
-          "apClimate": "İklim Adaptasyonu: Yüksek sıcaklık ortamları için termal yönetim",
-          "apNetwork": "Ağ Optimizasyonu: Değişken ağ koşullarında verimli işletim"
-        }
-      },
-      "results": {
-        "quantitativeResults": "Nicelik Sonuçları",
-        "energyConsumptionAnalysis": "Enerji Tüketim Analizi",
-        "financialImpact": "Finansal Etki"
-      },
-      "conclusion": {
-        "intro": "DDOGreen kurumsal dağıtımı, akıllı güç yönetiminin birden fazla boyutta önemli faydalar sağlayabileceğini göstermektedir:",
-        "financialImpact": "<strong>Finansal Etki:</strong> 20 günlük geri ödeme süresi ile yıllık 2.2 milyon dolar tasarruf",
-        "environmentalBenefits": "<strong>Çevresel Faydalar:</strong> Yıllık 1.847 metrik ton CO₂e emisyon azaltımı",
-        "userExperience": "<strong>Kullanıcı Deneyimi:</strong> İyileştirilmiş verimlilik ve memnuniyet puanları",
-        "operationalExcellence": "<strong>Operasyonel Mükemmellik:</strong> Azaltılmış BT destek yükü ve geliştirilmiş sistem güvenilirliği",
-        "recommendationsTitle": "Benzer Dağıtımlar için Ana Öneriler",
-        "recommendation1Title": "1. Üst Yönetim Desteği ile Başlayın",
-        "recommendation1Content": "İş faydalarına odaklanarak güçlü liderlik desteği sağlayın: maliyet tasarrufları, verimlilik iyileştirmeleri ve sürdürülebilirlikte rekabet avantajı.",
-        "recommendation2Title": "2. Kapsamlı Entegrasyon için Plan Yapın",
-        "recommendation2Content": "Mevcut kurumsal sistemlerle entegrasyon için yeterli zaman ve kaynak bütçeleyin. Bu, karmaşık ortamlarda başarı için kritiktir.",
-        "recommendation3Title": "3. Değişim Yönetimine Yatırım Yapın",
-        "recommendation3Content": "Kullanıcı adaptasyonu sonuçları yönlendirir. Kapsamlı eğitim, net iletişim ve duyarlı destek temel yatırımlardır.",
-        "recommendation4Title": "4. Başarıyı Ölçün ve İletişimini Kurun",
-        "recommendation4Content": "Finansal, çevresel ve kullanıcı deneyimi metrikleri üzerine düzenli raporlama momentum sağlar ve değeri gösterir.",
-        "recommendation5Title": "5. Ölçeklenebilirlik için Plan Yapın",
-        "recommendation5Content": "Organizasyonun ihtiyaçlarının büyümesi ve evrimini ele alacak dağıtım ve yönetim altyapısı tasarlayın.",
-        "closingParagraph1": "Bu vaka çalışması, DDOGreen gibi sürdürülebilir yazılım çözümlerinin uygun şekilde uygulandığında dönüştürücü sonuçlar sağlayabileceğini göstermektedir. Akıllı teknoloji, kapsamlı değişim yönetimi ve güçlü organizasyonel desteğin kombinasyonu, hem iş hem de çevresel hedeflere ulaşmak için güçlü bir temel oluşturur.",
-        "closingParagraph2": "Benzer girişimlere başlayan organizasyonlar sürdürülebilirlik yazılımını bir maliyet merkezi olarak değil, küresel çevresel hedeflere katkıda bulunurken ölçülebilir getiriler sağlayan stratejik bir yatırım olarak görmelidir. Kurumsal bilgi işlemin geleceği hem yüksek performanslı hem de sürdürülebilirdir—DDOGreen bu hedeflerin sadece uyumlu değil, sinerjik olduğunu kanıtlar."
-      }
+      "title": "Mühendislik Notları",
+      "subtitle": "DDOGreen ve SimIt'i geliştirirken tuttuğumuz saha notları — tasarım kararları, ödünler ve en çok öğreten hatalar.",
+      "backToHome": "← Ana sayfaya dön"
     }
   },
   "footer": {
@@ -1087,25 +364,52 @@
       "company": {
         "title": "Şirket",
         "links": [
-          {"text": "Hakkımızda", "href": "#about"},
-          {"text": "Ürünler", "href": "#products"},
-          {"text": "Makaleler", "href": "articles.html"},
-          {"text": "İletişim", "href": "#contact"}
+          {
+            "text": "Hakkımızda",
+            "href": "#about"
+          },
+          {
+            "text": "Ürünler",
+            "href": "#products"
+          },
+          {
+            "text": "Makaleler",
+            "href": "articles.html"
+          },
+          {
+            "text": "İletişim",
+            "href": "#contact"
+          }
         ]
       },
       "products": {
         "title": "Ürünler",
         "links": [
-          {"text": "DDOGreen", "href": "#products"},
-          {"text": "GitHub", "href": "https://github.com/abkulakli/ddogreen/releases"},
-          {"text": "Tefaster", "href": "https://tefaster.ddosoft.com"}
+          {
+            "text": "DDOGreen",
+            "href": "#products"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/abkulakli/ddogreen/releases"
+          },
+          {
+            "text": "Tefaster",
+            "href": "https://tefaster.ddosoft.com"
+          }
         ]
       },
       "connect": {
         "title": "Bağlanın",
         "links": [
-          {"text": "LinkedIn", "href": "https://www.linkedin.com/company/ddosoft"},
-          {"text": "E-posta", "href": "mailto:info@ddosoft.com"}
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/ddosoft"
+          },
+          {
+            "text": "E-posta",
+            "href": "mailto:info@ddosoft.com"
+          }
         ]
       }
     },

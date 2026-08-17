@@ -30,9 +30,9 @@
         "keywords": "sustainable software, green technology, power management, energy optimization"
       },
       "articles": {
-        "title": "Articles - DDOSoft",
-        "description": "Expert insights on sustainable software development, green algorithms, and energy-efficient programming practices.",
-        "keywords": "software development, green algorithms, sustainability, energy efficiency, programming"
+        "title": "Engineering Notes - DDOSoft",
+        "description": "Field notes from building DDOGreen and SimIt: power management internals, OCPP 1.6 integration, and what production taught us.",
+        "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software"
       },
       "about": {
         "title": "About DDOSoft - Sustainable Software Solutions",
@@ -43,28 +43,6 @@
         "title": "Contact DDOSoft - Get in Touch",
         "description": "Connect with DDOSoft for sustainable software solutions and green technology consulting.",
         "keywords": "contact ddosoft, green technology consulting, sustainable software support"
-      }
-    },
-    "articles": {
-      "calculating-carbon-footprint-software": {
-        "title": "Calculating Carbon Footprint of Software - DDOSoft",
-        "description": "Learn methodologies for measuring and reducing the environmental impact of software applications.",
-        "keywords": "carbon footprint, software sustainability, environmental impact, green computing"
-      },
-      "ddogreen-case-study-enterprise-deployment": {
-        "title": "DDOGreen Enterprise Deployment Case Study - DDOSoft",
-        "description": "Real-world case study of DDOGreen implementation in enterprise environment showing 25% energy savings.",
-        "keywords": "DDOGreen, enterprise deployment, power management, energy savings, case study"
-      },
-      "green-algorithms-performance-vs-efficiency": {
-        "title": "Green Algorithms: Performance vs Efficiency - DDOSoft",
-        "description": "Explore the balance between computational performance and energy efficiency in modern algorithms.",
-        "keywords": "green algorithms, performance optimization, energy efficiency, sustainable computing"
-      },
-      "sustainable-software-development-principles": {
-        "title": "Sustainable Software Development Principles - DDOSoft",
-        "description": "Essential principles and practices for developing environmentally sustainable software applications.",
-        "keywords": "sustainable development, green software principles, eco-friendly programming"
       }
     }
   },
@@ -338,784 +316,35 @@
     ]
   },
   "articles": {
-    "sectionTitle": "Latest Insights",
-    "sectionSubtitle": "Explore our thoughts on sustainable software development and green technology",
-    "viewAll": "View All Articles",
+    "sectionTitle": "Engineering Notes",
+    "sectionSubtitle": "What we learned building our own products — power management internals and OCPP integration under real load.",
+    "viewAll": "All Articles",
+    "readMore": "Read more →",
     "recent": [
       {
-        "title": "The Evolution of Laptop Power Management",
-        "excerpt": "Discover how modern power management has evolved from basic battery saving to intelligent, context-aware systems that optimize performance and efficiency.",
-        "category": "Technology",
-        "date": "September 15, 2025",
-        "link": "articles/power-management-evolution.html"
+        "title": "How DDOGreen Decides When to Save Power",
+        "excerpt": "Inside the dual-threshold hysteresis that keeps a power daemon from flapping between modes — and why it refuses to ship default values.",
+        "category": "Power Management",
+        "date": "August 17, 2026",
+        "link": "articles/ddogreen-power-management.html"
       },
       {
-        "title": "Cross-Platform Development: Lessons from DDOGreen",
-        "excerpt": "Learn the challenges and solutions involved in creating software that works seamlessly across Linux and Windows environments.",
-        "category": "Development",
-        "date": "September 10, 2025",
-        "link": "articles/cross-platform-development.html"
-      },
-      {
-        "title": "Green Algorithms: Balancing Performance vs Efficiency",
-        "excerpt": "Explore algorithmic choices that reduce computational complexity and energy consumption while maintaining high performance standards.",
-        "category": "Sustainability",
-        "date": "September 5, 2025",
-        "link": "articles/green-algorithms-performance-vs-efficiency.html"
-      },
-      {
-        "title": "Calculating the Carbon Footprint of Your Software",
-        "excerpt": "Learn practical methods to measure and reduce the environmental impact of your applications, from development to deployment and maintenance.",
-        "category": "Green Technology",
-        "date": "August 30, 2025",
-        "link": "articles/calculating-carbon-footprint-software.html"
+        "title": "OCPP 1.6 in Production: Lessons from a Charge Point Simulator",
+        "excerpt": "Connector mapping, charging-profile priority, offline authorisation, and the reconnect loop that quietly took down a fleet.",
+        "category": "EV Charging",
+        "date": "August 17, 2026",
+        "link": "articles/ocpp-16-integration-lessons.html"
       }
     ],
-    "readMore": "Read More →",
     "page": {
       "meta": {
-        "title": "Articles - DDOSoft | Sustainable Software Insights",
-        "description": "DDOSoft Articles - Insights on sustainable software development, green technology trends, power management, and environmental impact of software solutions.",
-        "keywords": "sustainable software articles, green technology blog, power management insights, DDOGreen updates, environmental software development"
+        "title": "Engineering Notes - DDOSoft",
+        "description": "Field notes from building DDOGreen and SimIt: power management internals, OCPP 1.6 integration, and what production taught us.",
+        "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software"
       },
-      "title": "Articles & Insights",
-      "subtitle": "Thought leadership on sustainable software development and green technology",
-      "search": "Search articles...",
-      "filter": {
-        "all": "All Categories",
-        "sustainability": "Sustainability",
-        "technology": "Technology",
-        "development": "Development",
-        "green-technology": "Green Technology"
-      },
-      "backToHome": "← Back to Home"
-    },
-    "powerManagementEvolution": {
-      "title": "The Evolution of Laptop Power Management",
-      "excerpt": "Discover how modern power management has evolved from basic battery saving to intelligent, context-aware systems that optimize performance and efficiency.",
-      "category": "Technology",
-      "date": "September 15, 2025",
-      "content": {
-        "intro": "The landscape of laptop power management has undergone a remarkable transformation over the past decade. What once began as simple battery-saving modes has evolved into sophisticated, AI-driven systems that intelligently balance performance demands with energy conservation.",
-        "sections": {
-          "earlyDays": {
-            "title": "The Early Days: Basic Power Profiles",
-            "content": "In the early 2010s, power management was largely a manual affair. Users had to choose between predefined power profiles:",
-            "profiles": [
-              {"name": "High Performance", "description": "Maximum CPU speed, full screen brightness, all features enabled"},
-              {"name": "Balanced", "description": "A compromise between performance and battery life"},
-              {"name": "Power Saver", "description": "Minimal CPU speeds, reduced screen brightness, limited functionality"}
-            ]
-          },
-          "intelligence": {
-            "title": "The Intelligence Revolution",
-            "content": "Modern power management systems, like those implemented in DDOGreen, represent a paradigm shift toward intelligent, context-aware optimization."
-          },
-          "future": {
-            "title": "The Future of Power Management",
-            "content": "Looking ahead, power management systems are evolving toward even greater intelligence and integration with predictive optimization and ecosystem integration."
-          }
-        },
-        "staticLimitation": "These static profiles were effective but crude. They couldn't adapt to changing workloads or user behavior patterns, often resulting in either unnecessary battery drain or frustrating performance limitations.",
-        "realTimeAnalysis": {
-          "title": "Real-Time Load Analysis",
-          "content": "Instead of relying on user-selected profiles, intelligent systems continuously monitor CPU utilization, analyzing workload patterns to predict performance needs. This allows for dynamic scaling that maintains responsiveness while maximizing efficiency."
-        },
-        "hysteresis": {
-          "title": "Hysteresis-Based Decision Making",
-          "content": "Advanced systems implement hysteresis algorithms that prevent rapid switching between power states. For example, DDOGreen uses a 70/30 threshold system - switching to high performance at 70% load but maintaining it until load drops below 30%. This prevents performance oscillation while ensuring smooth user experience."
-        },
-        "machineLearning": {
-          "title": "Machine Learning Integration",
-          "content": "The latest power management solutions incorporate machine learning to understand user behavior patterns. They learn when you typically perform intensive tasks, your preferred performance levels for different applications, and even your daily usage patterns."
-        },
-        "crossPlatformChallenges": {
-          "title": "Cross-Platform Challenges and Solutions",
-          "content": "One of the most significant challenges in modern power management is creating solutions that work effectively across different operating systems and hardware configurations."
-        },
-        "linuxIntegration": {
-          "title": "Linux Integration",
-          "intro": "On Linux systems, power management typically integrates with:",
-          "tlp": "TLP (Linux Advanced Power Management): Provides comprehensive power optimization",
-          "cpufreq": "CPUFreq: Handles CPU frequency scaling",
-          "systemd": "Systemd: Manages service lifecycle and system states"
-        },
-        "windowsOptimization": {
-          "title": "Windows Optimization",
-          "intro": "Windows power management leverages:",
-          "powerPlans": "Windows Power Plans: Built-in power profile management",
-          "performanceCounters": "Performance Counters: Real-time system monitoring",
-          "serviceManager": "Service Manager: Background service integration"
-        },
-        "predictiveOptimization": {
-          "title": "Predictive Optimization",
-          "content": "Future systems will predict user needs hours or even days in advance, pre-optimizing system states based on calendar events, location data, and historical usage patterns."
-        },
-        "ecosystemIntegration": {
-          "title": "Ecosystem Integration",
-          "content": "Power management will extend beyond individual devices to encompass entire computing ecosystems, optimizing power distribution across laptops, phones, tablets, and IoT devices."
-        },
-        "environmentalAwareness": {
-          "title": "Environmental Awareness",
-          "content": "Next-generation systems will factor in environmental conditions, power grid load, and renewable energy availability to make power decisions that benefit both users and the planet."
-        },
-        "conclusion": {
-          "title": "Conclusion",
-          "content": "The evolution of laptop power management from simple profiles to intelligent, adaptive systems represents one of the most significant advances in computing efficiency. As we move forward, these systems will become even more sophisticated, helping us build a more sustainable and efficient digital future.",
-          "ddogreen": "Solutions like DDOGreen demonstrate that we no longer need to choose between performance and efficiency - intelligent systems can deliver both, adapting seamlessly to our needs while maximizing battery life and minimizing environmental impact."
-        }
-      }
-    },
-    "crossPlatformDevelopment": {
-      "title": "Cross-Platform Development: Lessons from DDOGreen",
-      "excerpt": "Learn the challenges and solutions involved in creating software that works seamlessly across Linux and Windows environments.",
-      "category": "Development",
-      "date": "September 10, 2025",
-      "content": {
-        "intro": "Developing software that works seamlessly across multiple operating systems is one of the most complex challenges in modern software development. The DDOGreen project provides an excellent case study in how to overcome these challenges while maintaining performance, reliability, and platform-specific optimizations.",
-        "mainTitle": "Building Once, Running Everywhere: The Cross-Platform Challenge",
-        "sections": {
-          "imperative": {
-            "title": "The Cross-Platform Imperative",
-            "content": "In today's diverse computing environment, users expect software to work regardless of their operating system choice. For DDOGreen, this meant creating a power management solution that could deliver consistent functionality across Linux distributions and Windows versions while leveraging the unique capabilities of each platform.",
-            "whyTitle": "Why Cross-Platform Matters"
-          },
-          "architecture": {
-            "title": "Architectural Decisions: Foundation for Success",
-            "content": "The success of any cross-platform project begins with smart architectural decisions. For DDOGreen, we chose Modern C++20 as our foundation, providing several key advantages."
-          },
-          "implementation": {
-            "title": "Platform-Specific Implementation Details"
-          },
-          "buildSystem": {
-            "title": "Build System and Packaging"
-          },
-          "testing": {
-            "title": "Testing Strategy: Ensuring Reliability Across Platforms"
-          },
-          "performance": {
-            "title": "Performance Optimization Strategies"
-          },
-          "lessons": {
-            "title": "Lessons Learned and Best Practices",
-            "content": "The DDOGreen project demonstrates that effective cross-platform development requires more than just shared code—it demands deep understanding of each target platform, careful architectural planning, and rigorous testing across all supported environments."
-          },
-          "future": {
-            "title": "Future of Cross-Platform Development"
-          },
-          "conclusion": {
-            "title": "Conclusion: The Cross-Platform Advantage"
-          }
-        },
-        "whyMatters": {
-          "marketReach": "Market Reach: Access to users across all major platforms",
-          "devEfficiency": "Development Efficiency: Single codebase reduces maintenance overhead",
-          "featureParity": "Feature Parity: Consistent user experience across platforms",
-          "costEffective": "Cost Effectiveness: Reduced development and testing resources"
-        },
-        "languageChoice": {
-          "title": "Language Choice: C++20",
-          "content": "C++20 offered the perfect balance of performance, cross-platform support, and modern language features:",
-          "nativePerf": "Native Performance: Critical for system-level power management",
-          "stdLibrary": "Standard Library: Extensive cross-platform functionality",
-          "memoryMgmt": "Memory Management: Precise control over resource usage",
-          "modernFeatures": "Modern Features: Concepts, modules, and coroutines for cleaner code"
-        },
-        "abstractionLayer": {
-          "title": "Abstraction Layer Strategy",
-          "content": "We implemented a clean abstraction layer that separates platform-independent logic from platform-specific implementations:"
-        },
-        "linuxChallenges": {
-          "title": "Linux Integration Challenges",
-          "content": "Linux presented unique challenges due to its diverse ecosystem and system-level requirements:",
-          "systemService": {
-            "title": "System Service Integration",
-            "challenge": "Challenge: Multiple init systems (systemd, SysV, OpenRC)",
-            "solution": "Solution: Focused on systemd for modern distributions with fallback detection",
-            "implementation": "Implementation: Created systemd service files with proper dependencies and startup order"
-          },
-          "tlpIntegration": {
-            "title": "TLP Integration",
-            "challenge": "Challenge: Interfacing with TLP's power management system",
-            "solution": "Solution: Direct command execution with proper error handling",
-            "codeExample": "Code Example:"
-          },
-          "cpuMonitoring": {
-            "title": "CPU Load Monitoring",
-            "challenge": "Challenge: Accurate real-time CPU load detection",
-            "solution": "Solution: Direct /proc/loadavg parsing for minimal overhead",
-            "benefits": "Benefits: Native system integration without external dependencies"
-          }
-        },
-        "windowsChallenges": {
-          "title": "Windows Integration Challenges",
-          "content": "Windows required different approaches due to its unique API structure and service architecture:",
-          "powerPlan": {
-            "title": "Power Plan Management",
-            "challenge": "Challenge: Windows Power Plans API complexity",
-            "solution": "Solution: Windows Power Management API integration",
-            "implementation": "Implementation: Direct API calls for precise control"
-          },
-          "perfCounters": {
-            "title": "Performance Counters",
-            "challenge": "Challenge: Real-time system monitoring",
-            "solution": "Solution: Performance Data Helper (PDH) API usage",
-            "advantage": "Advantage: Detailed system metrics with minimal overhead"
-          },
-          "serviceManager": {
-            "title": "Service Manager Integration",
-            "challenge": "Challenge: Proper Windows service lifecycle management",
-            "solution": "Solution: Full Service Control Manager integration",
-            "features": "Features: Automatic startup, proper shutdown, service recovery"
-          }
-        },
-        "cmake": {
-          "title": "CMake: The Universal Build System",
-          "content": "CMake provided the foundation for our cross-platform build system:"
-        },
-        "packaging": {
-          "title": "Platform-Specific Packaging",
-          "content": "Each platform required its own packaging approach:",
-          "linux": {
-            "title": "Linux Packaging",
-            "deb": "DEB packages: For Debian/Ubuntu distributions",
-            "rpm": "RPM packages: For Red Hat/Fedora/SUSE distributions",
-            "tgz": "TGZ archives: For universal compatibility",
-            "packageMgr": "Package managers: Automated dependency resolution"
-          },
-          "windows": {
-            "title": "Windows Packaging",
-            "msi": "MSI installer: Professional installation experience",
-            "serviceReg": "Service registration: Automatic service setup",
-            "uninstall": "Uninstall support: Clean removal process",
-            "registry": "Registry integration: Proper Windows integration"
-          }
-        },
-        "testingSuite": {
-          "title": "Comprehensive Test Suite",
-          "content": "DDOGreen includes 122 comprehensive unit tests that verify functionality across both platforms:",
-          "unitTests": "Unit Tests: Individual component testing",
-          "integrationTests": "Integration Tests: Platform-specific functionality",
-          "perfTests": "Performance Tests: Load and stress testing",
-          "compatTests": "Compatibility Tests: Multiple OS version support"
-        },
-        "ci": {
-          "title": "Continuous Integration",
-          "content": "Our CI/CD pipeline ensures quality across platforms:",
-          "multiPlatform": "Multi-Platform Builds: Simultaneous Linux and Windows compilation",
-          "autoTesting": "Automated Testing: Full test suite execution on each commit",
-          "packageValidation": "Package Validation: Installation and functionality testing",
-          "perfBenchmark": "Performance Benchmarking: Regression detection"
-        },
-        "platformOptimizations": {
-          "title": "Platform-Specific Optimizations",
-          "content": "While maintaining cross-platform compatibility, we implemented platform-specific optimizations:",
-          "linux": {
-            "title": "Linux Optimizations",
-            "procAccess": "Direct /proc access: Minimal system call overhead",
-            "fsMonitoring": "Native file system monitoring: Efficient change detection",
-            "memoryMapping": "Memory mapping: Fast data access patterns"
-          },
-          "windows": {
-            "title": "Windows Optimizations",
-            "perfCounters": "Performance counters: Optimized system monitoring",
-            "apiUsage": "Windows API usage: Native system integration",
-            "memoryMgmt": "Memory management: Windows-specific allocation patterns"
-          }
-        },
-        "hysteresis": {
-          "title": "Smart Hysteresis Implementation",
-          "content": "The hysteresis algorithm works identically across platforms but adapts to platform-specific load reporting:"
-        },
-        "designPatterns": {
-          "title": "Design Patterns That Work",
-          "factory": "Factory Pattern: Platform-specific object creation",
-          "strategy": "Strategy Pattern: Interchangeable algorithms",
-          "adapter": "Adapter Pattern: Platform API normalization",
-          "observer": "Observer Pattern: Event-driven architecture"
-        },
-        "pitfalls": {
-          "title": "Common Pitfalls to Avoid",
-          "uniformity": "Assumption of uniformity: Each platform has unique characteristics",
-          "overAbstraction": "Over-abstraction: Balance abstraction with performance",
-          "insufficientTesting": "Insufficient testing: Test on actual target platforms",
-          "featureCreep": "Feature creep: Maintain focus on core functionality"
-        },
-        "workflow": {
-          "title": "Development Workflow Optimization",
-          "parallelDev": "Parallel development: Platform teams working simultaneously",
-          "sharedCodebase": "Shared codebase: Common logic in shared modules",
-          "regularIntegration": "Regular integration: Frequent cross-platform testing",
-          "documentation": "Documentation: Platform-specific behavior documentation"
-        },
-        "emergingTech": {
-          "title": "Emerging Technologies",
-          "content": "The landscape of cross-platform development continues to evolve:",
-          "webassembly": "WebAssembly: Near-native performance in browsers",
-          "containers": "Container Technologies: Simplified deployment across platforms",
-          "cloudNative": "Cloud-Native Applications: Platform-agnostic deployment",
-          "aiAssisted": "AI-Assisted Development: Automated platform adaptation"
-        },
-        "ddogreenEvolution": {
-          "title": "DDOGreen's Evolution",
-          "content": "Based on our cross-platform success, future DDOGreen versions will expand to:",
-          "macos": "macOS Support: Complete desktop platform coverage",
-          "mobile": "Mobile Platforms: Android and iOS power management",
-          "iot": "IoT Integration: Edge device power optimization",
-          "cloud": "Cloud Integration: Centralized management and monitoring"
-        },
-        "conclusionContent": {
-          "intro": "The DDOGreen project demonstrates that effective cross-platform development requires more than just shared code—it demands deep understanding of each target platform, careful architectural planning, and rigorous testing across all supported environments.",
-          "takeaways": "Key takeaways from our cross-platform journey:",
-          "architectureFirst": "Architecture First: Plan your abstraction layers before writing code",
-          "embraceDifferences": "Embrace Differences: Leverage platform-specific capabilities",
-          "testRelentlessly": "Test Relentlessly: Comprehensive testing prevents platform-specific bugs",
-          "performanceMatters": "Performance Matters: Cross-platform doesn't mean compromising performance",
-          "userExperience": "User Experience: Platform conventions matter for user adoption",
-          "byFollowing": "By following these principles, DDOGreen successfully delivers consistent power management functionality across Linux and Windows while maintaining the performance and reliability users expect from system-level software.",
-          "futureText": "The future of software is inherently cross-platform. As computing environments become increasingly diverse, the lessons learned from projects like DDOGreen will become essential for any developer looking to build software that truly serves all users, regardless of their platform choice."
-        }
-      }
-    },
-    "greenAlgorithms": {
-      "title": "Green Algorithms: Balancing Performance vs Efficiency",
-      "category": "Sustainability",
-      "date": "September 5, 2025",
-      "excerpt": "Explore algorithmic choices that reduce computational complexity and energy consumption while maintaining high performance standards.",
-      "content": {
-        "intro": "In today's rapidly advancing digital transformation, software algorithms must be evaluated not only for performance but also for their environmental impact. Green algorithms represent an innovative approach that harmonizes computational efficiency with environmental sustainability.",
-        "keyInsight": "Effective algorithm design both improves performance and reduces energy consumption.",
-        "sections": {
-          "environmentalCost": {
-            "title": "The Environmental Cost of Algorithms",
-            "description": "Every computational process physically consumes energy. Inefficient algorithms create unnecessary operations that waste billions of kilowatt-hours annually in data centers.",
-            "statistics": {
-              "globalImpact": "The global IT sector accounts for 4% of total energy consumption",
-              "dataCenter": "Data centers consume 1% of global electricity usage",
-              "optimization": "Algorithm optimization can reduce energy usage by up to 30%",
-              "future": "Digital carbon footprint is expected to triple by 2030"
-            }
-          },
-          "understanding": {
-            "title": "Understanding Algorithm Energy Consumption",
-            "description": "To improve energy efficiency, we must first understand how algorithms consume energy.",
-            "computationalComplexity": "Computational Complexity",
-            "memoryPatterns": "Memory Access Patterns"
-          },
-          "principles": {
-            "title": "Green Algorithm Design Principles",
-            "principle1": {
-              "title": "Minimize Computational Steps",
-              "description": "Fewer operations mean lower energy consumption.",
-              "elements": {
-                "complexity": "Prefer O(n) over O(n log n) complexity where possible",
-                "caching": "Use caching to avoid repeated calculations",
-                "early": "Implement early exit strategies when possible"
-              }
-            },
-            "principle2": {
-              "title": "Optimize Data Structures",
-              "description": "Efficient data structures reduce both memory and processor usage.",
-              "elements": {
-                "structures": "Choose the right data structure for the task",
-                "locality": "Optimize data layout for better cache locality",
-                "compression": "Use data compression techniques where applicable"
-              }
-            },
-            "principle3": {
-              "title": "Leverage Hardware Capabilities",
-              "description": "Modern hardware offers specialized features to improve efficiency.",
-              "elements": {
-                "parallel": "Implement parallel processing to utilize multiple cores",
-                "vectorization": "Use vectorization with SIMD instructions",
-                "specialized": "Utilize specialized processors like GPUs"
-              }
-            }
-          },
-          "simd": {
-            "title": "SIMD Instructions",
-            "description": "Single Instruction Multiple Data (SIMD) instructions allow parallel processing by applying the same operation to multiple data points simultaneously."
-          },
-          "measurement": {
-            "title": "Measurement and Analysis",
-            "description": "Various metrics are used to evaluate the impact of green algorithms:",
-            "metrics": {
-              "energy": "Energy Consumption - Total energy usage in joules",
-              "carbon": "Carbon Footprint - CO2 equivalent emissions",
-              "performance": "Performance per Watt - Processing power per unit of energy",
-              "efficiency": "Algorithm Efficiency - Balancing output quality with energy"
-            },
-            "tools": {
-              "title": "Profiling Tools:",
-              "intel": "Intel VTune - CPU and energy analysis",
-              "nvidia": "NVIDIA Nsight - GPU performance profiling",
-              "perf": "Linux perf - System-level performance monitoring",
-              "power": "PowerAPI - Real-time power consumption measurement"
-            }
-          },
-          "future": {
-            "title": "The Future of Green Computing",
-            "description": "The future of sustainable algorithms is promising:",
-            "trends": {
-              "quantum": "Quantum computing - Exponential efficiency gains for specific problems",
-              "neuromorphic": "Neuromorphic chips - Brain-like energy efficiency",
-              "approximate": "Approximate computing - Trading precision for energy",
-              "edge": "Edge computing - Reducing data transfer energy consumption"
-            },
-            "industryImpact": "Industry Impact"
-          },
-          "bestPractices": {
-            "title": "Best Practices for Developers",
-            "guidelines": "Development Guidelines",
-            "checklist": "Code Review Checklist"
-          },
-          "caseStudy": {
-            "title": "Real-World Applications: DDOGreen Case Study",
-            "hysteresis": "Hysteresis Algorithm",
-            "benefits": "Benefits of Green Algorithm Design"
-          },
-          "conclusion": {
-            "title": "Conclusion",
-            "content": "Green algorithms represent the future of sustainable software development. By balancing performance with energy efficiency, we can create solutions that not only meet user needs but also contribute to environmental conservation.",
-            "innovation": "The transition to green computing isn't just about responsibility—it's about innovation. As DDOGreen demonstrates, algorithms that prioritize efficiency often deliver better user experiences while reducing environmental impact.",
-            "future": "Every line of code we write is an opportunity to make a positive environmental impact. By embracing green algorithm principles, developers can lead the charge toward a more sustainable digital future."
-          }
-        }
-      }
-    },
-    "carbonFootprint": {
-      "title": "Calculating the Carbon Footprint of Your Software",
-      "category": "Green Technology",
-      "date": "August 30, 2025",
-      "excerpt": "Learn practical methods to measure and reduce the environmental impact of your applications, from development to deployment and maintenance.",
-      "content": {
-        "intro": "As the digital economy continues to grow, software applications have become significant contributors to global carbon emissions. Understanding and measuring the environmental impact of your software is no longer optional—it's essential for responsible development. This comprehensive guide provides practical methods for calculating and reducing your software's carbon footprint.",
-        "sections": {
-          "understanding": {
-            "title": "Understanding Software Carbon Footprint"
-          },
-          "methodologies": {
-            "title": "Measurement Methodologies",
-            "cloudMetrics": "3. Cloud Provider Carbon Metrics",
-            "awsFootprint": "AWS Carbon Footprint"
-          },
-          "tools": {
-            "title": "Practical Measurement Tools",
-            "webApplication": "Web Application Carbon Footprint"
-          },
-          "reduction": {
-            "title": "Reduction Strategies"
-          },
-          "reporting": {
-            "title": "Reporting and Compliance"
-          },
-          "future": {
-            "title": "Future Trends and Technologies",
-            "standards": "Industry Standards and Frameworks"
-          },
-          "caseStudy": {
-            "title": "Real-World Case Study: DDOGreen Impact Assessment",
-            "dashboard": "Carbon Footprint Dashboard"
-          },
-          "conclusion": {
-            "title": "Conclusion",
-            "paragraph1": "Calculating your software's carbon footprint is the first step toward building a more sustainable digital future. By understanding the environmental impact of your applications, you can make informed decisions that reduce emissions while maintaining performance and user experience.",
-            "paragraph2": "Tools like DDOGreen demonstrate that software can be both a solution to environmental challenges and a contributor to sustainability goals. Every optimization, every efficient algorithm, and every thoughtful architectural decision contributes to a cleaner, more sustainable digital ecosystem.",
-            "paragraph3": "The path to carbon-neutral software development requires measurement, optimization, and continuous improvement. Start measuring today, and join the growing community of developers committed to sustainable software development."
-          }
-        },
-        "understanding": {
-          "intro": "Software carbon footprint encompasses all greenhouse gas emissions associated with your application throughout its lifecycle. This includes direct emissions from energy consumption and indirect emissions from infrastructure, development, and maintenance activities.",
-          "threeScopesTitle": "The Three Scopes of Software Emissions",
-          "scope1Title": "Scope 1: Direct Emissions",
-          "scope1": {
-            "developmentHardware": "<strong>Development Hardware:</strong> Emissions from developers' computers, servers, and equipment",
-            "officeFacilities": "<strong>Office Facilities:</strong> Energy consumption from development offices and facilities",
-            "companyVehicles": "<strong>Company Vehicles:</strong> Transportation for software-related business activities"
-          },
-          "scope2Title": "Scope 2: Indirect Energy Emissions",
-          "scope2": {
-            "electricityConsumption": "<strong>Electricity Consumption:</strong> Grid electricity used for development and deployment",
-            "cloudServices": "<strong>Cloud Services:</strong> Energy consumed by cloud infrastructure hosting your applications",
-            "dataCenters": "<strong>Data Centers:</strong> Power consumption of servers running your software"
-          },
-          "scope3Title": "Scope 3: Other Indirect Emissions",
-          "scope3": {
-            "userDevices": "<strong>User Devices:</strong> Energy consumed by end-user devices running your software",
-            "networkTransmission": "<strong>Network Transmission:</strong> Data transfer between clients and servers",
-            "thirdPartyServices": "<strong>Third-party Services:</strong> Emissions from external APIs and services",
-            "softwareUpdates": "<strong>Software Updates:</strong> Distribution and installation of updates"
-          }
-        },
-        "methodologies": {
-          "energyBasedTitle": "1. Energy-Based Calculation",
-          "energyBasedDescription": "The most accurate method involves measuring actual energy consumption and converting it to carbon emissions:",
-          "basicFormulaTitle": "Basic Formula",
-          "implementationExampleTitle": "Implementation Example",
-          "resourceBasedTitle": "2. Resource-Based Estimation",
-          "resourceBasedDescription": "When direct measurement isn't possible, estimate based on resource consumption:",
-          "cpuBasedTitle": "CPU-Based Estimation"
-        },
-        "tools": {
-          "developmentMonitoringTitle": "Development Environment Monitoring",
-          "powerTopTitle": "PowerTOP (Linux)",
-          "activityMonitorTitle": "Activity Monitor (macOS)",
-          "windowsPerformanceTitle": "Windows Performance Monitor",
-          "runtimeMonitoringTitle": "Application Runtime Monitoring"
-        },
-        "reduction": {
-          "codeLevelTitle": "Code-Level Optimizations",
-          "algorithmEfficiencyTitle": "Algorithm Efficiency",
-          "infrastructureTitle": "Infrastructure Optimization",
-          "rightSizingTitle": "Right-Sizing Resources",
-          "rightSizing": {
-            "cpuScaling": "<strong>CPU Scaling:</strong> Use auto-scaling to match actual demand",
-            "memoryOptimization": "<strong>Memory Optimization:</strong> Reduce memory footprint to enable smaller instances",
-            "storageEfficiency": "<strong>Storage Efficiency:</strong> Implement data compression and deduplication",
-            "networkOptimization": "<strong>Network Optimization:</strong> Minimize data transfer through caching and CDNs"
-          },
-          "greenHostingTitle": "Green Hosting Choices",
-          "greenHosting": {
-            "renewableProviders": "<strong>Renewable Energy Providers:</strong> Choose hosting providers committed to renewable energy",
-            "geographicOptimization": "<strong>Geographic Optimization:</strong> Deploy in regions with clean energy grids",
-            "edgeComputing": "<strong>Edge Computing:</strong> Reduce latency and energy consumption through edge deployment",
-            "efficientDataCenters": "<strong>Efficient Data Centers:</strong> Select providers with high PUE (Power Usage Effectiveness) ratings"
-          }
-        },
-        "future": {
-          "industryIntegrationTitle": "Industry Integration",
-          "industryIntegration": {
-            "cicdGates": "<strong>CI/CD Carbon Gates:</strong> Automated carbon footprint checks in deployment pipelines",
-            "carbonAwareScheduling": "<strong>Carbon-Aware Scheduling:</strong> Running workloads when renewable energy is abundant",
-            "greenEngineering": "<strong>Green Software Engineering:</strong> Carbon considerations integrated into software design",
-            "regulatoryCompliance": "<strong>Regulatory Compliance:</strong> Mandatory carbon reporting for digital services"
-          }
-        }
-      }
-    },
-    "sustainableDevelopment": {
-      "title": "Sustainable Software Development: Core Principles",
-      "category": "Sustainability",
-      "date": "August 25, 2025",
-      "excerpt": "Essential principles and practices for developing environmentally conscious software that minimizes energy consumption and maximizes efficiency.",
-      "content": {
-        "intro": "Sustainable software development represents a fundamental shift in how we design, build, and maintain applications. As the environmental impact of technology becomes increasingly apparent, developers must embrace principles that minimize energy consumption, reduce resource waste, and create long-lasting, efficient solutions. This comprehensive guide outlines the core principles and practices essential for developing environmentally conscious software.",
-        "sections": {
-          "imperative": {
-            "title": "The Imperative for Sustainable Software"
-          },
-          "principles": {
-            "title": "Core Principles of Sustainable Software Development"
-          },
-          "framework": {
-            "title": "Implementation Framework",
-            "testing": "Testing for Sustainability",
-            "energyTesting": "Energy Consumption Testing"
-          },
-          "bestPractices": {
-            "title": "Best Practices and Guidelines"
-          },
-          "future": {
-            "title": "Future of Sustainable Software Development",
-            "emerging": "Emerging Technologies and Practices"
-          },
-          "caseStudy": {
-            "title": "Real-World Implementation: DDOGreen Case Study",
-            "application": "Principle Application in DDOGreen",
-            "impact": "Measured Impact"
-          },
-          "conclusion": {
-            "title": "Conclusion",
-            "paragraph1": "Sustainable software development is not just an environmental imperative—it's a competitive advantage. Software that consumes less energy, extends device battery life, and minimizes resource usage provides superior user experiences while contributing to environmental conservation.",
-            "paragraph2": "The principles outlined in this guide provide a foundation for building environmentally conscious software. By integrating sustainability considerations into every phase of development, from requirements gathering to deployment and monitoring, we can create technology that serves both human needs and planetary health.",
-            "paragraph3": "Projects like DDOGreen demonstrate that sustainable software development is not only possible but profitable. By embracing these principles, developers and organizations can lead the transition to a more sustainable digital future while delivering exceptional value to users.",
-            "paragraph4": "The future of software development is sustainable. The question is not whether to adopt these principles, but how quickly we can implement them across our industry. Start today, measure your impact, and join the growing community of developers committed to sustainable software development."
-          }
-        },
-        "imperative": {
-          "intro": "The software industry's environmental impact extends far beyond the obvious energy consumption of data centers. Every application we build, every algorithm we implement, and every architectural decision we make contributes to global energy consumption and carbon emissions.",
-          "understandingTitle": "Understanding the Impact",
-          "understanding": {
-            "globalEnergy": "<strong>Global Energy Consumption:</strong> ICT sector accounts for 4% of global greenhouse gas emissions",
-            "growthTrajectory": "<strong>Growth Trajectory:</strong> Digital energy consumption doubling every 4 years",
-            "hiddenCosts": "<strong>Hidden Costs:</strong> Manufacturing, deployment, and end-of-life disposal impact",
-            "userDeviceImpact": "<strong>User Device Impact:</strong> Software inefficiency reducing device lifespan"
-          }
-        },
-        "principles": {
-          "principle1Title": "Principle 1: Energy Efficiency First",
-          "principle1Description": "Energy efficiency must be a primary consideration in every development decision, from algorithm selection to architectural design. This principle encompasses both direct energy consumption during execution and indirect consumption through resource utilization.",
-          "principle1": {
-            "implementationStrategiesTitle": "Implementation Strategies"
-          },
-          "principle2Title": "Principle 2: Minimize Resource Footprint",
-          "principle2Description": "Sustainable software development requires conscious effort to minimize resource consumption across all dimensions: CPU cycles, memory usage, storage requirements, and network bandwidth.",
-          "principle2": {
-            "memoryManagementTitle": "Memory Management Excellence"
-          },
-          "principle3Title": "Principle 3: Design for Longevity",
-          "principle3Description": "Sustainable software is built to last. This means creating applications that remain functional, efficient, and maintainable over extended periods, reducing the need for frequent rewrites and updates.",
-          "principle3": {
-            "architecturalPatternsTitle": "Architectural Longevity Patterns"
-          },
-          "principle4Title": "Principle 4: Measure and Monitor Impact",
-          "principle4Description": "You cannot improve what you do not measure. Sustainable software development requires continuous monitoring of environmental impact and performance metrics.",
-          "principle4": {
-            "monitoringFrameworkTitle": "Comprehensive Monitoring Framework"
-          },
-          "principle5Title": "Principle 5: User-Centric Sustainability",
-          "principle5Description": "Sustainable software should empower users to make environmentally conscious choices without sacrificing functionality or user experience.",
-          "principle5": {
-            "uxDesignTitle": "Sustainable UX Design"
-          }
-        },
-        "framework": {
-          "lifecycleIntegrationTitle": "Development Lifecycle Integration",
-          "requirementsPhaseTitle": "1. Requirements Phase",
-          "requirementsPhase": {
-            "energyRequirements": "<strong>Energy Requirements:</strong> Define acceptable energy consumption limits",
-            "sustainabilityGoals": "<strong>Sustainability Goals:</strong> Set measurable environmental impact targets",
-            "deviceLongevity": "<strong>Device Longevity:</strong> Consider impact on device battery life and hardware wear",
-            "userChoice": "<strong>User Choice:</strong> Plan features that enable user control over sustainability"
-          },
-          "designPhaseTitle": "2. Design Phase"
-        },
-        "bestPractices": {
-          "teamGuidelinesTitle": "Development Team Guidelines",
-          "codeReviewChecklistTitle": "1. Code Review Sustainability Checklist",
-          "checklist": {
-            "algorithmComplexity": "□ Is the algorithm complexity justified for the problem requirements?",
-            "resourceManagement": "□ Are resources properly managed and disposed?",
-            "energyMinimization": "□ Is the code designed to minimize energy consumption?",
-            "cachingOptimization": "□ Are there opportunities for caching or optimization?",
-            "adaptiveQuality": "□ Does the implementation support adaptive quality based on resources?"
-          },
-          "performanceBalanceTitle": "2. Performance vs Sustainability Balance",
-          "organizationalIntegrationTitle": "Organizational Integration"
-        }
-      }
-    },
-    "ddogreenCaseStudy": {
-      "title": "DDOGreen Case Study: Enterprise Deployment Success",
-      "category": "Development",
-      "date": "August 20, 2025",
-      "excerpt": "Real-world case study of DDOGreen implementation in a large enterprise environment, including challenges faced and solutions implemented.",
-      "content": {
-        "intro": "The successful deployment of DDOGreen in a large enterprise environment demonstrates the practical benefits of intelligent power management solutions. This comprehensive case study examines the implementation process, challenges encountered, and measurable results achieved during a 12-month enterprise rollout.",
-        "sections": {
-          "summary": {
-            "title": "Executive Summary"
-          },
-          "profile": {
-            "title": "Company Profile"
-          },
-          "strategy": {
-            "title": "Implementation Strategy"
-          },
-          "challenges": {
-            "title": "Implementation Challenges and Solutions"
-          },
-          "results": {
-            "title": "Results and Impact Analysis"
-          },
-          "lessons": {
-            "title": "Lessons Learned and Best Practices"
-          },
-          "future": {
-            "title": "Future Enhancements and Roadmap"
-          },
-          "conclusion": {
-            "title": "Conclusion and Recommendations"
-          }
-        },
-        "metrics": {
-          "energySavings": "Energy Savings",
-          "energySavingsValue": "27.3% average reduction in laptop power consumption",
-          "costSavings": "Cost Savings",
-          "costSavingsValue": "$847,000 annual electricity cost reduction",
-          "carbonImpact": "Carbon Impact",
-          "carbonImpactValue": "1,847 metric tons CO₂e emissions avoided annually",
-          "deploymentScale": "Deployment Scale",
-          "deploymentScaleValue": "15,247 devices across 47 countries"
-        },
-        "companyProfile": {
-          "organizationOverview": "Organization Overview",
-          "industry": "Industry: Software Development and Technology Services",
-          "size": "Size: 18,500 employees globally",
-          "locations": "Locations: 47 countries across 6 continents",
-          "deviceFleet": "Device Fleet: 15,247 laptops (Windows and Linux)",
-          "sustainabilityGoal": "Sustainability Goal: Carbon neutral by 2030",
-          "preImplementationChallenges": "Pre-Implementation Challenges",
-          "highEnergyCosts": "High Energy Costs: $3.1M annual electricity costs for laptop usage",
-          "batteryComplaints": "Battery Complaints: 23% of help desk tickets related to battery life issues",
-          "inconsistentPolicies": "Inconsistent Power Policies: No standardized power management across locations",
-          "environmentalGoals": "Environmental Goals: Struggling to meet carbon reduction targets",
-          "userProductivity": "User Productivity: Frequent interruptions due to power-related issues"
-        },
-        "phases": {
-          "phase1": {
-            "title": "Phase 1: Pilot Program (3 months)",
-            "scope": "Pilot Scope",
-            "participants": "Participants: 500 volunteers from development teams",
-            "regions": "Regions: 3 primary offices (US, EU, APAC)",
-            "devices": "Devices: Mixed fleet of Dell, Lenovo, and HP laptops",
-            "operatingSystems": "Operating Systems: Windows 11 (70%), Ubuntu 22.04 (30%)",
-            "configuration": "Pilot Configuration",
-            "results": "Pilot Results"
-          },
-          "phase2": {
-            "title": "Phase 2: Regional Rollout (6 months)",
-            "strategy": "Rollout Strategy",
-            "adaptations": "Regional Configuration Adaptations"
-          },
-          "phase3": {
-            "title": "Phase 3: Global Deployment (4 months)",
-            "architecture": "Centralized Management Architecture"
-          }
-        },
-        "regionalConfig": {
-          "northAmerica": "North America",
-          "naGrid": "Grid Integration: Optimized for mixed renewable/fossil fuel grid",
-          "naPower": "Power Profiles: Aggressive power saving during peak hours (2-6 PM)",
-          "naCompliance": "Compliance: ENERGY STAR compliance reporting",
-          "naUserBehavior": "User Behavior: High usage of resource-intensive development tools",
-          "europe": "Europe",
-          "euGdpr": "GDPR Compliance: Enhanced privacy controls for data collection",
-          "euGreen": "Green Energy Focus: Maximized efficiency during high renewable periods",
-          "euLanguage": "Multi-language Support: 12 language localizations",
-          "euRegulatory": "Regulatory Reporting: EU taxonomy compliance metrics",
-          "asiaPacific": "Asia-Pacific",
-          "apDensity": "High-Density Deployments: Optimized for large development centers",
-          "apMobile": "Mobile-First Workers: Enhanced power management for frequent travelers",
-          "apClimate": "Climate Adaptation: Thermal management for high-temperature environments",
-          "apNetwork": "Network Optimization: Efficient operation over variable network conditions"
-        }
-      },
-      "results": {
-        "quantitativeResults": "Quantitative Results",
-        "energyConsumptionAnalysis": "Energy Consumption Analysis",
-        "financialImpact": "Financial Impact"
-      },
-      "conclusion": {
-        "intro": "The DDOGreen enterprise deployment demonstrates that intelligent power management can deliver substantial benefits across multiple dimensions:",
-        "financialImpact": "<strong>Financial Impact:</strong> $2.2M annual savings with 20-day payback period",
-        "environmentalBenefits": "<strong>Environmental Benefits:</strong> 1,847 metric tons CO₂e reduction annually",
-        "userExperience": "<strong>User Experience:</strong> Improved productivity and satisfaction scores",
-        "operationalExcellence": "<strong>Operational Excellence:</strong> Reduced IT support burden and improved system reliability",
-        "recommendationsTitle": "Key Recommendations for Similar Deployments",
-        "recommendation1Title": "1. Start with Executive Buy-In",
-        "recommendation1Content": "Secure strong leadership support by focusing on business benefits: cost savings, productivity improvements, and competitive advantage in sustainability.",
-        "recommendation2Title": "2. Plan for Comprehensive Integration",
-        "recommendation2Content": "Budget adequate time and resources for integration with existing enterprise systems. This is critical for success in complex environments.",
-        "recommendation3Title": "3. Invest in Change Management",
-        "recommendation3Content": "User adoption drives results. Comprehensive training, clear communication, and responsive support are essential investments.",
-        "recommendation4Title": "4. Measure and Communicate Success",
-        "recommendation4Content": "Regular reporting on financial, environmental, and user experience metrics maintains momentum and demonstrates value.",
-        "recommendation5Title": "5. Plan for Scalability",
-        "recommendation5Content": "Design deployment and management infrastructure to handle growth and evolution of the organization's needs.",
-        "closingParagraph1": "This case study demonstrates that sustainable software solutions like DDOGreen can deliver transformational results when properly implemented. The combination of intelligent technology, comprehensive change management, and strong organizational support creates a powerful foundation for achieving both business and environmental goals.",
-        "closingParagraph2": "Organizations embarking on similar initiatives should view sustainability software not as a cost center, but as a strategic investment that delivers measurable returns while contributing to global environmental goals. The future of enterprise computing is both high-performance and sustainable—DDOGreen proves that these objectives are not just compatible, but synergistic."
-      }
+      "title": "Engineering Notes",
+      "subtitle": "Field notes from building DDOGreen and SimIt — design decisions, trade-offs, and the mistakes that taught us the most.",
+      "backToHome": "← Back to home"
     }
   },
   "footer": {
@@ -1127,25 +356,52 @@
       "company": {
         "title": "Company",
         "links": [
-          {"text": "About Us", "href": "#about"},
-          {"text": "Products", "href": "#products"},
-          {"text": "Articles", "href": "articles.html"},
-          {"text": "Contact", "href": "#contact"}
+          {
+            "text": "About Us",
+            "href": "#about"
+          },
+          {
+            "text": "Products",
+            "href": "#products"
+          },
+          {
+            "text": "Articles",
+            "href": "articles.html"
+          },
+          {
+            "text": "Contact",
+            "href": "#contact"
+          }
         ]
       },
       "products": {
         "title": "Products",
         "links": [
-          {"text": "DDOGreen", "href": "#products"},
-          {"text": "GitHub", "href": "https://github.com/abkulakli/ddogreen/releases"},
-          {"text": "Tefaster", "href": "https://tefaster.ddosoft.com"}
+          {
+            "text": "DDOGreen",
+            "href": "#products"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/abkulakli/ddogreen/releases"
+          },
+          {
+            "text": "Tefaster",
+            "href": "https://tefaster.ddosoft.com"
+          }
         ]
       },
       "connect": {
         "title": "Connect",
         "links": [
-          {"text": "LinkedIn", "href": "https://www.linkedin.com/company/ddosoft"},
-          {"text": "Email", "href": "mailto:info@ddosoft.com"}
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/ddosoft"
+          },
+          {
+            "text": "Email",
+            "href": "mailto:info@ddosoft.com"
+          }
         ]
       }
     },

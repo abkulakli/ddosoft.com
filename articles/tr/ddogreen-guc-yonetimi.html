@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="tr" data-page-lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DDOGreen güç modlarını çekirdek başına yük ortalaması üzerinde çift eşikli histerezisle değiştiriyor. Neden mod değiştirmemek en az değiştirmek kadar önemli ve neden hiç varsayılan değer taşımıyor.">
+    <meta name="keywords" content="güç yönetimi, histerezis, yük ortalaması, TLP, C++ servis tasarımı, Linux güç tasarrufu, Windows güç planı, DDOGreen">
+    <meta name="author" content="DDOSoft">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.ddosoft.com/articles/tr/ddogreen-guc-yonetimi.html?lang=tr">
+    <link rel="alternate" hreflang="en"        href="https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en">
+    <link rel="alternate" hreflang="tr"        href="https://www.ddosoft.com/articles/tr/ddogreen-guc-yonetimi.html?lang=tr">
+    <link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en">
+
+    <!-- Open Graph -->
+    <meta property="og:title"            content="DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor">
+    <meta property="og:description"      content="Çift eşikli histerezis, çekirdek başına yük ortalaması ve yapılandırmayı tahmin etmeyi reddeden bir servis.">
+    <meta property="og:type"             content="article">
+    <meta property="og:url"              content="https://www.ddosoft.com/articles/tr/ddogreen-guc-yonetimi.html?lang=tr">
+    <meta property="og:site_name"        content="DDOSoft">
+    <meta property="og:locale"           content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="article:published_time" content="2026-08-17">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor">
+    <meta name="twitter:description" content="Çift eşikli histerezis, çekirdek başına yük ortalaması ve yapılandırmayı tahmin etmeyi reddeden bir servis.">
+
+    <title>DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor - DDOSoft</title>
+
+    <link rel="preload" href="../../css/styles.css" as="style">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor",
+      "description": "DDOGreen güç modlarını çekirdek başına yük ortalaması üzerinde çift eşikli histerezisle değiştiriyor. Neden mod değiştirmemek en az değiştirmek kadar önemli ve neden hiç varsayılan değer taşımıyor.",
+      "url": "https://www.ddosoft.com/articles/tr/ddogreen-guc-yonetimi.html?lang=tr",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "inLanguage": "tr-TR",
+      "author": { "@type": "Organization", "name": "DDOSoft" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DDOSoft",
+        "logo": { "@type": "ImageObject", "url": "https://www.ddosoft.com/logo.png" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ddosoft.com/articles/tr/ddogreen-guc-yonetimi.html?lang=tr"
+      },
+      "about": ["Güç Yönetimi", "Enerji Verimliliği", "Sistem Programlama"],
+      "keywords": "güç yönetimi, histerezis, yük ortalaması, TLP, C++ servis tasarımı, Linux güç tasarrufu"
+    }
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+
+        <article class="article">
+            <div class="article__container">
+
+                <header class="article__header">
+                    <div class="article__meta">
+                        <span class="article__category">Güç Yönetimi</span>
+                        <span class="article__date">17 Ağustos 2026</span>
+                        <span class="article__reading-time">7 dakika okuma</span>
+                    </div>
+                    <h1 class="article__title">DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor</h1>
+                    <p class="article__lead">
+                        Bir dizüstü bilgisayarı performans ve güç tasarrufu modları arasında geçirmek tek
+                        satırlık bir karar gibi görünür: CPU yüküne bak, modu seç. Neredeyse her güç yönetimi
+                        aracının ilk sürümü tam olarak böyle çalışır — ve çoğunun kaldırılma sebebi de budur.
+                    </p>
+                </header>
+
+                <div class="article__body">
+
+                    <p>
+                        DDOGreen, bir makinenin ne kadar meşgul olduğunu izleyip işletim sistemini yüksek
+                        performans ve güç tasarrufu profilleri arasında taşıyan küçük bir servis. Linux'ta
+                        <code>tlp</code>'yi sürüyor, Windows'ta güç planlarını değiştiriyor. İlginç olan kısım
+                        geçiş yapmak değil — o iki komut. İlginç olan kısım <em>ne zaman</em> geçileceğine
+                        karar vermek ve geçmemek konusunda disiplinli olmak.
+                    </p>
+
+                    <h2>Mod titremesi sorunu</h2>
+
+                    <p>
+                        Akla ilk gelen tasarımı düşünün: tek eşik. Yük %50'nin üzerindeyse performans modu,
+                        altındaysa güç tasarrufu. Şimdi kabaca yarı yükte duran bir makineyi hayal edin —
+                        birkaç sekmeli bir tarayıcı, arka planda dizin oluşturan bir dil sunucusu, olağanüstü
+                        bir şey yok. Yük her birkaç saniyede sınırın bir tarafından diğerine geçer.
+                    </p>
+
+                    <p>
+                        Her geçiş bir mod değişimi tetikler ve mod değişimi bedava değildir. Çekirdek ve
+                        firmware düzeyinde bir dizi parametre yeniden uygulanır: CPU yönetici politikası,
+                        enerji-performans tercihi, SATA bağlantı güç yönetimi, PCI aygıtlarında çalışma
+                        zamanı güç yönetimi, kablosuz güç tasarrufu. Bunu bir kez yapmak ucuzdur. Her birkaç
+                        saniyede bir yapmak, tasarruf edilenden fazla enerji harcar ve kullanıcı bunu takılma
+                        olarak fark eder — makine, kullanıcının işinden başka bir şeyle uğraşıyormuş gibi
+                        hissettirir.
+                    </p>
+
+                    <p>
+                        Tek eşik, eşiğin yakınında seyreden her iş yükü için bu davranışı garanti eder. Ve
+                        "eşiğin yakını" istisnai bir durum değil; sıradan masaüstü kullanımı tam olarak böyle
+                        görünür.
+                    </p>
+
+                    <h2>İki eşik ve bir ölü bant</h2>
+
+                    <p>
+                        Çözüm histerezis — bir termostatın hedef sıcaklığın çevresinde sürekli açılıp
+                        kapanmamasını sağlayan aynı fikir. DDOGreen tek eşik yerine iki eşik alıyor:
+                    </p>
+
+                    <ul>
+                        <li>Yük <code>high_performance_threshold</code> değerinin <strong>üzerindeyse</strong> → performans moduna geç.</li>
+                        <li>Yük <code>power_save_threshold</code> değerinin <strong>altındaysa</strong> → güç tasarrufu moduna geç.</li>
+                        <li>Yük <strong>ikisinin arasındaysa</strong> → hiçbir şey yapma. Bulunduğun modda kal.</li>
+                    </ul>
+
+                    <p>
+                        Ortadaki bölge bir ölü bant ve tasarımın tamamı bundan ibaret. Eşikler örneğin %30 ve
+                        %70 olduğunda, yarı yükte gezinen bir makine hangi moddaysa onda kalır. Performans
+                        moduna geçmesi için iş yükünün gerçekten %70'i aşması, güç tasarrufuna dönmesi için
+                        yükün gerçekten %30'un altına inmesi gerekir. Sıradan gürültü artık iki sınıra da
+                        ulaşamaz.
+                    </p>
+
+                    <p>
+                        Açıkça söylenmesi gereken sonuç şu: DDOGreen her zaman mevcut yükünün işaret ettiği
+                        modda çalışmaz. Aynı %50 yükteki iki makine farklı modlarda olabilir, çünkü oraya zıt
+                        yönlerden gelmişlerdir. Bu, sonra düzeltilecek bir kusur değil — servisi sessiz kılan
+                        özelliğin kendisi.
+                    </p>
+
+                    <h2>Neden ham yük değil, çekirdek başına yük ortalaması</h2>
+
+                    <p>
+                        DDOGreen bir dakikalık yük ortalamasını okuyup eşiklerle karşılaştırmadan önce CPU
+                        çekirdek sayısına bölüyor. Yapılandırma bu yüzden <em>çekirdek başına</em> yük olarak
+                        ifade ediliyor: <code>0.70</code>, çekirdek başına bir çekirdeğin %70'i kadar iş
+                        anlamına geliyor.
+                    </p>
+
+                    <p>
+                        Bu önemli, çünkü ham yük ortalaması makineler arasında karşılaştırılabilir bir sayı
+                        değil. Dört çekirdekli bir dizüstünde 4.0 yükü her çekirdeğin dolu olduğu anlamına
+                        gelir; on altı çekirdekli bir iş istasyonunda makinenin büyük ölçüde boşta olduğu
+                        anlamına gelir. Ham yüke göre yazılmış bir yapılandırma dosyasının kurulduğu her
+                        makine için yeniden ayarlanması gerekirdi — ki pratikte bu, çoğunda yanlış kalacağı
+                        anlamına gelir.
+                    </p>
+
+                    <p>
+                        Normalize etmek kayıtları da okunabilir kılıyor. Servis, mevcut çekirdek sayısı için
+                        hesapladığı mutlak eşiği ve bunu türettiği yüzdeyi birlikte yazıyor; böylece bir
+                        makine beklenmedik davrandığında eşiklerin istediğiniz yere düşüp düşmediğini hemen
+                        görebiliyorsunuz.
+                    </p>
+
+                    <p>
+                        Bir dakikalık pencerenin kendisi de histerezisin parçası. Daha kısa bir ortalama tek
+                        bir derleme işlemine tepki verirdi; bir dakika boyunca süren yük ise "kullanıcı
+                        gerçekten çalışıyor" için makul bir gösterge.
+                    </p>
+
+                    <h2>Varsayılan değer vermeyi reddetmek</h2>
+
+                    <p>
+                        DDOGreen'in gömülü hiçbir varsayılan değeri yok. Yapılandırma dosyasında
+                        <code>monitoring_frequency</code>, <code>high_performance_threshold</code> veya
+                        <code>power_save_threshold</code> eksikse, servis hangisinin eksik olduğunu kayda
+                        yazıyor ve başlamayı reddediyor.
+                    </p>
+
+                    <p>
+                        Bu bilinçli ve biraz modaya aykırı bir seçim. Güç yöneten bir programda sessiz
+                        varsayılanlar kötü bir ödünç: bir anahtar adındaki yazım hatası, servisin
+                        operatörün hiç seçmediği değerlerle mutlu mesut çalışmasına yol açar ve belirti —
+                        beklenenden hafifçe yavaş ya da hafifçe daha obur bir dizüstü — sebebine geri
+                        götürülmesi neredeyse imkânsız bir şeydir. Başlangıçta yüksek sesle hata vermek, bir
+                        muammayı tek satırlık bir kayda dönüştürür.
+                    </p>
+
+                    <p>
+                        Doğrulama varlık kontrolüyle bitmiyor. Her değer aralık denetiminden geçiyor
+                        (<code>monitoring_frequency</code> 1–300 saniye,
+                        <code>high_performance_threshold</code> 0.1–1.0,
+                        <code>power_save_threshold</code> 0.05–0.9) ve ardından iki eşik birbirine karşı
+                        denetleniyor: <code>power_save_threshold</code>, <code>high_performance_threshold</code>
+                        değerinden kesinlikle küçük olmak zorunda.
+                    </p>
+
+                    <p>
+                        Kendini asıl amorti eden denetim bu son madde. Ters çevrilmiş eşikler tek tek geçerli
+                        sayılardır, dolayısıyla hiçbir alan bazlı doğrulama onları yakalayamaz — ve ölü bandı
+                        yok ederek tasarımın önlemek için var olduğu titremeyi bizzat üretirler. Yalnızca iki
+                        alan arasında anlamı olan bir kısıt, o iki alan arasında denetlenmek zorundadır.
+                    </p>
+
+                    <h2>Çağırdığınız araca güvenmemek</h2>
+
+                    <p>
+                        Linux'ta mod değiştirmek <code>tlp ac</code> veya <code>tlp bat</code> çalıştırmak
+                        demek. Akla ilk gelen uygulama süreç çıkış kodunu kontrol edip yoluna devam eder.
+                    </p>
+
+                    <p>
+                        Bunun güvenilir olmadığı ortaya çıktı: TLP hatayı çıkış durumu üzerinden tutarlı
+                        biçimde bildirmiyor. Bu yüzden DDOGreen komutun birleşik çıktısını yakalayıp
+                        inceliyor, yalnızca dönüş değerine güvenmiyor; ayrıca güç yönetebileceğini iddia
+                        etmeden önce <code>tlp</code>'nin sistemde bulunup bulunmadığını kontrol ediyor.
+                    </p>
+
+                    <p>
+                        Bunun güç yönetiminin çok ötesine geçen genel bir dersi var. Harici bir araca komut
+                        gönderdiğinizde, o aracın hata bildirme biçimi arayüzünün parçasıdır ve bu arayüzü
+                        geleneklere uyduğunu varsaymak yerine deneyerek doğrulamanız gerekir. Başarısız bir
+                        komutu başarılı sanan bir servis, hiç girmediği bir modu bildirir — ve bu çökmekten
+                        daha kötüdür, çünkü kayıtlar sorunsuz görünecektir.
+                    </p>
+
+                    <h2>Kararın test edilebilmesi için tasarlamak</h2>
+
+                    <p>
+                        Güç yönetimi testlere düşmandır. Gerçek davranış root yetkisine, TLP'nin ya da Windows
+                        güç planlarının kurulu olmasına ve istediğiniz anda üretemeyeceğiniz bir sistem yüküne
+                        bağlıdır. Doğrudan test etmeye kalkarsanız yalnızca tek bir geliştiricinin
+                        dizüstünde çalışan bir test paketi elde edersiniz.
+                    </p>
+
+                    <p>
+                        DDOGreen her platform etkileşimini dar bir arayüzün arkasına koyuyor — yük okumak için
+                        <code>ISystemMonitor</code>, mod uygulamak için <code>IPowerManager</code>, ayrıca
+                        sinyal işleme ve platform yardımcıları için arayüzler — ve gerçek uygulamayı derleme
+                        zamanında seçen bir factory kullanıyor. Testler bunların yerine mock koyuyor.
+                    </p>
+
+                    <p>
+                        Bu dikiş yerinde olunca eşik mantığı sıradan bir birim testine dönüşüyor: bir yük
+                        dizisi ver, hangi mod geçişlerini istediğini doğrula. En çok önem taşıyan senaryolar
+                        da tam olarak gerçek donanımda üretilmesi pratik olmayanlar: ölü bandın içinde
+                        salınan yük, bir sınırı tam olarak bir kez geçen yük, servis başlamadan reddedilen
+                        ters yapılandırma.
+                    </p>
+
+                    <p>
+                        Bu soyutlama mimari düzen aşkına eklenmedi. Önemli olan mantığa onsuz erişilemediği
+                        için eklendi.
+                    </p>
+
+                    <div class="article__takeaway">
+                        <h3>Buradan çıkarılacaklar</h3>
+                        <ul>
+                            <li>Tek eşikli her denetim döngüsü salınır. İki eşik ve bir ölü bant neredeyse bedavadır ve bütün bir hata sınıfını ortadan kaldırır.</li>
+                            <li>Ölçümleri yapılandırmayla buluşmadan önce normalize edin; böylece bir yapılandırma dosyası her makinede aynı şeyi ifade eder.</li>
+                            <li>Sistem durumunu değiştiren yazılımda, tahmin edilmiş değerlerle başlamak yerine başlamamak daha iyidir.</li>
+                            <li>İki alanı birlikte kapsayan kısıtlar alanlar arasında denetlenmelidir; alan bazlı doğrulama onları göremez.</li>
+                            <li>Harici araçların hatayı gerçekte nasıl bildirdiğini doğrulayın. Gelenek bir sözleşme değildir.</li>
+                            <li>Önemsediğiniz mantığa donanım olmadan erişilemiyorsa, eksik olan şey bir test değil bir dikiş yeridir.</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        DDOGreen açık kaynak ve Linux ile Windows için paketleniyor. Burada anlatılan eşik
+                        mantığı etkinlik izleyicisinde, yapılandırma doğrulaması ise config yükleyicisinde
+                        duruyor; gerçeğini okumak isterseniz:
+                        <a href="https://github.com/abkulakli/ddogreen" target="_blank" rel="noopener">github.com/abkulakli/ddogreen</a>.
+                    </p>
+
+                </div>
+
+                <footer class="article__footer">
+                    <p class="article__footer-note">DDOSoft mühendislik ekibi tarafından yazıldı.</p>
+                    <a href="../../articles.html" class="btn btn--secondary">← Tüm makaleler</a>
+                </footer>
+
+            </div>
+        </article>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/component-loader.js"></script>
+    <script src="../../js/language-manager.js"></script>
+    <script src="../../js/structured-data-manager.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

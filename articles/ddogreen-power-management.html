@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How DDOGreen uses dual-threshold hysteresis over per-core load average to switch power modes without flapping — and why it ships no default configuration at all.">
+    <meta name="keywords" content="power management, hysteresis, load average, TLP, C++20 daemon, Linux power saving, Windows power plans, DDOGreen">
+    <meta name="author" content="DDOSoft">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en">
+    <link rel="alternate" hreflang="en"        href="https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en">
+    <link rel="alternate" hreflang="tr"        href="https://www.ddosoft.com/articles/tr/ddogreen-guc-yonetimi.html?lang=tr">
+    <link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en">
+
+    <!-- Open Graph -->
+    <meta property="og:title"            content="How DDOGreen Decides When to Save Power">
+    <meta property="og:description"      content="Dual-threshold hysteresis, per-core load average, and a daemon that refuses to guess your configuration.">
+    <meta property="og:type"             content="article">
+    <meta property="og:url"              content="https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en">
+    <meta property="og:site_name"        content="DDOSoft">
+    <meta property="og:locale"           content="en_US">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="article:published_time" content="2026-08-17">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="How DDOGreen Decides When to Save Power">
+    <meta name="twitter:description" content="Dual-threshold hysteresis, per-core load average, and a daemon that refuses to guess your configuration.">
+
+    <title>How DDOGreen Decides When to Save Power - DDOSoft</title>
+
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How DDOGreen Decides When to Save Power",
+      "description": "How DDOGreen uses dual-threshold hysteresis over per-core load average to switch power modes without flapping — and why it ships no default configuration at all.",
+      "url": "https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "inLanguage": "en-US",
+      "author": { "@type": "Organization", "name": "DDOSoft" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DDOSoft",
+        "logo": { "@type": "ImageObject", "url": "https://www.ddosoft.com/logo.png" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en"
+      },
+      "about": ["Power Management", "Energy Efficiency", "Systems Programming"],
+      "keywords": "power management, hysteresis, load average, TLP, C++20 daemon, Linux power saving"
+    }
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+
+        <article class="article">
+            <div class="article__container">
+
+                <header class="article__header">
+                    <div class="article__meta">
+                        <span class="article__category">Power Management</span>
+                        <span class="article__date">August 17, 2026</span>
+                        <span class="article__reading-time">7 min read</span>
+                    </div>
+                    <h1 class="article__title">How DDOGreen Decides When to Save Power</h1>
+                    <p class="article__lead">
+                        Switching a laptop between performance and power-saving modes sounds like a one-line
+                        decision: look at the CPU load, pick a mode. The first version of almost every power
+                        manager works exactly that way, and it is the reason so many of them get uninstalled.
+                    </p>
+                </header>
+
+                <div class="article__body">
+
+                    <p>
+                        DDOGreen is a small daemon that watches how busy a machine is and moves the operating
+                        system between its high-performance and power-saving profiles. On Linux it drives
+                        <code>tlp</code>; on Windows it switches power plans. The interesting part is not the
+                        switching — that is two shell commands. The interesting part is deciding
+                        <em>when</em> to switch, and being disciplined about not switching.
+                    </p>
+
+                    <h2>The flapping problem</h2>
+
+                    <p>
+                        Take the obvious design: one threshold. If load is above 50%, go to performance mode;
+                        below 50%, go to power saving. Now picture a machine sitting at roughly half load —
+                        a browser with a few tabs, a language server indexing in the background, nothing
+                        dramatic. Load drifts across the line every few seconds.
+                    </p>
+
+                    <p>
+                        Each crossing triggers a mode change, and a mode change is not free. It re-applies a
+                        whole set of kernel and firmware parameters: CPU governor, energy-performance
+                        preference, SATA link power management, runtime PM on PCI devices, wireless power
+                        saving. Doing that once is cheap. Doing it every few seconds burns more energy than
+                        the power saving recovers, and the user notices it as stutter — the machine feels like
+                        it is thinking about something other than their work.
+                    </p>
+
+                    <p>
+                        A single threshold guarantees this behaviour for any workload that happens to sit
+                        near it. And "near the threshold" is not an edge case; it is what normal desktop use
+                        looks like.
+                    </p>
+
+                    <h2>Two thresholds and a dead band</h2>
+
+                    <p>
+                        The fix is hysteresis, the same idea a thermostat uses so it does not click on and
+                        off around the target temperature. DDOGreen takes two thresholds instead of one:
+                    </p>
+
+                    <ul>
+                        <li>Load <strong>above</strong> <code>high_performance_threshold</code> → switch to performance.</li>
+                        <li>Load <strong>below</strong> <code>power_save_threshold</code> → switch to power saving.</li>
+                        <li>Load <strong>between</strong> the two → change nothing. Stay where you are.</li>
+                    </ul>
+
+                    <p>
+                        That middle region is a dead band, and it is the whole design. With thresholds at,
+                        say, 30% and 70%, a machine hovering at half load simply keeps whatever mode it was
+                        already in. To flip it into performance mode the workload has to genuinely climb past
+                        70%; to send it back to power saving, load has to genuinely fall below 30%. Ordinary
+                        noise no longer reaches either boundary.
+                    </p>
+
+                    <p>
+                        The consequence worth stating plainly: DDOGreen does not always run in the mode its
+                        current load would suggest. Two machines at identical 50% load can be in different
+                        modes, because they arrived there from opposite directions. That is not a bug to be
+                        fixed later — it is the property that makes the daemon quiet.
+                    </p>
+
+                    <h2>Why per-core load average, not raw load</h2>
+
+                    <p>
+                        DDOGreen reads the one-minute load average and divides it by the CPU core count
+                        before comparing against the thresholds. Configuration is therefore expressed as
+                        load <em>per core</em>: <code>0.70</code> means 70% of one core's worth of work, per
+                        core.
+                    </p>
+
+                    <p>
+                        This matters because raw load average is not comparable across machines. A load of
+                        4.0 on a four-core laptop means every core is saturated; on a sixteen-core
+                        workstation it means the machine is mostly idle. A configuration file written
+                        against raw load would have to be retuned for every machine it is deployed to, which
+                        in practice means it would be wrong on most of them.
+                    </p>
+
+                    <p>
+                        Normalising also makes the logs readable. The daemon reports both the absolute
+                        threshold it computed for the current core count and the percentage it came from, so
+                        when a machine behaves unexpectedly you can see immediately whether the thresholds
+                        landed where you intended.
+                    </p>
+
+                    <p>
+                        The one-minute window is itself part of the hysteresis. A shorter average would react
+                        to a single compile; a minute of sustained load is a reasonable proxy for "the user is
+                        actually working."
+                    </p>
+
+                    <h2>Refusing to ship defaults</h2>
+
+                    <p>
+                        DDOGreen has no built-in default values. If <code>monitoring_frequency</code>,
+                        <code>high_performance_threshold</code>, or <code>power_save_threshold</code> is
+                        missing from the configuration file, the daemon logs which one is missing and
+                        refuses to start.
+                    </p>
+
+                    <p>
+                        This is a deliberate and slightly unfashionable choice. Silent defaults in a program
+                        that manages power are a bad trade: a typo in a key name would leave the daemon
+                        running happily on values the operator never chose, and the symptom — a laptop that
+                        is subtly slower or subtly hungrier than expected — is almost impossible to trace
+                        back to its cause. Failing loudly at startup turns a mystery into a one-line log
+                        message.
+                    </p>
+
+                    <p>
+                        Validation goes beyond presence. Each value is range-checked
+                        (<code>monitoring_frequency</code> between 1 and 300 seconds,
+                        <code>high_performance_threshold</code> between 0.1 and 1.0,
+                        <code>power_save_threshold</code> between 0.05 and 0.9), and then the two thresholds
+                        are cross-checked against each other: <code>power_save_threshold</code> must be
+                        strictly less than <code>high_performance_threshold</code>.
+                    </p>
+
+                    <p>
+                        That last check is the one that pays for itself. Inverted thresholds are individually
+                        valid numbers, so no amount of per-field validation catches them — and they destroy
+                        the dead band, producing precisely the flapping the design exists to prevent. A
+                        constraint that only makes sense between two fields has to be checked between them.
+                    </p>
+
+                    <h2>Not trusting the tool you shell out to</h2>
+
+                    <p>
+                        On Linux, switching modes means running <code>tlp ac</code> or <code>tlp bat</code>.
+                        The obvious implementation checks the process exit code and moves on.
+                    </p>
+
+                    <p>
+                        That turned out not to be reliable: TLP does not consistently signal failure through
+                        its exit status. So DDOGreen captures the command's combined output and inspects it
+                        rather than trusting the return value alone, and it checks up front that
+                        <code>tlp</code> is even present on the system before claiming it can manage power at
+                        all.
+                    </p>
+
+                    <p>
+                        There is a general lesson in this that applies well beyond power management. When you
+                        shell out to an external tool, its error reporting is part of its interface, and you
+                        have to verify that interface empirically rather than assume it follows convention.
+                        A daemon that believes a failed command succeeded will report a mode it never
+                        actually entered — and that is worse than crashing, because the logs will look fine.
+                    </p>
+
+                    <h2>Designing so the decision can be tested</h2>
+
+                    <p>
+                        Power management is hostile to testing. The real behaviour depends on root privileges,
+                        on TLP or Windows power plans being installed, and on system load you cannot conjure
+                        on demand. Test it directly and you get a suite that only runs on one developer's
+                        laptop.
+                    </p>
+
+                    <p>
+                        DDOGreen puts every platform interaction behind a narrow interface —
+                        <code>ISystemMonitor</code> for reading load, <code>IPowerManager</code> for applying
+                        modes, plus interfaces for signal handling and platform utilities — with a factory
+                        that selects the real implementation at build time. Tests substitute mocks.
+                    </p>
+
+                    <p>
+                        With that seam in place, the threshold logic becomes an ordinary pure-ish unit under
+                        test: feed it a load sequence, assert which mode transitions it requests. The
+                        scenarios that matter most are exactly the ones that are impractical to reproduce on
+                        real hardware — load oscillating inside the dead band, load crossing a boundary
+                        exactly once, inverted configuration being rejected before the daemon starts.
+                    </p>
+
+                    <p>
+                        The abstraction was not introduced for architectural tidiness. It was introduced
+                        because the interesting logic is unreachable without it.
+                    </p>
+
+                    <div class="article__takeaway">
+                        <h3>What to take from this</h3>
+                        <ul>
+                            <li>Any control loop with one threshold will oscillate. Two thresholds and a dead band cost almost nothing and remove the entire failure class.</li>
+                            <li>Normalise measurements before they meet configuration, so a config file means the same thing on every machine.</li>
+                            <li>In software that changes system state, refusing to start beats starting on guessed values.</li>
+                            <li>Constraints that span two fields must be checked between the fields — per-field validation cannot see them.</li>
+                            <li>Verify how external tools actually report failure. Convention is not a contract.</li>
+                            <li>If the logic you care about cannot be reached without hardware, the missing piece is a seam, not a test.</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        DDOGreen is open source and packaged for Linux and Windows. The threshold logic
+                        described here lives in the activity monitor, and the configuration validation in the
+                        config loader, if you would like to read the real thing:
+                        <a href="https://github.com/abkulakli/ddogreen" target="_blank" rel="noopener">github.com/abkulakli/ddogreen</a>.
+                    </p>
+
+                </div>
+
+                <footer class="article__footer">
+                    <p class="article__footer-note">Written by the DDOSoft engineering team.</p>
+                    <a href="../articles.html" class="btn btn--secondary">← All articles</a>
+                </footer>
+
+            </div>
+        </article>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/component-loader.js"></script>
+    <script src="../js/language-manager.js"></script>
+    <script src="../js/structured-data-manager.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -46,7 +46,9 @@ Header and footer live **only** in `components/header.html` and `components/foot
 <script src="js/component-loader.js"></script>   <!-- must be first script -->
 ```
 
-`js/component-loader.js` resolves relative paths for root vs. subdirectory pages then injects the components. For `/articles/` pages it prepends `../` to all internal links.
+`js/component-loader.js` injects the components, then rewrites their links for the current page's depth. The prefix is computed from directory depth (`ComponentLoader.getPathPrefix()`), so it works at any nesting level — `articles/x.html` gets `../`, `articles/tr/x.html` gets `../../`. Never hardcode `../` against a specific directory.
+
+Links in the components that point at another page (not a `#section`) need a `data-internal-link="articles.html"` attribute carrying the root-relative path; the loader prefixes that value.
 
 ### Multilingual System (EN/TR)
 
@@ -60,9 +62,32 @@ Translations live in `lang/en.json` and `lang/tr.json`. Every visible text eleme
 
 **Important:** If no `?lang=` param is present, `language-manager.js` immediately redirects to `?lang=en`. The bare URL `https://www.ddosoft.com/` never serves content directly. Always use `?lang=en` / `?lang=tr` in canonical URLs, sitemap `<loc>` values, OG URLs, and hreflang `href` attributes.
 
+Elements whose `href` differs per language (article links) use `data-lang-href="articles.recent.0.link"` instead of hardcoding a path.
+
+### Article Pages — the one exception to `data-lang-key`
+
+Article pages carry their prose **directly in the HTML**, one file per language, and declare their language on the root element:
+
+```html
+<html lang="tr" data-page-lang="tr">
+```
+
+Why: crawlers that don't run JavaScript — LinkedIn, X and Slack link previews in particular — must see the article text, and each language needs its own URL for a clean hreflang pair. Turkish articles also get Turkish slugs, which matters for Turkish queries.
+
+When `data-page-lang` is present, `language-manager.js` **does not touch** the page's title, description, canonical, OG tags or hreflang links — the page owns them. It only translates the header and footer, and repoints the EN/TR buttons at the page's counterpart (read from the static hreflang alternates). So an article page must hand-write:
+
+- `<link rel="canonical">` pointing at itself with `?lang=`
+- three `<link rel="alternate">` entries: `en`, `tr`, `x-default` — absolute URLs, reciprocal between the pair
+- its own `<title>`, description, OG and Twitter tags
+- an inline `Article` JSON-LD block (`structured-data-manager.js` skips its own Article generation when it finds one)
+
+Header, footer and every other page keep using `data-lang-key` as normal.
+
 ### Page Structure
 
-- `index.html` — single-page: Hero · About · Services · Products · Contact
+- `index.html` — single-page: Hero · About · Services · Products · Articles · Contact
+- `articles.html` — article index, uses the normal `?lang=` mechanism
+- `articles/*.html` — English articles; `articles/tr/*.html` — Turkish articles
 - `components/` — shared header and footer (single source of truth)
 - `lang/` — `en.json` and `tr.json`
 - `js/` — component-loader, language-manager, main, structured-data-manager
@@ -86,7 +111,9 @@ Translations live in `lang/en.json` and `lang/tr.json`. Every visible text eleme
 
 `sitemap.xml` lists all live pages with `hreflang` entries. **Update it whenever pages are added or removed.**
 
-`js/structured-data-manager.js` injects JSON-LD schema.org markup dynamically.
+`js/structured-data-manager.js` injects JSON-LD schema.org markup dynamically. It bootstraps off the `languageApplied` event that `language-manager.js` dispatches once translations are loaded — not a timer — because it reads its field values out of the language data.
+
+Content policy for articles: no performance or savings figure goes into an article unless a measurement backs it and the article shows the methodology. Product marketing copy on the homepage is a separate decision from what an engineering article asserts.
 
 ## Quality Targets
 

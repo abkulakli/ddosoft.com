@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-page-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lessons from implementing OCPP 1.6 in a charge point simulator: connector model mismatches, charging profile priority, offline authorisation, clock trust, and the reconnect loop that takes down fleets.">
+    <meta name="keywords" content="OCPP 1.6, EV charging, CSMS integration, charge point simulator, charging profiles, offline authorization, WebSocket reconnect">
+    <meta name="author" content="DDOSoft">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.ddosoft.com/articles/ocpp-16-integration-lessons.html?lang=en">
+    <link rel="alternate" hreflang="en"        href="https://www.ddosoft.com/articles/ocpp-16-integration-lessons.html?lang=en">
+    <link rel="alternate" hreflang="tr"        href="https://www.ddosoft.com/articles/tr/ocpp-16-entegrasyon-dersleri.html?lang=tr">
+    <link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/ocpp-16-integration-lessons.html?lang=en">
+
+    <!-- Open Graph -->
+    <meta property="og:title"            content="OCPP 1.6 in Production: Lessons from a Charge Point Simulator">
+    <meta property="og:description"      content="Connector mapping, charging-profile priority, offline authorisation, clock trust, and the reconnect loop that quietly took down a fleet.">
+    <meta property="og:type"             content="article">
+    <meta property="og:url"              content="https://www.ddosoft.com/articles/ocpp-16-integration-lessons.html?lang=en">
+    <meta property="og:site_name"        content="DDOSoft">
+    <meta property="og:locale"           content="en_US">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="article:published_time" content="2026-08-17">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="OCPP 1.6 in Production: Lessons from a Charge Point Simulator">
+    <meta name="twitter:description" content="Connector mapping, charging-profile priority, offline authorisation, and the reconnect loop that quietly took down a fleet.">
+
+    <title>OCPP 1.6 in Production: Lessons from a Charge Point Simulator - DDOSoft</title>
+
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "OCPP 1.6 in Production: Lessons from a Charge Point Simulator",
+      "description": "Lessons from implementing OCPP 1.6 in a charge point simulator: connector model mismatches, charging profile priority, offline authorisation, clock trust, and the reconnect loop that takes down fleets.",
+      "url": "https://www.ddosoft.com/articles/ocpp-16-integration-lessons.html?lang=en",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "inLanguage": "en-US",
+      "author": { "@type": "Organization", "name": "DDOSoft" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DDOSoft",
+        "logo": { "@type": "ImageObject", "url": "https://www.ddosoft.com/logo.png" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ddosoft.com/articles/ocpp-16-integration-lessons.html?lang=en"
+      },
+      "about": ["OCPP", "EV Charging Infrastructure", "Protocol Implementation"],
+      "keywords": "OCPP 1.6, EV charging, CSMS integration, charge point simulator, charging profiles, offline authorization"
+    }
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+
+        <article class="article">
+            <div class="article__container">
+
+                <header class="article__header">
+                    <div class="article__meta">
+                        <span class="article__category">EV Charging</span>
+                        <span class="article__date">August 17, 2026</span>
+                        <span class="article__reading-time">9 min read</span>
+                    </div>
+                    <h1 class="article__title">OCPP 1.6 in Production: Lessons from a Charge Point Simulator</h1>
+                    <p class="article__lead">
+                        OCPP 1.6 is a readable specification. You can implement enough of it to complete a
+                        charging session in a couple of days. The gap between that and a charge point that
+                        behaves correctly against a real backend, at fleet scale, for weeks at a time, is
+                        where all the engineering actually lives.
+                    </p>
+                </header>
+
+                <div class="article__body">
+
+                    <p>
+                        We build SimIt, a simulator that stands in for physical charge points so that
+                        operators can test their central system — the CSMS — without buying hardware. It
+                        speaks OCPP 1.6 and 2.0.1, and it runs many simulated stations at once against real
+                        backends. That combination surfaces a particular class of problem: not "does the
+                        message parse" but "what happens on the four hundredth station on the third day."
+                    </p>
+
+                    <p>
+                        These are the lessons that cost us the most to learn.
+                    </p>
+
+                    <h2>1.6 and 2.0.1 disagree about what a connector is</h2>
+
+                    <p>
+                        In OCPP 1.6 a charge point has a flat list of connectors, addressed by a single
+                        integer <code>connectorId</code>, where <code>0</code> means "the station as a whole."
+                        In 2.0.1 the model is two levels: a station contains EVSEs, and each EVSE contains
+                        connectors numbered locally within it.
+                    </p>
+
+                    <p>
+                        If you support both versions — and anyone building tooling in this space has to — you
+                        need one internal model and a translation at the protocol boundary. We chose the
+                        2.0.1 shape internally, because you can always project a hierarchy down to a flat
+                        list but you cannot reliably reconstruct a hierarchy from flat integers, and wrote
+                        explicit conversions in both directions for the 1.6 handlers.
+                    </p>
+
+                    <p>
+                        The tempting alternative is to keep a flat model and special-case 2.0.1. It works
+                        until you meet a station with multiple connectors per EVSE — a DC unit with CCS and
+                        CHAdeMO on one power stack, sharing a current limit. Flat numbering cannot express
+                        that they share anything, so every power-allocation decision built on top of it is
+                        subtly wrong. Choose the richer model even when the protocol you are speaking today
+                        does not need it.
+                    </p>
+
+                    <h2>Charging profiles: knowing whose limit wins</h2>
+
+                    <p>
+                        Smart charging is the part of 1.6 that implementations most often get wrong, because
+                        the answer to "what is the current limit for this connector" is never a single
+                        stored number. Several profiles can apply at once, and the specification defines how
+                        they compose.
+                    </p>
+
+                    <p>
+                        Profiles have a purpose — a station-wide maximum, a default for transactions, or a
+                        limit attached to one specific transaction — and a stack level. Resolution takes the
+                        highest stack level within each purpose, then applies the purpose precedence from the
+                        specification's smart charging section, and the effective limit is the most
+                        restrictive result. A transaction-specific profile does not simply replace the
+                        station maximum; it is bounded by it.
+                    </p>
+
+                    <p>
+                        Two details are easy to miss and both produce plausible-looking wrong numbers:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>Profiles carry a schedule, not a value.</strong> The limit is a function
+                            of time since the schedule start, with discrete periods. Reading "the limit" means
+                            evaluating the schedule at an offset, not reading a field.
+                        </li>
+                        <li>
+                            <strong>Units are per-profile.</strong> A profile declares its rate in amperes or
+                            watts. Comparing two profiles requires normalising first, and normalising amperes
+                            to watts requires the supply voltage and phase count — which is station
+                            configuration, not part of the profile. Compare raw numbers across profiles with
+                            different units and you will confidently enforce a limit off by a factor of
+                            several hundred.
+                        </li>
+                    </ul>
+
+                    <p>
+                        We keep the profile store in its native units and convert only at the point of
+                        comparison, so the conversion assumptions live in one place where they can be
+                        reviewed.
+                    </p>
+
+                    <h2>Offline authorisation is three flags interacting, not one</h2>
+
+                    <p>
+                        A charge point that only works while connected is not a charge point. The
+                        specification's answer to a lost connection is a set of configuration keys, and their
+                        interaction is the actual behaviour:
+                    </p>
+
+                    <ul>
+                        <li><code>LocalAuthListEnabled</code> — may the station consult its locally cached list of known identifiers?</li>
+                        <li><code>LocalPreAuthorize</code> — may it start a transaction from that local list without waiting for the CSMS to confirm?</li>
+                        <li><code>AllowOfflineTxForUnknownId</code> — may it start a transaction for an identifier it has never seen, while offline?</li>
+                    </ul>
+
+                    <p>
+                        Read individually each is obvious. Together they form a decision table, and the
+                        combinations are where implementations diverge from each other: a station that is
+                        online but slow behaves differently from one that is offline, and an identifier
+                        absent from the local list is not the same as one present and expired.
+                    </p>
+
+                    <p>
+                        We implemented this as a single authorisation function that takes the identifier and
+                        the current connectivity state and returns a decision, rather than scattering
+                        <code>if offline</code> checks through the transaction handlers. That shape matters
+                        for a reason beyond tidiness: it is the only version you can exhaustively test.
+                        Every combination of three flags, two connectivity states and three identifier
+                        conditions is a table you can enumerate — but only if the logic lives in one place.
+                    </p>
+
+                    <h2>Never trust the station's own clock</h2>
+
+                    <p>
+                        Every OCPP message carrying a timestamp is evidence in a billing dispute. If a
+                        station's clock is wrong, its meter values are wrong in a way that is invisible until
+                        someone disputes an invoice.
+                    </p>
+
+                    <p>
+                        Station clocks drift, and in the field they are sometimes badly wrong — a unit that
+                        lost power and came back with a clock at the epoch is not unusual. So we do not use
+                        local time for protocol timestamps. The CSMS returns its own time in the
+                        BootNotification response and in heartbeat responses; we store the offset between
+                        that and local time, and derive every outgoing timestamp from local time plus the
+                        offset.
+                    </p>
+
+                    <p>
+                        Keeping an offset rather than setting the clock is the important detail. It is
+                        cheap, it needs no privileges, it survives the CSMS being briefly unreachable, and
+                        it keeps the intervals between our own events monotonic even if the backend's clock
+                        jumps. The station and the backend agree on absolute time without the station
+                        pretending to be a time authority.
+                    </p>
+
+                    <h2>The reconnect loop is where fleets die</h2>
+
+                    <p>
+                        This is the expensive one, and the reason it is expensive is that the bug was in code
+                        nobody thinks of as important: the loop that retries a failed WebSocket connection.
+                    </p>
+
+                    <p>
+                        Ours escalated its retry interval only when the handshake <em>timed out</em>. Any
+                        other failure — including an outright rejection by the backend — reset the counter
+                        and retried at the base interval, a few seconds, indefinitely.
+                    </p>
+
+                    <p>
+                        That distinction seems harmless until a CSMS starts rate-limiting. It answers every
+                        connection attempt with an immediate rejection rather than a timeout, so every
+                        station in the fleet sat in the base retry band, hammering the backend every few
+                        seconds and never backing off. The fleet entered a permanent connect-reject cycle.
+                    </p>
+
+                    <p>
+                        The failure that followed was not the one we would have predicted. A rejected
+                        handshake never builds a session, so no single connection leaked much. But each
+                        <em>successful</em> reconnect in that churn rebuilds a station's full object graph,
+                        and process memory grew steadily under that repeated construction until the
+                        processes were killed for exceeding their memory limits. A retry policy defect
+                        presented as an out-of-memory incident, several layers away from its cause.
+                    </p>
+
+                    <p>
+                        So we wrote a small module whose only job is to classify a rejection and produce a
+                        wait. Rejections meaning <em>I am alive but cannot take you right now</em> — the
+                        rate-limit and service-unavailable statuses — escalate along a jittered curve up to
+                        a ceiling.
+                    </p>
+
+                    <h3>The follow-up we got wrong twice</h3>
+
+                    <p>
+                        We initially excluded permanent rejections — bad credentials, wrong URL path — from
+                        the backoff, on two arguments that felt sound: retrying a misconfigured station is
+                        cheap, and the operator needs to see the error promptly.
+                    </p>
+
+                    <p>
+                        Both were wrong, and a later look at the logs showed why. A handful of misconfigured
+                        stations produced the overwhelming majority of all warnings logged across the whole
+                        fleet, each retrying every few seconds for hours with no escalation. Not cheap:
+                        that is exactly the connect-reject churn that caused the earlier memory incident.
+                        Not prompt either — the signal was not one visible line but thousands of identical
+                        ones, which buried the other, genuinely different faults happening at the same time.
+                        And a continuous stream of failing authentication attempts against someone else's
+                        backend is a good way to get your egress address blocked.
+                    </p>
+
+                    <p>
+                        Permanent rejections now escalate on the same curve, tracked separately from the
+                        rate-limit class because they share a shape but not a meaning. Escalating does not
+                        hide the misconfiguration: every attempt still logs its own status, just at a falling
+                        rate.
+                    </p>
+
+                    <h3>Never stop retrying</h3>
+
+                    <p>
+                        One rule we held onto throughout: the loop escalates but never gives up.
+                    </p>
+
+                    <p>
+                        The reasoning is about who fixes the fault. For a rate limit, the backend may recover
+                        at any moment. For a permanent rejection, the recovery event is a human correcting a
+                        credential or a URL — and nobody is going to walk out to the station afterwards to
+                        power-cycle it. A station that gave up permanently would need a site visit to
+                        recover; one that retries slowly picks up the correction on its own within the
+                        ceiling interval. A slow station is a much better failure than a dead one.
+                    </p>
+
+                    <div class="article__takeaway">
+                        <h3>What to take from this</h3>
+                        <ul>
+                            <li>Model the richer domain internally and translate at the protocol edge. Flattening loses relationships you will need later.</li>
+                            <li>In smart charging, the limit is a schedule evaluated at a time, in a declared unit — not a stored number.</li>
+                            <li>Put multi-flag decisions in one function. Scattered conditionals cannot be enumerated, and therefore cannot be tested.</li>
+                            <li>Derive protocol timestamps from a tracked offset to the backend's clock, not from local time.</li>
+                            <li>Retry loops must distinguish failure classes. Treating every non-timeout as transient turns one backend's rate limit into your outage.</li>
+                            <li>Escalate without ever giving up, when the recovery event is someone editing configuration remotely.</li>
+                            <li>A defect in unglamorous code can surface as an unrelated symptom several layers away. Follow the churn, not the error message.</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        SimIt is available at
+                        <a href="https://simit.ddosoft.com" target="_blank" rel="noopener">simit.ddosoft.com</a>,
+                        with a free plan for testing a CSMS against simulated stations. If you are integrating
+                        OCPP 1.6 or 2.0.1 and would rather not learn these lessons the way we did,
+                        <a href="../index.html#contact">get in touch</a>.
+                    </p>
+
+                </div>
+
+                <footer class="article__footer">
+                    <p class="article__footer-note">Written by the DDOSoft engineering team.</p>
+                    <a href="../articles.html" class="btn btn--secondary">← All articles</a>
+                </footer>
+
+            </div>
+        </article>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/component-loader.js"></script>
+    <script src="../js/language-manager.js"></script>
+    <script src="../js/structured-data-manager.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
