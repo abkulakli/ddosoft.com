@@ -12,7 +12,9 @@ DDOSoft is a static single-page landing website for a sustainable software consu
 **LinkedIn**: [linkedin.com/company/ddosoft](https://www.linkedin.com/company/ddosoft)
 
 ### Products
-- **DDOGreen** v0.3.1 — cross-platform power management tool (C++20, Linux/Windows). 20–30% battery savings, zero config, 122 unit tests. [GitHub](https://github.com/abkulakli/ddogreen)
+- **DDOGreen** v0.3.1 — cross-platform power management tool (C++20, Linux/Windows). Switches power modes from per-core load average with dual-threshold hysteresis; the package installs a working default config (0.70 / 0.30 / 30s). [GitHub](https://github.com/abkulakli/ddogreen)
+
+  No battery-savings percentage is claimed anywhere on the site: nothing in the ddogreen repo measures one. Don't reintroduce a figure without a measurement and a stated methodology. Test counts and coverage percentages are likewise kept qualitative, because they drift with every commit and the site cannot be updated per commit.
 - **Tefaster** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [tefaster.ddosoft.com](https://tefaster.ddosoft.com)
 - **SimIt** — [simit.ddosoft.com](https://simit.ddosoft.com)
 

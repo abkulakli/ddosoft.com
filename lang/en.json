@@ -2,7 +2,7 @@
   "meta": {
     "site": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "DDOSoft creates innovative, sustainable software solutions. Discover DDOGreen, our smart power management tool that extends laptop battery life by 20-30%.",
+      "description": "DDOSoft creates innovative, sustainable software solutions. Discover DDOGreen, our smart power management tool that switches your laptop's power mode automatically based on real system load.",
       "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -126,10 +126,10 @@
       "tagline": "Smart Power Management That Just Works",
       "version": "Latest Version: v0.3.1",
       "intro": "DDOGreen is an intelligent, production-ready power management tool that automatically switches your laptop between high-performance and power-saving modes based on actual system usage.",
-      "highlight": "20-30% longer battery life with zero performance compromise",
+      "highlight": "Automatic power mode switching driven by real CPU load, with hysteresis that prevents mode flapping",
       "card": {
         "category": "Power Management",
-        "excerpt": "Automatically extends your laptop's battery life by 20–30% — just install and it works silently in the background, no setup needed."
+        "excerpt": "Watches how busy your machine is and switches power modes automatically — install it and it works silently in the background, no setup needed."
       },
       "features": {
         "title": "Key Features",
@@ -144,7 +144,7 @@
           },
           {
             "title": "Zero Configuration:",
-            "description": "Works perfectly out of the box with hardcoded sensible defaults"
+            "description": "Ships with a working default configuration — install it and it runs"
           },
           {
             "title": "Enterprise Ready:",
@@ -152,7 +152,7 @@
           },
           {
             "title": "Production Quality:",
-            "description": "122 comprehensive unit tests and professional CI/CD validation"
+            "description": "Comprehensive unit test suite and CI/CD validation on every change"
           }
         ]
       },
@@ -259,7 +259,7 @@
       "architecture": {
         "title": "Technical Excellence",
         "features": [
-          "170 comprehensive automated tests with 40-45% coverage",
+          "Comprehensive automated test suite run in CI on every change",
           "Enterprise security with bot protection and rate limiting",
           "Database optimization with N+1 query prevention (83% reduction)",
           "Pre-commit hooks with Ruff linting and Black formatting",

@@ -10,7 +10,7 @@
         "title": "Yaklaşımımız",
         "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında kanıtlanmış 15+ yıllık deneyimimizle, eski sistem modernizasyonundan son teknoloji sürdürülebilir yazılım geliştirmeye kadar kapsamlı çözümler sunuyoruz. Uzmanlığımız gömülü sistemlerden bulut platformlarına kadar tüm teknoloji yığınını kapsar."
       },
-      "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayar pil ömrünü %20-30 uzatan akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
+      "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayarınızın güç modunu gerçek sistem yüküne göre otomatik değiştiren akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -134,10 +134,10 @@
       "tagline": "Akıllı Güç Yönetimi, Basitçe Çalışır",
       "version": "Son Sürüm: v0.3.1",
       "intro": "DDOGreen, dizüstü bilgisayarınızı gerçek sistem kullanımına dayalı olarak otomatik olarak yüksek performans ve güç tasarrufu modları arasında geçiren akıllı, üretime hazır bir güç yönetimi aracıdır.",
-      "highlight": "Sıfır performans kaybıyla %20-30 daha uzun pil ömrü",
+      "highlight": "Gerçek CPU yüküne göre otomatik güç modu geçişi, mod titremesini önleyen histerezisle",
       "card": {
         "category": "Güç Yönetimi",
-        "excerpt": "Dizüstü bilgisayarınızın pil ömrünü otomatik olarak %20–30 uzatır — yükleyin, gerisini arka planda sessizce halleder. Hiçbir ayar gerekmez."
+        "excerpt": "Makinenizin ne kadar meşgul olduğunu izler ve güç modlarını otomatik değiştirir — yükleyin, gerisini arka planda sessizce halleder. Hiçbir ayar gerekmez."
       },
       "features": {
         "title": "Temel Özellikler",
@@ -152,7 +152,7 @@
           },
           {
             "title": "Sıfır Yapılandırma:",
-            "description": "Sabitlenmiş mantıklı varsayılanlarla kutudan çıkar çıkmaz mükemmel çalışır"
+            "description": "Çalışan bir varsayılan yapılandırmayla gelir — kurun, çalışır"
           },
           {
             "title": "Kurumsal Hazır:",
@@ -160,7 +160,7 @@
           },
           {
             "title": "Üretim Kalitesi:",
-            "description": "122 kapsamlı birim test ve profesyonel CI/CD doğrulaması"
+            "description": "Kapsamlı birim test paketi ve her değişiklikte CI/CD doğrulaması"
           }
         ]
       },
@@ -267,7 +267,7 @@
       "architecture": {
         "title": "Teknik Mükemmellik",
         "features": [
-          "%40-45 kapsama ile 170 kapsamlı otomatik test",
+          "Her değişiklikte CI'da çalışan kapsamlı otomatik test paketi",
           "Bot koruması ve hız sınırlama ile kurumsal güvenlik",
           "N+1 sorgu önleme ile veritabanı optimizasyonu (%83 azalma)",
           "Ruff linting ve Black formatlama ile pre-commit hook'ları",
