@@ -31,7 +31,9 @@ php -S localhost:8000        # PHP
 
 No install, build, or compile step. Changes are live on page refresh.
 
-**Deployment**: Push to `main` → GitHub Actions (`.github/workflows/deploy.yml`) deploys to GitHub Pages automatically. `.nojekyll` prevents Jekyll processing. `CNAME` sets the custom domain.
+**Validation**: `python3 scripts/validate-site.py` — stdlib only, no install. Checks HTML nesting, language-file validity, that every `data-lang-key` / `data-lang-href` exists in **both** language files, that relative links and assets resolve, that article pages carry complete and reciprocal SEO metadata with exactly one `Article` schema, that article prose is present in the HTML rather than injected, and that the sitemap covers every article. Run it before pushing; it is the only safety net this repo has.
+
+**Deployment**: `.github/workflows/deploy.yml` has two jobs. `validate` runs the script on pull requests and on `main`. `deploy` runs only on push to `main` (`if: github.event_name == 'push'`) because the `github-pages` environment rejects deployments from non-default branches — a deploy job triggered by a pull request fails at the environment gate before any step runs. `.nojekyll` prevents Jekyll processing. `CNAME` sets the custom domain.
 
 ## Architecture
 
