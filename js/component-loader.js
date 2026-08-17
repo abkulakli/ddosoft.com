@@ -5,23 +5,25 @@
 
 class ComponentLoader {
     constructor() {
-        this.componentsPath = this.getComponentsPath();
+        this.pathPrefix = ComponentLoader.getPathPrefix();
+        this.componentsPath = `${this.pathPrefix}components/`;
         this.loadedComponents = new Map();
     }
 
     /**
-     * Determine the correct path to components based on current page location
+     * Relative prefix back to the site root, derived from directory depth.
+     *
+     * Root pages get '', articles/x.html gets '../', articles/tr/x.html gets
+     * '../../'. Counting depth rather than matching '/articles/' is what makes
+     * the nested per-language article directories resolve.
      */
-    getComponentsPath() {
-        const currentPath = window.location.pathname;
-
-        // If we're in an article subdirectory, use relative path
-        if (currentPath.includes('/articles/')) {
-            return '../components/';
-        }
-
-        // For root directory pages
-        return 'components/';
+    static getPathPrefix() {
+        const path = window.location.pathname;
+        const segments = path.split('/').filter(Boolean);
+        // A trailing slash means every segment is a directory; otherwise the
+        // last segment is the document itself and does not add depth.
+        const depth = path.endsWith('/') ? segments.length : Math.max(0, segments.length - 1);
+        return '../'.repeat(depth);
     }
 
     /**
@@ -68,9 +70,6 @@ class ComponentLoader {
             const headerHtml = await this.loadComponent('header');
             headerPlaceholder.outerHTML = headerHtml;
 
-            // Update navigation links for article pages
-            this.updateNavigationLinks();
-
             console.log('Header component loaded successfully');
         } catch (error) {
             console.error('Failed to load header component:', error);
@@ -91,9 +90,6 @@ class ComponentLoader {
             const footerHtml = await this.loadComponent('footer');
             footerPlaceholder.outerHTML = footerHtml;
 
-            // Update footer links for article pages
-            this.updateFooterLinks();
-
             console.log('Footer component loaded successfully');
         } catch (error) {
             console.error('Failed to load footer component:', error);
@@ -101,60 +97,28 @@ class ComponentLoader {
     }
 
     /**
-     * Update navigation links for article pages
+     * Rewrite the shared components' root-relative links for the current depth.
+     *
+     * Header and footer are authored for the homepage, so their section links
+     * are bare fragments ('#about'). Away from the root those must point back
+     * at index.html, and any link to another page needs the depth prefix.
      */
-    updateNavigationLinks() {
-        const currentPath = window.location.pathname;
+    resolveInternalLinks() {
+        if (!this.pathPrefix) return;
 
-        if (currentPath.includes('/articles/')) {
-            // Update navigation links to point back to index.html
-            const navLinks = document.querySelectorAll('.nav__link[href^="#"]');
-            navLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
-                    link.setAttribute('href', `../index.html${href}`);
-                }
-            });
+        // Section fragments become links back to the homepage's sections.
+        document.querySelectorAll('.nav__link[href^="#"], .footer__link[href^="#"]').forEach(link => {
+            link.setAttribute('href', `${this.pathPrefix}index.html${link.getAttribute('href')}`);
+        });
 
-            // Update logo link
-            const logoLink = document.querySelector('.nav__logo');
-            if (logoLink) {
-                logoLink.setAttribute('href', '../index.html');
-            }
-        }
-    }
+        // Links to sibling pages ('articles.html') need the prefix too.
+        document.querySelectorAll('[data-internal-link]').forEach(link => {
+            link.setAttribute('href', `${this.pathPrefix}${link.getAttribute('data-internal-link')}`);
+        });
 
-    /**
-     * Update footer links for article pages
-     */
-    updateFooterLinks() {
-        const currentPath = window.location.pathname;
-
-        if (currentPath.includes('/articles/')) {
-            // Update footer links to point back to index.html
-            const footerLinks = document.querySelectorAll('.footer__link[href^="#"]');
-            footerLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
-                    link.setAttribute('href', `../index.html${href}`);
-                }
-            });
-        }
-    }
-
-    /**
-     * Fix navigation links based on current page location
-     */
-    fixNavigationLinks() {
-        const currentPath = window.location.pathname;
-        const isInSubdirectory = currentPath.includes('/articles/');
-
-        if (isInSubdirectory) {
-            // Update navigation links to point back to homepage sections
-            document.querySelectorAll('[data-nav-target]').forEach(link => {
-                const target = link.getAttribute('data-nav-target');
-                link.href = `../index.html#${target}`;
-            });
+        const logoLink = document.querySelector('.nav__logo');
+        if (logoLink) {
+            logoLink.setAttribute('href', `${this.pathPrefix}index.html`);
         }
     }
 
@@ -167,8 +131,8 @@ class ComponentLoader {
             this.loadFooter()
         ]);
 
-        // Fix navigation links after components are loaded
-        this.fixNavigationLinks();
+        // Resolve component links once both components are in the DOM
+        this.resolveInternalLinks();
     }
 }
 

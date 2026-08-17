@@ -4,14 +4,51 @@ class LanguageManager {
         this.supportedLanguages = ['en', 'tr'];
         this.languageData = {};
         this.defaultLanguage = 'en';
+
+        // Pages that carry their own prose declare their language on <html>.
+        // Article pages do this: each language is a separate URL with its own
+        // hand-written title, canonical, OG tags and hreflang pair, so the
+        // JSON-driven meta below must leave them alone.
+        const declared = document.documentElement.getAttribute('data-page-lang');
+        this.pageLanguage = this.supportedLanguages.includes(declared) ? declared : null;
+
         this.init();
+    }
+
+    /**
+     * True when the page authored its own SEO meta and we must not overwrite it.
+     */
+    ownsOwnMeta() {
+        return this.pageLanguage !== null;
+    }
+
+    /**
+     * URL of this page's counterpart in another language, from the static
+     * hreflang alternates in the document head.
+     *
+     * Those are absolute because Google requires fully-qualified hreflang URLs,
+     * but navigation is kept on whichever host actually served us so the pair
+     * still works on localhost and on preview deployments.
+     */
+    getAlternateUrl(language) {
+        const alternate = document.querySelector(`link[rel="alternate"][hreflang="${language}"]`);
+        if (!alternate) return null;
+
+        const url = new URL(alternate.getAttribute('href'), window.location.href);
+        return url.pathname + url.search + url.hash;
     }
 
     async init() {
         try {
+            // Other modules (structured data) need to find us and need to know
+            // when the translations are actually in place.
+            window.languageManager = this;
+
             this.currentLanguage = this.detectLanguage();
             await this.loadLanguageData(this.currentLanguage);
             this.applyLanguage();
+            document.dispatchEvent(new CustomEvent('languageApplied'));
+
             // Re-apply after header/footer components are dynamically injected
             document.addEventListener('componentsLoaded', () => {
                 this.applyLanguage();
@@ -23,32 +60,48 @@ class LanguageManager {
 
     detectLanguage() {
         const urlLang = new URLSearchParams(window.location.search).get('lang');
+
         if (urlLang && this.supportedLanguages.includes(urlLang)) {
+            // On a page written in one language, a request for another means
+            // the reader wants the counterpart page, not this text under a
+            // translated header.
+            if (this.pageLanguage && urlLang !== this.pageLanguage) {
+                const alternate = this.getAlternateUrl(urlLang);
+                if (alternate) {
+                    window.location.replace(alternate);
+                    return urlLang;
+                }
+                // No counterpart exists — serve this page in its own language.
+                return this.pageLanguage;
+            }
+
             localStorage.setItem('ddosoft-language', urlLang);
             return urlLang;
         }
 
-        // No lang param — redirect to English as the canonical default
-        window.location.replace('?lang=en' + window.location.hash);
-        return this.defaultLanguage;
+        // No lang param — redirect to the canonical default, which for a page
+        // that declares its own language is that language.
+        const target = this.pageLanguage || this.defaultLanguage;
+        window.location.replace(`?lang=${target}` + window.location.hash);
+        return target;
     }
 
     async loadLanguageData(language) {
         // Determine the correct path based on current location
         const pathToLang = this.getLanguageFilePath();
-        const response = await fetch(`${pathToLang}/lang/${language}.json`);
+        const response = await fetch(`${pathToLang}lang/${language}.json`);
         this.languageData = await response.json();
     }
 
+    /**
+     * Relative prefix back to the site root, derived from directory depth, so
+     * that nested article directories (articles/tr/) resolve correctly.
+     */
     getLanguageFilePath() {
-        // Check if we're in a subdirectory (like articles/)
         const path = window.location.pathname;
-        const depth = (path.match(/\//g) || []).length - 1; // Count directory depth
-
-        if (depth > 1 || path.includes('/articles/')) {
-            return '..'; // We're in a subdirectory, go up one level
-        }
-        return '.'; // We're in the root directory
+        const segments = path.split('/').filter(Boolean);
+        const depth = path.endsWith('/') ? segments.length : Math.max(0, segments.length - 1);
+        return '../'.repeat(depth);
     }
 
     updateContent() {
@@ -58,9 +111,26 @@ class LanguageManager {
             const text = this.getTranslation(key);
             if (text) el.innerHTML = text;
         });
+
+        // Article links differ per language — each language file points at its
+        // own translation of the article, so the href is a translated value too.
+        document.querySelectorAll('[data-lang-href]').forEach(el => {
+            const href = this.getTranslation(el.getAttribute('data-lang-href'));
+            if (href) el.setAttribute('href', href);
+        });
     }
 
     updateMetaTags() {
+        // A page that declares its own language authored its own title,
+        // description, canonical, Open Graph tags and hreflang pair. Rewriting
+        // them from lang/*.json would point canonical at the homepage and drop
+        // the cross-language pairing.
+        if (this.ownsOwnMeta()) {
+            this.updateLanguageSwitchLinks();
+            this.updateLanguageButton();
+            return;
+        }
+
         // Get current page type for specific meta data
         const currentPage = this.getCurrentPageType();
 
@@ -200,6 +270,24 @@ class LanguageManager {
         defaultTag.setAttribute('hreflang', 'x-default');
         defaultTag.setAttribute('href', `${baseUrl}?lang=en`);
         document.head.appendChild(defaultTag);
+    }
+
+    /**
+     * Point the header's language buttons at this page's counterparts.
+     *
+     * The buttons are authored as absolute homepage URLs, which would drop a
+     * reader out of the article they are reading.
+     */
+    updateLanguageSwitchLinks() {
+        document.querySelectorAll('[data-lang-switch]').forEach(button => {
+            const language = button.getAttribute('data-lang-switch');
+            const target = language === this.pageLanguage
+                ? `?lang=${language}`
+                : this.getAlternateUrl(language);
+            if (target) {
+                button.setAttribute('href', target);
+            }
+        });
     }
 
     updateLanguageButton() {

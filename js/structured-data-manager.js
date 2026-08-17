@@ -59,11 +59,6 @@ class StructuredDataManager {
             "publisher": {
                 "@type": "Organization",
                 "name": "DDOSoft"
-            },
-            "potentialAction": {
-                "@type": "SearchAction",
-                "target": `${this.baseUrl}/articles.html?search={search_term_string}`,
-                "query-input": "required name=search_term_string"
             }
         };
 
@@ -71,6 +66,12 @@ class StructuredDataManager {
     }
 
     generatePageSpecificData() {
+        // Article pages embed their own Article schema in the HTML so that
+        // crawlers see it without running JavaScript. Don't add a second one.
+        if (this.hasStaticArticleSchema()) {
+            return;
+        }
+
         const currentPage = this.getCurrentPageType();
 
         switch (currentPage) {
@@ -80,10 +81,6 @@ class StructuredDataManager {
             case 'articles':
                 this.generateBlogData();
                 break;
-            default:
-                if (this.isArticlePage(currentPage)) {
-                    this.generateArticleData(currentPage);
-                }
         }
     }
 
@@ -139,46 +136,18 @@ class StructuredDataManager {
         this.insertStructuredData('blog', blogData);
     }
 
-    generateArticleData(articleKey) {
-        const articleTitle = this.languageManager.getTranslation(`meta.articles.${articleKey}.title`);
-        const articleDescription = this.languageManager.getTranslation(`meta.articles.${articleKey}.description`);
-
-        if (!articleTitle || !articleDescription) return;
-
-        const articleData = {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": articleTitle,
-            "description": articleDescription,
-            "url": `${this.baseUrl}/articles/${articleKey}.html`,
-            "datePublished": this.getArticlePublishDate(articleKey),
-            "dateModified": this.getArticleModifiedDate(articleKey),
-            "author": {
-                "@type": "Organization",
-                "name": "DDOSoft"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "DDOSoft",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": `${this.baseUrl}/images/logo.svg`
+    /**
+     * True when the document already ships an Article schema of its own.
+     */
+    hasStaticArticleSchema() {
+        return Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+            .some(script => {
+                try {
+                    return JSON.parse(script.textContent)['@type'] === 'Article';
+                } catch {
+                    return false;
                 }
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": `${this.baseUrl}/articles/${articleKey}.html`
-            },
-            "inLanguage": this.languageManager.currentLanguage === 'tr' ? 'tr-TR' : 'en-US',
-            "about": [
-                "Sustainable Software",
-                "Green Technology",
-                "Energy Efficiency"
-            ],
-            "keywords": this.languageManager.getTranslation(`meta.articles.${articleKey}.keywords`)
-        };
-
-        this.insertStructuredData('article', articleData);
+            });
     }
 
     getCurrentPageType() {
@@ -193,27 +162,6 @@ class StructuredDataManager {
         }
 
         return 'home';
-    }
-
-    isArticlePage(pageType) {
-        return ['calculating-carbon-footprint-software',
-                'ddogreen-case-study-enterprise-deployment',
-                'green-algorithms-performance-vs-efficiency',
-                'sustainable-software-development-principles'].includes(pageType);
-    }
-
-    getArticlePublishDate(articleKey) {
-        const publishDates = {
-            'calculating-carbon-footprint-software': '2024-12-15',
-            'ddogreen-case-study-enterprise-deployment': '2024-12-20',
-            'green-algorithms-performance-vs-efficiency': '2024-12-10',
-            'sustainable-software-development-principles': '2024-12-05'
-        };
-        return publishDates[articleKey] || '2024-12-01';
-    }
-
-    getArticleModifiedDate(articleKey) {
-        return this.getArticlePublishDate(articleKey);
     }
 
     insertStructuredData(id, data) {
@@ -241,21 +189,12 @@ class StructuredDataManager {
     }
 }
 
-// Initialize when language changes
-document.addEventListener('DOMContentLoaded', () => {
-    // Wait for language manager to be ready
-    setTimeout(() => {
-        if (window.languageManager) {
-            window.structuredDataManager = new StructuredDataManager(window.languageManager);
+// Build the schema once the translations it reads from are actually loaded.
+// Waiting on the event rather than a fixed delay is what makes this reliable —
+// the language data arrives over the network, so no timeout is long enough to
+// be correct and short enough to be fast.
+document.addEventListener('languageApplied', () => {
+    if (!window.languageManager) return;
 
-            // Update structured data when language changes
-            const originalSwitchLanguage = window.languageManager.switchLanguage.bind(window.languageManager);
-            window.languageManager.switchLanguage = async function(lang) {
-                await originalSwitchLanguage(lang);
-                if (window.structuredDataManager) {
-                    window.structuredDataManager.updateStructuredData();
-                }
-            };
-        }
-    }, 100);
-});
+    window.structuredDataManager = new StructuredDataManager(window.languageManager);
+}, { once: true });

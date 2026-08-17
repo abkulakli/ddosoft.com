@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Field notes from building DDOGreen and SimIt: power management internals, OCPP 1.6 integration, and what production taught us.">
+    <meta name="keywords" content="power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software">
+    <meta name="author" content="DDOSoft">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.ddosoft.com/articles.html?lang=en">
+
+    <!-- Open Graph -->
+    <meta property="og:title"            content="Engineering Notes - DDOSoft">
+    <meta property="og:description"      content="Field notes from building DDOGreen and SimIt: power management internals, OCPP 1.6 integration, and what production taught us.">
+    <meta property="og:type"             content="website">
+    <meta property="og:url"              content="https://www.ddosoft.com/articles.html?lang=en">
+    <meta property="og:site_name"        content="DDOSoft">
+    <meta property="og:locale"           content="en_US">
+    <meta property="og:locale:alternate" content="tr_TR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Engineering Notes - DDOSoft">
+    <meta name="twitter:description" content="Power management internals, OCPP 1.6 integration, and what production taught us.">
+
+    <title>Engineering Notes - DDOSoft</title>
+
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+
+        <section class="articles-page">
+            <div class="articles__container">
+
+                <div class="articles-page__header">
+                    <h1 class="articles-page__title" data-lang-key="articles.page.title">Engineering Notes</h1>
+                    <p class="articles-page__subtitle" data-lang-key="articles.page.subtitle">
+                        Field notes from building DDOGreen and SimIt — design decisions, trade-offs, and the mistakes that taught us the most.
+                    </p>
+                </div>
+
+                <div class="articles-grid">
+
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__category" data-lang-key="articles.recent.0.category">Power Management</span>
+                            <span class="article-card__date" data-lang-key="articles.recent.0.date">August 17, 2026</span>
+                        </div>
+                        <h2 class="article-card__title">
+                            <a href="articles/ddogreen-power-management.html" data-lang-href="articles.recent.0.link" data-lang-key="articles.recent.0.title">How DDOGreen Decides When to Save Power</a>
+                        </h2>
+                        <p class="article-card__excerpt" data-lang-key="articles.recent.0.excerpt">
+                            Inside the dual-threshold hysteresis that keeps a power daemon from flapping between modes — and why it refuses to ship default values.
+                        </p>
+                        <a href="articles/ddogreen-power-management.html" class="article-card__cta" data-lang-href="articles.recent.0.link" data-lang-key="articles.readMore">Read more →</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__category" data-lang-key="articles.recent.1.category">EV Charging</span>
+                            <span class="article-card__date" data-lang-key="articles.recent.1.date">August 17, 2026</span>
+                        </div>
+                        <h2 class="article-card__title">
+                            <a href="articles/ocpp-16-integration-lessons.html" data-lang-href="articles.recent.1.link" data-lang-key="articles.recent.1.title">OCPP 1.6 in Production: Lessons from a Charge Point Simulator</a>
+                        </h2>
+                        <p class="article-card__excerpt" data-lang-key="articles.recent.1.excerpt">
+                            Connector mapping, charging-profile priority, offline authorisation, and the reconnect loop that quietly took down a fleet.
+                        </p>
+                        <a href="articles/ocpp-16-integration-lessons.html" class="article-card__cta" data-lang-href="articles.recent.1.link" data-lang-key="articles.readMore">Read more →</a>
+                    </article>
+
+                </div>
+
+                <div class="articles__footer">
+                    <a href="index.html" class="btn btn--secondary" data-lang-key="articles.page.backToHome">← Back to home</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/component-loader.js"></script>
+    <script src="js/language-manager.js"></script>
+    <script src="js/structured-data-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

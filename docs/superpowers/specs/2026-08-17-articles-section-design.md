@@ -160,9 +160,9 @@ implementasyonu. Yazılabilir doğrulanmış konular:
 - Yeniden bağlanma backoff sınıflandırması (`src/reconnect_backoff.py`) — aşağıdaki
   açık soruya bakınız.
 
-## Açık sorular — içerik yazımını bloklar
+## Kararlar — içerik doğruluğu
 
-Aşağıdaki üç madde çözülmeden ilgili bölümler yazılmayacak.
+Aşağıdaki üç madde malzeme toplanırken çıktı ve sahibi tarafından karara bağlandı.
 
 ### 1. Sitedeki "%20–30 pil tasarrufu" iddiasının dayanağı yok
 
@@ -172,24 +172,49 @@ README'deki 30 % ve 70 %, **CPU yük eşikleri** — pil tasarrufu değil. Site 
 kullanıyor.
 
 Bir makalede "%20–30 tasarrufu şöyle sağlıyoruz" yazmak, ölçüm göstermeden bu iddiayı
-büyütmek olur — tam olarak reddettiğimiz içerik türü. Seçenekler: (a) ölçüm verisi
-varsa paylaşılsın ve makalede metodolojiyle birlikte verilsin, (b) makale sayısal
-iddia kullanmadan mekanizmayı anlatsın.
+büyütmek olur — tam olarak reddettiğimiz içerik türü.
+
+**Karar: makale sayısal tasarruf iddiası kullanmıyor.** Mekanizmayı anlatıyor —
+histerezis, eşik matematiği, TLP entegrasyonu. Sitedeki ve `products.ddogreen`
+çevirilerindeki "%20–30" iddiası bu çalışmanın kapsamı dışında bırakıldı; ürün
+pazarlama metnini değiştirmek ayrı bir karardır ve sahibine bırakıldı.
 
 ### 2. SimIt production olay kayıtları hassas
 
-`src/reconnect_backoff.py` docstring'i iki gerçek olayı tarih ve sayılarla belgeliyor
-(2026-08-10 ve 2026-08-16). Mühendislik anlatısı olarak birinci sınıf malzeme, ancak
-üçüncü taraf bir CSMS'in davranışını, kendi altyapı ölçeğimizi ve yanlış yapılandırılmış
-istasyonları ifşa ediyor. Yayınlanıp yayınlanmayacağı ve hangi ayrıntıların
-anonimleştirileceği sahibinin kararı.
+`src/reconnect_backoff.py` docstring'i iki gerçek olayı tarih ve sayılarla belgeliyor.
+Mühendislik anlatısı olarak birinci sınıf malzeme, ancak üçüncü taraf bir CSMS'in
+davranışını, kendi altyapı ölçeğimizi ve yanlış yapılandırılmış istasyonları ifşa ediyor.
+
+**Karar: ders anlatılıyor, tanımlayıcı ayrıntılar çıkarılıyor.** Makalede tarih yok,
+istasyon/replika sayısı yok, RSS rakamı yok, üçüncü tarafa işaret eden hiçbir ayrıntı
+yok. Anlatı "hız sınırlaması uygulayan bir CSMS", "filo", "bellek sınırlarını aştıkları
+için sonlandırılan süreçler" düzeyinde tutuluyor. Mühendislik değeri korunuyor.
 
 ### 3. Sitedeki iki bilgi güncel değil
 
 - **Test sayısı**: site ve CLAUDE.md 122 diyor, repoda 153 test var.
 - **Platform desteği**: site "Linux/Windows" diyor, ancak `src/platform/macos/`
-  altında dört dosya var ve `CMakeLists.txt:97` bunları derliyor. macOS desteğinin
-  durumu (tam / deneysel / yayınlanmamış) netleşmeli.
+  altında dört dosya var ve `CMakeLists.txt:97` bunları derliyor.
+
+**Karar: makale sayı vermiyor.** Test sayısı her commit'te değişebileceği için niteliksel
+ifade kullanılıyor; makaleyi eskitmiyor. macOS'a hiç değinilmiyor — desteğin durumu
+(tam / deneysel / yayınlanmamış) belirsiz olduğu için iddia edilmiyor. Sitedeki 122
+sayısını ve platform listesini düzeltmek bu çalışmanın kapsamı dışında bırakıldı.
+
+## Uygulama sırasında bulunan üçüncü hata
+
+`js/structured-data-manager.js` kendini yalnızca `window.languageManager` varsa
+kuruyordu ve ardından `languageManager.switchLanguage` fonksiyonunu sarmalıyordu.
+`js/main.js` LanguageManager'ı `new LanguageManager()` ile yaratıyor ama `window`'a
+atamıyor ve sınıfta `switchLanguage` diye bir metot hiç yok. Sonuç: **JSON-LD sistemi
+site genelinde hiç çalışmıyordu** — ana sayfa dahil, bu çalışmadan önce de. Değişiklik
+öncesi HEAD'de doğrulandı.
+
+Kapsama alındı, çünkü liste sayfasının `Blog` şeması bu bileşene bağlı. Düzeltme:
+LanguageManager kendini `window.languageManager` olarak yazıyor ve çeviriler
+yüklendiğinde `languageApplied` olayını yayıyor; structured-data-manager sabit bir
+`setTimeout(100)` tahmini yerine bu olayı bekliyor. Dil verisi ağdan geldiği için hiçbir
+sabit gecikme aynı anda hem doğru hem hızlı olamaz.
 
 ## Doğrulama
 
