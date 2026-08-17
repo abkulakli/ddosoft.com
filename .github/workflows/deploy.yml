@@ -7,7 +7,26 @@ on:
     branches: [ main ]
 
 jobs:
+  # Runs on pull requests and on main. Deployment is a separate job because the
+  # github-pages environment only accepts deployments from the default branch —
+  # running the deploy job on a pull request fails at the environment gate
+  # before any step executes, which is what used to make every PR red.
+  validate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate site
+        run: python3 scripts/validate-site.py
+
   deploy:
+    needs: validate
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
 
     permissions:
