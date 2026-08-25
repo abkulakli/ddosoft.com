@@ -39,7 +39,7 @@
       },
       "articles": {
         "title": "Mühendislik Notları - DDOSoft",
-        "description": "DDOGreen ve SimIt'i geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
+        "description": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
         "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım"
       },
       "about": {
@@ -283,7 +283,7 @@
       }
     },
     "simit": {
-      "name": "SimIt",
+      "name": "SimItNow",
       "tagline": "Fiziksel Donanım Olmadan EV Şarj Altyapısını Test Edin",
       "version": "Beta",
       "card": {
@@ -342,16 +342,23 @@
         "category": "EV Şarj",
         "date": "17 Ağustos 2026",
         "link": "articles/tr/ocpp-16-entegrasyon-dersleri.html"
+      },
+      {
+        "title": "SimIt Artık SimItNow",
+        "excerpt": "OCPP şarj istasyonu simülatörümüzün neden yeni bir adı ve www.simitnow.com adresinde yeni bir evi var — ve neyin değişmediği.",
+        "category": "Ürün Güncellemesi",
+        "date": "25 Ağustos 2026",
+        "link": "articles/tr/simit-simitnow-oldu.html"
       }
     ],
     "page": {
       "meta": {
         "title": "Mühendislik Notları - DDOSoft",
-        "description": "DDOGreen ve SimIt'i geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
+        "description": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
         "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım"
       },
       "title": "Mühendislik Notları",
-      "subtitle": "DDOGreen ve SimIt'i geliştirirken tuttuğumuz saha notları — tasarım kararları, ödünler ve en çok öğreten hatalar.",
+      "subtitle": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz saha notları — tasarım kararları, ödünler ve en çok öğreten hatalar.",
       "backToHome": "← Ana sayfaya dön"
     }
   },

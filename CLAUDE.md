@@ -16,7 +16,7 @@ DDOSoft is a static single-page landing website for a sustainable software consu
 
   No battery-savings percentage is claimed anywhere on the site: nothing in the ddogreen repo measures one. Don't reintroduce a figure without a measurement and a stated methodology. Test counts and coverage percentages are likewise kept qualitative, because they drift with every commit and the site cannot be updated per commit.
 - **Tefaster** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [tefaster.ddosoft.com](https://tefaster.ddosoft.com)
-- **SimIt** — [simit.ddosoft.com](https://simit.ddosoft.com)
+- **SimItNow** (formerly SimIt, renamed 2026-08-25 to resolve a trademark conflict) — [www.simitnow.com](https://www.simitnow.com), an independent domain, not a ddosoft.com subdomain. The old `simit.ddosoft.com` still resolves for now but is no longer the canonical link.
 
 ### Services
 Software consulting (OCPP 1.6, EV charging, AWS, embedded), digital transformation (cloud migration, CMMI), custom development (Python/Django, C++20, WebSocket protocols). 15+ years experience.

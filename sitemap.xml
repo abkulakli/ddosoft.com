@@ -83,6 +83,26 @@
     </url>
 
     <url>
+        <loc>https://www.ddosoft.com/articles/simit-is-now-simitnow.html?lang=en</loc>
+        <lastmod>2026-08-25</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en"        href="https://www.ddosoft.com/articles/simit-is-now-simitnow.html?lang=en" />
+        <xhtml:link rel="alternate" hreflang="tr"        href="https://www.ddosoft.com/articles/tr/simit-simitnow-oldu.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/simit-is-now-simitnow.html?lang=en" />
+    </url>
+
+    <url>
+        <loc>https://www.ddosoft.com/articles/tr/simit-simitnow-oldu.html?lang=tr</loc>
+        <lastmod>2026-08-25</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en"        href="https://www.ddosoft.com/articles/simit-is-now-simitnow.html?lang=en" />
+        <xhtml:link rel="alternate" hreflang="tr"        href="https://www.ddosoft.com/articles/tr/simit-simitnow-oldu.html?lang=tr" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ddosoft.com/articles/simit-is-now-simitnow.html?lang=en" />
+    </url>
+
+    <url>
         <loc>https://tefaster.ddosoft.com/</loc>
         <lastmod>2026-02-26</lastmod>
         <changefreq>monthly</changefreq>
@@ -90,8 +110,8 @@
     </url>
 
     <url>
-        <loc>https://simit.ddosoft.com/</loc>
-        <lastmod>2026-02-26</lastmod>
+        <loc>https://www.simitnow.com/</loc>
+        <lastmod>2026-08-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

@@ -31,7 +31,7 @@
       },
       "articles": {
         "title": "Engineering Notes - DDOSoft",
-        "description": "Field notes from building DDOGreen and SimIt: power management internals, OCPP 1.6 integration, and what production taught us.",
+        "description": "Field notes from building DDOGreen and SimItNow: power management internals, OCPP 1.6 integration, and what production taught us.",
         "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software"
       },
       "about": {
@@ -275,7 +275,7 @@
       }
     },
     "simit": {
-      "name": "SimIt",
+      "name": "SimItNow",
       "tagline": "Test EV Charging Infrastructure Without the Hardware",
       "version": "Beta",
       "card": {
@@ -334,16 +334,23 @@
         "category": "EV Charging",
         "date": "August 17, 2026",
         "link": "articles/ocpp-16-integration-lessons.html"
+      },
+      {
+        "title": "SimIt Is Now SimItNow",
+        "excerpt": "Why our OCPP charge point simulator has a new name and a new home at www.simitnow.com, and what stays the same.",
+        "category": "Product Update",
+        "date": "August 25, 2026",
+        "link": "articles/simit-is-now-simitnow.html"
       }
     ],
     "page": {
       "meta": {
         "title": "Engineering Notes - DDOSoft",
-        "description": "Field notes from building DDOGreen and SimIt: power management internals, OCPP 1.6 integration, and what production taught us.",
+        "description": "Field notes from building DDOGreen and SimItNow: power management internals, OCPP 1.6 integration, and what production taught us.",
         "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software"
       },
       "title": "Engineering Notes",
-      "subtitle": "Field notes from building DDOGreen and SimIt — design decisions, trade-offs, and the mistakes that taught us the most.",
+      "subtitle": "Field notes from building DDOGreen and SimItNow — design decisions, trade-offs, and the mistakes that taught us the most.",
       "backToHome": "← Back to home"
     }
   },
