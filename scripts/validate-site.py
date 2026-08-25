@@ -287,6 +287,72 @@ def check_article_body_is_static():
     return problems
 
 
+# A percentage in either language's convention: English writes "20-30%",
+# Turkish writes "%20-30". Missing the prefix form let a Turkish claim through
+# the first version of this check.
+PERCENTAGE = r'(?:%\s*\d+(?:\s*[-–]\s*\d+)?|\d+(?:\s*[-–]\s*\d+)?\s*%)'
+
+# "power saving" and "güç tasarrufu" are the names of a mode, not a claim about
+# savings, and both appear next to the threshold percentages the articles
+# legitimately discuss. Exclude them so only a real benefit claim matches.
+BATTERY_WORDS = (
+    r'(?:batter\w*|pil(?:\s+ömr\w*)?'
+    r'|(?<!power )(?<!power-)(?<!güç )(?:saving\w*|tasarruf\w*))'
+)
+COVERAGE_WORDS = r'(?:coverage|kapsam\w*)'
+
+
+def _near(first, second, distance=70):
+    """Match either order, within one sentence-ish span."""
+    return f'(?:{first}[^.<>]{{0,{distance}}}?{second}|{second}[^.<>]{{0,{distance}}}?{first})'
+
+
+# Claims that were removed because nothing measures them. Each pattern stays
+# narrow on purpose: the legitimate figures on this site must keep passing —
+# the 0.70/0.30 hysteresis values the package actually installs, Tefaster's 83%
+# query reduction (documented as 6+ queries down to 1), the 2,316 TEFAS funds,
+# and the example thresholds discussed in the articles.
+FORBIDDEN_CLAIMS = (
+    (
+        re.compile(_near(BATTERY_WORDS, PERCENTAGE), re.I),
+        'battery-savings percentage — no measurement in the ddogreen repo backs one',
+    ),
+    (
+        # Allows intervening adjectives: "170 kapsamlı otomatik test".
+        re.compile(r'\d[\d,.]*\s+(?:\w+\s+){0,3}tests?\b', re.I),
+        'hard-coded test count — drifts with every commit; keep it qualitative',
+    ),
+    (
+        re.compile(_near(COVERAGE_WORDS, PERCENTAGE, 20), re.I),
+        'coverage percentage — drifts with every commit; keep it qualitative',
+    ),
+)
+
+
+def check_no_unsubstantiated_claims():
+    """Fail if a removed quantitative claim reappears in visitor-facing text.
+
+    These were audited against the product repositories and removed because no
+    measurement supported them. The check exists so they cannot drift back in
+    through a copy edit — the site is the one place they would look plausible.
+    """
+    problems = []
+    targets = html_files() + [f'lang/{language}.json' for language in LANGUAGES] + [
+        'js/main.js', 'js/structured-data-manager.js'
+    ]
+    for path in targets:
+        if not os.path.exists(path):
+            continue
+        for line_number, line in enumerate(read(path).splitlines(), 1):
+            for pattern, reason in FORBIDDEN_CLAIMS:
+                found = pattern.search(line)
+                if found:
+                    problems.append(
+                        f'{path}:{line_number}: "{found.group().strip()}" — {reason}'
+                    )
+    return problems
+
+
 def main():
     if not os.path.exists('index.html'):
         print('error: run this from the repository root', file=sys.stderr)
@@ -302,6 +368,7 @@ def main():
         ('relative links and assets resolve', check_relative_links),
         ('article SEO metadata complete and reciprocal', check_article_seo),
         ('article prose is in the HTML', check_article_body_is_static),
+        ('no unsubstantiated quantitative claims', check_no_unsubstantiated_claims),
         ('sitemap covers every article', check_sitemap),
     ]
 

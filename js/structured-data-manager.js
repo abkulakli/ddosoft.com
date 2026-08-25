@@ -104,7 +104,7 @@ class StructuredDataManager {
             "features": [
                 "Automatic power mode switching",
                 "CPU load monitoring",
-                "20-30% battery life extension",
+                "Hysteresis that prevents power mode flapping",
                 "Zero configuration required"
             ],
             "requirements": "Linux or Windows operating system"

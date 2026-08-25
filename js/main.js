@@ -590,7 +590,7 @@ class ProductModal {
                 tagline: 'Smart Power Management That Just Works',
                 version: 'v0.3.1',
                 intro: 'DDOGreen is an intelligent, production-ready power management tool that automatically switches your laptop between high-performance and power-saving modes based on actual system usage.',
-                highlight: '20-30% longer battery life with zero performance compromise',
+                highlight: 'Automatic power mode switching driven by real CPU load, with hysteresis that prevents mode flapping',
                 features: [
                     {
                         title: 'Automatic Power Management',
@@ -602,7 +602,7 @@ class ProductModal {
                     },
                     {
                         title: 'Zero Configuration',
-                        description: 'Works perfectly out of the box with hardcoded sensible defaults'
+                        description: 'Ships with a working default configuration — install it and it runs'
                     },
                     {
                         title: 'Enterprise Ready',
@@ -610,7 +610,7 @@ class ProductModal {
                     },
                     {
                         title: 'Production Quality',
-                        description: '122 comprehensive unit tests and professional CI/CD validation'
+                        description: 'Comprehensive unit test suite and CI/CD validation on every change'
                     }
                 ],
                 platforms: {
