@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How DDOGreen uses dual-threshold hysteresis over per-core load average to switch power modes without flapping — and why it ships no default configuration at all.">
+    <meta name="description" content="How DDOGreen uses dual-threshold hysteresis over per-core load average to switch power modes without flapping, and why it ships no default configuration at all.">
     <meta name="keywords" content="power management, hysteresis, load average, TLP, C++20 daemon, Linux power saving, Windows power plans, DDOGreen">
     <meta name="author" content="DDOSoft">
     <meta name="robots" content="index, follow">
@@ -39,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "How DDOGreen Decides When to Save Power",
-      "description": "How DDOGreen uses dual-threshold hysteresis over per-core load average to switch power modes without flapping — and why it ships no default configuration at all.",
+      "description": "How DDOGreen uses dual-threshold hysteresis over per-core load average to switch power modes without flapping, and why it ships no default configuration at all.",
       "url": "https://www.ddosoft.com/articles/ddogreen-power-management.html?lang=en",
       "datePublished": "2026-08-17",
       "dateModified": "2026-08-17",
@@ -87,18 +87,14 @@
                     <p>
                         DDOGreen is a small daemon that watches how busy a machine is and moves the operating
                         system between its high-performance and power-saving profiles. On Linux it drives
-                        <code>tlp</code>; on Windows it switches power plans. The interesting part is not the
-                        switching — that is two shell commands. The interesting part is deciding
-                        <em>when</em> to switch, and being disciplined about not switching.
+                        <code>tlp</code>; on Windows it switches power plans. Switching is the easy part, two shell commands. The hard part is deciding <em>when</em> to switch, and being disciplined about not switching.
                     </p>
 
                     <h2>The flapping problem</h2>
 
                     <p>
                         Take the obvious design: one threshold. If load is above 50%, go to performance mode;
-                        below 50%, go to power saving. Now picture a machine sitting at roughly half load —
-                        a browser with a few tabs, a language server indexing in the background, nothing
-                        dramatic. Load drifts across the line every few seconds.
+                        below 50%, go to power saving. Now picture a machine sitting at roughly half load: a browser with a few tabs, a language server indexing in the background, nothing dramatic. Load drifts across the line every few seconds.
                     </p>
 
                     <p>
@@ -106,8 +102,7 @@
                         whole set of kernel and firmware parameters: CPU governor, energy-performance
                         preference, SATA link power management, runtime PM on PCI devices, wireless power
                         saving. Doing that once is cheap. Doing it every few seconds burns more energy than
-                        the power saving recovers, and the user notices it as stutter — the machine feels like
-                        it is thinking about something other than their work.
+                        the power saving recovers, and the user notices it as stutter. The machine feels like it is thinking about something other than their work.
                     </p>
 
                     <p>
@@ -140,8 +135,7 @@
                     <p>
                         The consequence worth stating plainly: DDOGreen does not always run in the mode its
                         current load would suggest. Two machines at identical 50% load can be in different
-                        modes, because they arrived there from opposite directions. That is not a bug to be
-                        fixed later — it is the property that makes the daemon quiet.
+                        modes, because they arrived there from opposite directions. That is not a bug to be fixed later. It is the property that keeps the daemon from thrashing.
                     </p>
 
                     <h2>Why per-core load average, not raw load</h2>
@@ -184,17 +178,15 @@
                     </p>
 
                     <p>
-                        This is not a burden on whoever installs it — the packages ship a working
-                        configuration file. The point is narrower: the daemon never invents a value that
+                        This is not a burden on whoever installs it, because the packages ship a
+                        working configuration file. The point is narrower: the daemon never invents a value that
                         nobody wrote down.
                     </p>
 
                     <p>
                         This is a deliberate and slightly unfashionable choice. Silent defaults in a program
                         that manages power are a bad trade: a typo in a key name would leave the daemon
-                        running happily on values the operator never chose, and the symptom — a laptop that
-                        is subtly slower or subtly hungrier than expected — is almost impossible to trace
-                        back to its cause. Failing loudly at startup turns a mystery into a one-line log
+                        running happily on values the operator never chose, and the symptom, a laptop that is subtly slower or subtly hungrier than expected, is almost impossible to trace back to its cause. Failing loudly at startup turns a mystery into a one-line log
                         message.
                     </p>
 
@@ -209,8 +201,7 @@
 
                     <p>
                         That last check is the one that pays for itself. Inverted thresholds are individually
-                        valid numbers, so no amount of per-field validation catches them — and they destroy
-                        the dead band, producing precisely the flapping the design exists to prevent. A
+                        valid numbers, so no amount of per-field validation catches them, and they destroy the dead band, producing precisely the flapping the design exists to prevent. A
                         constraint that only makes sense between two fields has to be checked between them.
                     </p>
 
@@ -233,8 +224,9 @@
                         There is a general lesson in this that applies well beyond power management. When you
                         shell out to an external tool, its error reporting is part of its interface, and you
                         have to verify that interface empirically rather than assume it follows convention.
-                        A daemon that believes a failed command succeeded will report a mode it never
-                        actually entered — and that is worse than crashing, because the logs will look fine.
+                        A daemon that believes a failed command succeeded will report a mode it
+                        never actually entered, which is worse than crashing because the logs will
+                        look fine.
                     </p>
 
                     <h2>Designing so the decision can be tested</h2>
@@ -247,23 +239,22 @@
                     </p>
 
                     <p>
-                        DDOGreen puts every platform interaction behind a narrow interface —
-                        <code>ISystemMonitor</code> for reading load, <code>IPowerManager</code> for applying
-                        modes, plus interfaces for signal handling and platform utilities — with a factory
-                        that selects the real implementation at build time. Tests substitute mocks.
+                        DDOGreen puts every platform interaction behind a narrow interface:
+                        <code>ISystemMonitor</code> for reading load, <code>IPowerManager</code> for
+                        applying modes, plus interfaces for signal handling and platform utilities.
+                        A factory selects the real implementation at build time, and tests
+                        substitute mocks.
                     </p>
 
                     <p>
                         With that seam in place, the threshold logic becomes an ordinary pure-ish unit under
                         test: feed it a load sequence, assert which mode transitions it requests. The
-                        scenarios that matter most are exactly the ones that are impractical to reproduce on
-                        real hardware — load oscillating inside the dead band, load crossing a boundary
-                        exactly once, inverted configuration being rejected before the daemon starts.
+                        scenarios that matter most are exactly the ones that are impractical to reproduce on real hardware: load oscillating inside the dead band, load crossing a boundary exactly once, inverted configuration being rejected before the daemon starts.
                     </p>
 
                     <p>
-                        The abstraction was not introduced for architectural tidiness. It was introduced
-                        because the interesting logic is unreachable without it.
+                        Architectural tidiness was not the reason. The seam is there because the
+                        interesting logic is unreachable without it.
                     </p>
 
                     <div class="article__takeaway">
@@ -272,7 +263,8 @@
                             <li>Any control loop with one threshold will oscillate. Two thresholds and a dead band cost almost nothing and remove the entire failure class.</li>
                             <li>Normalise measurements before they meet configuration, so a config file means the same thing on every machine.</li>
                             <li>In software that changes system state, refusing to start beats starting on guessed values.</li>
-                            <li>Constraints that span two fields must be checked between the fields — per-field validation cannot see them.</li>
+                            <li>Constraints that span two fields must be checked between the fields,
+                            because per-field validation cannot see them.</li>
                             <li>Verify how external tools actually report failure. Convention is not a contract.</li>
                             <li>If the logic you care about cannot be reached without hardware, the missing piece is a seam, not a test.</li>
                         </ul>

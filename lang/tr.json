@@ -4,13 +4,13 @@
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
       "mission": {
         "title": "Misyonumuz",
-        "text": "DDOSoft olarak, güçlü yazılımların gezegenimiz pahasına olmaması gerektiğine inanıyoruz. Kuruluşların teknoloji altyapılarını dönüştürürken enerji tüketimini ve çevresel etkiyi önemli ölçüde azaltmalarına yardımcı olmak için uzman danışmanlık ve geliştirme hizmetleri sağlıyoruz."
+        "text": "Güçlü yazılım gezegenin sırtından çıkmamalı. Teknoloji altyapısını hem modernize etmek hem de daha az enerji harcar hale getirmek isteyen kuruluşlara danışmanlık veriyoruz ve bu altyapıyı kuruyoruz."
       },
       "vision": {
         "title": "Yaklaşımımız",
-        "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında kanıtlanmış 15+ yıllık deneyimimizle, eski sistem modernizasyonundan son teknoloji sürdürülebilir yazılım geliştirmeye kadar kapsamlı çözümler sunuyoruz. Uzmanlığımız gömülü sistemlerden bulut platformlarına kadar tüm teknoloji yığınını kapsar."
+        "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında 15+ yıllık deneyimimiz var. İşin kapsamı eski sistemleri modernize etmekten sıfırdan yeni sistem kurmaya kadar uzanıyor. EV şarjı için OCPP protokol implementasyonu, AWS altyapı optimizasyonu, gömülü sistemler ve sistem entegrasyonu bu kapsamın içinde."
       },
-      "description": "DDOSoft yenilikçi, sürdürülebilir yazılım çözümleri yaratır. Dizüstü bilgisayarınızın güç modunu gerçek sistem yüküne göre otomatik değiştiren akıllı güç yönetimi aracımız DDOGreen'i keşfedin.",
+      "description": "DDOSoft sürdürülebilir yazılım geliştirir. Güç yönetimi aracımız DDOGreen, dizüstü bilgisayarınızın güç modunu gerçek sistem yüküne göre kendisi değiştirir.",
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -18,7 +18,7 @@
     },
     "openGraph": {
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-      "description": "Akıllı yazılım çözümleri ile yeşil teknolojinin geleceğine öncülük ediyoruz",
+      "description": "Daha az enerji harcayan yazılımlar için danışmanlık ve araçlar",
       "type": "website",
       "url": "https://www.ddosoft.com/tr/",
       "image": "https://www.ddosoft.com/images/og-image-tr.jpg",
@@ -28,13 +28,13 @@
       "card": "summary_large_image",
       "site": "@ddosoft",
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-      "description": "Akıllı yazılım çözümleri ile yeşil teknolojinin geleceğine öncülük ediyoruz",
+      "description": "Daha az enerji harcayan yazılımlar için danışmanlık ve araçlar",
       "image": "https://www.ddosoft.com/images/twitter-image-tr.jpg"
     },
     "pages": {
       "home": {
         "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-        "description": "Enerji tüketimini azaltırken olağanüstü performans sunan akıllı, çevreye duyarlı yazılımlar geliştiriyoruz.",
+        "description": "İhtiyacınız olan performanstan ödün vermeden daha az enerji harcayan yazılımlar geliştiriyoruz.",
         "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, enerji optimizasyonu"
       },
       "articles": {
@@ -44,12 +44,12 @@
       },
       "about": {
         "title": "Hakkımızda DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-        "description": "DDOSoft'un çevresel etkiyi azaltan sürdürülebilir yazılım çözümleri yaratma misyonu hakkında bilgi edinin.",
+        "description": "DDOSoft'un çevresel etkiyi azaltan yazılımlar üzerine çalışması.",
         "keywords": "ddosoft hakkında, sürdürülebilir yazılım şirketi, yeşil teknoloji misyonu"
       },
       "contact": {
         "title": "İletişim DDOSoft - Bize Ulaşın",
-        "description": "Sürdürülebilir yazılım çözümleri ve yeşil teknoloji danışmanlığı için DDOSoft ile iletişime geçin.",
+        "description": "Sürdürülebilir yazılım ve yeşil teknoloji danışmanlığı için DDOSoft'a ulaşın.",
         "keywords": "ddosoft iletişim, yeşil teknoloji danışmanlığı, sürdürülebilir yazılım desteği"
       }
     }
@@ -67,20 +67,20 @@
   "hero": {
     "eyebrow": "Sürdürülebilir Yazılım Danışmanlığı",
     "title": "Sürdürülebilir<br><em>Yazılım</em><br>Çözümleri",
-    "subtitle": "Uzman yazılım danışmanlığı, dijital dönüşüm ve sürdürülebilir geliştirme hizmetleri. Kuruluşların teknoloji altyapılarını modernize ederken enerji tüketimini ve çevresel etkiyi azaltmalarına yardımcı oluyoruz.",
+    "subtitle": "Yazılım danışmanlığı, dijital dönüşüm ve sürdürülebilir geliştirme. Teknoloji altyapınızı modernize ederken enerji tüketimini de aynı proje içinde düşürüyoruz.",
     "cta": "Ürünleri Görüntüle",
     "scrollHint": "Daha Fazla Bilgi"
   },
   "about": {
     "title": "DDOSoft Hakkında",
-    "subtitle": "Çevresel etki ve performansa odaklanan sürdürülebilir yazılım geliştirmede öncülük",
+    "subtitle": "Enerji tüketimini performans kadar ciddiye alan yazılım geliştirme",
     "mission": {
       "title": "Misyonumuz",
-      "text": "DDOSoft'ta, güçlü yazılımın gezegenimizin aleyhine olmaması gerektiğine inanıyoruz. Sistem performansını optimize ederken enerji tüketimini önemli ölçüde azaltan akıllı çözümler geliştiriyoruz ve işletmelerin ile bireylerin çevresel ayak izlerini minimize etmelerine yardımcı oluyoruz."
+      "text": "Güçlü yazılım gezegenin sırtından çıkmamalı. Teknoloji altyapısını hem modernize etmek hem de daha az enerji harcar hale getirmek isteyen kuruluşlara danışmanlık veriyoruz ve bu altyapıyı kuruyoruz."
     },
     "vision": {
       "title": "Yaklaşımımız",
-      "text": "Gelişmiş algoritmalar, çapraz platform mühendisliği ve titiz testlerle, Linux ve Windows ortamlarında sorunsuz çalışan üretime hazır yazılımlar yaratıyoruz. Çözümlerimiz sıfır yapılandırma gerektirirken ölçülebilir enerji tasarrufu sağlar."
+      "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında 15+ yıllık deneyimimiz var. İşin kapsamı eski sistemleri modernize etmekten sıfırdan yeni sistem kurmaya kadar uzanıyor. EV şarjı için OCPP protokol implementasyonu, AWS altyapı optimizasyonu, gömülü sistemler ve sistem entegrasyonu bu kapsamın içinde."
     },
     "founders": {
       "title": "Kurucumuzla Tanışın",
@@ -94,10 +94,10 @@
   },
   "services": {
     "title": "Hizmetlerimiz",
-    "subtitle": "Teknoloji altyapınızı dönüştürmek için uzman danışmanlık ve geliştirme hizmetleri",
+    "subtitle": "Teknoloji altyapınızı modernize etmek için danışmanlık ve geliştirme",
     "consulting": {
       "title": "Yazılım Danışmanlığı",
-      "description": "Yazılım mimarisi, teknoloji seçimi ve en iyi uygulamalar konusunda 15+ yıllık uzmanlık. OCPP 1.6 protokol implementasyonu, EV şarj sistemleri, AWS bulut platformları ve kurumsal sistem entegrasyonunda uzmanlaşmış.",
+      "description": "Yazılım mimarisi, teknoloji seçimi ve gözden geçirme işinde 15+ yıl. OCPP 1.6, EV şarj sistemleri, AWS ve sistem entegrasyonunda uzmanlaşıyoruz.",
       "features": [
         "Sistem mimarisi tasarımı ve optimizasyonu",
         "OCPP protokol ve EV şarj uzmanlığı",
@@ -106,7 +106,7 @@
     },
     "transformation": {
       "title": "Dijital Dönüşüm",
-      "description": "Kurumsal sistemleri AWS bulut göçü, süreç otomasyonu ve sürdürülebilir teknoloji çözümleri için CMMI uyumlu geliştirme pratikleri ile modernize etmede kanıtlanmış başarı.",
+      "description": "Kurumsal sistemleri modernize ediyoruz: AWS bulut göçü, süreç otomasyonu ve CMMI uyumlu geliştirme pratikleri.",
       "features": [
         "AWS bulut göçü ve optimizasyonu",
         "Eski sistem modernizasyonu ve entegrasyonu",
@@ -115,7 +115,7 @@
     },
     "development": {
       "title": "Özel Geliştirme",
-      "description": "Python, modern C++20 ve bulut-native teknolojileri kullanarak üretime hazır backend sistemleri, RESTful API'ler ve çapraz platform çözümleri. Protokol geliştirme ve sistem entegrasyonunda uzmanlaşmış.",
+      "description": "Python ve C++20 ile backend sistemleri, RESTful API'ler ve çapraz platform yazılımları. Zamanımızın çoğu protokol geliştirme ve sistem entegrasyonunda geçiyor.",
       "features": [
         "Backend ve RESTful API geliştirme (Python, Django)",
         "Çapraz platform çözümleri (C++20, Linux/Windows)",
@@ -128,39 +128,39 @@
   },
   "products": {
     "title": "Ürünlerimiz",
-    "subtitle": "Teknolojiyi daha sürdürülebilir ve verimli hale getiren yenilikçi çözümler",
+    "subtitle": "Kendimiz geliştirip kendimiz bakımını yaptığımız yazılımlar",
     "ddogreen": {
       "name": "DDOGreen",
-      "tagline": "Akıllı Güç Yönetimi, Basitçe Çalışır",
+      "tagline": "Arka planda çalışan güç yönetimi",
       "version": "Son Sürüm: v0.3.1",
-      "intro": "DDOGreen, dizüstü bilgisayarınızı gerçek sistem kullanımına dayalı olarak otomatik olarak yüksek performans ve güç tasarrufu modları arasında geçiren akıllı, üretime hazır bir güç yönetimi aracıdır.",
-      "highlight": "Gerçek CPU yüküne göre otomatik güç modu geçişi, mod titremesini önleyen histerezisle",
+      "intro": "DDOGreen, dizüstü bilgisayarınızı ne kadar meşgul olduğuna bakarak yüksek performans ve güç tasarrufu modları arasında geçirir.",
+      "highlight": "Gerçek CPU yüküne göre güç modu geçişi, modlar arasında gidip gelmeyi önleyen histerezisle",
       "card": {
         "category": "Güç Yönetimi",
-        "excerpt": "Makinenizin ne kadar meşgul olduğunu izler ve güç modlarını otomatik değiştirir — yükleyin, gerisini arka planda sessizce halleder. Hiçbir ayar gerekmez."
+        "excerpt": "Makinenizin ne kadar meşgul olduğunu izler ve güç modlarını kendisi değiştirir. Kurun, arka planda çalışır. Hiçbir ayar gerekmez."
       },
       "features": {
         "title": "Temel Özellikler",
         "items": [
           {
-            "title": "Otomatik Güç Yönetimi:",
-            "description": "CPU yük izlemeye dayalı akıllı geçiş"
+            "title": "Otomatik güç yönetimi:",
+            "description": "CPU yüküne göre mod değiştirir"
           },
           {
-            "title": "Çapraz Platform Desteği:",
-            "description": "Yerel Linux (TLP) ve Windows (Power Plans) entegrasyonu"
+            "title": "Çapraz platform:",
+            "description": "Linux'ta TLP, Windows'ta Power Plans üzerinden"
           },
           {
-            "title": "Sıfır Yapılandırma:",
-            "description": "Çalışan bir varsayılan yapılandırmayla gelir — kurun, çalışır"
+            "title": "Sıfır yapılandırma:",
+            "description": "Çalışan bir yapılandırma dosyasıyla gelir, kurulumdan sonra çalışır"
           },
           {
-            "title": "Kurumsal Hazır:",
-            "description": "Tam systemd ve Windows Service Manager entegrasyonu"
+            "title": "Servis olarak çalışır:",
+            "description": "Linux'ta systemd, Windows'ta Service Manager"
           },
           {
-            "title": "Üretim Kalitesi:",
-            "description": "Kapsamlı birim test paketi ve her değişiklikte CI/CD doğrulaması"
+            "title": "CI'da test edilir:",
+            "description": "Birim test paketi her değişiklikte çalışır"
           }
         ]
       },
@@ -188,56 +188,56 @@
       "architecture": {
         "title": "Teknik Mimari",
         "features": [
-          "Çapraz platform uyumluluğuna sahip modern C++20",
-          "Akıllı histeresis davranışı (%70 yüksek performans, %30 güç tasarrufu)",
-          "Platform optimizasyonları ile gerçek zamanlı CPU yük izleme",
-          "Profesyonel kayıt tutma ve hata yönetimi",
-          "Minimal sistem etkisi ile bellek verimli tasarım"
+          "C++20, hem Linux'ta hem Windows'ta derlenir",
+          "Aralarında ölü bant bırakan iki eşik (%70 performansa, %30 güç tasarrufuna)",
+          "CPU yükü her platformun kendi arayüzünden okunur",
+          "Kayıt tutma ve hata yönetimi",
+          "Küçük bellek ayak izi"
         ]
       },
       "download": {
         "title": "DDOGreen'i İndirin",
-        "subtitle": "Bugün akıllı güç yönetimine başlayın",
+        "subtitle": "Linux ve Windows paketleri",
         "github": "GitHub'da Görüntüle",
         "releases": "Son Sürümü İndirin"
       }
     },
     "tefaster": {
       "name": "Tefaster",
-      "tagline": "Türk Yatırım Fonları için Profesyonel Portföy Yönetimi",
+      "tagline": "Türk yatırım fonları için portföy takibi",
       "version": "Beta",
-      "intro": "Tefaster, günlük TEFAS veri entegrasyonu ile Türk yatırım fonu portföylerini yönetmek için tasarlanmış, üretime hazır bir Django uygulamasıdır. Modern web teknolojileri ve kurumsal düzeyde uygulamalarla inşa edilen Tefaster, yatırımları takip etmek, fon performansını analiz etmek ve bilinçli portföy kararları almak için kapsamlı bir çözüm sunar.",
-      "highlight": "2.316+ Türk yatırım fonunu günlük otomatik güncellemeler ve akıllı analizlerle yönetin",
+      "intro": "Tefaster, Türk yatırım fonu portföylerini yönetmek için yazılmış bir Django uygulamasıdır. TEFAS verisini her gün çeker, elinizdekini takip eder ve her fonun nasıl performans gösterdiğini gösterir.",
+      "highlight": "2.316+ Türk yatırım fonu, TEFAS'tan günlük fiyatlanır",
       "card": {
         "category": "Portföy Yönetimi",
-        "excerpt": "Tüm Türk yatırım fonlarını tek yerden analiz edin ve takip edin. Fiyatlar TEFAS'tan günlük otomatik güncellenir. Ücretsiz başlayın, kredi kartı gerekmez."
+        "excerpt": "Türk yatırım fonlarını tek yerden takip edin ve analiz edin. Fiyatlar TEFAS'tan her gün yenilenir. Ücretsiz başlayın, kredi kartı gerekmez."
       },
       "features": {
         "title": "Temel Özellikler",
         "items": [
           {
-            "title": "Çok Kullanıcılı Portföy Yönetimi:",
-            "description": "Kimlik doğrulama ve yetkilendirme ile birden fazla kullanıcı için güvenli, izole portföy takibi"
+            "title": "Çok kullanıcılı portföyler:",
+            "description": "Her kullanıcının portföyü kimlik doğrulamanın arkasında izole edilir"
           },
           {
-            "title": "Günlük TEFAS Entegrasyonu:",
-            "description": "2.316+ Türk yatırım fonu için güncel fiyatlarla otomatik günlük güncellemeler"
+            "title": "Günlük TEFAS entegrasyonu:",
+            "description": "2.316+ Türk yatırım fonunun fiyatı her gün yenilenir"
           },
           {
-            "title": "İşlem Takibi:",
-            "description": "Otomatik holding hesaplamaları ile kapsamlı alış/satış işlem yönetimi"
+            "title": "İşlem takibi:",
+            "description": "Alış ve satış kayıtları, elde tutulanlar bunlardan hesaplanır"
           },
           {
-            "title": "Fon Etiketleme Sistemi:",
-            "description": "Fonları organize etmek ve filtrelemek için etiket gruplarıyla esnek kategorizasyon"
+            "title": "Fon etiketleme:",
+            "description": "Fonları organize etmek ve filtrelemek için etiket grupları"
           },
           {
-            "title": "Akıllı Fiyat Yedekleme:",
-            "description": "Doğru işlem değerlemesi için otomatik hafta sonu/tatil fiyat işleme"
+            "title": "Hafta sonu ve tatil fiyatları:",
+            "description": "Son işlem gününe düşer, böylece değerleme doğru kalır"
           },
           {
-            "title": "Performans Analitiği:",
-            "description": "Portföy performans takibi için etkileşimli grafikler ve metrikler"
+            "title": "Performans grafikleri:",
+            "description": "Portföyün tamamı için etkileşimli grafikler ve metrikler"
           }
         ]
       },
@@ -265,30 +265,30 @@
         }
       },
       "architecture": {
-        "title": "Teknik Mükemmellik",
+        "title": "Mühendislik pratikleri",
         "features": [
-          "Her değişiklikte CI'da çalışan kapsamlı otomatik test paketi",
-          "Bot koruması ve hız sınırlama ile kurumsal güvenlik",
-          "N+1 sorgu önleme ile veritabanı optimizasyonu (%83 azalma)",
+          "Otomatik test paketi her değişiklikte CI'da çalışır",
+          "Bot koruması ve hız sınırlama",
+          "N+1 sorguları giderildi, veritabanı çağrıları %83 azaldı",
           "Ruff linting ve Black formatlama ile pre-commit hook'ları",
-          "Sağlık kontrolleri ile üretime hazır Docker kurulumu",
-          "Otomatik güncellemeler için Celery ile arka plan görev işleme"
+          "Sağlık kontrolleri olan Docker kurulumu",
+          "Günlük güncelleme işini arka planda Celery yürütür"
         ]
       },
       "download": {
         "title": "Tefaster'ı Deneyin",
-        "subtitle": "Bugün Türk yatırım fonu portföyünüzü yönetmeye başlayın",
+        "subtitle": "Canlı sürümü deneyin ya da kaynak koda bakın",
         "live": "Canlı Demo'yu Deneyin",
         "github": "GitHub'da Görüntüle"
       }
     },
     "simit": {
       "name": "SimItNow",
-      "tagline": "Fiziksel Donanım Olmadan EV Şarj Altyapısını Test Edin",
+      "tagline": "Donanım olmadan EV şarj sistemlerini test edin",
       "version": "Beta",
       "card": {
         "category": "EV Şarj Simülatörü",
-        "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. OCPP 1.6 ve 2.0.1 destekler. Gerçek şarj istasyonlarını bulutta simüle edin ve anında yük testi yapın. Ücretsiz plan mevcut."
+        "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. OCPP 1.6 ve 2.0.1 konuşur, şarj istasyonlarını bulutta simüle eder ve gerçek bir backend'e karşı yük testi yapar. Ücretsiz plan mevcut."
       }
     },
     "card": {
@@ -298,19 +298,19 @@
   },
   "contact": {
     "title": "İletişime Geçin",
-    "subtitle": "Yazılımınızı daha sürdürülebilir hale getirmeye hazır mısınız? Doğrudan bizimle iletişime geçin.",
+    "subtitle": "Bir proje ya da ürünlerimizden biri hakkında sorunuz mu var? Bize yazın.",
     "methods": [
       {
         "icon": "📧",
         "title": "E-posta",
         "link": "info@ddosoft.com",
-        "description": "Proje sorularınız ve ortaklık teklifleriniz için bize yazın"
+        "description": "Proje sorularınız ve ortaklık teklifleriniz"
       },
       {
         "icon": "🔗",
         "title": "LinkedIn",
         "link": "DDOSoft Şirket Sayfası",
-        "description": "Güncellemeler ve sektör görüşleri için bizi takip edin"
+        "description": "Ne geliştirdiğimize dair güncellemeler"
       },
       {
         "icon": "📍",
@@ -319,33 +319,33 @@
         "line2": "1003. Sokak No: 7/3",
         "line3": "Onikişubat/Kahramanmaraş",
         "country": "Türkiye",
-        "description": "Yüz yüze görüşmeler için ofisimizi ziyaret edin"
+        "description": "Yüz yüze görüşmeler için ofisimiz"
       }
     ]
   },
   "articles": {
     "sectionTitle": "Mühendislik Notları",
-    "sectionSubtitle": "Kendi ürünlerimizi geliştirirken öğrendiklerimiz — güç yönetiminin iç işleyişi ve gerçek yük altında OCPP entegrasyonu.",
+    "sectionSubtitle": "Kendi ürünlerimizi geliştirirken öğrendiklerimiz: güç yönetiminin iç işleyişi ve gerçek yük altında OCPP entegrasyonu.",
     "viewAll": "Tüm Makaleler",
     "readMore": "Devamını oku →",
     "recent": [
       {
         "title": "DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor",
-        "excerpt": "Bir güç yönetimi servisini modlar arasında gidip gelmekten koruyan çift eşikli histerezis — ve neden hiç varsayılan değer vermiyor.",
+        "excerpt": "Bir güç yönetimi servisini modlar arasında gidip gelmekten koruyan çift eşikli histerezis ve neden hiç varsayılan değer vermediği.",
         "category": "Güç Yönetimi",
         "date": "17 Ağustos 2026",
         "link": "articles/tr/ddogreen-guc-yonetimi.html"
       },
       {
         "title": "Sahada OCPP 1.6: Şarj İstasyonu Simülatöründen Dersler",
-        "excerpt": "Konnektör eşleme, şarj profili önceliği, çevrimdışı yetkilendirme ve bütün bir filoyu sessizce deviren yeniden bağlanma döngüsü.",
+        "excerpt": "Konnektör eşleme, şarj profili önceliği, çevrimdışı yetkilendirme ve bütün bir filoyu deviren yeniden bağlanma döngüsü.",
         "category": "EV Şarj",
         "date": "17 Ağustos 2026",
         "link": "articles/tr/ocpp-16-entegrasyon-dersleri.html"
       },
       {
         "title": "SimIt Artık SimItNow",
-        "excerpt": "OCPP şarj istasyonu simülatörümüzün neden yeni bir adı ve www.simitnow.com adresinde yeni bir evi var — ve neyin değişmediği.",
+        "excerpt": "OCPP şarj istasyonu simülatörümüzün neden yeni bir adı ve www.simitnow.com adresinde yeni bir evi olduğu, neyin değişmediği.",
         "category": "Ürün Güncellemesi",
         "date": "25 Ağustos 2026",
         "link": "articles/tr/simit-simitnow-oldu.html"
@@ -358,7 +358,7 @@
         "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım"
       },
       "title": "Mühendislik Notları",
-      "subtitle": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz saha notları — tasarım kararları, ödünler ve en çok öğreten hatalar.",
+      "subtitle": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz saha notları: tasarım kararları, ödünler ve en çok öğreten hatalar.",
       "backToHome": "← Ana sayfaya dön"
     }
   },
