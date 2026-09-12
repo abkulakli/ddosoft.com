@@ -78,7 +78,8 @@
                     <p class="article__lead">
                         Bir dizüstü bilgisayarı performans ve güç tasarrufu modları arasında geçirmek tek
                         satırlık bir karar gibi görünür: CPU yüküne bak, modu seç. Neredeyse her güç yönetimi
-                        aracının ilk sürümü tam olarak böyle çalışır — ve çoğunun kaldırılma sebebi de budur.
+                        aracının ilk sürümü tam olarak böyle çalışır ve çoğunun kaldırılma sebebi de
+                        budur.
                     </p>
                 </header>
 
@@ -87,18 +88,14 @@
                     <p>
                         DDOGreen, bir makinenin ne kadar meşgul olduğunu izleyip işletim sistemini yüksek
                         performans ve güç tasarrufu profilleri arasında taşıyan küçük bir servis. Linux'ta
-                        <code>tlp</code>'yi sürüyor, Windows'ta güç planlarını değiştiriyor. İlginç olan kısım
-                        geçiş yapmak değil — o iki komut. İlginç olan kısım <em>ne zaman</em> geçileceğine
-                        karar vermek ve geçmemek konusunda disiplinli olmak.
+                        <code>tlp</code>'yi sürüyor, Windows'ta güç planlarını değiştiriyor. Geçiş yapmak işin kolay tarafı, topu topu iki komut. Asıl mesele <em>ne zaman</em> geçileceğine karar vermek ve geçmemek konusunda disiplinli olmak.
                     </p>
 
                     <h2>Mod titremesi sorunu</h2>
 
                     <p>
                         Akla ilk gelen tasarımı düşünün: tek eşik. Yük %50'nin üzerindeyse performans modu,
-                        altındaysa güç tasarrufu. Şimdi kabaca yarı yükte duran bir makineyi hayal edin —
-                        birkaç sekmeli bir tarayıcı, arka planda dizin oluşturan bir dil sunucusu, olağanüstü
-                        bir şey yok. Yük her birkaç saniyede sınırın bir tarafından diğerine geçer.
+                        altındaysa güç tasarrufu. Şimdi kabaca yarı yükte duran bir makineyi hayal edin: birkaç sekmeli bir tarayıcı, arka planda dizin oluşturan bir dil sunucusu, olağanüstü bir şey yok. Yük her birkaç saniyede sınırın bir tarafından diğerine geçer.
                     </p>
 
                     <p>
@@ -106,22 +103,18 @@
                         firmware düzeyinde bir dizi parametre yeniden uygulanır: CPU yönetici politikası,
                         enerji-performans tercihi, SATA bağlantı güç yönetimi, PCI aygıtlarında çalışma
                         zamanı güç yönetimi, kablosuz güç tasarrufu. Bunu bir kez yapmak ucuzdur. Her birkaç
-                        saniyede bir yapmak, tasarruf edilenden fazla enerji harcar ve kullanıcı bunu takılma
-                        olarak fark eder — makine, kullanıcının işinden başka bir şeyle uğraşıyormuş gibi
-                        hissettirir.
+                        saniyede bir yapmak, tasarruf edilenden fazla enerji harcar ve kullanıcı bunu takılma olarak fark eder. Makine, kullanıcının işinden başka bir şeyle uğraşıyormuş gibi hissettirir.
                     </p>
 
                     <p>
-                        Tek eşik, eşiğin yakınında seyreden her iş yükü için bu davranışı garanti eder. Ve
-                        "eşiğin yakını" istisnai bir durum değil; sıradan masaüstü kullanımı tam olarak böyle
-                        görünür.
+                        Tek eşik, eşiğin yakınında seyreden her iş yükü için bu davranışı garanti eder. "Eşiğin yakını" ise istisnai bir durum değil, sıradan masaüstü kullanımı tam olarak böyle görünür.
                     </p>
 
                     <h2>İki eşik ve bir ölü bant</h2>
 
                     <p>
-                        Çözüm histerezis — bir termostatın hedef sıcaklığın çevresinde sürekli açılıp
-                        kapanmamasını sağlayan aynı fikir. DDOGreen tek eşik yerine iki eşik alıyor:
+                        Çözüm histerezis, yani bir termostatın hedef sıcaklığın çevresinde sürekli
+                        açılıp kapanmamasını sağlayan fikir. DDOGreen tek eşik yerine iki eşik alıyor:
                     </p>
 
                     <ul>
@@ -139,10 +132,9 @@
                     </p>
 
                     <p>
-                        Açıkça söylenmesi gereken sonuç şu: DDOGreen her zaman mevcut yükünün işaret ettiği
-                        modda çalışmaz. Aynı %50 yükteki iki makine farklı modlarda olabilir, çünkü oraya zıt
-                        yönlerden gelmişlerdir. Bu, sonra düzeltilecek bir kusur değil — servisi sessiz kılan
-                        özelliğin kendisi.
+                        Bunun açıkça söylenmesi gereken bir sonucu var. DDOGreen her zaman mevcut
+                        yükünün işaret ettiği modda çalışmaz. Aynı %50 yükteki iki makine farklı modlarda olabilir, çünkü oraya zıt
+                        yönlerden gelmişlerdir. Bu sonradan düzeltilecek bir kusur değil. Servisi sakin tutan özelliğin kendisi.
                     </p>
 
                     <h2>Neden ham yük değil, çekirdek başına yük ortalaması</h2>
@@ -156,23 +148,18 @@
 
                     <p>
                         Bu önemli, çünkü ham yük ortalaması makineler arasında karşılaştırılabilir bir sayı
-                        değil. Dört çekirdekli bir dizüstünde 4.0 yükü her çekirdeğin dolu olduğu anlamına
-                        gelir; on altı çekirdekli bir iş istasyonunda makinenin büyük ölçüde boşta olduğu
-                        anlamına gelir. Ham yüke göre yazılmış bir yapılandırma dosyasının kurulduğu her
-                        makine için yeniden ayarlanması gerekirdi — ki pratikte bu, çoğunda yanlış kalacağı
-                        anlamına gelir.
+                        değil. Dört çekirdekli bir dizüstünde 4.0 yükü her çekirdeğin dolu olduğunu gösterir. On altı çekirdekli bir iş istasyonunda ise aynı sayı makinenin büyük ölçüde boşta olduğunu gösterir. Ham yüke göre yazılmış bir yapılandırma dosyasının kurulduğu her makine için yeniden ayarlanması gerekirdi. Pratikte bu, dosyanın çoğu makinede yanlış kalması demek.
                     </p>
 
                     <p>
                         Normalize etmek kayıtları da okunabilir kılıyor. Servis, mevcut çekirdek sayısı için
-                        hesapladığı mutlak eşiği ve bunu türettiği yüzdeyi birlikte yazıyor; böylece bir
-                        makine beklenmedik davrandığında eşiklerin istediğiniz yere düşüp düşmediğini hemen
+                        hesapladığı mutlak eşiği ve bunu türettiği yüzdeyi birlikte yazıyor. Böylece
+                        bir makine beklenmedik davrandığında eşiklerin istediğiniz yere düşüp düşmediğini hemen
                         görebiliyorsunuz.
                     </p>
 
                     <p>
-                        Bir dakikalık pencerenin kendisi de histerezisin parçası. Daha kısa bir ortalama tek
-                        bir derleme işlemine tepki verirdi; bir dakika boyunca süren yük ise "kullanıcı
+                        Bir dakikalık pencerenin kendisi de histerezisin parçası. Daha kısa bir ortalama tek bir derleme işlemine tepki verirdi. Bir dakika boyunca süren yük ise "kullanıcı
                         gerçekten çalışıyor" için makul bir gösterge.
                     </p>
 
@@ -186,17 +173,13 @@
                     </p>
 
                     <p>
-                        Bu, kuran kişiye yük bindiren bir şey değil — paketler çalışan bir yapılandırma
-                        dosyası kuruyor. Mesele daha dar: servis, kimsenin yazmadığı bir değeri asla
+                        Bu, kuran kişiye yük bindiren bir şey değil, çünkü paketler çalışan bir
+                        yapılandırma dosyası kuruyor. Mesele daha dar: servis, kimsenin yazmadığı bir değeri asla
                         kendiliğinden uydurmuyor.
                     </p>
 
                     <p>
-                        Bu bilinçli ve biraz modaya aykırı bir seçim. Güç yöneten bir programda sessiz
-                        varsayılanlar kötü bir ödünç: bir anahtar adındaki yazım hatası, servisin
-                        operatörün hiç seçmediği değerlerle mutlu mesut çalışmasına yol açar ve belirti —
-                        beklenenden hafifçe yavaş ya da hafifçe daha obur bir dizüstü — sebebine geri
-                        götürülmesi neredeyse imkânsız bir şeydir. Başlangıçta yüksek sesle hata vermek, bir
+                        Bu bilinçli ve biraz modaya aykırı bir seçim. Güç yöneten bir programda sessiz varsayılanlar kötü bir takas. Bir anahtar adındaki yazım hatası, servisin operatörün hiç seçmediği değerlerle mutlu mesut çalışmasına yol açar. Ortaya çıkan belirtiyi, yani beklenenden hafifçe yavaş ya da hafifçe daha obur bir dizüstünü, sebebine geri götürmek neredeyse imkânsızdır. Başlangıçta yüksek sesle hata vermek, bir
                         muammayı tek satırlık bir kayda dönüştürür.
                     </p>
 
@@ -211,8 +194,7 @@
 
                     <p>
                         Kendini asıl amorti eden denetim bu son madde. Ters çevrilmiş eşikler tek tek geçerli
-                        sayılardır, dolayısıyla hiçbir alan bazlı doğrulama onları yakalayamaz — ve ölü bandı
-                        yok ederek tasarımın önlemek için var olduğu titremeyi bizzat üretirler. Yalnızca iki
+                        sayılardır, dolayısıyla hiçbir alan bazlı doğrulama onları yakalayamaz, üstelik ölü bandı yok ederek tasarımın önlemek için var olduğu titremeyi bizzat üretirler. Yalnızca iki
                         alan arasında anlamı olan bir kısıt, o iki alan arasında denetlenmek zorundadır.
                     </p>
 
@@ -226,16 +208,15 @@
                     <p>
                         Bunun güvenilir olmadığı ortaya çıktı: TLP hatayı çıkış durumu üzerinden tutarlı
                         biçimde bildirmiyor. Bu yüzden DDOGreen komutun birleşik çıktısını yakalayıp
-                        inceliyor, yalnızca dönüş değerine güvenmiyor; ayrıca güç yönetebileceğini iddia
-                        etmeden önce <code>tlp</code>'nin sistemde bulunup bulunmadığını kontrol ediyor.
+                        inceliyor, yalnızca dönüş değerine güvenmiyor. Ayrıca güç yönetebileceğini
+                        iddia etmeden önce <code>tlp</code>'nin sistemde bulunup bulunmadığını kontrol ediyor.
                     </p>
 
                     <p>
                         Bunun güç yönetiminin çok ötesine geçen genel bir dersi var. Harici bir araca komut
                         gönderdiğinizde, o aracın hata bildirme biçimi arayüzünün parçasıdır ve bu arayüzü
                         geleneklere uyduğunu varsaymak yerine deneyerek doğrulamanız gerekir. Başarısız bir
-                        komutu başarılı sanan bir servis, hiç girmediği bir modu bildirir — ve bu çökmekten
-                        daha kötüdür, çünkü kayıtlar sorunsuz görünecektir.
+                        komutu başarılı sanan bir servis, hiç girmediği bir modu bildirir. Bu çökmekten daha kötüdür, çünkü kayıtlar sorunsuz görünecektir.
                     </p>
 
                     <h2>Kararın test edilebilmesi için tasarlamak</h2>
@@ -248,10 +229,11 @@
                     </p>
 
                     <p>
-                        DDOGreen her platform etkileşimini dar bir arayüzün arkasına koyuyor — yük okumak için
-                        <code>ISystemMonitor</code>, mod uygulamak için <code>IPowerManager</code>, ayrıca
-                        sinyal işleme ve platform yardımcıları için arayüzler — ve gerçek uygulamayı derleme
-                        zamanında seçen bir factory kullanıyor. Testler bunların yerine mock koyuyor.
+                        DDOGreen her platform etkileşimini dar bir arayüzün arkasına koyuyor: yük
+                        okumak için <code>ISystemMonitor</code>, mod uygulamak için
+                        <code>IPowerManager</code>, ayrıca sinyal işleme ve platform yardımcıları
+                        için arayüzler. Gerçek uygulamayı derleme zamanında bir factory seçiyor,
+                        testler de bunların yerine mock koyuyor.
                     </p>
 
                     <p>
@@ -263,26 +245,28 @@
                     </p>
 
                     <p>
-                        Bu soyutlama mimari düzen aşkına eklenmedi. Önemli olan mantığa onsuz erişilemediği
-                        için eklendi.
+                        Mimari düzen aşkına eklenmiş bir soyutlama değil bu. Önemli olan mantığa
+                        onsuz erişilemediği için orada duruyor.
                     </p>
 
                     <div class="article__takeaway">
                         <h3>Buradan çıkarılacaklar</h3>
                         <ul>
                             <li>Tek eşikli her denetim döngüsü salınır. İki eşik ve bir ölü bant neredeyse bedavadır ve bütün bir hata sınıfını ortadan kaldırır.</li>
-                            <li>Ölçümleri yapılandırmayla buluşmadan önce normalize edin; böylece bir yapılandırma dosyası her makinede aynı şeyi ifade eder.</li>
+                            <li>Ölçümleri yapılandırmayla buluşmadan önce normalize edin. Böylece
+                            bir yapılandırma dosyası her makinede aynı şeyi ifade eder.</li>
                             <li>Sistem durumunu değiştiren yazılımda, tahmin edilmiş değerlerle başlamak yerine başlamamak daha iyidir.</li>
-                            <li>İki alanı birlikte kapsayan kısıtlar alanlar arasında denetlenmelidir; alan bazlı doğrulama onları göremez.</li>
+                            <li>İki alanı birlikte kapsayan kısıtlar alanlar arasında
+                            denetlenmelidir, çünkü alan bazlı doğrulama onları göremez.</li>
                             <li>Harici araçların hatayı gerçekte nasıl bildirdiğini doğrulayın. Gelenek bir sözleşme değildir.</li>
-                            <li>Önemsediğiniz mantığa donanım olmadan erişilemiyorsa, eksik olan şey bir test değil bir dikiş yeridir.</li>
+                            <li>Önemsediğiniz mantığa donanım olmadan erişilemiyorsa, eksik olan şey
+                            bir test değildir. Eksik olan bir dikiş yeridir.</li>
                         </ul>
                     </div>
 
                     <p>
                         DDOGreen açık kaynak ve Linux ile Windows için paketleniyor. Burada anlatılan eşik
-                        mantığı etkinlik izleyicisinde, yapılandırma doğrulaması ise config yükleyicisinde
-                        duruyor; gerçeğini okumak isterseniz:
+                        mantığı etkinlik izleyicisinde, yapılandırma doğrulaması ise config yükleyicisinde duruyor. Gerçeğini okumak isterseniz:
                         <a href="https://github.com/abkulakli/ddogreen" target="_blank" rel="noopener">github.com/abkulakli/ddogreen</a>.
                     </p>
 

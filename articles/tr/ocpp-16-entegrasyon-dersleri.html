@@ -87,10 +87,9 @@
 
                     <p>
                         SimItNow'u geliştiriyoruz: fiziksel şarj istasyonlarının yerine geçerek işletmecilerin
-                        merkezi sistemlerini — CSMS'i — donanım satın almadan test etmesini sağlayan bir
-                        simülatör. OCPP 1.6 ve 2.0.1 konuşuyor ve gerçek arka uçlara karşı aynı anda çok
-                        sayıda istasyon çalıştırıyor. Bu bileşim belirli bir problem sınıfını ortaya çıkarıyor:
-                        "mesaj ayrıştırılıyor mu" değil, "dört yüzüncü istasyonda, üçüncü günde ne oluyor".
+                        merkezi sistemlerini, yani CSMS'i, donanım satın almadan test etmesini
+                        sağlayan bir simülatör. OCPP 1.6 ve 2.0.1 konuşuyor ve gerçek arka uçlara karşı aynı anda çok
+                        sayıda istasyon çalıştırıyor. Bu bileşim belirli bir problem sınıfını ortaya çıkarıyor. Soru artık "mesaj ayrıştırılıyor mu" olmaktan çıkıp "dört yüzüncü istasyonda, üçüncü günde ne oluyor" hâline geliyor.
                     </p>
 
                     <p>
@@ -100,25 +99,21 @@
                     <h2>1.6 ve 2.0.1 konnektörün ne olduğu konusunda anlaşamıyor</h2>
 
                     <p>
-                        OCPP 1.6'da bir şarj istasyonunun düz bir konnektör listesi vardır; tek bir tam sayı
-                        olan <code>connectorId</code> ile adreslenir ve <code>0</code> "istasyonun bütünü"
-                        anlamına gelir. 2.0.1'de model iki katmanlıdır: istasyon EVSE'ler içerir, her EVSE
+                        OCPP 1.6'da bir şarj istasyonunun düz bir konnektör listesi vardır. Bu liste
+                        tek bir tam sayı olan <code>connectorId</code> ile adreslenir ve
+                        <code>0</code> "istasyonun bütünü" anlamına gelir. 2.0.1'de model iki katmanlıdır: istasyon EVSE'ler içerir, her EVSE
                         kendi içinde yerel olarak numaralanmış konnektörler içerir.
                     </p>
 
                     <p>
-                        İki sürümü birlikte destekliyorsanız — ve bu alanda araç geliştiren herkes
-                        desteklemek zorundadır — tek bir dahili modele ve protokol sınırında bir çeviriye
-                        ihtiyacınız var. Biz dahilî model olarak 2.0.1'in şeklini seçtik, çünkü bir hiyerarşiyi
-                        her zaman düz listeye indirebilirsiniz ama düz tam sayılardan hiyerarşiyi güvenilir
-                        biçimde geri kuramazsınız; 1.6 işleyicileri için de her iki yöne açık dönüşümler
-                        yazdık.
+                        İki sürümü birlikte destekliyorsanız, ki bu alanda araç geliştiren herkes
+                        desteklemek zorundadır, tek bir dahili modele ve protokol sınırında bir
+                        çeviriye ihtiyacınız var. Biz dahilî model olarak 2.0.1'in şeklini seçtik, çünkü bir hiyerarşiyi
+                        her zaman düz listeye indirebilirsiniz ama düz tam sayılardan hiyerarşiyi güvenilir biçimde geri kuramazsınız. 1.6 işleyicileri için de her iki yöne açık dönüşümler yazdık.
                     </p>
 
                     <p>
-                        Cazip alternatif, düz modeli koruyup 2.0.1'i özel durum olarak ele almaktır. EVSE
-                        başına birden fazla konnektörü olan bir istasyona rastlayana kadar işe yarar — tek güç
-                        katı üzerinde CCS ve CHAdeMO taşıyan, akım limitini paylaşan bir DC ünite gibi. Düz
+                        Cazip alternatif, düz modeli koruyup 2.0.1'i özel durum olarak ele almaktır. EVSE başına birden fazla konnektörü olan bir istasyona rastlayana kadar işe yarar. Tek güç katı üzerinde CCS ve CHAdeMO taşıyan ve akım limitini paylaşan bir DC ünite böyle bir istasyondur. Düz
                         numaralandırma bunların bir şeyi paylaştığını ifade edemez, dolayısıyla üzerine
                         kurulan her güç paylaştırma kararı sinsice yanlış olur. Bugün konuştuğunuz protokol
                         ihtiyaç duymasa bile zengin modeli seçin.
@@ -127,18 +122,19 @@
                     <h2>Şarj profilleri: limitin kime ait olduğunu bilmek</h2>
 
                     <p>
-                        Akıllı şarj, 1.6'nın uygulamaların en sık yanlış yaptığı kısmı — çünkü "bu konnektörün
-                        akım limiti nedir" sorusunun cevabı hiçbir zaman saklanmış tek bir sayı değildir. Aynı
+                        Akıllı şarj, 1.6'nın uygulamaların en sık yanlış yaptığı kısmı, çünkü "bu
+                        konnektörün akım limiti nedir" sorusunun cevabı hiçbir zaman saklanmış tek
+                        bir sayı değildir. Aynı
                         anda birden fazla profil geçerli olabilir ve spesifikasyon bunların nasıl
                         birleştiğini tanımlar.
                     </p>
 
                     <p>
-                        Profillerin bir amacı vardır — istasyon geneli bir üst sınır, işlemler için bir
-                        varsayılan ya da tek bir işleme bağlı bir limit — ve bir yığın seviyesi. Çözümleme her
+                        Profillerin bir amacı ve bir yığın seviyesi vardır. Amaç, istasyon geneli
+                        bir üst sınır, işlemler için bir varsayılan ya da tek bir işleme bağlı bir
+                        limit olabilir. Çözümleme her
                         amaç içindeki en yüksek yığın seviyesini alır, ardından spesifikasyonun akıllı şarj
-                        bölümündeki amaç önceliğini uygular ve etkin limit en kısıtlayıcı sonuçtur. İşleme
-                        özgü bir profil istasyon üst sınırının yerine geçmez; onunla sınırlanır.
+                        bölümündeki amaç önceliğini uygular ve etkin limit en kısıtlayıcı sonuçtur. İşleme özgü bir profil istasyon üst sınırının yerine geçmez, onunla sınırlanır.
                     </p>
 
                     <p>
@@ -154,21 +150,17 @@
                         </li>
                         <li>
                             <strong>Birim profil başınadır.</strong> Bir profil hızını amper ya da watt olarak
-                            bildirir. İki profili karşılaştırmak önce normalize etmeyi gerektirir; amperi
-                            watta çevirmek ise besleme gerilimi ve faz sayısını gerektirir — bunlar profilin
-                            parçası değil, istasyon yapılandırmasıdır. Birimleri farklı profillerin ham
+                            bildirir. İki profili karşılaştırmak önce normalize etmeyi gerektirir. Amperi watta çevirmek ise besleme gerilimi ve faz sayısını gerektirir, bunlar da profilin parçası değil istasyon yapılandırmasıdır. Birimleri farklı profillerin ham
                             sayılarını karşılaştırırsanız, yüzlerce kat sapmış bir limiti kendinizden emin
                             biçimde uygularsınız.
                         </li>
                     </ul>
 
                     <p>
-                        Profil deposunu kendi doğal biriminde tutuyoruz ve dönüşümü yalnızca karşılaştırma
-                        noktasında yapıyoruz; böylece dönüşüm varsayımları gözden geçirilebilecekleri tek bir
-                        yerde duruyor.
+                        Profil deposunu kendi doğal biriminde tutuyoruz ve dönüşümü yalnızca karşılaştırma noktasında yapıyoruz. Böylece dönüşüm varsayımları gözden geçirilebilecekleri tek bir yerde duruyor.
                     </p>
 
-                    <h2>Çevrimdışı yetkilendirme tek bayrak değil, üç bayrağın etkileşimi</h2>
+                    <h2>Çevrimdışı yetkilendirme üç bayrağın etkileşimidir</h2>
 
                     <p>
                         Yalnızca bağlıyken çalışan bir şarj istasyonu, şarj istasyonu değildir.
@@ -177,9 +169,12 @@
                     </p>
 
                     <ul>
-                        <li><code>LocalAuthListEnabled</code> — istasyon, bildiği kimliklerin yerel önbelleğine bakabilir mi?</li>
-                        <li><code>LocalPreAuthorize</code> — CSMS onayını beklemeden bu yerel listeye dayanarak işlem başlatabilir mi?</li>
-                        <li><code>AllowOfflineTxForUnknownId</code> — çevrimdışıyken, hiç görmediği bir kimlik için işlem başlatabilir mi?</li>
+                        <li><code>LocalAuthListEnabled</code>: istasyon, bildiği kimliklerin yerel
+                        önbelleğine bakabilir mi?</li>
+                        <li><code>LocalPreAuthorize</code>: CSMS onayını beklemeden bu yerel listeye
+                        dayanarak işlem başlatabilir mi?</li>
+                        <li><code>AllowOfflineTxForUnknownId</code>: çevrimdışıyken, hiç görmediği
+                        bir kimlik için işlem başlatabilir mi?</li>
                     </ul>
 
                     <p>
@@ -194,24 +189,21 @@
                         yerine, kimliği ve o anki bağlantı durumunu alıp bir karar döndüren tek bir
                         yetkilendirme fonksiyonu olarak uyguladık. Bu biçim düzenlilikten öte bir sebeple
                         önemli: kapsamlı biçimde test edilebilen tek sürüm bu. Üç bayrağın, iki bağlantı
-                        durumunun ve üç kimlik koşulunun her bileşimi sayılabilir bir tablodur — ama yalnızca
-                        mantık tek bir yerde duruyorsa.
+                        durumunun ve üç kimlik koşulunun her bileşimi sayılabilir bir tablodur ama yalnızca mantık tek bir yerde duruyorsa.
                     </p>
 
                     <h2>İstasyonun kendi saatine asla güvenmeyin</h2>
 
                     <p>
                         Zaman damgası taşıyan her OCPP mesajı, bir faturalandırma anlaşmazlığında delildir.
-                        Bir istasyonun saati yanlışsa, sayaç değerleri de yanlıştır — ve bu, biri faturaya
-                        itiraz edene kadar görünmez bir yanlışlıktır.
+                        Bir istasyonun saati yanlışsa sayaç değerleri de yanlıştır ve bu, biri
+                        faturaya itiraz edene kadar görünmez bir yanlışlıktır.
                     </p>
 
                     <p>
-                        İstasyon saatleri kayar ve sahada kimi zaman fena hâlde yanlıştır; elektriği kesilip
-                        saati epoch'a dönmüş bir ünite olağandışı değildir. Bu yüzden protokol zaman
-                        damgalarında yerel saati kullanmıyoruz. CSMS kendi saatini BootNotification yanıtında
-                        ve heartbeat yanıtlarında bildiriyor; biz bununla yerel saat arasındaki farkı saklıyor
-                        ve giden her zaman damgasını yerel saat artı bu fark olarak türetiyoruz.
+                        İstasyon saatleri kayar ve sahada kimi zaman fena hâlde yanlıştır. Elektriği
+                        kesilip saati epoch'a dönmüş bir ünite olağandışı değildir. Bu yüzden protokol zaman
+                        damgalarında yerel saati kullanmıyoruz. CSMS kendi saatini BootNotification yanıtında ve heartbeat yanıtlarında bildiriyor. Biz bununla yerel saat arasındaki farkı saklıyor ve giden her zaman damgasını yerel saat artı bu fark olarak türetiyoruz.
                     </p>
 
                     <p>
@@ -230,8 +222,7 @@
 
                     <p>
                         Bizimki yeniden deneme aralığını yalnızca el sıkışma <em>zaman aşımına</em> uğradığında
-                        artırıyordu. Başka her başarısızlık — arka ucun doğrudan reddetmesi dahil — sayacı
-                        sıfırlıyor ve temel aralıkta, birkaç saniyede bir, süresiz olarak yeniden deniyordu.
+                        artırıyordu. Başka her başarısızlık, arka ucun doğrudan reddetmesi dahil, sayacı sıfırlıyor ve temel aralıkta, birkaç saniyede bir, süresiz olarak yeniden deniyordu.
                     </p>
 
                     <p>
@@ -243,10 +234,7 @@
                     </p>
 
                     <p>
-                        Ardından gelen arıza, tahmin edeceğimiz arıza değildi. Reddedilen bir el sıkışma hiç
-                        oturum kurmaz, dolayısıyla tek bir bağlantı fazla bir şey sızdırmadı. Ama bu
-                        çalkantı içindeki her <em>başarılı</em> yeniden bağlanma bir istasyonun tüm nesne
-                        grafiğini yeniden inşa ediyor ve süreç belleği bu tekrarlanan inşa altında istikrarlı
+                        Ardından gelen arıza, tahmin edeceğimiz arıza değildi. Reddedilen bir el sıkışma hiç oturum kurmaz, dolayısıyla tek bir bağlantı fazla bir şey sızdırmadı ama bu çalkantı içindeki her <em>başarılı</em> yeniden bağlanma bir istasyonun tüm nesne grafiğini yeniden inşa ediyor ve süreç belleği bu tekrarlanan inşa altında istikrarlı
                         biçimde büyüyerek süreçler bellek sınırlarını aştıkları için sonlandırılana kadar
                         devam etti. Bir yeniden deneme politikası kusuru, sebebinden birkaç katman uzakta,
                         bellek yetersizliği olayı olarak göründü.
@@ -254,33 +242,32 @@
 
                     <p>
                         Bu yüzden tek işi bir reddi sınıflandırıp bir bekleme süresi üretmek olan küçük bir
-                        modül yazdık. <em>Ayaktayım ama şu an seni alamıyorum</em> anlamına gelen retler —
-                        hız sınırı ve hizmet kullanılamaz durumları — bir üst sınıra kadar, üzerine gürültü
-                        eklenmiş bir eğri boyunca artıyor.
+                        modül yazdık. <em>Ayaktayım ama şu an seni alamıyorum</em> anlamına gelen retler, yani hız sınırı ve hizmet kullanılamaz durumları, bir üst sınıra kadar, üzerine gürültü eklenmiş bir eğri boyunca artıyor.
                     </p>
 
                     <h3>İki kez yanlış yaptığımız devam kararı</h3>
 
                     <p>
-                        Kalıcı retleri — hatalı kimlik bilgisi, yanlış URL yolu — başta backoff'un dışında
-                        tuttuk; sağlam görünen iki gerekçeyle: yanlış yapılandırılmış bir istasyonu yeniden
-                        denemek ucuzdur ve operatörün hatayı hemen görmesi gerekir.
+                        Kalıcı retleri (hatalı kimlik bilgisi, yanlış URL yolu) başta backoff'un
+                        dışında tuttuk. Sağlam görünen iki gerekçemiz vardı: yanlış yapılandırılmış
+                        bir istasyonu yeniden denemek ucuzdur ve operatörün hatayı hemen görmesi
+                        gerekir.
                     </p>
 
                     <p>
                         İkisi de yanlıştı ve kayıtlara sonradan bakmak nedenini gösterdi. Bir avuç yanlış
                         yapılandırılmış istasyon, filo genelinde kaydedilen tüm uyarıların ezici çoğunluğunu
-                        üretiyordu; her biri saatler boyunca, hiç artmayan birkaç saniyelik aralıkla yeniden
-                        deniyordu. Ucuz değil: bu, daha önceki bellek olayına yol açan bağlan-reddedil
-                        çalkantısının tam kendisi. Hemen görünür de değil — sinyal tek bir belirgin satır
-                        değil, birbirinin aynısı binlerce satırdı ve aynı anda yaşanan diğer, gerçekten farklı
-                        arızaları gömüyordu. Ayrıca başkasının arka ucuna karşı sürekli akan başarısız kimlik
+                        üretiyordu. Her biri saatler boyunca, hiç artmayan birkaç saniyelik aralıkla
+                        yeniden deniyordu. Bu ucuz değil, çünkü daha önceki bellek olayına yol açan
+                        bağlan-reddedil çalkantısının tam kendisi. Hemen görünür de değil, çünkü
+                        sinyal birbirinin aynısı binlerce satır olarak geliyordu ve aynı anda
+                        yaşanan diğer, gerçekten farklı arızaları gömüyordu. Ayrıca başkasının arka ucuna karşı sürekli akan başarısız kimlik
                         doğrulama denemeleri, çıkış adresinizi engellemeye götüren iyi bir yol.
                     </p>
 
                     <p>
-                        Kalıcı retler artık aynı eğri boyunca artıyor; hız sınırı sınıfından ayrı izleniyor,
-                        çünkü aynı şekli paylaşıyorlar ama aynı anlamı paylaşmıyorlar. Artırmak yanlış
+                        Kalıcı retler artık aynı eğri boyunca artıyor. Hız sınırı sınıfından ayrı
+                        izleniyor, çünkü aynı şekli paylaşıyorlar ama aynı anlamı paylaşmıyorlar. Artırmak yanlış
                         yapılandırmayı gizlemiyor: her deneme kendi durum kodunu yine kaydediyor, sadece
                         azalan bir hızda.
                     </p>
@@ -293,11 +280,7 @@
 
                     <p>
                         Gerekçe, arızayı kimin düzelttiğiyle ilgili. Hız sınırında arka uç her an
-                        toparlanabilir. Kalıcı retde ise kurtarma olayı, bir insanın kimlik bilgisini ya da
-                        URL'yi düzeltmesidir — ve sonrasında kimse istasyona yürüyüp elektriğini kesip
-                        açmayacak. Kalıcı olarak vazgeçen bir istasyonun kurtarılması saha ziyareti
-                        gerektirirdi; yavaşça yeniden deneyen istasyon ise düzeltmeyi üst sınır aralığı içinde
-                        kendi başına fark eder. Yavaş bir istasyon, ölü bir istasyondan çok daha iyi bir
+                        toparlanabilir. Kalıcı rette ise kurtarma olayı, bir insanın kimlik bilgisini ya da URL'yi düzeltmesidir ve sonrasında kimse istasyona yürüyüp elektriğini kesip açmayacak. Kalıcı olarak vazgeçen bir istasyonun kurtarılması saha ziyareti gerektirirdi. Yavaşça yeniden deneyen istasyon ise düzeltmeyi üst sınır aralığı içinde kendi başına fark eder. Yavaş bir istasyon, ölü bir istasyondan çok daha iyi bir
                         arızadır.
                     </p>
 
@@ -305,7 +288,8 @@
                         <h3>Buradan çıkarılacaklar</h3>
                         <ul>
                             <li>Zengin alan modelini dahilî tutun, protokol sınırında çevirin. Düzleştirmek sonradan ihtiyaç duyacağınız ilişkileri yok eder.</li>
-                            <li>Akıllı şarjda limit, saklanmış bir sayı değil; bildirilmiş bir birimde, bir zaman noktasında değerlendirilen bir çizelgedir.</li>
+                            <li>Akıllı şarjda limit, bildirilmiş bir birimde ve bir zaman noktasında
+                            değerlendirilen bir çizelgedir, saklanmış bir sayı değil.</li>
                             <li>Çok bayraklı kararları tek bir fonksiyona koyun. Dağıtılmış koşullar sayılamaz, dolayısıyla test edilemez.</li>
                             <li>Protokol zaman damgalarını yerel saatten değil, arka ucun saatine göre tutulan bir farktan türetin.</li>
                             <li>Yeniden deneme döngüleri hata sınıflarını ayırmalıdır. Zaman aşımı olmayan her şeyi geçici saymak, bir arka ucun hız sınırını sizin kesintinize çevirir.</li>
@@ -317,8 +301,8 @@
                     <p>
                         SimItNow'a
                         <a href="https://www.simitnow.com" target="_blank" rel="noopener">www.simitnow.com</a>
-                        adresinden ulaşabilirsiniz; bir CSMS'i simüle edilmiş istasyonlara karşı test etmek
-                        için ücretsiz planı var. OCPP 1.6 ya da 2.0.1 entegrasyonu yapıyorsanız ve bu dersleri
+                        adresinden ulaşabilirsiniz. Bir CSMS'i simüle edilmiş istasyonlara karşı
+                        test etmek için ücretsiz planı var. OCPP 1.6 ya da 2.0.1 entegrasyonu yapıyorsanız ve bu dersleri
                         bizim öğrendiğimiz yolla öğrenmek istemiyorsanız,
                         <a href="../../index.html#contact">bizimle iletişime geçin</a>.
                     </p>

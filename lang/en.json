@@ -2,7 +2,7 @@
   "meta": {
     "site": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "DDOSoft creates innovative, sustainable software solutions. Discover DDOGreen, our smart power management tool that switches your laptop's power mode automatically based on real system load.",
+      "description": "DDOSoft builds sustainable software. Our power management tool DDOGreen switches your laptop's power mode automatically, based on real system load.",
       "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -10,7 +10,7 @@
     },
     "openGraph": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "Leading the future of green technology with intelligent software solutions",
+      "description": "Software consulting and tools built to use less energy",
       "type": "website",
       "url": "https://www.ddosoft.com/",
       "image": "https://www.ddosoft.com/images/og-image.jpg",
@@ -20,13 +20,13 @@
       "card": "summary_large_image",
       "site": "@ddosoft",
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "Leading the future of green technology with intelligent software solutions",
+      "description": "Software consulting and tools built to use less energy",
       "image": "https://www.ddosoft.com/images/twitter-image.jpg"
     },
     "pages": {
       "home": {
         "title": "DDOSoft - Sustainable Software Solutions",
-        "description": "Create intelligent, environmentally-conscious software that reduces energy consumption while delivering exceptional performance.",
+        "description": "Software built to use less energy without giving up the performance you need.",
         "keywords": "sustainable software, green technology, power management, energy optimization"
       },
       "articles": {
@@ -36,12 +36,12 @@
       },
       "about": {
         "title": "About DDOSoft - Sustainable Software Solutions",
-        "description": "Learn about DDOSoft's mission to create sustainable software solutions that reduce environmental impact.",
+        "description": "DDOSoft's work on software that reduces environmental impact.",
         "keywords": "about ddosoft, sustainable software company, green technology mission"
       },
       "contact": {
         "title": "Contact DDOSoft - Get in Touch",
-        "description": "Connect with DDOSoft for sustainable software solutions and green technology consulting.",
+        "description": "Reach DDOSoft about sustainable software and green technology consulting.",
         "keywords": "contact ddosoft, green technology consulting, sustainable software support"
       }
     }
@@ -59,20 +59,20 @@
   "hero": {
     "eyebrow": "Sustainable Software Consulting",
     "title": "Sustainable<br><em>Software</em><br>Solutions",
-    "subtitle": "Expert software consulting, digital transformation, and sustainable development services. We help organizations modernize their technology infrastructure while reducing energy consumption and environmental impact.",
+    "subtitle": "Software consulting, digital transformation, and sustainable development. We modernize technology infrastructure and cut its energy consumption in the same project.",
     "cta": "View Products",
     "scrollHint": "Learn More"
   },
   "about": {
     "title": "About DDOSoft",
-    "subtitle": "Pioneering sustainable software development with a focus on environmental impact and performance",
+    "subtitle": "Software development that takes energy use as seriously as performance",
     "mission": {
       "title": "Our Mission",
-      "text": "At DDOSoft, we believe that powerful software shouldn't come at the expense of our planet. We provide expert consulting and development services to help organizations transform their technology infrastructure while significantly reducing energy consumption and environmental impact."
+      "text": "Powerful software shouldn't cost the planet. We consult on and build technology infrastructure for organizations that want to modernize it and reduce its energy consumption at the same time."
     },
     "vision": {
       "title": "Our Approach",
-      "text": "With 15+ years of proven experience in software architecture, cloud systems, and digital transformation, we deliver comprehensive solutions spanning from legacy system modernization to cutting-edge sustainable software development. Our expertise includes OCPP protocol implementation for EV charging systems, AWS cloud infrastructure optimization, embedded systems development, and enterprise-grade system integration."
+      "text": "We have 15+ years in software architecture, cloud systems, and digital transformation, and the work ranges from modernizing legacy systems to building new ones. That includes OCPP protocol implementation for EV charging, AWS infrastructure optimization, embedded systems, and system integration."
     },
     "founders": {
       "title": "Meet Our Founder",
@@ -86,10 +86,10 @@
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Expert consulting and development services to transform your technology infrastructure",
+    "subtitle": "Consulting and development work to modernize your technology infrastructure",
     "consulting": {
       "title": "Software Consulting",
-      "description": "15+ years of expertise in software architecture, technology selection, and best practices. Specialized in OCPP 1.6 protocol implementation, EV charging systems, AWS cloud platforms, and enterprise system integration.",
+      "description": "15+ years of software architecture, technology selection, and review work. We specialize in OCPP 1.6, EV charging systems, AWS, and system integration.",
       "features": [
         "System architecture design & optimization",
         "OCPP protocol & EV charging expertise",
@@ -98,7 +98,7 @@
     },
     "transformation": {
       "title": "Digital Transformation",
-      "description": "Proven track record in modernizing enterprise systems with AWS cloud migration, process automation, and CMMI-compliant development practices for sustainable technology solutions.",
+      "description": "We modernize enterprise systems: AWS cloud migration, process automation, and CMMI-compliant development practices.",
       "features": [
         "AWS cloud migration & optimization",
         "Legacy system modernization & integration",
@@ -107,7 +107,7 @@
     },
     "development": {
       "title": "Custom Development",
-      "description": "Production-ready backend systems, RESTful APIs, and cross-platform solutions using Python, modern C++20, and cloud-native technologies. Specialized in protocol development and system integration.",
+      "description": "Backend systems, RESTful APIs, and cross-platform software in Python and C++20. Protocol development and system integration are where we spend most of our time.",
       "features": [
         "Backend & RESTful API development (Python, Django)",
         "Cross-platform solutions (C++20, Linux/Windows)",
@@ -120,39 +120,39 @@
   },
   "products": {
     "title": "Our Products",
-    "subtitle": "Innovative solutions that make technology more sustainable and efficient",
+    "subtitle": "Software we build and maintain ourselves",
     "ddogreen": {
       "name": "DDOGreen",
-      "tagline": "Smart Power Management That Just Works",
+      "tagline": "Power management that runs in the background",
       "version": "Latest Version: v0.3.1",
-      "intro": "DDOGreen is an intelligent, production-ready power management tool that automatically switches your laptop between high-performance and power-saving modes based on actual system usage.",
-      "highlight": "Automatic power mode switching driven by real CPU load, with hysteresis that prevents mode flapping",
+      "intro": "DDOGreen switches your laptop between high-performance and power-saving modes based on how busy it actually is.",
+      "highlight": "Switches power modes from real CPU load, with hysteresis so it does not flap between them",
       "card": {
         "category": "Power Management",
-        "excerpt": "Watches how busy your machine is and switches power modes automatically — install it and it works silently in the background, no setup needed."
+        "excerpt": "Watches how busy your machine is and switches power modes automatically. Install it and it runs in the background with no setup."
       },
       "features": {
         "title": "Key Features",
         "items": [
           {
-            "title": "Automatic Power Management:",
-            "description": "Intelligent switching based on CPU load monitoring"
+            "title": "Automatic power management:",
+            "description": "Switches modes from CPU load"
           },
           {
-            "title": "Cross-Platform Support:",
-            "description": "Native Linux (TLP) and Windows (Power Plans) integration"
+            "title": "Cross-platform:",
+            "description": "Linux through TLP, Windows through Power Plans"
           },
           {
-            "title": "Zero Configuration:",
-            "description": "Ships with a working default configuration — install it and it runs"
+            "title": "Zero configuration:",
+            "description": "Ships with a working config file, so it runs after install"
           },
           {
-            "title": "Enterprise Ready:",
-            "description": "Full systemd and Windows Service Manager integration"
+            "title": "Runs as a service:",
+            "description": "systemd on Linux, Service Manager on Windows"
           },
           {
-            "title": "Production Quality:",
-            "description": "Comprehensive unit test suite and CI/CD validation on every change"
+            "title": "Tested in CI:",
+            "description": "Unit test suite runs on every change"
           }
         ]
       },
@@ -180,56 +180,56 @@
       "architecture": {
         "title": "Technical Architecture",
         "features": [
-          "Modern C++20 with cross-platform compatibility",
-          "Smart hysteresis behavior (70% high performance, 30% power save)",
-          "Real-time CPU load monitoring with platform optimizations",
-          "Professional logging and error handling",
-          "Memory-efficient design with minimal system impact"
+          "C++20, building on both Linux and Windows",
+          "Two thresholds with a dead band between them (70% to performance, 30% to power save)",
+          "CPU load read through each platform's native interface",
+          "Logging and error handling",
+          "Small memory footprint"
         ]
       },
       "download": {
         "title": "Download DDOGreen",
-        "subtitle": "Get started with intelligent power management today",
+        "subtitle": "Packages for Linux and Windows",
         "github": "View on GitHub",
         "releases": "Download Latest Release"
       }
     },
     "tefaster": {
       "name": "Tefaster",
-      "tagline": "Professional Portfolio Management for Turkish Mutual Funds",
+      "tagline": "Portfolio tracking for Turkish mutual funds",
       "version": "Beta",
-      "intro": "Tefaster is a production-ready Django application designed for managing Turkish mutual fund portfolios with daily TEFAS data integration. Built with modern web technologies and enterprise-grade practices, Tefaster provides a comprehensive solution for tracking investments, analyzing fund performance, and making informed portfolio decisions.",
-      "highlight": "Manage 2,316+ Turkish mutual funds with daily automatic updates and intelligent analytics",
+      "intro": "Tefaster is a Django application for managing Turkish mutual fund portfolios. It pulls TEFAS data daily, tracks what you hold, and shows how each fund has performed.",
+      "highlight": "2,316+ Turkish mutual funds, priced daily from TEFAS",
       "card": {
         "category": "Portfolio Management",
-        "excerpt": "Analyze and track all Turkish investment funds in one place. Prices update daily from TEFAS automatically. Free to start, no credit card required."
+        "excerpt": "Track and analyze Turkish investment funds in one place. Prices refresh daily from TEFAS. Free to start, no credit card required."
       },
       "features": {
         "title": "Key Features",
         "items": [
           {
-            "title": "Multi-User Portfolio Management:",
-            "description": "Secure, isolated portfolio tracking for multiple users with authentication and authorization"
+            "title": "Multi-user portfolios:",
+            "description": "Each user's portfolio is isolated behind authentication"
           },
           {
-            "title": "Daily TEFAS Integration:",
-            "description": "Automatic daily updates for 2,316+ Turkish mutual funds with current pricing"
+            "title": "Daily TEFAS integration:",
+            "description": "Prices for 2,316+ Turkish mutual funds refresh every day"
           },
           {
-            "title": "Transaction Tracking:",
-            "description": "Comprehensive buy/sell transaction management with automatic holding calculations"
+            "title": "Transaction tracking:",
+            "description": "Buy and sell entries, with holdings calculated from them"
           },
           {
-            "title": "Fund Tagging System:",
-            "description": "Flexible categorization with tag groups for organizing and filtering funds"
+            "title": "Fund tagging:",
+            "description": "Tag groups for organizing and filtering funds"
           },
           {
-            "title": "Smart Price Fallback:",
-            "description": "Automatic weekend/holiday price handling for accurate transaction valuation"
+            "title": "Weekend and holiday prices:",
+            "description": "Falls back to the last trading day so valuations stay correct"
           },
           {
-            "title": "Performance Analytics:",
-            "description": "Interactive charts and metrics for portfolio performance tracking"
+            "title": "Performance charts:",
+            "description": "Interactive charts and metrics for the whole portfolio"
           }
         ]
       },
@@ -257,30 +257,30 @@
         }
       },
       "architecture": {
-        "title": "Technical Excellence",
+        "title": "Engineering practices",
         "features": [
-          "Comprehensive automated test suite run in CI on every change",
-          "Enterprise security with bot protection and rate limiting",
-          "Database optimization with N+1 query prevention (83% reduction)",
+          "Automated test suite runs in CI on every change",
+          "Bot protection and rate limiting",
+          "N+1 queries eliminated, cutting database calls by 83%",
           "Pre-commit hooks with Ruff linting and Black formatting",
-          "Production-ready Docker setup with health checks",
-          "Background task processing with Celery for automatic updates"
+          "Docker setup with health checks",
+          "Celery runs the daily update job in the background"
         ]
       },
       "download": {
         "title": "Try Tefaster",
-        "subtitle": "Start managing your Turkish mutual fund portfolio today",
+        "subtitle": "Try the live instance or read the source",
         "live": "Try Live Demo",
         "github": "View on GitHub"
       }
     },
     "simit": {
       "name": "SimItNow",
-      "tagline": "Test EV Charging Infrastructure Without the Hardware",
+      "tagline": "Test EV charging systems without the hardware",
       "version": "Beta",
       "card": {
         "category": "EV Charging Simulator",
-        "excerpt": "Test your EV charging systems without any hardware. Supports OCPP 1.6 and 2.0.1. Simulate real chargers in the cloud and run load tests instantly. Free plan available."
+        "excerpt": "Test your EV charging systems without hardware. Speaks OCPP 1.6 and 2.0.1, simulates chargers in the cloud, and runs load tests against a real backend. Free plan available."
       }
     },
     "card": {
@@ -290,19 +290,19 @@
   },
   "contact": {
     "title": "Get In Touch",
-    "subtitle": "Ready to make your software more sustainable? Connect with us directly.",
+    "subtitle": "Questions about a project, or about one of our products? Write to us.",
     "methods": [
       {
         "icon": "📧",
         "title": "Email",
         "link": "info@ddosoft.com",
-        "description": "Drop us a line for project inquiries and partnerships"
+        "description": "Project inquiries and partnerships"
       },
       {
         "icon": "🔗",
         "title": "LinkedIn",
         "link": "DDOSoft Company Page",
-        "description": "Follow us for updates and industry insights"
+        "description": "Updates on what we're building"
       },
       {
         "icon": "📍",
@@ -311,26 +311,26 @@
         "line2": "1003. Sokak No: 7/3",
         "line3": "Onikişubat/Kahramanmaraş",
         "country": "Türkiye",
-        "description": "Visit our office for in-person meetings"
+        "description": "Our office, for meetings in person"
       }
     ]
   },
   "articles": {
     "sectionTitle": "Engineering Notes",
-    "sectionSubtitle": "What we learned building our own products — power management internals and OCPP integration under real load.",
+    "sectionSubtitle": "What we learned building our own products: power management internals and OCPP integration under real load.",
     "viewAll": "All Articles",
     "readMore": "Read more →",
     "recent": [
       {
         "title": "How DDOGreen Decides When to Save Power",
-        "excerpt": "Inside the dual-threshold hysteresis that keeps a power daemon from flapping between modes — and why it refuses to ship default values.",
+        "excerpt": "Inside the dual-threshold hysteresis that keeps a power daemon from flapping between modes, and why it refuses to ship default values.",
         "category": "Power Management",
         "date": "August 17, 2026",
         "link": "articles/ddogreen-power-management.html"
       },
       {
         "title": "OCPP 1.6 in Production: Lessons from a Charge Point Simulator",
-        "excerpt": "Connector mapping, charging-profile priority, offline authorisation, and the reconnect loop that quietly took down a fleet.",
+        "excerpt": "Connector mapping, charging-profile priority, offline authorisation, and the reconnect loop that took down a fleet.",
         "category": "EV Charging",
         "date": "August 17, 2026",
         "link": "articles/ocpp-16-integration-lessons.html"
@@ -350,7 +350,7 @@
         "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software"
       },
       "title": "Engineering Notes",
-      "subtitle": "Field notes from building DDOGreen and SimItNow — design decisions, trade-offs, and the mistakes that taught us the most.",
+      "subtitle": "Field notes from building DDOGreen and SimItNow: design decisions, trade-offs, and the mistakes we learned the most from.",
       "backToHome": "← Back to home"
     }
   },

@@ -87,10 +87,9 @@
 
                     <p>
                         We build SimItNow, a simulator that stands in for physical charge points so that
-                        operators can test their central system — the CSMS — without buying hardware. It
+                        operators can test their central system, the CSMS, without buying hardware. It
                         speaks OCPP 1.6 and 2.0.1, and it runs many simulated stations at once against real
-                        backends. That combination surfaces a particular class of problem: not "does the
-                        message parse" but "what happens on the four hundredth station on the third day."
+                        backends. That combination surfaces a particular class of problem. The question stops being "does the message parse" and becomes "what happens on the four hundredth station on the third day."
                     </p>
 
                     <p>
@@ -107,17 +106,15 @@
                     </p>
 
                     <p>
-                        If you support both versions — and anyone building tooling in this space has to — you
-                        need one internal model and a translation at the protocol boundary. We chose the
+                        If you support both versions, and anyone building tooling in this space has
+                        to, you need one internal model and a translation at the protocol boundary. We chose the
                         2.0.1 shape internally, because you can always project a hierarchy down to a flat
                         list but you cannot reliably reconstruct a hierarchy from flat integers, and wrote
                         explicit conversions in both directions for the 1.6 handlers.
                     </p>
 
                     <p>
-                        The tempting alternative is to keep a flat model and special-case 2.0.1. It works
-                        until you meet a station with multiple connectors per EVSE — a DC unit with CCS and
-                        CHAdeMO on one power stack, sharing a current limit. Flat numbering cannot express
+                        The tempting alternative is to keep a flat model and special-case 2.0.1. It works until you meet a station with multiple connectors per EVSE: a DC unit with CCS and CHAdeMO on one power stack, sharing a current limit. Flat numbering cannot express
                         that they share anything, so every power-allocation decision built on top of it is
                         subtly wrong. Choose the richer model even when the protocol you are speaking today
                         does not need it.
@@ -133,8 +130,8 @@
                     </p>
 
                     <p>
-                        Profiles have a purpose — a station-wide maximum, a default for transactions, or a
-                        limit attached to one specific transaction — and a stack level. Resolution takes the
+                        Profiles have a purpose (a station-wide maximum, a default for transactions,
+                        or a limit attached to one specific transaction) and a stack level. Resolution takes the
                         highest stack level within each purpose, then applies the purpose precedence from the
                         specification's smart charging section, and the effective limit is the most
                         restrictive result. A transaction-specific profile does not simply replace the
@@ -154,8 +151,7 @@
                         <li>
                             <strong>Units are per-profile.</strong> A profile declares its rate in amperes or
                             watts. Comparing two profiles requires normalising first, and normalising amperes
-                            to watts requires the supply voltage and phase count — which is station
-                            configuration, not part of the profile. Compare raw numbers across profiles with
+                            to watts requires the supply voltage and phase count, which is station configuration and not part of the profile. Compare raw numbers across profiles with
                             different units and you will confidently enforce a limit off by a factor of
                             several hundred.
                         </li>
@@ -176,9 +172,12 @@
                     </p>
 
                     <ul>
-                        <li><code>LocalAuthListEnabled</code> — may the station consult its locally cached list of known identifiers?</li>
-                        <li><code>LocalPreAuthorize</code> — may it start a transaction from that local list without waiting for the CSMS to confirm?</li>
-                        <li><code>AllowOfflineTxForUnknownId</code> — may it start a transaction for an identifier it has never seen, while offline?</li>
+                        <li><code>LocalAuthListEnabled</code>: may the station consult its locally
+                        cached list of known identifiers?</li>
+                        <li><code>LocalPreAuthorize</code>: may it start a transaction from that
+                        local list without waiting for the CSMS to confirm?</li>
+                        <li><code>AllowOfflineTxForUnknownId</code>: may it start a transaction for
+                        an identifier it has never seen, while offline?</li>
                     </ul>
 
                     <p>
@@ -193,8 +192,7 @@
                         the current connectivity state and returns a decision, rather than scattering
                         <code>if offline</code> checks through the transaction handlers. That shape matters
                         for a reason beyond tidiness: it is the only version you can exhaustively test.
-                        Every combination of three flags, two connectivity states and three identifier
-                        conditions is a table you can enumerate — but only if the logic lives in one place.
+                        Every combination of three flags, two connectivity states and three identifier conditions is a table you can enumerate, but only if the logic lives in one place.
                     </p>
 
                     <h2>Never trust the station's own clock</h2>
@@ -206,8 +204,7 @@
                     </p>
 
                     <p>
-                        Station clocks drift, and in the field they are sometimes badly wrong — a unit that
-                        lost power and came back with a clock at the epoch is not unusual. So we do not use
+                        Station clocks drift, and in the field they are sometimes badly wrong. A unit that lost power and came back with a clock at the epoch is not unusual. So we do not use
                         local time for protocol timestamps. The CSMS returns its own time in the
                         BootNotification response and in heartbeat responses; we store the offset between
                         that and local time, and derive every outgoing timestamp from local time plus the
@@ -230,9 +227,7 @@
                     </p>
 
                     <p>
-                        Ours escalated its retry interval only when the handshake <em>timed out</em>. Any
-                        other failure — including an outright rejection by the backend — reset the counter
-                        and retried at the base interval, a few seconds, indefinitely.
+                        Ours escalated its retry interval only when the handshake <em>timed out</em>. Any other failure, including an outright rejection by the backend, reset the counter and retried at the base interval, a few seconds, indefinitely.
                     </p>
 
                     <p>
@@ -253,26 +248,21 @@
 
                     <p>
                         So we wrote a small module whose only job is to classify a rejection and produce a
-                        wait. Rejections meaning <em>I am alive but cannot take you right now</em> — the
-                        rate-limit and service-unavailable statuses — escalate along a jittered curve up to
-                        a ceiling.
+                        wait. Rejections meaning <em>I am alive but cannot take you right now</em>, the rate-limit and service-unavailable statuses, escalate along a jittered curve up to a ceiling.
                     </p>
 
                     <h3>The follow-up we got wrong twice</h3>
 
                     <p>
-                        We initially excluded permanent rejections — bad credentials, wrong URL path — from
-                        the backoff, on two arguments that felt sound: retrying a misconfigured station is
+                        We initially excluded permanent rejections (bad credentials, wrong URL path)
+                        from the backoff, on two arguments that felt sound: retrying a misconfigured station is
                         cheap, and the operator needs to see the error promptly.
                     </p>
 
                     <p>
                         Both were wrong, and a later look at the logs showed why. A handful of misconfigured
                         stations produced the overwhelming majority of all warnings logged across the whole
-                        fleet, each retrying every few seconds for hours with no escalation. Not cheap:
-                        that is exactly the connect-reject churn that caused the earlier memory incident.
-                        Not prompt either — the signal was not one visible line but thousands of identical
-                        ones, which buried the other, genuinely different faults happening at the same time.
+                        fleet, each retrying every few seconds for hours with no escalation. It is not cheap: that churn is exactly what caused the earlier memory incident. It was not prompt either, because the signal arrived as thousands of identical lines rather than one visible one, and those buried the other, genuinely different faults happening at the same time.
                         And a continuous stream of failing authentication attempts against someone else's
                         backend is a good way to get your egress address blocked.
                     </p>
@@ -292,9 +282,7 @@
 
                     <p>
                         The reasoning is about who fixes the fault. For a rate limit, the backend may recover
-                        at any moment. For a permanent rejection, the recovery event is a human correcting a
-                        credential or a URL — and nobody is going to walk out to the station afterwards to
-                        power-cycle it. A station that gave up permanently would need a site visit to
+                        at any moment. For a permanent rejection, the recovery event is a human correcting a credential or a URL, and nobody is going to walk out to the station afterwards to power-cycle it. A station that gave up permanently would need a site visit to
                         recover; one that retries slowly picks up the correction on its own within the
                         ceiling interval. A slow station is a much better failure than a dead one.
                     </p>
@@ -303,7 +291,8 @@
                         <h3>What to take from this</h3>
                         <ul>
                             <li>Model the richer domain internally and translate at the protocol edge. Flattening loses relationships you will need later.</li>
-                            <li>In smart charging, the limit is a schedule evaluated at a time, in a declared unit — not a stored number.</li>
+                            <li>In smart charging, the limit is a schedule evaluated at a time, in a
+                            declared unit, not a stored number.</li>
                             <li>Put multi-flag decisions in one function. Scattered conditionals cannot be enumerated, and therefore cannot be tested.</li>
                             <li>Derive protocol timestamps from a tracked offset to the backend's clock, not from local time.</li>
                             <li>Retry loops must distinguish failure classes. Treating every non-timeout as transient turns one backend's rate limit into your outage.</li>
