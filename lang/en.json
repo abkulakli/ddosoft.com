@@ -280,7 +280,7 @@
       "version": "Beta",
       "card": {
         "category": "EV Charging Simulator",
-        "excerpt": "Test your EV charging systems without hardware. Speaks OCPP 1.6 and 2.0.1, simulates chargers in the cloud, and runs load tests against a real backend. Free plan available."
+        "excerpt": "Test your EV charging systems without hardware. Simulate charge points against a CSMS, or run a hosted CSMS for your chargers to connect to. Speaks OCPP 1.6 and 2.0.1 either way, and runs load tests. Free plan available."
       }
     },
     "card": {

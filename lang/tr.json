@@ -288,7 +288,7 @@
       "version": "Beta",
       "card": {
         "category": "EV Şarj Simülatörü",
-        "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. OCPP 1.6 ve 2.0.1 konuşur, şarj istasyonlarını bulutta simüle eder ve gerçek bir backend'e karşı yük testi yapar. Ücretsiz plan mevcut."
+        "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. Şarj istasyonlarını bir CSMS'e karşı simüle edin, ya da şarj cihazlarınızın bağlanacağı barındırılan bir CSMS çalıştırın. Her iki yönde de OCPP 1.6 ve 2.0.1 konuşur, yük testleri yapar. Ücretsiz plan mevcut."
       }
     },
     "card": {
