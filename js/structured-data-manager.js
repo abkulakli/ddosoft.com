@@ -25,7 +25,7 @@ class StructuredDataManager {
             "foundingDate": "2024",
             "founder": {
                 "@type": "Person",
-                "name": "Dr. Ayşe Pınar KULAKLI",
+                "name": "Ayşe Pınar KULAKLI",
                 "sameAs": "https://www.linkedin.com/in/apkulakli"
             },
             "contactPoint": {

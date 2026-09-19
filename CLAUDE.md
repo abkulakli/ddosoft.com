@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 DDOSoft is a static single-page landing website for a sustainable software consulting company. Built with pure HTML5/CSS3/Vanilla JavaScript — no build tools, no npm, no frameworks.
 
 **Live site**: ddosoft.com (deployed via GitHub Pages)  
-**Founder**: Dr. Ayşe Pınar KULAKLI — [LinkedIn](https://www.linkedin.com/in/apkulakli)  
+**Founder**: Ayşe Pınar KULAKLI — [LinkedIn](https://www.linkedin.com/in/apkulakli)  
 **Contact**: info@ddosoft.com  
 **LinkedIn**: [linkedin.com/company/ddosoft](https://www.linkedin.com/company/ddosoft)
 
