@@ -37,6 +37,14 @@ No install, build, or compile step. Changes are live on page refresh.
 
 **Deployment**: `.github/workflows/deploy.yml` has two jobs. `validate` runs the script on pull requests and on `main`. `deploy` runs only on push to `main` (`if: github.event_name == 'push'`) because the `github-pages` environment rejects deployments from non-default branches — a deploy job triggered by a pull request fails at the environment gate before any step runs. `.nojekyll` prevents Jekyll processing. `CNAME` sets the custom domain.
 
+## Git Workflow
+
+The primary workspace stays checked out on `main` at all times. Never commit a change directly onto whatever branch happens to be checked out there — a stray commit can land on someone else's in-progress branch (e.g. one already carrying an unmerged commit from earlier work) and has to be reverted out again.
+
+For any change, create a git worktree for it instead of `git checkout -b` in the main workspace. Commit inside that worktree, push it, and open a PR (`gh pr create`) once the change is ready — a pushed branch should never sit without a PR.
+
+Only remove a worktree and delete its branch after the user explicitly confirms the PR merged (verify with `gh pr view <n>` rather than assuming). Then fast-forward the main workspace's `main` to pick up the merge.
+
 ## Architecture
 
 ### DRY Component System
