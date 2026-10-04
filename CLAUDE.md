@@ -107,7 +107,9 @@ Header, footer and every other page keep using `data-lang-key` as normal.
 
 ### Brand & Logo
 
-`logo.png` — transparent PNG, white background removed. Used as favicon and in nav/footer. Source of truth for the brand mark. Use absolute path `/logo.png` in components so it resolves correctly from both root and subdirectory pages.
+`logo.png` — transparent PNG (354×240, trimmed to the wordmark), used in nav/footer and as the schema.org `logo`. Source of truth for the brand mark. Use absolute path `/logo.png` in components so it resolves correctly from both root and subdirectory pages.
+
+Favicon set, all derived from the same artwork and referenced with absolute paths in every page `<head>`: `favicon.ico` (16/32/48), `icon-192.png`, `icon-512.png` (both transparent, also listed in `site.webmanifest`), `apple-touch-icon.png` (180×180, opaque on `--bg-0` because iOS fills transparency with black). The site is dark-themed, so the logo must keep its alpha channel — a white-background export looks like a sticker on `--bg-0`.
 
 ### Design Tokens (css/styles.css)
 
