@@ -129,6 +129,10 @@ Favicon set, all derived from the same artwork and referenced with absolute path
 
 Content policy for articles: no performance or savings figure goes into an article unless a measurement backs it and the article shows the methodology. Product marketing copy on the homepage is a separate decision from what an engineering article asserts.
 
+### Analytics
+
+The Google tag (`G-3G6HWWBNZB`) is pasted as the first thing in every page's `<head>`, components excluded. It is per page rather than a shared script because there is no build step and a shared file would delay it. A new page must carry it too; `scripts/validate-site.py` fails any page missing it or carrying it twice. The site has no cookie-consent banner, unlike the other DDOSoft apps (tefaster, simitnow), which load the tag only after consent.
+
 ## Quality Targets
 
 - **Performance**: FCP < 1.5s, LCP < 2.5s, CLS < 0.1, total page < 2MB

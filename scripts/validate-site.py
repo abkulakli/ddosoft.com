@@ -353,6 +353,34 @@ def check_no_unsubstantiated_claims():
     return problems
 
 
+GA_MEASUREMENT_ID = 'G-3G6HWWBNZB'
+
+
+def check_analytics_tag():
+    """Every page (components excluded) carries the Google tag exactly once, in <head>.
+
+    The tag is pasted per page because there is no build step and a shared
+    script would delay it; a page added later without it would silently drop
+    out of the analytics.
+    """
+    problems = []
+    loader = f'https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}'
+    config = f"gtag('config', '{GA_MEASUREMENT_ID}')"
+    for path in html_files():
+        if path.startswith('components/'):
+            continue
+        source = read(path)
+        head = re.search(r'<head>(.*?)</head>', source, re.S)
+        if not head:
+            problems.append(f'{path}: no <head> found')
+            continue
+        for label, needle in (('gtag.js loader', loader), ('gtag config call', config)):
+            count = head.group(1).count(needle)
+            if count != 1:
+                problems.append(f'{path}: {count} occurrences of the {label} in <head> (expected 1)')
+    return problems
+
+
 def main():
     if not os.path.exists('index.html'):
         print('error: run this from the repository root', file=sys.stderr)
@@ -370,6 +398,7 @@ def main():
         ('article prose is in the HTML', check_article_body_is_static),
         ('no unsubstantiated quantitative claims', check_no_unsubstantiated_claims),
         ('sitemap covers every article', check_sitemap),
+        ('Google tag present once in every page <head>', check_analytics_tag),
     ]
 
     failed = 0
