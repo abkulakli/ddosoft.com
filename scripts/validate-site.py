@@ -353,7 +353,7 @@ def check_no_unsubstantiated_claims():
     return problems
 
 
-GA_MEASUREMENT_ID = 'G-3G6HWWBNZB'
+GA_MEASUREMENT_ID = 'G-R6E0SJZXT0'
 
 
 def check_analytics_tag():

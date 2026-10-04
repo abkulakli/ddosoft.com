@@ -131,7 +131,7 @@ Content policy for articles: no performance or savings figure goes into an artic
 
 ### Analytics
 
-The Google tag (`G-3G6HWWBNZB`) is pasted as the first thing in every page's `<head>`, components excluded. It is per page rather than a shared script because there is no build step and a shared file would delay it. A new page must carry it too; `scripts/validate-site.py` fails any page missing it or carrying it twice. The site has no cookie-consent banner, unlike the other DDOSoft apps (tefaster, simitnow), which load the tag only after consent.
+The Google tag (`G-R6E0SJZXT0`) is pasted as the first thing in every page's `<head>`, components excluded. It is per page rather than a shared script because there is no build step and a shared file would delay it. A new page must carry it too; `scripts/validate-site.py` fails any page missing it or carrying it twice. The site has no cookie-consent banner, unlike the other DDOSoft apps (tefaster, simitnow), which load the tag only after consent.
 
 ## Quality Targets
 
