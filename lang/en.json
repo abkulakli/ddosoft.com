@@ -194,11 +194,11 @@
         "releases": "Download Latest Release"
       }
     },
-    "tefaster": {
-      "name": "Tefaster",
+    "portfonio": {
+      "name": "Portfonio",
       "tagline": "Portfolio tracking for Turkish mutual funds",
       "version": "Beta",
-      "intro": "Tefaster is a Django application for managing Turkish mutual fund portfolios. It pulls TEFAS data daily, tracks what you hold, and shows how each fund has performed.",
+      "intro": "Portfonio is a Django application for managing Turkish mutual fund portfolios. It pulls TEFAS data daily, tracks what you hold, and shows how each fund has performed.",
       "highlight": "2,316+ Turkish mutual funds, priced daily from TEFAS",
       "card": {
         "category": "Portfolio Management",
@@ -268,7 +268,7 @@
         ]
       },
       "download": {
-        "title": "Try Tefaster",
+        "title": "Try Portfonio",
         "subtitle": "Try the live instance or read the source",
         "live": "Try Live Demo",
         "github": "View on GitHub"
@@ -393,8 +393,8 @@
             "href": "https://github.com/abkulakli/ddogreen/releases"
           },
           {
-            "text": "Tefaster",
-            "href": "https://tefaster.ddosoft.com"
+            "text": "Portfonio",
+            "href": "https://www.portfonio.com"
           }
         ]
       },

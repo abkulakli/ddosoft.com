@@ -15,7 +15,7 @@ DDOSoft is a static single-page landing website for a sustainable software consu
 - **DDOGreen** v0.3.1 — cross-platform power management tool (C++20, Linux/Windows). Switches power modes from per-core load average with dual-threshold hysteresis; the package installs a working default config (0.70 / 0.30 / 30s). [GitHub](https://github.com/abkulakli/ddogreen)
 
   No battery-savings percentage is claimed anywhere on the site: nothing in the ddogreen repo measures one. Don't reintroduce a figure without a measurement and a stated methodology. Test counts and coverage percentages are likewise kept qualitative, because they drift with every commit and the site cannot be updated per commit.
-- **Tefaster** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [tefaster.ddosoft.com](https://tefaster.ddosoft.com)
+- **Portfonio** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [www.portfonio.com](https://www.portfonio.com).
 - **SimItNow** (formerly SimIt, renamed 2026-08-25 to resolve a trademark conflict) — [www.simitnow.com](https://www.simitnow.com), an independent domain, not a ddosoft.com subdomain. The old `simit.ddosoft.com` still resolves for now but is no longer the canonical link.
 
 ### Services
@@ -131,7 +131,7 @@ Content policy for articles: no performance or savings figure goes into an artic
 
 ### Analytics
 
-The Google tag (`G-R6E0SJZXT0`) is pasted as the first thing in every page's `<head>`, components excluded. It is per page rather than a shared script because there is no build step and a shared file would delay it. A new page must carry it too; `scripts/validate-site.py` fails any page missing it or carrying it twice. The site has no cookie-consent banner, unlike the other DDOSoft apps (tefaster, simitnow), which load the tag only after consent.
+The Google tag (`G-R6E0SJZXT0`) is pasted as the first thing in every page's `<head>`, components excluded. It is per page rather than a shared script because there is no build step and a shared file would delay it. A new page must carry it too; `scripts/validate-site.py` fails any page missing it or carrying it twice. The site has no cookie-consent banner, unlike the other DDOSoft apps (portfonio, simitnow), which load the tag only after consent.
 
 ## Quality Targets
 
