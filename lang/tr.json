@@ -202,11 +202,11 @@
         "releases": "Son Sürümü İndirin"
       }
     },
-    "tefaster": {
-      "name": "Tefaster",
+    "portfonio": {
+      "name": "Portfonio",
       "tagline": "Türk yatırım fonları için portföy takibi",
       "version": "Beta",
-      "intro": "Tefaster, Türk yatırım fonu portföylerini yönetmek için yazılmış bir Django uygulamasıdır. TEFAS verisini her gün çeker, elinizdekini takip eder ve her fonun nasıl performans gösterdiğini gösterir.",
+      "intro": "Portfonio, Türk yatırım fonu portföylerini yönetmek için yazılmış bir Django uygulamasıdır. TEFAS verisini her gün çeker, elinizdekini takip eder ve her fonun nasıl performans gösterdiğini gösterir.",
       "highlight": "2.316+ Türk yatırım fonu, TEFAS'tan günlük fiyatlanır",
       "card": {
         "category": "Portföy Yönetimi",
@@ -276,7 +276,7 @@
         ]
       },
       "download": {
-        "title": "Tefaster'ı Deneyin",
+        "title": "Portfonio'yu Deneyin",
         "subtitle": "Canlı sürümü deneyin ya da kaynak koda bakın",
         "live": "Canlı Demo'yu Deneyin",
         "github": "GitHub'da Görüntüle"
@@ -401,8 +401,8 @@
             "href": "https://github.com/abkulakli/ddogreen/releases"
           },
           {
-            "text": "Tefaster",
-            "href": "https://tefaster.ddosoft.com"
+            "text": "Portfonio",
+            "href": "https://www.portfonio.com"
           }
         ]
       },

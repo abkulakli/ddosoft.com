@@ -309,7 +309,7 @@ def _near(first, second, distance=70):
 
 # Claims that were removed because nothing measures them. Each pattern stays
 # narrow on purpose: the legitimate figures on this site must keep passing —
-# the 0.70/0.30 hysteresis values the package actually installs, Tefaster's 83%
+# the 0.70/0.30 hysteresis values the package actually installs, Portfonio's 83%
 # query reduction (documented as 6+ queries down to 1), the 2,316 TEFAS funds,
 # and the example thresholds discussed in the articles.
 FORBIDDEN_CLAIMS = (
