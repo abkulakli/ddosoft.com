@@ -127,6 +127,10 @@ Favicon set, all derived from the same artwork and referenced with absolute path
 
 `js/structured-data-manager.js` injects JSON-LD schema.org markup dynamically. It bootstraps off the `languageApplied` event that `language-manager.js` dispatches once translations are loaded — not a timer — because it reads its field values out of the language data.
 
+**Homepage metadata has two sources that drift apart.** The static `<head>` in `index.html` is what crawlers that skip JavaScript see; for non-article pages `language-manager.js` overwrites title, description, canonical, OG and Twitter tags at runtime from `meta.*` in `lang/en.json` / `lang/tr.json`. Change both when touching either. `sitemap.xml` lists only `www.ddosoft.com` URLs (never another host).
+
+`scripts/validate-site.py` does not fetch absolute URLs. After touching canonical, `og:image`, `twitter:image`, the schema `logo` or the sitemap, run `curl -s -o /dev/null -w '%{http_code}'` on each one (200 expected). The only preview image is the square `icon-512.png`, so `twitter:card` is `summary`; going back to `summary_large_image` needs a 1200×630 image.
+
 Content policy for articles: no performance or savings figure goes into an article unless a measurement backs it and the article shows the methodology. Product marketing copy on the homepage is a separate decision from what an engineering article asserts.
 
 ### Analytics
