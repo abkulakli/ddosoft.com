@@ -6,22 +6,22 @@
       "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development",
       "author": "DDOSoft",
       "robots": "index, follow",
-      "canonical": "https://www.ddosoft.com/"
+      "canonical": "https://www.ddosoft.com/?lang=en"
     },
     "openGraph": {
       "title": "DDOSoft - Sustainable Software Solutions",
       "description": "Software consulting and tools built to use less energy",
       "type": "website",
-      "url": "https://www.ddosoft.com/",
-      "image": "https://www.ddosoft.com/images/og-image.jpg",
+      "url": "https://www.ddosoft.com/?lang=en",
+      "image": "https://www.ddosoft.com/icon-512.png",
       "siteName": "DDOSoft"
     },
     "twitter": {
-      "card": "summary_large_image",
+      "card": "summary",
       "site": "@ddosoft",
       "title": "DDOSoft - Sustainable Software Solutions",
       "description": "Software consulting and tools built to use less energy",
-      "image": "https://www.ddosoft.com/images/twitter-image.jpg"
+      "image": "https://www.ddosoft.com/icon-512.png"
     },
     "pages": {
       "home": {
@@ -283,6 +283,10 @@
         "excerpt": "Test your EV charging systems without hardware. Simulate charge points against a CSMS, or run a hosted CSMS for your chargers to connect to. Speaks OCPP 1.6 and 2.0.1 either way, and runs load tests. Free plan available."
       }
     },
+    "badges": {
+      "freeToStart": "Free to Start",
+      "freePlan": "Free Plan"
+    },
     "card": {
       "learnMore": "Learn More →",
       "tryNow": "Try Now →"
@@ -412,7 +416,6 @@
         ]
       }
     },
-    "copyright": "Copyright 2025 – DDOSoft. All rights reserved.",
-    "credit": "Built with GitHub Copilot"
+    "copyright": "Copyright – DDOSoft. All rights reserved."
   }
 }

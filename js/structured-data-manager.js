@@ -20,7 +20,7 @@ class StructuredDataManager {
             "name": "DDOSoft",
             "alternateName": "DDO Software",
             "url": this.baseUrl,
-            "logo": `${this.baseUrl}/images/logo.svg`,
+            "logo": `${this.baseUrl}/logo.png`,
             "description": this.languageManager.getTranslation('meta.site.description'),
             "foundingDate": "2024",
             "founder": {

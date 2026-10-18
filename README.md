@@ -20,4 +20,4 @@ Push to `main` → GitHub Actions deploys to GitHub Pages automatically.
 
 ## License
 
-Copyright 2025 – DDOSoft. All rights reserved.
+Copyright – DDOSoft. All rights reserved.

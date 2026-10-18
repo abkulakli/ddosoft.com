@@ -14,22 +14,22 @@
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
-      "canonical": "https://www.ddosoft.com/tr/"
+      "canonical": "https://www.ddosoft.com/?lang=tr"
     },
     "openGraph": {
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
       "description": "Daha az enerji harcayan yazılımlar için danışmanlık ve araçlar",
       "type": "website",
-      "url": "https://www.ddosoft.com/tr/",
-      "image": "https://www.ddosoft.com/images/og-image-tr.jpg",
+      "url": "https://www.ddosoft.com/?lang=tr",
+      "image": "https://www.ddosoft.com/icon-512.png",
       "siteName": "DDOSoft"
     },
     "twitter": {
-      "card": "summary_large_image",
+      "card": "summary",
       "site": "@ddosoft",
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
       "description": "Daha az enerji harcayan yazılımlar için danışmanlık ve araçlar",
-      "image": "https://www.ddosoft.com/images/twitter-image-tr.jpg"
+      "image": "https://www.ddosoft.com/icon-512.png"
     },
     "pages": {
       "home": {
@@ -291,6 +291,10 @@
         "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. Şarj istasyonlarını bir CSMS'e karşı simüle edin, ya da şarj cihazlarınızın bağlanacağı barındırılan bir CSMS çalıştırın. Her iki yönde de OCPP 1.6 ve 2.0.1 konuşur, yük testleri yapar. Ücretsiz plan mevcut."
       }
     },
+    "badges": {
+      "freeToStart": "Ücretsiz Başlayın",
+      "freePlan": "Ücretsiz Plan"
+    },
     "card": {
       "learnMore": "Daha Fazla Bilgi →",
       "tryNow": "Şimdi Dene →"
@@ -420,7 +424,6 @@
         ]
       }
     },
-    "copyright": "Telif Hakkı 2025 – DDOSoft. Tüm hakları saklıdır.",
-    "credit": "GitHub Copilot ile geliştirildi"
+    "copyright": "Telif Hakkı – DDOSoft. Tüm hakları saklıdır."
   }
 }
