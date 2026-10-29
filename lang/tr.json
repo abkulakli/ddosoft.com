@@ -10,8 +10,8 @@
         "title": "Yaklaşımımız",
         "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında 15+ yıllık deneyimimiz var. İşin kapsamı eski sistemleri modernize etmekten sıfırdan yeni sistem kurmaya kadar uzanıyor. EV şarjı için OCPP protokol implementasyonu, AWS altyapı optimizasyonu, gömülü sistemler ve sistem entegrasyonu bu kapsamın içinde."
       },
-      "description": "DDOSoft sürdürülebilir yazılım geliştirir. Güç yönetimi aracımız DDOGreen, dizüstü bilgisayarınızın güç modunu gerçek sistem yüküne göre kendisi değiştirir.",
-      "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, DDOGreen, pil optimizasyonu, yazılım geliştirme",
+      "description": "DDOSoft sürdürülebilir yazılım geliştirir. Matematik ve refleks oyunumuz Zekky'yi tarayıcınızda ücretsiz oynayabilirsiniz, reklam göstermez.",
+      "keywords": "sürdürülebilir yazılım, yeşil teknoloji, Zekky, matematik oyunu, refleks oyunu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
       "canonical": "https://www.ddosoft.com/?lang=tr"
@@ -129,77 +129,14 @@
   "products": {
     "title": "Ürünlerimiz",
     "subtitle": "Kendimiz geliştirip kendimiz bakımını yaptığımız yazılımlar",
-    "ddogreen": {
-      "name": "DDOGreen",
-      "tagline": "Arka planda çalışan güç yönetimi",
-      "version": "Son Sürüm: v0.3.1",
-      "intro": "DDOGreen, dizüstü bilgisayarınızı ne kadar meşgul olduğuna bakarak yüksek performans ve güç tasarrufu modları arasında geçirir.",
-      "highlight": "Gerçek CPU yüküne göre güç modu geçişi, modlar arasında gidip gelmeyi önleyen histerezisle",
+    "zekky": {
+      "name": "Zekky",
+      "tagline": "Doğru cevabı bul, saat seni geçmesin",
+      "version": "Yeni",
+      "description": "Zekky, saat bitmeden doğru cevabı bulup dokunduğunuz bir matematik ve refleks oyunudur. Tarayıcıda ücretsiz oynanır ve reklam göstermez.",
       "card": {
-        "category": "Güç Yönetimi",
-        "excerpt": "Makinenizin ne kadar meşgul olduğunu izler ve güç modlarını kendisi değiştirir. Kurun, arka planda çalışır. Hiçbir ayar gerekmez."
-      },
-      "features": {
-        "title": "Temel Özellikler",
-        "items": [
-          {
-            "title": "Otomatik güç yönetimi:",
-            "description": "CPU yüküne göre mod değiştirir"
-          },
-          {
-            "title": "Çapraz platform:",
-            "description": "Linux'ta TLP, Windows'ta Power Plans üzerinden"
-          },
-          {
-            "title": "Sıfır yapılandırma:",
-            "description": "Çalışan bir yapılandırma dosyasıyla gelir, kurulumdan sonra çalışır"
-          },
-          {
-            "title": "Servis olarak çalışır:",
-            "description": "Linux'ta systemd, Windows'ta Service Manager"
-          },
-          {
-            "title": "CI'da test edilir:",
-            "description": "Birim test paketi her değişiklikte çalışır"
-          }
-        ]
-      },
-      "platforms": {
-        "title": "Platform Desteği",
-        "linux": {
-          "title": "Linux Sistemleri",
-          "features": [
-            "TLP entegrasyonu (tlp ac / tlp bat)",
-            "Systemd servis yönetimi",
-            "DEB, RPM ve TGZ paketleri",
-            "Yerel /proc/loadavg izleme"
-          ]
-        },
-        "windows": {
-          "title": "Windows Sistemleri",
-          "features": [
-            "Windows Power Plans entegrasyonu",
-            "Service Manager entegrasyonu",
-            "MSI yükleyici paketi",
-            "Performance Counters izleme"
-          ]
-        }
-      },
-      "architecture": {
-        "title": "Teknik Mimari",
-        "features": [
-          "C++20, hem Linux'ta hem Windows'ta derlenir",
-          "Aralarında ölü bant bırakan iki eşik (%70 performansa, %30 güç tasarrufuna)",
-          "CPU yükü her platformun kendi arayüzünden okunur",
-          "Kayıt tutma ve hata yönetimi",
-          "Küçük bellek ayak izi"
-        ]
-      },
-      "download": {
-        "title": "DDOGreen'i İndirin",
-        "subtitle": "Linux ve Windows paketleri",
-        "github": "GitHub'da Görüntüle",
-        "releases": "Son Sürümü İndirin"
+        "category": "Matematik Oyunu",
+        "excerpt": "Saat işlerken doğru cevabı bulup dokunursunuz. On soruluk turlarda matematik ve sayı dizisi soruları gelir, oynadıkça seviyeniz yükselir. Reklam göstermez, tarayıcınızda ücretsiz oynarsınız."
       }
     },
     "portfonio": {
@@ -293,11 +230,14 @@
     },
     "badges": {
       "freeToStart": "Ücretsiz Başlayın",
-      "freePlan": "Ücretsiz Plan"
+      "freePlan": "Ücretsiz Plan",
+      "noAds": "Reklamsız",
+      "free": "Ücretsiz"
     },
     "card": {
       "learnMore": "Daha Fazla Bilgi →",
-      "tryNow": "Şimdi Dene →"
+      "tryNow": "Şimdi Dene →",
+      "playNow": "Hemen Oyna →"
     }
   },
   "contact": {
@@ -397,12 +337,8 @@
         "title": "Ürünler",
         "links": [
           {
-            "text": "DDOGreen",
-            "href": "#products"
-          },
-          {
-            "text": "GitHub",
-            "href": "https://github.com/abkulakli/ddogreen/releases"
+            "text": "Zekky",
+            "href": "https://zekky.ddosoft.com"
           },
           {
             "text": "Portfonio",

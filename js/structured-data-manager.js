@@ -88,26 +88,21 @@ class StructuredDataManager {
         const productData = {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "DDOGreen",
-            "applicationCategory": "SystemUtility",
-            "operatingSystem": ["Linux", "Windows"],
-            "description": this.languageManager.getTranslation('products.ddogreen.description'),
+            "name": "Zekky",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://zekky.ddosoft.com",
+            "description": this.languageManager.getTranslation('products.zekky.description'),
+            "inLanguage": ["en", "tr"],
             "creator": {
                 "@type": "Organization",
                 "name": "DDOSoft"
             },
-            "downloadUrl": "https://github.com/abkulakli/ddogreen",
-            "codeRepository": "https://github.com/abkulakli/ddogreen",
-            "programmingLanguage": "C++",
-            "version": "0.3.1",
-            "license": "https://opensource.org/licenses/MIT",
-            "features": [
-                "Automatic power mode switching",
-                "CPU load monitoring",
-                "Hysteresis that prevents power mode flapping",
-                "Zero configuration required"
-            ],
-            "requirements": "Linux or Windows operating system"
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
         };
 
         this.insertStructuredData('product', productData);
