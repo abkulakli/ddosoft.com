@@ -259,7 +259,7 @@ def check_sitemap():
     namespace = '{http://www.sitemaps.org/schemas/sitemap/0.9}'
     locations = {element.text for element in root.iter(f'{namespace}loc')}
 
-    for path in article_files():
+    for path in article_files() + sorted(glob.glob('*.html')):
         canonical = article_metadata(path)['canonical']
         if canonical and canonical not in locations:
             problems.append(f'sitemap.xml: missing {canonical} (from {path})')
@@ -397,7 +397,7 @@ def main():
         ('article SEO metadata complete and reciprocal', check_article_seo),
         ('article prose is in the HTML', check_article_body_is_static),
         ('no unsubstantiated quantitative claims', check_no_unsubstantiated_claims),
-        ('sitemap covers every article', check_sitemap),
+        ('sitemap covers every article and top-level page', check_sitemap),
         ('Google tag present once in every page <head>', check_analytics_tag),
     ]
 
