@@ -12,9 +12,7 @@ DDOSoft is a static single-page landing website for a sustainable software consu
 **LinkedIn**: [linkedin.com/company/ddosoft](https://www.linkedin.com/company/ddosoft)
 
 ### Products
-- **DDOGreen** v0.3.1 — cross-platform power management tool (C++20, Linux/Windows). Switches power modes from per-core load average with dual-threshold hysteresis; the package installs a working default config (0.70 / 0.30 / 30s). [GitHub](https://github.com/abkulakli/ddogreen)
-
-  No battery-savings percentage is claimed anywhere on the site: nothing in the ddogreen repo measures one. Don't reintroduce a figure without a measurement and a stated methodology. Test counts and coverage percentages are likewise kept qualitative, because they drift with every commit and the site cannot be updated per commit.
+- **Zekky** — casual math and reflex mobile game (Godot), playable free in the browser at [zekky.ddosoft.com](https://zekky.ddosoft.com) (an independent subdomain served from the DDOSoft cluster, not from this repo). English and Turkish, no ads, collects no data. Not in a store yet, so the homepage card links to the landing page and never promises an Android download.
 - **Portfonio** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [www.portfonio.com](https://www.portfonio.com).
 - **SimItNow** (formerly SimIt, renamed 2026-08-25 to resolve a trademark conflict) — [www.simitnow.com](https://www.simitnow.com), an independent domain, not a ddosoft.com subdomain. The old `simit.ddosoft.com` still resolves for now but is no longer the canonical link.
 

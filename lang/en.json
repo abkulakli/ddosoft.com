@@ -2,8 +2,8 @@
   "meta": {
     "site": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "DDOSoft builds sustainable software. Our power management tool DDOGreen switches your laptop's power mode automatically, based on real system load.",
-      "keywords": "sustainable software, green technology, power management, DDOGreen, battery optimization, software development",
+      "description": "DDOSoft builds sustainable software. Zekky, our math and reflex game, plays free in your browser and shows no ads.",
+      "keywords": "sustainable software, green technology, Zekky, math game, reflex game, software development",
       "author": "DDOSoft",
       "robots": "index, follow",
       "canonical": "https://www.ddosoft.com/?lang=en"
@@ -121,77 +121,14 @@
   "products": {
     "title": "Our Products",
     "subtitle": "Software we build and maintain ourselves",
-    "ddogreen": {
-      "name": "DDOGreen",
-      "tagline": "Power management that runs in the background",
-      "version": "Latest Version: v0.3.1",
-      "intro": "DDOGreen switches your laptop between high-performance and power-saving modes based on how busy it actually is.",
-      "highlight": "Switches power modes from real CPU load, with hysteresis so it does not flap between them",
+    "zekky": {
+      "name": "Zekky",
+      "tagline": "Find the right answer before the clock does",
+      "version": "New",
+      "description": "Zekky is a math and reflex game where you tap the right answer before the clock runs out. It plays free in the browser and shows no ads.",
       "card": {
-        "category": "Power Management",
-        "excerpt": "Watches how busy your machine is and switches power modes automatically. Install it and it runs in the background with no setup."
-      },
-      "features": {
-        "title": "Key Features",
-        "items": [
-          {
-            "title": "Automatic power management:",
-            "description": "Switches modes from CPU load"
-          },
-          {
-            "title": "Cross-platform:",
-            "description": "Linux through TLP, Windows through Power Plans"
-          },
-          {
-            "title": "Zero configuration:",
-            "description": "Ships with a working config file, so it runs after install"
-          },
-          {
-            "title": "Runs as a service:",
-            "description": "systemd on Linux, Service Manager on Windows"
-          },
-          {
-            "title": "Tested in CI:",
-            "description": "Unit test suite runs on every change"
-          }
-        ]
-      },
-      "platforms": {
-        "title": "Platform Support",
-        "linux": {
-          "title": "Linux Systems",
-          "features": [
-            "TLP integration (tlp ac / tlp bat)",
-            "Systemd service management",
-            "DEB, RPM, and TGZ packages",
-            "Native /proc/loadavg monitoring"
-          ]
-        },
-        "windows": {
-          "title": "Windows Systems",
-          "features": [
-            "Windows Power Plans integration",
-            "Service Manager integration",
-            "MSI installer package",
-            "Performance Counters monitoring"
-          ]
-        }
-      },
-      "architecture": {
-        "title": "Technical Architecture",
-        "features": [
-          "C++20, building on both Linux and Windows",
-          "Two thresholds with a dead band between them (70% to performance, 30% to power save)",
-          "CPU load read through each platform's native interface",
-          "Logging and error handling",
-          "Small memory footprint"
-        ]
-      },
-      "download": {
-        "title": "Download DDOGreen",
-        "subtitle": "Packages for Linux and Windows",
-        "github": "View on GitHub",
-        "releases": "Download Latest Release"
+        "category": "Math Game",
+        "excerpt": "Tap the right answer while the clock runs. Rounds are ten questions of math and number patterns, and your level rises as you play. No ads, and it plays free in your browser."
       }
     },
     "portfonio": {
@@ -285,11 +222,14 @@
     },
     "badges": {
       "freeToStart": "Free to Start",
-      "freePlan": "Free Plan"
+      "freePlan": "Free Plan",
+      "noAds": "No Ads",
+      "free": "Free"
     },
     "card": {
       "learnMore": "Learn More →",
-      "tryNow": "Try Now →"
+      "tryNow": "Try Now →",
+      "playNow": "Play Now →"
     }
   },
   "contact": {
@@ -389,12 +329,8 @@
         "title": "Products",
         "links": [
           {
-            "text": "DDOGreen",
-            "href": "#products"
-          },
-          {
-            "text": "GitHub",
-            "href": "https://github.com/abkulakli/ddogreen/releases"
+            "text": "Zekky",
+            "href": "https://zekky.ddosoft.com"
           },
           {
             "text": "Portfonio",
