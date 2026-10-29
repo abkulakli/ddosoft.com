@@ -32,7 +32,8 @@
       "articles": {
         "title": "Engineering Notes - DDOSoft",
         "description": "Field notes from building DDOGreen and SimItNow: power management internals, OCPP 1.6 integration, and what production taught us.",
-        "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software"
+        "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software",
+        "canonical": "https://www.ddosoft.com/articles.html?lang=en"
       },
       "about": {
         "title": "About DDOSoft - Sustainable Software Solutions",

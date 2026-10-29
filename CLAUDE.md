@@ -100,7 +100,7 @@ Header, footer and every other page keep using `data-lang-key` as normal.
 
 - `index.html` — single-page: Hero · About · Services · Products · Articles · Contact
 - `articles.html` — article index, uses the normal `?lang=` mechanism
-- `products.html` — every product, a two-column grid. The homepage Products section shows only three cards (the current flagship products) and links here; a new product goes on this page first and takes a homepage slot only by replacing one. The card markup is duplicated between the two pages, so change both. The page declares `meta.pages.products.canonical` in the language files: a page with that key gets its own canonical, `og:url`, title and description at runtime, while pages without it inherit the homepage's (as `articles.html` still does)
+- `products.html` — every product, a two-column grid. The homepage Products section shows only three cards (the current flagship products) and links here; a new product goes on this page first and takes a homepage slot only by replacing one. The card markup is duplicated between the two pages, so change both. Both this page and `articles.html` declare `meta.pages.<page>.canonical` in the language files: a page with that key gets its own canonical, `og:url`, title and description at runtime, while a page without it inherits the homepage's, so any new non-article page must declare it
 - `articles/*.html` — English articles; `articles/tr/*.html` — Turkish articles
 - `components/` — shared header and footer (single source of truth)
 - `lang/` — `en.json` and `tr.json`
