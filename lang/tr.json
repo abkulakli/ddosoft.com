@@ -40,7 +40,8 @@
       "articles": {
         "title": "Mühendislik Notları - DDOSoft",
         "description": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
-        "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım"
+        "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım",
+        "canonical": "https://www.ddosoft.com/articles.html?lang=tr"
       },
       "about": {
         "title": "Hakkımızda DDOSoft - Sürdürülebilir Yazılım Çözümleri",
