@@ -707,6 +707,23 @@ section { padding: clamp(4rem, 10vw, 7rem) 0; }
     gap: 2rem;
 }
 
+.products__grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.products__footer { text-align: center; margin-top: 2.5rem; }
+
+.products-page { padding-top: calc(var(--nav-h) + clamp(2.5rem, 7vw, 5rem)); padding-bottom: clamp(3rem, 8vw, 6rem); }
+
+.products-page__header { text-align: center; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+
+.products-page__title { margin-bottom: .75rem; }
+
+.products-page__subtitle {
+    color: var(--text-1);
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
 .product-card {
     background: var(--bg-card);
     border: 1px solid var(--border-0);

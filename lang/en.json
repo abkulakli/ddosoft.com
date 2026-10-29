@@ -43,6 +43,12 @@
         "title": "Contact DDOSoft - Get in Touch",
         "description": "Reach DDOSoft about sustainable software and green technology consulting.",
         "keywords": "contact ddosoft, green technology consulting, sustainable software support"
+      },
+      "products": {
+        "title": "Products - DDOSoft",
+        "description": "Zekky, Portfonio, SimItNow and DDOGreen: the software DDOSoft builds and maintains itself.",
+        "keywords": "DDOSoft products, Zekky, Portfonio, SimItNow, DDOGreen, software products",
+        "canonical": "https://www.ddosoft.com/products.html?lang=en"
       }
     }
   },
@@ -220,6 +226,15 @@
         "excerpt": "Test your EV charging systems without hardware. Simulate charge points against a CSMS, or run a hosted CSMS for your chargers to connect to. Speaks OCPP 1.6 and 2.0.1 either way, and runs load tests. Free plan available."
       }
     },
+    "ddogreen": {
+      "name": "DDOGreen",
+      "tagline": "Power management that runs in the background",
+      "version": "Latest Version: v0.3.1",
+      "card": {
+        "category": "Power Management",
+        "excerpt": "Watches how busy your machine is and switches power modes automatically. Install it and it runs in the background with no setup."
+      }
+    },
     "badges": {
       "freeToStart": "Free to Start",
       "freePlan": "Free Plan",
@@ -230,7 +245,8 @@
       "learnMore": "Learn More →",
       "tryNow": "Try Now →",
       "playNow": "Play Now →"
-    }
+    },
+    "viewAll": "All Products →"
   },
   "contact": {
     "title": "Get In Touch",

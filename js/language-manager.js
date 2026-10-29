@@ -153,7 +153,10 @@ class LanguageManager {
         }
 
         // Update canonical URL
-        const canonical = this.getTranslation('meta.site.canonical');
+        // A page opts in to its own canonical/OG identity by declaring
+        // meta.pages.<page>.canonical; the rest inherit the homepage's.
+        const pageCanonical = this.getPageMeta(currentPage, 'canonical');
+        const canonical = pageCanonical || this.getTranslation('meta.site.canonical');
         if (canonical) {
             this.updateMetaTag('rel', 'canonical', 'href', canonical);
         }
@@ -165,9 +168,9 @@ class LanguageManager {
         }
 
         // Update Open Graph meta tags
-        const ogTitle = this.getTranslation('meta.openGraph.title');
-        const ogDescription = this.getTranslation('meta.openGraph.description');
-        const ogUrl = this.getTranslation('meta.openGraph.url');
+        const ogTitle = pageCanonical ? title : this.getTranslation('meta.openGraph.title');
+        const ogDescription = pageCanonical ? description : this.getTranslation('meta.openGraph.description');
+        const ogUrl = pageCanonical || this.getTranslation('meta.openGraph.url');
         const ogImage = this.getTranslation('meta.openGraph.image');
         const ogType = this.getTranslation('meta.openGraph.type');
         const ogSiteName = this.getTranslation('meta.openGraph.siteName');
@@ -182,8 +185,8 @@ class LanguageManager {
         // Update Twitter Card meta tags
         const twitterCard = this.getTranslation('meta.twitter.card');
         const twitterSite = this.getTranslation('meta.twitter.site');
-        const twitterTitle = this.getTranslation('meta.twitter.title');
-        const twitterDescription = this.getTranslation('meta.twitter.description');
+        const twitterTitle = pageCanonical ? title : this.getTranslation('meta.twitter.title');
+        const twitterDescription = pageCanonical ? description : this.getTranslation('meta.twitter.description');
         const twitterImage = this.getTranslation('meta.twitter.image');
 
         if (twitterCard) this.updateMetaTag('name', 'twitter:card', 'content', twitterCard);
@@ -205,6 +208,7 @@ class LanguageManager {
 
         if (filename === 'index.html' || filename === '') return 'home';
         if (filename === 'articles.html') return 'articles';
+        if (filename === 'products.html') return 'products';
         if (filename.includes('about')) return 'about';
         if (filename.includes('contact')) return 'contact';
 

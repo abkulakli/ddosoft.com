@@ -12,6 +12,9 @@ DDOSoft is a static single-page landing website for a sustainable software consu
 **LinkedIn**: [linkedin.com/company/ddosoft](https://www.linkedin.com/company/ddosoft)
 
 ### Products
+- **DDOGreen** v0.3.1 — cross-platform power management tool (C++20, Linux/Windows). Switches power modes from per-core load average with dual-threshold hysteresis; the package installs a working default config (0.70 / 0.30 / 30s). [GitHub](https://github.com/abkulakli/ddogreen)
+
+  No battery-savings percentage is claimed anywhere on the site: nothing in the ddogreen repo measures one. Don't reintroduce a figure without a measurement and a stated methodology. Test counts and coverage percentages are likewise kept qualitative, because they drift with every commit and the site cannot be updated per commit.
 - **Zekky** — casual math and reflex mobile game (Godot), playable free in the browser at [zekky.ddosoft.com](https://zekky.ddosoft.com) (an independent subdomain served from the DDOSoft cluster, not from this repo). English and Turkish, no ads, collects no data. Not in a store yet, so the homepage card links to the landing page and never promises an Android download.
 - **Portfonio** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [www.portfonio.com](https://www.portfonio.com).
 - **SimItNow** (formerly SimIt, renamed 2026-08-25 to resolve a trademark conflict) — [www.simitnow.com](https://www.simitnow.com), an independent domain, not a ddosoft.com subdomain. The old `simit.ddosoft.com` still resolves for now but is no longer the canonical link.
@@ -97,6 +100,7 @@ Header, footer and every other page keep using `data-lang-key` as normal.
 
 - `index.html` — single-page: Hero · About · Services · Products · Articles · Contact
 - `articles.html` — article index, uses the normal `?lang=` mechanism
+- `products.html` — every product, a two-column grid. The homepage Products section shows only three cards (the current flagship products) and links here; a new product goes on this page first and takes a homepage slot only by replacing one. The card markup is duplicated between the two pages, so change both. The page declares `meta.pages.products.canonical` in the language files: a page with that key gets its own canonical, `og:url`, title and description at runtime, while pages without it inherit the homepage's (as `articles.html` still does)
 - `articles/*.html` — English articles; `articles/tr/*.html` — Turkish articles
 - `components/` — shared header and footer (single source of truth)
 - `lang/` — `en.json` and `tr.json`
