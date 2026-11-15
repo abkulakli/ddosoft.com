@@ -10,7 +10,7 @@
         "title": "Yaklaşımımız",
         "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında 15+ yıllık deneyimimiz var. İşin kapsamı eski sistemleri modernize etmekten sıfırdan yeni sistem kurmaya kadar uzanıyor. EV şarjı için OCPP protokol implementasyonu, AWS altyapı optimizasyonu, gömülü sistemler ve sistem entegrasyonu bu kapsamın içinde."
       },
-      "description": "DDOSoft sürdürülebilir yazılım geliştirir. Matematik ve refleks oyunumuz Zekky'yi tarayıcınızda ücretsiz oynayabilirsiniz, reklam göstermez.",
+      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, Zekky, matematik oyunu, refleks oyunu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -18,7 +18,7 @@
     },
     "openGraph": {
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-      "description": "Daha az enerji harcayan yazılımlar için danışmanlık ve araçlar",
+      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
       "type": "website",
       "url": "https://www.ddosoft.com/?lang=tr",
       "image": "https://www.ddosoft.com/icon-512.png",
@@ -28,13 +28,13 @@
       "card": "summary",
       "site": "@ddosoft",
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-      "description": "Daha az enerji harcayan yazılımlar için danışmanlık ve araçlar",
+      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
       "image": "https://www.ddosoft.com/icon-512.png"
     },
     "pages": {
       "home": {
         "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-        "description": "İhtiyacınız olan performanstan ödün vermeden daha az enerji harcayan yazılımlar geliştiriyoruz.",
+        "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
         "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, enerji optimizasyonu"
       },
       "about": {
@@ -59,11 +59,11 @@
     "languageSwitch": "EN"
   },
   "hero": {
-    "eyebrow": "Sürdürülebilir Yazılım Danışmanlığı",
-    "title": "Sürdürülebilir<br><em>Yazılım</em><br>Çözümleri",
-    "subtitle": "Yazılım danışmanlığı, dijital dönüşüm ve sürdürülebilir geliştirme. Teknoloji altyapınızı modernize ederken enerji tüketimini de aynı proje içinde düşürüyoruz.",
-    "cta": "Ürünleri Görüntüle",
-    "scrollHint": "Daha Fazla Bilgi"
+    "title": "Enerji kullanımını gözeten yazılım danışmanlığı ve geliştirme",
+    "subtitle": "DDOSoft, Kahramanmaraş'ta çalışan bir yazılım danışmanlık firması. Eski sistemleri modernize ediyor, AWS'ye taşıyor ve özel backend sistemleri kuruyoruz, enerji kullanımını da en baştan bir tasarım kısıtı sayıyoruz. Kendi ürünlerimizi de geliştirip işletiyoruz.",
+    "ctaPrimary": "Projeyi konuşalım",
+    "ctaSecondary": "Ürünlerimize bakın",
+    "stackCaption": "En çok çalıştığımız teknolojiler."
   },
   "about": {
     "title": "DDOSoft Hakkında",
@@ -131,7 +131,8 @@
       "card": {
         "category": "Matematik Oyunu",
         "excerpt": "Saat işlerken doğru cevabı bulup dokunursunuz. On soruluk turlarda matematik ve sayı dizisi soruları gelir, oynadıkça seviyeniz yükselir. Reklam göstermez, tarayıcınızda ücretsiz oynarsınız."
-      }
+      },
+      "cta": "Tarayıcıda oyna"
     },
     "portfonio": {
       "name": "Portfonio",
@@ -211,7 +212,8 @@
         "subtitle": "Canlı sürümü deneyin ya da kaynak koda bakın",
         "live": "Canlı Demo'yu Deneyin",
         "github": "GitHub'da Görüntüle"
-      }
+      },
+      "cta": "Portfonio'yu aç"
     },
     "simit": {
       "name": "SimItNow",
@@ -220,18 +222,14 @@
       "card": {
         "category": "EV Şarj Simülatörü",
         "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. Şarj istasyonlarını bir CSMS'e karşı simüle edin, ya da şarj cihazlarınızın bağlanacağı barındırılan bir CSMS çalıştırın. Her iki yönde de OCPP 1.6 ve 2.0.1 konuşur, yük testleri yapar. Ücretsiz plan mevcut."
-      }
+      },
+      "cta": "SimItNow'u aç"
     },
     "badges": {
       "freeToStart": "Ücretsiz Başlayın",
       "freePlan": "Ücretsiz Plan",
       "noAds": "Reklamsız",
       "free": "Ücretsiz"
-    },
-    "card": {
-      "learnMore": "Daha Fazla Bilgi →",
-      "tryNow": "Şimdi Dene →",
-      "playNow": "Hemen Oyna →"
     }
   },
   "contact": {

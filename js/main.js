@@ -237,52 +237,6 @@ class HeaderScrollEffects {
 }
 
 // =============================================================================
-// Intersection Observer for Animations
-// =============================================================================
-
-class ScrollAnimations {
-    constructor() {
-        this.animateElements = document.querySelectorAll('.about__stats, .benefit, .team__member, .product');
-        this.observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        this.init();
-    }
-
-    init() {
-        // Check if user prefers reduced motion
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            return;
-        }
-
-        if ('IntersectionObserver' in window) {
-            this.observer = new IntersectionObserver((entries) => {
-                this.handleIntersection(entries);
-            }, this.observerOptions);
-
-            this.animateElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                this.observer.observe(element);
-            });
-        }
-    }
-
-    handleIntersection(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                this.observer.unobserve(entry.target);
-            }
-        });
-    }
-}
-
-// =============================================================================
 // Performance Optimizations
 // =============================================================================
 
@@ -367,26 +321,6 @@ class AccessibilityEnhancements {
         skipLink.href = '#main';
         skipLink.textContent = 'Skip to main content';
         skipLink.className = 'skip-link';
-        skipLink.style.cssText = `
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: var(--color-primary);
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 1000;
-            transition: top 0.2s ease;
-        `;
-
-        skipLink.addEventListener('focus', () => {
-            skipLink.style.top = '6px';
-        });
-
-        skipLink.addEventListener('blur', () => {
-            skipLink.style.top = '-40px';
-        });
 
         document.body.insertBefore(skipLink, document.body.firstChild);
     }
@@ -447,7 +381,6 @@ class DDOSoftWebsite {
                 new MobileNavigation(),
                 new SmoothScrollNavigation(),
                 new HeaderScrollEffects(),
-                new ScrollAnimations(),
                 new PerformanceOptimizations(),
                 new AccessibilityEnhancements()
             ];
@@ -470,46 +403,3 @@ class DDOSoftWebsite {
 
 // Create global instance
 window.ddosoftWebsite = new DDOSoftWebsite();
-
-// Add CSS for JavaScript-enhanced elements
-const dynamicStyles = document.createElement('style');
-dynamicStyles.textContent = `
-    /* Form Error Styles */
-    .form__input--error,
-    .form__textarea--error {
-        border-color: #ef4444 !important;
-        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
-    }
-
-    .form__error {
-        color: #ef4444;
-        font-size: var(--font-size-sm);
-        margin-top: var(--spacing-xs);
-        display: block;
-    }
-
-    /* Button Loading State */
-    .btn--loading {
-        opacity: 0.7;
-        cursor: not-allowed;
-    }
-
-    /* Skip Link Enhancement */
-    .using-keyboard *:focus {
-        outline: 2px solid var(--color-primary) !important;
-        outline-offset: 2px !important;
-    }
-
-    /* Smooth reveal animation fallback */
-    @media (prefers-reduced-motion: reduce) {
-        .about__stats,
-        .benefit,
-        .team__member,
-        .product {
-            opacity: 1 !important;
-            transform: none !important;
-        }
-    }
-`;
-
-document.head.appendChild(dynamicStyles);
