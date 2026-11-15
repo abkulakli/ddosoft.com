@@ -12,9 +12,6 @@ DDOSoft is a static single-page landing website for a sustainable software consu
 **LinkedIn**: [linkedin.com/company/ddosoft](https://www.linkedin.com/company/ddosoft)
 
 ### Products
-- **DDOGreen** v0.3.1 — cross-platform power management tool (C++20, Linux/Windows). Switches power modes from per-core load average with dual-threshold hysteresis; the package installs a working default config (0.70 / 0.30 / 30s). [GitHub](https://github.com/abkulakli/ddogreen)
-
-  No battery-savings percentage is claimed anywhere on the site: nothing in the ddogreen repo measures one. Don't reintroduce a figure without a measurement and a stated methodology. Test counts and coverage percentages are likewise kept qualitative, because they drift with every commit and the site cannot be updated per commit.
 - **Zekky** — casual math and reflex mobile game (Godot), playable free in the browser at [zekky.ddosoft.com](https://zekky.ddosoft.com) (an independent subdomain served from the DDOSoft cluster, not from this repo). English and Turkish, no ads, collects no data. Not in a store yet, so the homepage card links to the landing page and never promises an Android download.
 - **Portfonio** (Beta) — Django app for Turkish mutual fund portfolio management (TEFAS data). [www.portfonio.com](https://www.portfonio.com).
 - **SimItNow** (formerly SimIt, renamed 2026-08-25 to resolve a trademark conflict) — [www.simitnow.com](https://www.simitnow.com), an independent domain, not a ddosoft.com subdomain. The old `simit.ddosoft.com` still resolves for now but is no longer the canonical link.
@@ -34,7 +31,7 @@ php -S localhost:8000        # PHP
 
 No install, build, or compile step. Changes are live on page refresh.
 
-**Validation**: `python3 scripts/validate-site.py` — stdlib only, no install. Checks HTML nesting, language-file validity, that every `data-lang-key` / `data-lang-href` exists in **both** language files, that relative links and assets resolve, that article pages carry complete and reciprocal SEO metadata with exactly one `Article` schema, that article prose is present in the HTML rather than injected, and that the sitemap covers every article. Run it before pushing; it is the only safety net this repo has.
+**Validation**: `python3 scripts/validate-site.py` — stdlib only, no install. Checks HTML nesting, language-file validity, that every `data-lang-key` / `data-lang-href` exists in **both** language files, that relative links and assets resolve, that the Google tag is in every page, that no removed quantitative claim has crept back, and that the sitemap covers every top-level page and lists no page whose file is gone. Run it before pushing; it is the only safety net this repo has.
 
 **Deployment**: `.github/workflows/deploy.yml` has two jobs. `validate` runs the script on pull requests and on `main`. `deploy` runs only on push to `main` (`if: github.event_name == 'push'`) because the `github-pages` environment rejects deployments from non-default branches — a deploy job triggered by a pull request fails at the environment gate before any step runs. `.nojekyll` prevents Jekyll processing. `CNAME` sets the custom domain.
 
@@ -59,9 +56,9 @@ Header and footer live **only** in `components/header.html` and `components/foot
 <script src="js/component-loader.js"></script>   <!-- must be first script -->
 ```
 
-`js/component-loader.js` injects the components, then rewrites their links for the current page's depth. The prefix is computed from directory depth (`ComponentLoader.getPathPrefix()`), so it works at any nesting level — `articles/x.html` gets `../`, `articles/tr/x.html` gets `../../`. Never hardcode `../` against a specific directory.
+`js/component-loader.js` injects the components, then rewrites their links for the current page's depth. The prefix is computed from directory depth (`ComponentLoader.getPathPrefix()`), so it works at any nesting level — `dir/x.html` gets `../`, `dir/sub/x.html` gets `../../`. Never hardcode `../` against a specific directory.
 
-Links in the components that point at another page (not a `#section`) need a `data-internal-link="articles.html"` attribute carrying the root-relative path; the loader prefixes that value.
+Links in the components that point at another page (not a `#section`) need a `data-internal-link="<page>.html"` attribute carrying the root-relative path; the loader prefixes that value.
 
 ### Multilingual System (EN/TR)
 
@@ -75,33 +72,14 @@ Translations live in `lang/en.json` and `lang/tr.json`. Every visible text eleme
 
 **Important:** If no `?lang=` param is present, `language-manager.js` immediately redirects to `?lang=en`. The bare URL `https://www.ddosoft.com/` never serves content directly. Always use `?lang=en` / `?lang=tr` in canonical URLs, sitemap `<loc>` values, OG URLs, and hreflang `href` attributes.
 
-Elements whose `href` differs per language (article links) use `data-lang-href="articles.recent.0.link"` instead of hardcoding a path.
+### Per-language pages (`data-page-lang`) — currently unused
 
-### Article Pages — the one exception to `data-lang-key`
-
-Article pages carry their prose **directly in the HTML**, one file per language, and declare their language on the root element:
-
-```html
-<html lang="tr" data-page-lang="tr">
-```
-
-Why: crawlers that don't run JavaScript — LinkedIn, X and Slack link previews in particular — must see the article text, and each language needs its own URL for a clean hreflang pair. Turkish articles also get Turkish slugs, which matters for Turkish queries.
-
-When `data-page-lang` is present, `language-manager.js` **does not touch** the page's title, description, canonical, OG tags or hreflang links — the page owns them. It only translates the header and footer, and repoints the EN/TR buttons at the page's counterpart (read from the static hreflang alternates). So an article page must hand-write:
-
-- `<link rel="canonical">` pointing at itself with `?lang=`
-- three `<link rel="alternate">` entries: `en`, `tr`, `x-default` — absolute URLs, reciprocal between the pair
-- its own `<title>`, description, OG and Twitter tags
-- an inline `Article` JSON-LD block (`structured-data-manager.js` skips its own Article generation when it finds one)
-
-Header, footer and every other page keep using `data-lang-key` as normal.
+The site has no articles. `language-manager.js` still supports a page that carries its prose directly in the HTML, one file per language, and declares `<html lang="tr" data-page-lang="tr">`. For such a page the manager **does not touch** title, description, canonical, OG tags or hreflang links, and only repoints the EN/TR buttons at the page's counterpart (read from the static hreflang alternates), so the page must hand-write its own canonical (with `?lang=`), reciprocal absolute `en` / `tr` / `x-default` alternates, title, description, OG and Twitter tags. `scripts/validate-site.py` has no check for such pages; add one if the mechanism is used again.
 
 ### Page Structure
 
-- `index.html` — single-page: Hero · About · Services · Products · Articles · Contact
-- `articles.html` — article index, uses the normal `?lang=` mechanism
-- `products.html` — every product, a two-column grid. The homepage Products section shows only three cards (the current flagship products) and links here; a new product goes on this page first and takes a homepage slot only by replacing one. The card markup is duplicated between the two pages, so change both. Both this page and `articles.html` declare `meta.pages.<page>.canonical` in the language files: a page with that key gets its own canonical, `og:url`, title and description at runtime, while a page without it inherits the homepage's, so any new non-article page must declare it
-- `articles/*.html` — English articles; `articles/tr/*.html` — Turkish articles
+- `index.html` — single-page: Hero · About · Services · Products · Contact
+- There is no separate products page: the Products section of `index.html` holds one card per product (Zekky, Portfonio, SimItNow), and each card links straight to that product's own site. A new product is a new card. Any new page other than the homepage must declare `meta.pages.<page>.canonical` in the language files: a page with that key gets its own canonical, `og:url`, title and description at runtime, while a page without it inherits the homepage's.
 - `components/` — shared header and footer (single source of truth)
 - `lang/` — `en.json` and `tr.json`
 - `js/` — component-loader, language-manager, main, structured-data-manager
@@ -129,11 +107,11 @@ Favicon set, all derived from the same artwork and referenced with absolute path
 
 `js/structured-data-manager.js` injects JSON-LD schema.org markup dynamically. It bootstraps off the `languageApplied` event that `language-manager.js` dispatches once translations are loaded — not a timer — because it reads its field values out of the language data.
 
-**Homepage metadata has two sources that drift apart.** The static `<head>` in `index.html` is what crawlers that skip JavaScript see; for non-article pages `language-manager.js` overwrites title, description, canonical, OG and Twitter tags at runtime from `meta.*` in `lang/en.json` / `lang/tr.json`. Change both when touching either. `sitemap.xml` lists only `www.ddosoft.com` URLs (never another host).
+**Homepage metadata has two sources that drift apart.** The static `<head>` in `index.html` is what crawlers that skip JavaScript see; for pages without `data-page-lang` `language-manager.js` overwrites title, description, canonical, OG and Twitter tags at runtime from `meta.*` in `lang/en.json` / `lang/tr.json`. Change both when touching either. `sitemap.xml` lists only `www.ddosoft.com` URLs (never another host).
 
 `scripts/validate-site.py` does not fetch absolute URLs. After touching canonical, `og:image`, `twitter:image`, the schema `logo` or the sitemap, run `curl -s -o /dev/null -w '%{http_code}'` on each one (200 expected). The only preview image is the square `icon-512.png`, so `twitter:card` is `summary`; going back to `summary_large_image` needs a 1200×630 image.
 
-Content policy for articles: no performance or savings figure goes into an article unless a measurement backs it and the article shows the methodology. Product marketing copy on the homepage is a separate decision from what an engineering article asserts.
+Content policy: no performance or savings figure goes into any page of the site unless a measurement backs it and the methodology is stated. Test counts and coverage percentages are kept qualitative, because they drift with every commit and the site cannot be updated per commit.
 
 ### Analytics
 

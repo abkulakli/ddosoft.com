@@ -13,9 +13,9 @@ class ComponentLoader {
     /**
      * Relative prefix back to the site root, derived from directory depth.
      *
-     * Root pages get '', articles/x.html gets '../', articles/tr/x.html gets
-     * '../../'. Counting depth rather than matching '/articles/' is what makes
-     * the nested per-language article directories resolve.
+     * Root pages get '', dir/x.html gets '../', dir/sub/x.html gets '../../'.
+     * Counting depth rather than matching a directory name is what makes
+     * nested directories resolve.
      */
     static getPathPrefix() {
         const path = window.location.pathname;
@@ -111,7 +111,7 @@ class ComponentLoader {
             link.setAttribute('href', `${this.pathPrefix}index.html${link.getAttribute('href')}`);
         });
 
-        // Links to sibling pages ('articles.html') need the prefix too.
+        // Links to sibling pages need the prefix too.
         document.querySelectorAll('[data-internal-link]').forEach(link => {
             link.setAttribute('href', `${this.pathPrefix}${link.getAttribute('data-internal-link')}`);
         });

@@ -5,10 +5,10 @@ class LanguageManager {
         this.languageData = {};
         this.defaultLanguage = 'en';
 
-        // Pages that carry their own prose declare their language on <html>.
-        // Article pages do this: each language is a separate URL with its own
-        // hand-written title, canonical, OG tags and hreflang pair, so the
-        // JSON-driven meta below must leave them alone.
+        // Pages that carry their own prose declare their language on <html>:
+        // each language is a separate URL with its own hand-written title,
+        // canonical, OG tags and hreflang pair, so the JSON-driven meta below
+        // must leave them alone. No page uses this at the moment.
         const declared = document.documentElement.getAttribute('data-page-lang');
         this.pageLanguage = this.supportedLanguages.includes(declared) ? declared : null;
 
@@ -95,7 +95,7 @@ class LanguageManager {
 
     /**
      * Relative prefix back to the site root, derived from directory depth, so
-     * that nested article directories (articles/tr/) resolve correctly.
+     * that pages in subdirectories resolve correctly.
      */
     getLanguageFilePath() {
         const path = window.location.pathname;
@@ -110,13 +110,6 @@ class LanguageManager {
             const key = el.getAttribute('data-lang-key');
             const text = this.getTranslation(key);
             if (text) el.innerHTML = text;
-        });
-
-        // Article links differ per language — each language file points at its
-        // own translation of the article, so the href is a translated value too.
-        document.querySelectorAll('[data-lang-href]').forEach(el => {
-            const href = this.getTranslation(el.getAttribute('data-lang-href'));
-            if (href) el.setAttribute('href', href);
         });
     }
 
@@ -207,18 +200,8 @@ class LanguageManager {
         const filename = path.split('/').pop() || 'index.html';
 
         if (filename === 'index.html' || filename === '') return 'home';
-        if (filename === 'articles.html') return 'articles';
-        if (filename === 'products.html') return 'products';
         if (filename.includes('about')) return 'about';
         if (filename.includes('contact')) return 'contact';
-
-        // Check if it's an article page
-        if (path.includes('/articles/') || filename.includes('.html')) {
-            const articleKey = filename.replace('.html', '');
-            if (this.getTranslation(`meta.articles.${articleKey}`)) {
-                return articleKey;
-            }
-        }
 
         return 'home';
     }
@@ -226,13 +209,7 @@ class LanguageManager {
     getPageMeta(pageType, metaType) {
         // First try page-specific meta
         const pageMeta = this.getTranslation(`meta.pages.${pageType}.${metaType}`);
-        if (pageMeta) return pageMeta;
-
-        // Then try article-specific meta
-        const articleMeta = this.getTranslation(`meta.articles.${pageType}.${metaType}`);
-        if (articleMeta) return articleMeta;
-
-        return null;
+        return pageMeta || null;
     }
 
     updateMetaTag(attribute, value, contentAttribute, content) {
@@ -280,7 +257,7 @@ class LanguageManager {
      * Point the header's language buttons at this page's counterparts.
      *
      * The buttons are authored as absolute homepage URLs, which would drop a
-     * reader out of the article they are reading.
+     * reader out of the page they are reading.
      */
     updateLanguageSwitchLinks() {
         document.querySelectorAll('[data-lang-switch]').forEach(button => {
