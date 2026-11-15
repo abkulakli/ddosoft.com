@@ -1,6 +1,6 @@
 /* ==========================================================================
    DDOSoft - company landing page
-   One light surface, one dark surface (the protocol trace in the hero).
+   One light surface, one dark surface (the stack panel in the hero).
    ========================================================================== */
 
 :root {
@@ -186,8 +186,8 @@ code { font-family: var(--mono); }
 .hero__lead { margin-top: 1.5rem; max-width: 52ch; font-size: 1.15rem; color: var(--ink-2); }
 .hero__actions { margin-top: 2.25rem; display: flex; flex-wrap: wrap; gap: .75rem; }
 
-/* The memorable element: a real OCPP 1.6 exchange, revealed once on load */
-.trace__bar {
+/* The memorable element: the stack as a config file, revealed once on load */
+.stack__bar {
     background: var(--console-bg);
     border: 1px solid var(--console-line);
     border-bottom: 0;
@@ -195,27 +195,26 @@ code { font-family: var(--mono); }
     padding: .7rem 1.1rem;
     color: var(--console-dim);
     font-size: .78rem;
-    overflow-wrap: anywhere;
 }
-.trace__frames {
+.stack__rows {
     background: var(--console-bg);
     border: 1px solid var(--console-line);
     border-radius: 0 0 var(--radius) var(--radius);
-    padding: 1.1rem 1.1rem 1.3rem;
+    padding: 1.4rem 1.1rem 1.5rem;
     display: grid;
-    gap: .9rem;
+    gap: 1.1rem;
+    margin: 0;
     font-family: var(--mono);
-    font-size: .8rem;
-    line-height: 1.55;
+    font-size: .95rem;
+    line-height: 1.5;
 }
-.frame { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); opacity: 0; animation: frame-in .45s ease forwards; animation-delay: calc(.5s + var(--i) * .55s); }
-.frame code { overflow-wrap: break-word; }
-.frame--call { color: var(--console-text); }
-.frame--result { color: var(--console-signal); }
-.frame__dir { color: var(--console-dim); }
-@keyframes frame-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+.stack__row { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: .75rem; opacity: 0; animation: row-in .45s ease forwards; animation-delay: calc(.4s + var(--i) * .4s); }
+.stack__row dt { color: var(--console-signal); }
+.stack__row dt::after { content: ':'; color: var(--console-dim); }
+.stack__row dd { margin: 0; color: var(--console-text); overflow-wrap: break-word; }
+@keyframes row-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
 
-.trace__caption { margin-top: .85rem; font-size: .85rem; color: var(--ink-2); max-width: 58ch; }
+.stack__caption { margin-top: .85rem; font-size: .85rem; color: var(--ink-2); max-width: 58ch; }
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(4rem, 9vw, 7rem) 0; }
@@ -344,6 +343,6 @@ code { font-family: var(--mono); }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .frame { opacity: 1; animation: none; }
+    .stack__row { opacity: 1; animation: none; }
     * { transition-duration: .01ms !important; }
 }

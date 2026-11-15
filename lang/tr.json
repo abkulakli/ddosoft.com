@@ -10,7 +10,7 @@
         "title": "Yaklaşımımız",
         "text": "Yazılım mimarisi, bulut sistemleri ve dijital dönüşüm alanında 15+ yıllık deneyimimiz var. İşin kapsamı eski sistemleri modernize etmekten sıfırdan yeni sistem kurmaya kadar uzanıyor. EV şarjı için OCPP protokol implementasyonu, AWS altyapı optimizasyonu, gömülü sistemler ve sistem entegrasyonu bu kapsamın içinde."
       },
-      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. OCPP ve EV şarj entegrasyonları kurar, sistemleri AWS'ye taşır, özel backend yazılımları geliştirir. Ürünlerimiz Zekky, Portfonio ve SimItNow.",
+      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
       "keywords": "sürdürülebilir yazılım, yeşil teknoloji, Zekky, matematik oyunu, refleks oyunu, yazılım geliştirme",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -18,7 +18,7 @@
     },
     "openGraph": {
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. OCPP ve EV şarj entegrasyonları kurar, sistemleri AWS'ye taşır, özel backend yazılımları geliştirir. Ürünlerimiz Zekky, Portfonio ve SimItNow.",
+      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
       "type": "website",
       "url": "https://www.ddosoft.com/?lang=tr",
       "image": "https://www.ddosoft.com/icon-512.png",
@@ -28,13 +28,13 @@
       "card": "summary",
       "site": "@ddosoft",
       "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. OCPP ve EV şarj entegrasyonları kurar, sistemleri AWS'ye taşır, özel backend yazılımları geliştirir. Ürünlerimiz Zekky, Portfonio ve SimItNow.",
+      "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
       "image": "https://www.ddosoft.com/icon-512.png"
     },
     "pages": {
       "home": {
         "title": "DDOSoft - Sürdürülebilir Yazılım Çözümleri",
-        "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. OCPP ve EV şarj entegrasyonları kurar, sistemleri AWS'ye taşır, özel backend yazılımları geliştirir. Ürünlerimiz Zekky, Portfonio ve SimItNow.",
+        "description": "DDOSoft, Kahramanmaraş merkezli bir yazılım danışmanlık firmasıdır. Eski sistemleri modernize eder, AWS'ye taşır ve özel backend sistemleri kurar. Kendi ürünlerimiz Zekky, Portfonio ve SimItNow.",
         "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, enerji optimizasyonu"
       },
       "about": {
@@ -59,11 +59,11 @@
     "languageSwitch": "EN"
   },
   "hero": {
-    "title": "EV şarj, bulut ve gömülü sistemler için yazılım",
-    "subtitle": "DDOSoft, Kahramanmaraş'ta çalışan bir yazılım danışmanlık firması. Backend sistemleri ve OCPP entegrasyonları kuruyoruz, eski sistemleri AWS'ye taşıyoruz ve enerji kullanımını en baştan bir tasarım kısıtı sayıyoruz.",
+    "title": "Enerji kullanımını gözeten yazılım danışmanlığı ve geliştirme",
+    "subtitle": "DDOSoft, Kahramanmaraş'ta çalışan bir yazılım danışmanlık firması. Eski sistemleri modernize ediyor, AWS'ye taşıyor ve özel backend sistemleri kuruyoruz, enerji kullanımını da en baştan bir tasarım kısıtı sayıyoruz. Kendi ürünlerimizi de geliştirip işletiyoruz.",
     "ctaPrimary": "Projeyi konuşalım",
     "ctaSecondary": "Ürünlerimize bakın",
-    "traceCaption": "OCPP 1.6 örnek mesajları. Sağa bakan ok şarj istasyonunun sunucuyu çağırmasını, sola bakan ok sunucunun yanıtını gösterir."
+    "stackCaption": "En çok çalıştığımız teknolojiler."
   },
   "about": {
     "title": "DDOSoft Hakkında",

@@ -2,7 +2,7 @@
   "meta": {
     "site": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
+      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We modernize legacy systems, migrate them to AWS and build custom backends. Our own products are Zekky, Portfonio and SimItNow.",
       "keywords": "sustainable software, green technology, Zekky, math game, reflex game, software development",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -10,7 +10,7 @@
     },
     "openGraph": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
+      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We modernize legacy systems, migrate them to AWS and build custom backends. Our own products are Zekky, Portfonio and SimItNow.",
       "type": "website",
       "url": "https://www.ddosoft.com/?lang=en",
       "image": "https://www.ddosoft.com/icon-512.png",
@@ -20,13 +20,13 @@
       "card": "summary",
       "site": "@ddosoft",
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
+      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We modernize legacy systems, migrate them to AWS and build custom backends. Our own products are Zekky, Portfonio and SimItNow.",
       "image": "https://www.ddosoft.com/icon-512.png"
     },
     "pages": {
       "home": {
         "title": "DDOSoft - Sustainable Software Solutions",
-        "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
+        "description": "DDOSoft is a software consultancy in Kahramanmaraş. We modernize legacy systems, migrate them to AWS and build custom backends. Our own products are Zekky, Portfonio and SimItNow.",
         "keywords": "sustainable software, green technology, power management, energy optimization"
       },
       "about": {
@@ -51,11 +51,11 @@
     "languageSwitch": "TR"
   },
   "hero": {
-    "title": "Software for EV charging, cloud and embedded systems",
-    "subtitle": "DDOSoft is a software consultancy in Kahramanmaraş. We build backends and OCPP integrations, move legacy systems to AWS, and count energy use as a design constraint from the start.",
+    "title": "Software consulting and development, with energy use in mind",
+    "subtitle": "DDOSoft is a software consultancy in Kahramanmaraş. We modernize legacy systems, move them to AWS and build custom backends, and we count energy use as a design constraint from the start. We also build and run our own products.",
     "ctaPrimary": "Discuss a project",
     "ctaSecondary": "See our products",
-    "traceCaption": "Example OCPP 1.6 frames. A right arrow is the charge point calling the server, a left arrow is the reply."
+    "stackCaption": "The technologies we work with most."
   },
   "about": {
     "title": "About DDOSoft",

@@ -99,11 +99,11 @@ Favicon set, all derived from the same artwork and referenced with absolute path
 | `--ink` / `--ink-2` | `#0E1F1A` / `#4A5B55` | Text / secondary text |
 | `--line` | `#D5DDD8` | Hairlines between rows |
 | `--signal` / `--signal-ink` | `#0A7F59` / `#076646` | Buttons, links, badges (both pass 4.5:1 on `--paper`) |
-| `--console-*` | `#0B1713` base | The only dark surface: the OCPP trace in the hero |
-| `--font` | Schibsted Grotesk | Everything except protocol text |
-| `--mono` | IBM Plex Mono | Protocol trace and small technical tags only |
+| `--console-*` | `#0B1713` base | The only dark surface: the stack panel in the hero |
+| `--font` | Schibsted Grotesk | Everything except the stack panel and tags |
+| `--mono` | IBM Plex Mono | Stack panel and small technical tags only |
 
-Layout rules: left-aligned, no cards, no all-caps labels, no numbered markers, no emoji icons; each section has its own structure (ruled service rows, horizontal product rows, two-column about, one large email link). The only non-user-triggered motion is the hero trace revealing once on load (CSS only, off under `prefers-reduced-motion`). The trace frames are valid OCPP 1.6 CALL/CALLRESULT messages; keep them valid when editing, and keep `<wbr>` after commas so lines wrap there instead of mid-word.
+Layout rules: left-aligned, no cards, no all-caps labels, no numbered markers, no emoji icons; each section has its own structure (ruled service rows, horizontal product rows, two-column about, one large email link). The only non-user-triggered motion is the hero stack panel revealing once on load (CSS only, off under `prefers-reduced-motion`). DDOSoft is a software consultancy, not an OCPP company: OCPP is one technology among others and one product (SimItNow), so it never headlines the hero or the meta description. The panel lists only technologies named in the service copy; change it together with that copy.
 
 ### SEO
 
