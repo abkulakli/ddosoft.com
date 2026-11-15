@@ -29,12 +29,6 @@
         "description": "Software built to use less energy without giving up the performance you need.",
         "keywords": "sustainable software, green technology, power management, energy optimization"
       },
-      "articles": {
-        "title": "Engineering Notes - DDOSoft",
-        "description": "Field notes from building DDOGreen and SimItNow: power management internals, OCPP 1.6 integration, and what production taught us.",
-        "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software",
-        "canonical": "https://www.ddosoft.com/articles.html?lang=en"
-      },
       "about": {
         "title": "About DDOSoft - Sustainable Software Solutions",
         "description": "DDOSoft's work on software that reduces environmental impact.",
@@ -44,12 +38,6 @@
         "title": "Contact DDOSoft - Get in Touch",
         "description": "Reach DDOSoft about sustainable software and green technology consulting.",
         "keywords": "contact ddosoft, green technology consulting, sustainable software support"
-      },
-      "products": {
-        "title": "Products - DDOSoft",
-        "description": "Zekky, Portfonio, SimItNow and DDOGreen: the software DDOSoft builds and maintains itself.",
-        "keywords": "DDOSoft products, Zekky, Portfonio, SimItNow, DDOGreen, software products",
-        "canonical": "https://www.ddosoft.com/products.html?lang=en"
       }
     }
   },
@@ -58,7 +46,6 @@
     "about": "About",
     "services": "Services",
     "products": "Products",
-    "articles": "Articles",
     "contact": "Contact",
     "language": "Language",
     "languageSwitch": "TR"
@@ -227,15 +214,6 @@
         "excerpt": "Test your EV charging systems without hardware. Simulate charge points against a CSMS, or run a hosted CSMS for your chargers to connect to. Speaks OCPP 1.6 and 2.0.1 either way, and runs load tests. Free plan available."
       }
     },
-    "ddogreen": {
-      "name": "DDOGreen",
-      "tagline": "Power management that runs in the background",
-      "version": "Latest Version: v0.3.1",
-      "card": {
-        "category": "Power Management",
-        "excerpt": "Watches how busy your machine is and switches power modes automatically. Install it and it runs in the background with no setup."
-      }
-    },
     "badges": {
       "freeToStart": "Free to Start",
       "freePlan": "Free Plan",
@@ -246,8 +224,7 @@
       "learnMore": "Learn More →",
       "tryNow": "Try Now →",
       "playNow": "Play Now →"
-    },
-    "viewAll": "All Products →"
+    }
   },
   "contact": {
     "title": "Get In Touch",
@@ -276,45 +253,6 @@
       }
     ]
   },
-  "articles": {
-    "sectionTitle": "Engineering Notes",
-    "sectionSubtitle": "What we learned building our own products: power management internals and OCPP integration under real load.",
-    "viewAll": "All Articles",
-    "readMore": "Read more →",
-    "recent": [
-      {
-        "title": "How DDOGreen Decides When to Save Power",
-        "excerpt": "Inside the dual-threshold hysteresis that keeps a power daemon from flapping between modes, and why it refuses to ship default values.",
-        "category": "Power Management",
-        "date": "August 17, 2026",
-        "link": "articles/ddogreen-power-management.html"
-      },
-      {
-        "title": "OCPP 1.6 in Production: Lessons from a Charge Point Simulator",
-        "excerpt": "Connector mapping, charging-profile priority, offline authorisation, and the reconnect loop that took down a fleet.",
-        "category": "EV Charging",
-        "date": "August 17, 2026",
-        "link": "articles/ocpp-16-integration-lessons.html"
-      },
-      {
-        "title": "SimIt Is Now SimItNow",
-        "excerpt": "Why our OCPP charge point simulator has a new name and a new home at www.simitnow.com, and what stays the same.",
-        "category": "Product Update",
-        "date": "August 25, 2026",
-        "link": "articles/simit-is-now-simitnow.html"
-      }
-    ],
-    "page": {
-      "meta": {
-        "title": "Engineering Notes - DDOSoft",
-        "description": "Field notes from building DDOGreen and SimItNow: power management internals, OCPP 1.6 integration, and what production taught us.",
-        "keywords": "power management, OCPP 1.6, EV charging software, C++ daemon design, charge point simulator, sustainable software"
-      },
-      "title": "Engineering Notes",
-      "subtitle": "Field notes from building DDOGreen and SimItNow: design decisions, trade-offs, and the mistakes we learned the most from.",
-      "backToHome": "← Back to home"
-    }
-  },
   "footer": {
     "brand": {
       "name": "DDOSoft",
@@ -331,10 +269,6 @@
           {
             "text": "Products",
             "href": "#products"
-          },
-          {
-            "text": "Articles",
-            "href": "articles.html"
           },
           {
             "text": "Contact",

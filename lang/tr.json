@@ -37,12 +37,6 @@
         "description": "İhtiyacınız olan performanstan ödün vermeden daha az enerji harcayan yazılımlar geliştiriyoruz.",
         "keywords": "sürdürülebilir yazılım, yeşil teknoloji, güç yönetimi, enerji optimizasyonu"
       },
-      "articles": {
-        "title": "Mühendislik Notları - DDOSoft",
-        "description": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
-        "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım",
-        "canonical": "https://www.ddosoft.com/articles.html?lang=tr"
-      },
       "about": {
         "title": "Hakkımızda DDOSoft - Sürdürülebilir Yazılım Çözümleri",
         "description": "DDOSoft'un çevresel etkiyi azaltan yazılımlar üzerine çalışması.",
@@ -52,12 +46,6 @@
         "title": "İletişim DDOSoft - Bize Ulaşın",
         "description": "Sürdürülebilir yazılım ve yeşil teknoloji danışmanlığı için DDOSoft'a ulaşın.",
         "keywords": "ddosoft iletişim, yeşil teknoloji danışmanlığı, sürdürülebilir yazılım desteği"
-      },
-      "products": {
-        "title": "Ürünler - DDOSoft",
-        "description": "Zekky, Portfonio, SimItNow ve DDOGreen: DDOSoft'un kendi geliştirip bakımını yaptığı yazılımlar.",
-        "keywords": "DDOSoft ürünleri, Zekky, Portfonio, SimItNow, DDOGreen, yazılım ürünleri",
-        "canonical": "https://www.ddosoft.com/products.html?lang=tr"
       }
     }
   },
@@ -66,7 +54,6 @@
     "about": "Hakkımızda",
     "services": "Hizmetler",
     "products": "Ürünler",
-    "articles": "Makaleler",
     "contact": "İletişim",
     "language": "Dil",
     "languageSwitch": "EN"
@@ -235,15 +222,6 @@
         "excerpt": "EV şarj sistemlerinizi donanım olmadan test edin. Şarj istasyonlarını bir CSMS'e karşı simüle edin, ya da şarj cihazlarınızın bağlanacağı barındırılan bir CSMS çalıştırın. Her iki yönde de OCPP 1.6 ve 2.0.1 konuşur, yük testleri yapar. Ücretsiz plan mevcut."
       }
     },
-    "ddogreen": {
-      "name": "DDOGreen",
-      "tagline": "Arka planda çalışan güç yönetimi",
-      "version": "Son Sürüm: v0.3.1",
-      "card": {
-        "category": "Güç Yönetimi",
-        "excerpt": "Makinenizin ne kadar meşgul olduğunu izler ve güç modlarını kendisi değiştirir. Kurun, arka planda çalışır. Hiçbir ayar gerekmez."
-      }
-    },
     "badges": {
       "freeToStart": "Ücretsiz Başlayın",
       "freePlan": "Ücretsiz Plan",
@@ -254,8 +232,7 @@
       "learnMore": "Daha Fazla Bilgi →",
       "tryNow": "Şimdi Dene →",
       "playNow": "Hemen Oyna →"
-    },
-    "viewAll": "Tüm Ürünler →"
+    }
   },
   "contact": {
     "title": "İletişime Geçin",
@@ -284,45 +261,6 @@
       }
     ]
   },
-  "articles": {
-    "sectionTitle": "Mühendislik Notları",
-    "sectionSubtitle": "Kendi ürünlerimizi geliştirirken öğrendiklerimiz: güç yönetiminin iç işleyişi ve gerçek yük altında OCPP entegrasyonu.",
-    "viewAll": "Tüm Makaleler",
-    "readMore": "Devamını oku →",
-    "recent": [
-      {
-        "title": "DDOGreen Güç Tasarrufuna Ne Zaman Geçeceğine Nasıl Karar Veriyor",
-        "excerpt": "Bir güç yönetimi servisini modlar arasında gidip gelmekten koruyan çift eşikli histerezis ve neden hiç varsayılan değer vermediği.",
-        "category": "Güç Yönetimi",
-        "date": "17 Ağustos 2026",
-        "link": "articles/tr/ddogreen-guc-yonetimi.html"
-      },
-      {
-        "title": "Sahada OCPP 1.6: Şarj İstasyonu Simülatöründen Dersler",
-        "excerpt": "Konnektör eşleme, şarj profili önceliği, çevrimdışı yetkilendirme ve bütün bir filoyu deviren yeniden bağlanma döngüsü.",
-        "category": "EV Şarj",
-        "date": "17 Ağustos 2026",
-        "link": "articles/tr/ocpp-16-entegrasyon-dersleri.html"
-      },
-      {
-        "title": "SimIt Artık SimItNow",
-        "excerpt": "OCPP şarj istasyonu simülatörümüzün neden yeni bir adı ve www.simitnow.com adresinde yeni bir evi olduğu, neyin değişmediği.",
-        "category": "Ürün Güncellemesi",
-        "date": "25 Ağustos 2026",
-        "link": "articles/tr/simit-simitnow-oldu.html"
-      }
-    ],
-    "page": {
-      "meta": {
-        "title": "Mühendislik Notları - DDOSoft",
-        "description": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz notlar: güç yönetiminin iç işleyişi, OCPP 1.6 entegrasyonu ve sahanın öğrettikleri.",
-        "keywords": "güç yönetimi, OCPP 1.6, EV şarj yazılımı, C++ servis tasarımı, şarj istasyonu simülatörü, sürdürülebilir yazılım"
-      },
-      "title": "Mühendislik Notları",
-      "subtitle": "DDOGreen ve SimItNow'u geliştirirken tuttuğumuz saha notları: tasarım kararları, ödünler ve en çok öğreten hatalar.",
-      "backToHome": "← Ana sayfaya dön"
-    }
-  },
   "footer": {
     "brand": {
       "name": "DDOSoft",
@@ -339,10 +277,6 @@
           {
             "text": "Ürünler",
             "href": "#products"
-          },
-          {
-            "text": "Makaleler",
-            "href": "articles.html"
           },
           {
             "text": "İletişim",

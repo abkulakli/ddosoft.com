@@ -35,8 +35,7 @@ class StructuredDataManager {
                 "availableLanguage": ["English", "Turkish"]
             },
             "sameAs": [
-                "https://www.linkedin.com/company/ddosoft",
-                "https://github.com/abkulakli/ddogreen"
+                "https://www.linkedin.com/company/ddosoft"
             ],
             "industry": "Software Development",
             "speciality": "Sustainable Software Solutions",
@@ -66,20 +65,11 @@ class StructuredDataManager {
     }
 
     generatePageSpecificData() {
-        // Article pages embed their own Article schema in the HTML so that
-        // crawlers see it without running JavaScript. Don't add a second one.
-        if (this.hasStaticArticleSchema()) {
-            return;
-        }
-
         const currentPage = this.getCurrentPageType();
 
         switch (currentPage) {
             case 'home':
                 this.generateHomePageData();
-                break;
-            case 'articles':
-                this.generateBlogData();
                 break;
         }
     }
@@ -108,51 +98,13 @@ class StructuredDataManager {
         this.insertStructuredData('product', productData);
     }
 
-    generateBlogData() {
-        const blogData = {
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            "name": this.languageManager.getTranslation('meta.pages.articles.title'),
-            "description": this.languageManager.getTranslation('meta.pages.articles.description'),
-            "url": `${this.baseUrl}/articles.html`,
-            "inLanguage": this.languageManager.currentLanguage === 'tr' ? 'tr-TR' : 'en-US',
-            "publisher": {
-                "@type": "Organization",
-                "name": "DDOSoft"
-            },
-            "about": [
-                "Sustainable Software Development",
-                "Green Technology",
-                "Energy Efficient Computing",
-                "Software Performance Optimization"
-            ]
-        };
-
-        this.insertStructuredData('blog', blogData);
-    }
-
-    /**
-     * True when the document already ships an Article schema of its own.
-     */
-    hasStaticArticleSchema() {
-        return Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
-            .some(script => {
-                try {
-                    return JSON.parse(script.textContent)['@type'] === 'Article';
-                } catch {
-                    return false;
-                }
-            });
-    }
-
     getCurrentPageType() {
         const path = window.location.pathname;
         const filename = path.split('/').pop() || 'index.html';
 
         if (filename === 'index.html' || filename === '') return 'home';
-        if (filename === 'articles.html') return 'articles';
 
-        if (path.includes('/articles/') || filename.includes('.html')) {
+        if (filename.includes('.html')) {
             return filename.replace('.html', '');
         }
 
