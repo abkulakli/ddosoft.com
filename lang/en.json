@@ -2,7 +2,7 @@
   "meta": {
     "site": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "DDOSoft builds sustainable software. Zekky, our math and reflex game, plays free in your browser and shows no ads.",
+      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
       "keywords": "sustainable software, green technology, Zekky, math game, reflex game, software development",
       "author": "DDOSoft",
       "robots": "index, follow",
@@ -10,7 +10,7 @@
     },
     "openGraph": {
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "Software consulting and tools built to use less energy",
+      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
       "type": "website",
       "url": "https://www.ddosoft.com/?lang=en",
       "image": "https://www.ddosoft.com/icon-512.png",
@@ -20,13 +20,13 @@
       "card": "summary",
       "site": "@ddosoft",
       "title": "DDOSoft - Sustainable Software Solutions",
-      "description": "Software consulting and tools built to use less energy",
+      "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
       "image": "https://www.ddosoft.com/icon-512.png"
     },
     "pages": {
       "home": {
         "title": "DDOSoft - Sustainable Software Solutions",
-        "description": "Software built to use less energy without giving up the performance you need.",
+        "description": "DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.",
         "keywords": "sustainable software, green technology, power management, energy optimization"
       },
       "about": {
@@ -51,11 +51,11 @@
     "languageSwitch": "TR"
   },
   "hero": {
-    "eyebrow": "Sustainable Software Consulting",
-    "title": "Sustainable<br><em>Software</em><br>Solutions",
-    "subtitle": "Software consulting, digital transformation, and sustainable development. We modernize technology infrastructure and cut its energy consumption in the same project.",
-    "cta": "View Products",
-    "scrollHint": "Learn More"
+    "title": "Software for EV charging, cloud and embedded systems",
+    "subtitle": "DDOSoft is a software consultancy in Kahramanmaraş. We build backends and OCPP integrations, move legacy systems to AWS, and count energy use as a design constraint from the start.",
+    "ctaPrimary": "Discuss a project",
+    "ctaSecondary": "See our products",
+    "traceCaption": "Example OCPP 1.6 frames. A right arrow is the charge point calling the server, a left arrow is the reply."
   },
   "about": {
     "title": "About DDOSoft",
@@ -123,7 +123,8 @@
       "card": {
         "category": "Math Game",
         "excerpt": "Tap the right answer while the clock runs. Rounds are ten questions of math and number patterns, and your level rises as you play. No ads, and it plays free in your browser."
-      }
+      },
+      "cta": "Play in your browser"
     },
     "portfonio": {
       "name": "Portfonio",
@@ -203,7 +204,8 @@
         "subtitle": "Try the live instance or read the source",
         "live": "Try Live Demo",
         "github": "View on GitHub"
-      }
+      },
+      "cta": "Open Portfonio"
     },
     "simit": {
       "name": "SimItNow",
@@ -212,22 +214,18 @@
       "card": {
         "category": "EV Charging Simulator",
         "excerpt": "Test your EV charging systems without hardware. Simulate charge points against a CSMS, or run a hosted CSMS for your chargers to connect to. Speaks OCPP 1.6 and 2.0.1 either way, and runs load tests. Free plan available."
-      }
+      },
+      "cta": "Open SimItNow"
     },
     "badges": {
       "freeToStart": "Free to Start",
       "freePlan": "Free Plan",
       "noAds": "No Ads",
       "free": "Free"
-    },
-    "card": {
-      "learnMore": "Learn More →",
-      "tryNow": "Try Now →",
-      "playNow": "Play Now →"
     }
   },
   "contact": {
-    "title": "Get In Touch",
+    "title": "Get in touch",
     "subtitle": "Questions about a project, or about one of our products? Write to us.",
     "methods": [
       {

@@ -78,28 +78,32 @@ The site has no articles. `language-manager.js` still supports a page that carri
 
 ### Page Structure
 
-- `index.html` — single-page: Hero · About · Services · Products · Contact
+- `index.html` — single-page: Hero · Services · Products · About · Contact
 - There is no separate products page: the Products section of `index.html` holds one card per product (Zekky, Portfonio, SimItNow), and each card links straight to that product's own site. A new product is a new card. Any new page other than the homepage must declare `meta.pages.<page>.canonical` in the language files: a page with that key gets its own canonical, `og:url`, title and description at runtime, while a page without it inherits the homepage's.
 - `components/` — shared header and footer (single source of truth)
 - `lang/` — `en.json` and `tr.json`
 - `js/` — component-loader, language-manager, main, structured-data-manager
-- `css/styles.css` — single stylesheet, BEM-style, mobile-first, dark theme
+- `css/styles.css` — single stylesheet, mobile-first, light theme with one dark surface (the hero protocol trace)
 
 ### Brand & Logo
 
 `logo.png` — transparent PNG (354×240, trimmed to the wordmark), used in nav/footer and as the schema.org `logo`. Source of truth for the brand mark. Use absolute path `/logo.png` in components so it resolves correctly from both root and subdirectory pages.
 
-Favicon set, all derived from the same artwork and referenced with absolute paths in every page `<head>`: `favicon.ico` (16/32/48), `icon-192.png`, `icon-512.png` (both transparent, also listed in `site.webmanifest`), `apple-touch-icon.png` (180×180, opaque on `--bg-0` because iOS fills transparency with black). The site is dark-themed, so the logo must keep its alpha channel — a white-background export looks like a sticker on `--bg-0`.
+Favicon set, all derived from the same artwork and referenced with absolute paths in every page `<head>`: `favicon.ico` (16/32/48), `icon-192.png`, `icon-512.png` (both transparent, also listed in `site.webmanifest`), `apple-touch-icon.png` (180×180, opaque on `#050d07` because iOS fills transparency with black). The logo must keep its alpha channel — a white-background export looks like a sticker on the tinted `--paper-2` sections.
 
 ### Design Tokens (css/styles.css)
 
 | Token | Value | Use |
 |-------|-------|-----|
-| `--bg-0` | `#050d07` | Page background |
-| `--accent` | `#00e87a` | Primary green accent |
-| `--text-0` | `#e6f2ea` | Primary text |
-| `--font-display` | Fraunces | Headings |
-| `--font-body` | Plus Jakarta Sans | Body text |
+| `--paper` / `--paper-2` | `#F4F6F3` / `#EAEFEC` | Page background / tinted sections (Products, Contact) |
+| `--ink` / `--ink-2` | `#0E1F1A` / `#4A5B55` | Text / secondary text |
+| `--line` | `#D5DDD8` | Hairlines between rows |
+| `--signal` / `--signal-ink` | `#0A7F59` / `#076646` | Buttons, links, badges (both pass 4.5:1 on `--paper`) |
+| `--console-*` | `#0B1713` base | The only dark surface: the OCPP trace in the hero |
+| `--font` | Schibsted Grotesk | Everything except protocol text |
+| `--mono` | IBM Plex Mono | Protocol trace and small technical tags only |
+
+Layout rules: left-aligned, no cards, no all-caps labels, no numbered markers, no emoji icons; each section has its own structure (ruled service rows, horizontal product rows, two-column about, one large email link). The only non-user-triggered motion is the hero trace revealing once on load (CSS only, off under `prefers-reduced-motion`). The trace frames are valid OCPP 1.6 CALL/CALLRESULT messages; keep them valid when editing, and keep `<wbr>` after commas so lines wrap there instead of mid-word.
 
 ### SEO
 

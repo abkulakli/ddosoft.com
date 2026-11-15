@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DDOSoft - Sustainable software solutions, digital transformation consulting, and custom development services. Specializing in green technology, cloud migration, and EV charging software.">
+    <meta name="description" content="DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.">
     <meta name="keywords" content="sustainable software, green technology, digital transformation, software consulting, Zekky, cloud migration, custom development">
     <meta name="author" content="DDOSoft">
     <meta name="robots" content="index, follow">
@@ -20,7 +20,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title"            content="DDOSoft - Sustainable Software Solutions">
-    <meta property="og:description"      content="Sustainable software from DDOSoft. Zekky, our math and reflex game, plays free in your browser.">
+    <meta property="og:description"      content="DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.">
     <meta property="og:type"             content="website">
     <meta property="og:url"              content="https://www.ddosoft.com/?lang=en">
     <meta property="og:site_name"        content="DDOSoft">
@@ -30,330 +30,202 @@
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary">
     <meta name="twitter:title"       content="DDOSoft - Sustainable Software Solutions">
-    <meta name="twitter:description" content="Sustainable software from DDOSoft. Zekky, our math and reflex game, plays free in your browser.">
+    <meta name="twitter:description" content="DDOSoft is a software consultancy in Kahramanmaraş. We build OCPP and EV charging integrations, migrate systems to AWS and develop custom backends. Our products are Zekky, Portfonio and SimItNow.">
 
     <title>DDOSoft - Sustainable Software Solutions</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#050d07">
+    <meta name="theme-color" content="#F4F6F3">
 </head>
 <body>
 
     <div id="header-placeholder"></div>
 
-    <main class="main">
+    <main class="main" id="main">
 
         <!-- ── Hero ─────────────────────────────────────────────── -->
         <section class="hero" id="home">
-            <div class="hero__container">
+            <div class="wrap hero__grid">
 
-                <div class="hero__content">
-                    <div class="hero__eyebrow" data-lang-key="hero.eyebrow">Sustainable Software Consulting</div>
-
-                    <h1 class="hero__title" data-lang-key="hero.title">
-                        Sustainable<br><em>Software</em><br>Solutions
-                    </h1>
-
-                    <p class="hero__description" data-lang-key="hero.subtitle">
-                        Software consulting, digital transformation, and sustainable development. We modernize technology infrastructure and cut its energy consumption in the same project.
-                    </p>
-
+                <div class="hero__copy">
+                    <h1 class="hero__title" data-lang-key="hero.title">Software for EV charging, cloud and embedded systems</h1>
+                    <p class="hero__lead" data-lang-key="hero.subtitle">DDOSoft is a software consultancy in Kahramanmaraş. We build backends and OCPP integrations, move legacy systems to AWS, and count energy use as a design constraint from the start.</p>
                     <div class="hero__actions">
-                        <a href="#about"    class="btn btn--primary"   data-lang-key="hero.scrollHint">Learn More</a>
-                        <a href="#products" class="btn btn--secondary" data-lang-key="hero.cta">View Products</a>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ── About ─────────────────────────────────────────────── -->
-        <section class="about section--alt" id="about">
-            <div class="about__container">
-
-                <div class="section__header">
-                    <h2 class="section__title" data-lang-key="about.title">About DDOSoft</h2>
-                    <p class="section__subtitle" data-lang-key="about.subtitle">
-                        Software development that takes energy use as seriously as performance
-                    </p>
-                </div>
-
-                <div class="about__content">
-                    <div class="about__text">
-                        <h3 data-lang-key="about.mission.title">Our Mission</h3>
-                        <p data-lang-key="about.mission.text">
-                            Powerful software shouldn't cost the planet. We consult on and build technology infrastructure for organizations that want to modernize it and reduce its energy consumption at the same time.
-                        </p>
-
-                        <h3 data-lang-key="about.vision.title">Our Approach</h3>
-                        <p data-lang-key="about.vision.text">
-                            We have 15+ years in software architecture, cloud systems, and digital transformation, and the work ranges from modernizing legacy systems to building new ones. That includes OCPP protocol implementation for EV charging, AWS infrastructure optimization, embedded systems, and system integration.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="team">
-                    <h3 class="team__title" data-lang-key="about.founders.title">Meet Our Founder</h3>
-                    <div class="team__grid">
-                        <div class="team__card">
-                            <div class="team__photo">
-                                <div class="team__placeholder" aria-hidden="true">AP</div>
-                            </div>
-                            <h4 class="team__name"  data-lang-key="about.founders.people.0.name">Dr. Ayşe Pınar KULAKLI</h4>
-                            <p class="team__role"   data-lang-key="about.founders.people.0.role">Founder</p>
-                            <div class="team__social">
-                                <a href="https://www.linkedin.com/in/apkulakli"
-                                   class="team__link"
-                                   target="_blank" rel="noopener"
-                                   aria-label="Ayşe Pınar KULAKLI LinkedIn profile">
-                                    LinkedIn
-                                </a>
-                            </div>
-                        </div>
+                        <a href="mailto:info@ddosoft.com" class="btn btn--primary" data-lang-key="hero.ctaPrimary">Discuss a project</a>
+                        <a href="#products" class="btn btn--quiet" data-lang-key="hero.ctaSecondary">See our products</a>
                     </div>
                 </div>
+
+                <figure class="trace">
+                    <div class="trace__bar"><code>wss://csms.example.com/ocpp/CP001</code></div>
+                    <ol class="trace__frames" aria-hidden="true">
+                            <li class="frame frame--call" style="--i:0"><span class="frame__dir" aria-hidden="true">→</span><code>[2,<wbr>"7f3a",<wbr>"BootNotification",<wbr>{"chargePointVendor":"DDOSoft",<wbr>"chargePointModel":"SimItNow"}]</code></li>
+                            <li class="frame frame--result" style="--i:1"><span class="frame__dir" aria-hidden="true">←</span><code>[3,<wbr>"7f3a",<wbr>{"status":"Accepted",<wbr>"currentTime":"2026-11-16T09:00:00Z",<wbr>"interval":300}]</code></li>
+                            <li class="frame frame--call" style="--i:2"><span class="frame__dir" aria-hidden="true">→</span><code>[2,<wbr>"7f3b",<wbr>"StatusNotification",<wbr>{"connectorId":1,<wbr>"errorCode":"NoError",<wbr>"status":"Available"}]</code></li>
+                            <li class="frame frame--result" style="--i:3"><span class="frame__dir" aria-hidden="true">←</span><code>[3,<wbr>"7f3b",<wbr>{}]</code></li>
+                            <li class="frame frame--call" style="--i:4"><span class="frame__dir" aria-hidden="true">→</span><code>[2,<wbr>"7f3c",<wbr>"StartTransaction",<wbr>{"connectorId":1,<wbr>"idTag":"DEMO01",<wbr>"meterStart":0,<wbr>"timestamp":"2026-11-16T09:02:10Z"}]</code></li>
+                            <li class="frame frame--result" style="--i:5"><span class="frame__dir" aria-hidden="true">←</span><code>[3,<wbr>"7f3c",<wbr>{"transactionId":1042,<wbr>"idTagInfo":{"status":"Accepted"}}]</code></li>
+                    </ol>
+                    <figcaption class="trace__caption" data-lang-key="hero.traceCaption">Example OCPP 1.6 frames. A right arrow is the charge point calling the server, a left arrow is the reply.</figcaption>
+                </figure>
 
             </div>
         </section>
 
         <!-- ── Services ──────────────────────────────────────────── -->
-        <section class="services" id="services">
-            <div class="services__container">
-
-                <div class="section__header">
+        <section class="section services" id="services">
+            <div class="wrap">
+                <header class="section__head">
                     <h2 class="section__title" data-lang-key="services.title">Our Services</h2>
-                    <p class="section__subtitle" data-lang-key="services.subtitle">
-                        Consulting and development work to modernize your technology infrastructure
-                    </p>
-                </div>
-
-                <div class="services__grid">
-
-                    <div class="service__card">
-                        <div class="service__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                                <line x1="12" y1="22.08" x2="12" y2="12"/>
-                            </svg>
-                        </div>
-                        <h3 class="service__title" data-lang-key="services.consulting.title">Software Consulting</h3>
-                        <p class="service__description" data-lang-key="services.consulting.description">
-                            15+ years of software architecture, technology selection, and review work. We specialize in OCPP 1.6, EV charging systems, AWS, and system integration.
-                        </p>
-                        <ul class="service__features">
+                    <p class="section__lead" data-lang-key="services.subtitle">Consulting and development work to modernize your technology infrastructure</p>
+                </header>
+                <div class="svc-list">
+                    <article class="svc">
+                        <h3 class="svc__title" data-lang-key="services.consulting.title">Software Consulting</h3>
+                        <p class="svc__text" data-lang-key="services.consulting.description">15+ years of software architecture, technology selection, and review work. We specialize in OCPP 1.6, EV charging systems, AWS, and system integration.</p>
+                        <ul class="svc__list">
                             <li data-lang-key="services.consulting.features.0">System architecture design &amp; optimization</li>
                             <li data-lang-key="services.consulting.features.1">OCPP protocol &amp; EV charging expertise</li>
                             <li data-lang-key="services.consulting.features.2">AWS cloud infrastructure &amp; migration</li>
                         </ul>
-                    </div>
-
-                    <div class="service__card">
-                        <div class="service__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                        </div>
-                        <h3 class="service__title" data-lang-key="services.transformation.title">Digital Transformation</h3>
-                        <p class="service__description" data-lang-key="services.transformation.description">
-                            We modernize enterprise systems: AWS cloud migration, process automation, and CMMI-compliant development practices.
-                        </p>
-                        <ul class="service__features">
+                    </article>
+                    <article class="svc">
+                        <h3 class="svc__title" data-lang-key="services.transformation.title">Digital Transformation</h3>
+                        <p class="svc__text" data-lang-key="services.transformation.description">We modernize enterprise systems: AWS cloud migration, process automation, and CMMI-compliant development practices.</p>
+                        <ul class="svc__list">
                             <li data-lang-key="services.transformation.features.0">AWS cloud migration &amp; optimization</li>
                             <li data-lang-key="services.transformation.features.1">Legacy system modernization &amp; integration</li>
                             <li data-lang-key="services.transformation.features.2">CMMI process implementation &amp; automation</li>
                         </ul>
-                    </div>
-
-                    <div class="service__card">
-                        <div class="service__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <polyline points="16,18 22,12 16,6"/>
-                                <polyline points="8,6 2,12 8,18"/>
-                            </svg>
-                        </div>
-                        <h3 class="service__title" data-lang-key="services.development.title">Custom Development</h3>
-                        <p class="service__description" data-lang-key="services.development.description">
-                            Backend systems, RESTful APIs, and cross-platform software in Python and C++20. Protocol development and system integration are where we spend most of our time.
-                        </p>
-                        <ul class="service__features">
+                    </article>
+                    <article class="svc">
+                        <h3 class="svc__title" data-lang-key="services.development.title">Custom Development</h3>
+                        <p class="svc__text" data-lang-key="services.development.description">Backend systems, RESTful APIs, and cross-platform software in Python and C++20. Protocol development and system integration are where we spend most of our time.</p>
+                        <ul class="svc__list">
                             <li data-lang-key="services.development.features.0">Backend &amp; RESTful API development (Python, Django)</li>
                             <li data-lang-key="services.development.features.1">Cross-platform solutions (C++20, Linux/Windows)</li>
                             <li data-lang-key="services.development.features.2">Protocol implementation (OCPP, WebSocket)</li>
                         </ul>
-                    </div>
-
+                    </article>
                 </div>
-
             </div>
         </section>
 
         <!-- ── Products ──────────────────────────────────────────── -->
-        <section class="products section--alt" id="products">
-            <div class="products__container">
-
-                <div class="section__header">
+        <section class="section section--tint products" id="products">
+            <div class="wrap">
+                <header class="section__head">
                     <h2 class="section__title" data-lang-key="products.title">Our Products</h2>
-                    <p class="section__subtitle" data-lang-key="products.subtitle">
-                        Software we build and maintain ourselves
-                    </p>
+                    <p class="section__lead" data-lang-key="products.subtitle">Software we build and maintain ourselves</p>
+                </header>
+                <ul class="plist">
+                    <li class="prow" data-product="zekky">
+                        <div class="prow__main">
+                            <h3 class="prow__name">
+                                <span data-lang-key="products.zekky.name">Zekky</span>
+                                <span class="badge" data-lang-key="products.zekky.version">New</span>
+                            </h3>
+                            <p class="prow__kind" data-lang-key="products.zekky.card.category">Math Game</p>
+                            <p class="prow__tagline" data-lang-key="products.zekky.tagline">Find the right answer before the clock does</p>
+                            <p class="prow__text" data-lang-key="products.zekky.card.excerpt">Tap the right answer while the clock runs. Rounds are ten questions of math and number patterns, and your level rises as you play. No ads, and it plays free in your browser.</p>
+                        </div>
+                        <div class="prow__side">
+                            <ul class="tags"><li>Web</li><li data-lang-key="products.badges.noAds">No Ads</li><li data-lang-key="products.badges.free">Free</li></ul>
+                            <a href="https://zekky.ddosoft.com" class="textlink" target="_blank" rel="noopener" data-lang-key="products.zekky.cta">Play in your browser</a>
+                        </div>
+                    </li>
+                    <li class="prow" data-product="portfonio">
+                        <div class="prow__main">
+                            <h3 class="prow__name">
+                                <span data-lang-key="products.portfonio.name">Portfonio</span>
+                                <span class="badge" data-lang-key="products.portfonio.version">Beta</span>
+                            </h3>
+                            <p class="prow__kind" data-lang-key="products.portfonio.card.category">Portfolio Management</p>
+                            <p class="prow__tagline" data-lang-key="products.portfonio.tagline">Portfolio tracking for Turkish mutual funds</p>
+                            <p class="prow__text" data-lang-key="products.portfonio.card.excerpt">Track and analyze Turkish investment funds in one place. Prices refresh daily from TEFAS. Free to start, no credit card required.</p>
+                        </div>
+                        <div class="prow__side">
+                            <ul class="tags"><li>Web</li><li data-lang-key="products.badges.freeToStart">Free to Start</li></ul>
+                            <a href="https://www.portfonio.com" class="textlink" target="_blank" rel="noopener" data-lang-key="products.portfonio.cta">Open Portfonio</a>
+                        </div>
+                    </li>
+                    <li class="prow" data-product="simit">
+                        <div class="prow__main">
+                            <h3 class="prow__name">
+                                <span data-lang-key="products.simit.name">SimItNow</span>
+                                <span class="badge" data-lang-key="products.simit.version">Beta</span>
+                            </h3>
+                            <p class="prow__kind" data-lang-key="products.simit.card.category">EV Charging Simulator</p>
+                            <p class="prow__tagline" data-lang-key="products.simit.tagline">Test EV charging systems without the hardware</p>
+                            <p class="prow__text" data-lang-key="products.simit.card.excerpt">Test your EV charging systems without hardware. Simulate charge points against a CSMS, or run a hosted CSMS for your chargers to connect to. Speaks OCPP 1.6 and 2.0.1 either way, and runs load tests. Free plan available.</p>
+                        </div>
+                        <div class="prow__side">
+                            <ul class="tags"><li>Web</li><li>OCPP 1.6</li><li>OCPP 2.0.1</li><li>CSMS</li><li data-lang-key="products.badges.freePlan">Free Plan</li></ul>
+                            <a href="https://www.simitnow.com" class="textlink" target="_blank" rel="noopener" data-lang-key="products.simit.cta">Open SimItNow</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ── About ─────────────────────────────────────────────── -->
+        <section class="section about" id="about">
+            <div class="wrap about__grid">
+                <div class="about__intro">
+                    <h2 class="section__title" data-lang-key="about.title">About DDOSoft</h2>
+                    <p class="about__statement" data-lang-key="about.subtitle">Software development that takes energy use as seriously as performance</p>
                 </div>
-
-                <div class="products__grid" id="products-grid">
-
-                    <!-- Zekky -->
-                    <article class="product-card" data-product="zekky">
-                        <div class="product-card__image">
-                            <div class="product-card__image-placeholder">
-                                <span class="product-card__image-icon">🧠</span>
-                            </div>
-                        </div>
-                        <div class="product-card__content">
-                            <div class="product-card__meta">
-                                <span class="product-card__category" data-lang-key="products.zekky.card.category">Math Game</span>
-                                <span class="product-card__version" data-lang-key="products.zekky.version">New</span>
-                            </div>
-                            <h3 class="product-card__title" data-lang-key="products.zekky.name">Zekky</h3>
-                            <p class="product-card__tagline" data-lang-key="products.zekky.tagline">Find the right answer before the clock does</p>
-                            <p class="product-card__excerpt" data-lang-key="products.zekky.card.excerpt">
-                                Tap the right answer while the clock runs. Rounds are ten questions of math and number patterns, and your level rises as you play. No ads, and it plays free in your browser.
-                            </p>
-                            <div class="product-card__platforms">
-                                <span class="platform-badge">Web</span>
-                                <span class="platform-badge" data-lang-key="products.badges.noAds">No Ads</span>
-                                <span class="platform-badge" data-lang-key="products.badges.free">Free</span>
-                            </div>
-                            <a href="https://zekky.ddosoft.com" class="product-card__cta" target="_blank" rel="noopener" data-lang-key="products.card.playNow">
-                                Play Now →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Portfonio -->
-                    <article class="product-card" data-product="portfonio">
-                        <div class="product-card__image">
-                            <div class="product-card__image-placeholder">
-                                <span class="product-card__image-icon">📊</span>
-                            </div>
-                        </div>
-                        <div class="product-card__content">
-                            <div class="product-card__meta">
-                                <span class="product-card__category" data-lang-key="products.portfonio.card.category">Portfolio Management</span>
-                                <span class="product-card__version" data-lang-key="products.portfonio.version">Beta</span>
-                            </div>
-                            <h3 class="product-card__title" data-lang-key="products.portfonio.name">Portfonio</h3>
-                            <p class="product-card__tagline" data-lang-key="products.portfonio.tagline">Portfolio tracking for Turkish mutual funds</p>
-                            <p class="product-card__excerpt" data-lang-key="products.portfonio.card.excerpt">
-                                Track and analyze Turkish investment funds in one place. Prices refresh daily from TEFAS. Free to start, no credit card required.
-                            </p>
-                            <div class="product-card__platforms">
-                                <span class="platform-badge">Web</span>
-                                <span class="platform-badge" data-lang-key="products.badges.freeToStart">Free to Start</span>
-                            </div>
-                            <a href="https://www.portfonio.com" class="product-card__cta" target="_blank" rel="noopener" data-lang-key="products.card.tryNow">
-                                Try Now →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- SimItNow -->
-                    <article class="product-card" data-product="simit">
-                        <div class="product-card__image">
-                            <div class="product-card__image-placeholder">
-                                <span class="product-card__image-icon">⚡</span>
-                            </div>
-                        </div>
-                        <div class="product-card__content">
-                            <div class="product-card__meta">
-                                <span class="product-card__category" data-lang-key="products.simit.card.category">EV Charging Simulator</span>
-                                <span class="product-card__version" data-lang-key="products.simit.version">Beta</span>
-                            </div>
-                            <h3 class="product-card__title" data-lang-key="products.simit.name">SimItNow</h3>
-                            <p class="product-card__tagline" data-lang-key="products.simit.tagline">Test EV charging systems without the hardware</p>
-                            <p class="product-card__excerpt" data-lang-key="products.simit.card.excerpt">
-                                Test your EV charging systems without hardware. Simulate charge points against a CSMS, or run a hosted CSMS for your chargers to connect to. Speaks OCPP 1.6 and 2.0.1 either way, and runs load tests. Free plan available.
-                            </p>
-                            <div class="product-card__platforms">
-                                <span class="platform-badge">Web</span>
-                                <span class="platform-badge">OCPP 1.6</span>
-                                <span class="platform-badge">OCPP 2.0.1</span>
-                                <span class="platform-badge">CSMS</span>
-                                <span class="platform-badge" data-lang-key="products.badges.freePlan">Free Plan</span>
-                            </div>
-                            <a href="https://www.simitnow.com" class="product-card__cta" target="_blank" rel="noopener" data-lang-key="products.card.tryNow">
-                                Try Now →
-                            </a>
-                        </div>
-                    </article>
-
+                <div class="about__body">
+                    <h3 class="about__h" data-lang-key="about.mission.title">Our Mission</h3>
+                    <p data-lang-key="about.mission.text">Powerful software shouldn't cost the planet. We consult on and build technology infrastructure for organizations that want to modernize it and reduce its energy consumption at the same time.</p>
+                    <h3 class="about__h" data-lang-key="about.vision.title">Our Approach</h3>
+                    <p data-lang-key="about.vision.text">We have 15+ years in software architecture, cloud systems, and digital transformation, and the work ranges from modernizing legacy systems to building new ones. That includes OCPP protocol implementation for EV charging, AWS infrastructure optimization, embedded systems, and system integration.</p>
+                    <div class="founder">
+                        <p class="founder__name" data-lang-key="about.founders.people.0.name">Dr. Ayşe Pınar KULAKLI</p>
+                        <p class="founder__role" data-lang-key="about.founders.people.0.role">Founder</p>
+                        <a href="https://www.linkedin.com/in/apkulakli" class="textlink" target="_blank" rel="noopener" aria-label="Ayşe Pınar KULAKLI LinkedIn profile">LinkedIn</a>
+                    </div>
                 </div>
-
             </div>
         </section>
 
         <!-- ── Contact ───────────────────────────────────────────── -->
-        <section class="contact" id="contact">
-            <div class="contact__container">
-
-                <div class="section__header">
+        <section class="section section--tint contact" id="contact">
+            <div class="wrap contact__grid">
+                <header class="contact__intro">
                     <h2 class="section__title" data-lang-key="contact.title">Get In Touch</h2>
-                    <p class="section__subtitle" data-lang-key="contact.subtitle">
-                        Questions about a project, or about one of our products? Write to us.
-                    </p>
-                </div>
-
-                <div class="contact__content contact__content--simple">
-                    <div class="contact__info">
-
-                        <div class="contact__item">
-                            <div class="contact__icon" aria-hidden="true">📧</div>
-                            <div class="contact__details">
-                                <h4 class="contact__title" data-lang-key="contact.methods.0.title">Email</h4>
-                                <a href="mailto:info@ddosoft.com" class="contact__link">info@ddosoft.com</a>
-                                <p class="contact__description" data-lang-key="contact.methods.0.description">Project inquiries and partnerships</p>
-                            </div>
-                        </div>
-
-                        <div class="contact__item">
-                            <div class="contact__icon" aria-hidden="true">🔗</div>
-                            <div class="contact__details">
-                                <h4 class="contact__title" data-lang-key="contact.methods.1.title">LinkedIn</h4>
-                                <a href="https://www.linkedin.com/company/ddosoft"
-                                   class="contact__link"
-                                   target="_blank" rel="noopener"
-                                   aria-label="DDOSoft LinkedIn company page"
-                                   data-lang-key="contact.methods.1.link">
-                                    DDOSoft Company Page
-                                </a>
-                                <p class="contact__description" data-lang-key="contact.methods.1.description">Updates on what we're building</p>
-                            </div>
-                        </div>
-
-                        <div class="contact__item">
-                            <div class="contact__icon" aria-hidden="true">📍</div>
-                            <div class="contact__details">
-                                <h4 class="contact__title" data-lang-key="contact.methods.2.title">Address</h4>
-                                <address class="contact__address">
-                                    <span data-lang-key="contact.methods.2.line1">Süleymanşah Mahallesi</span>
-                                    <span data-lang-key="contact.methods.2.line2">1003. Sokak No: 7/3</span>
-                                    <span data-lang-key="contact.methods.2.line3">Onikişubat/Kahramanmaraş</span>
-                                    <span data-lang-key="contact.methods.2.country">Türkiye</span>
-                                </address>
-                            </div>
-                        </div>
-
+                    <p class="section__lead" data-lang-key="contact.subtitle">Questions about a project, or about one of our products? Write to us.</p>
+                </header>
+                <div class="contact__list">
+                    <div class="contact__item">
+                        <p class="contact__label" data-lang-key="contact.methods.0.title">Email</p>
+                        <a href="mailto:info@ddosoft.com" class="contact__mail">info@ddosoft.com</a>
+                        <p class="contact__note" data-lang-key="contact.methods.0.description">Project inquiries and partnerships</p>
+                    </div>
+                    <div class="contact__item">
+                        <p class="contact__label" data-lang-key="contact.methods.1.title">LinkedIn</p>
+                        <a href="https://www.linkedin.com/company/ddosoft" class="textlink" target="_blank" rel="noopener" aria-label="DDOSoft LinkedIn company page" data-lang-key="contact.methods.1.link">DDOSoft Company Page</a>
+                        <p class="contact__note" data-lang-key="contact.methods.1.description">Updates on what we're building</p>
+                    </div>
+                    <div class="contact__item">
+                        <p class="contact__label" data-lang-key="contact.methods.2.title">Address</p>
+                        <address class="contact__address">
+                            <span data-lang-key="contact.methods.2.line1">Süleymanşah Mahallesi</span>
+                            <span data-lang-key="contact.methods.2.line2">1003. Sokak No: 7/3</span>
+                            <span data-lang-key="contact.methods.2.line3">Onikişubat/Kahramanmaraş</span>
+                            <span data-lang-key="contact.methods.2.country">Türkiye</span>
+                        </address>
+                        <p class="contact__note" data-lang-key="contact.methods.2.description">Our office, for meetings in person</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
